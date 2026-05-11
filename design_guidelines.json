@@ -1,0 +1,142 @@
+{
+  "project_meta": {
+    "name": "Mora Bangun Solutions",
+    "domain": "morabangun.com",
+    "app_type": "landing_page",
+    "stack": ["Laravel 12", "Blade", "Tailwind CSS v4", "Alpine.js", "Vite"],
+    "target_audience": "Corporate enterprises, BUMN, SMEs in Indonesia"
+  },
+  "theme_archetype": {
+    "archetype": "7 (Electric & Neon) merged with 4 (Swiss & High-Contrast)",
+    "theme": "Dark",
+    "description": "Cyber-Corporate. Deep dark background conveying security and enterprise authority, with neon cyan and electric blue accents for a futuristic AI feel. Ensures trust for BUMNs while looking cutting-edge."
+  },
+  "colors": {
+    "background": {
+      "base": "#030712",
+      "surface": "#0F172A",
+      "surface_glass": "rgba(15, 23, 42, 0.6)"
+    },
+    "primary": {
+      "DEFAULT": "#00E5FF",
+      "hover": "#67E8F9",
+      "glow": "rgba(0, 229, 255, 0.5)"
+    },
+    "secondary": {
+      "DEFAULT": "#2962FF",
+      "hover": "#3B82F6"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "accent": "rgba(0, 229, 255, 0.3)"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Outfit, sans-serif",
+      "body": "Plus Jakarta Sans, sans-serif"
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl lg:text-6xl tracking-tighter font-bold",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-semibold",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-slate-300",
+      "overline": "text-sm uppercase tracking-[0.2em] text-cyan-400 font-semibold"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12 lg:px-24",
+    "section_padding": "py-24 md:py-32",
+    "grid_system": "Use strict CSS grid with gap-8 or gap-12. Prefer asymmetrical layouts for features."
+  },
+  "surfaces_and_effects": {
+    "glassmorphism": "backdrop-blur-xl bg-slate-900/60 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)]",
+    "glow_effect": "drop-shadow-[0_0_15px_rgba(0,229,255,0.6)]",
+    "cards": "bg-slate-900 border border-slate-800 hover:-translate-y-1 hover:border-cyan-500/50 transition-all duration-300"
+  },
+  "components": {
+    "navigation": {
+      "style": "Sticky crystal glass header (z-50) with backdrop-blur-xl bg-slate-950/70 border-b border-white/10.",
+      "features": ["Logo", "Nav links", "Language Switcher (ID/EN using Alpine.js state)", "Primary CTA Button"]
+    },
+    "hero": {
+      "layout": "Centered or split layout with intense glow.",
+      "map_feature": "Render a World Map SVG in the background or right column. The path for 'Indonesia' MUST have a custom class that applies a pulsing neon cyan glow (e.g., fill-cyan-400 drop-shadow-[0_0_20px_#00E5FF]).",
+      "background_image": "hero_abstract_bg with overlay bg-slate-950/80 to ensure text readability."
+    },
+    "services_bento": {
+      "layout": "Bento Grid (Mode A). 4 items: ERP, CRM, Corporate Portal, AI Workflow.",
+      "style": "Glassmorphism cards with inner 1px border. Hover reveals subtle cyan tracing beam or gradient background."
+    },
+    "portfolio": {
+      "layout": "Grid of 6 items.",
+      "style": "Each item MUST be wrapped in a Mac OS style browser frame (top bar with 3 dots: red, yellow, green). Use iframe or full-height screenshots wrapped in overflow-hidden.",
+      "projects": ["m2b.co.id", "portal.m2b.co.id", "dira.co.ia", "indoplas.co.id", "gma-world.co.id", "ladaik.store"]
+    },
+    "tech_stack": {
+      "layout": "Infinite horizontal marquee (using raw CSS animations or Alpine JS).",
+      "logos": "Fetch from cdn.simpleicons.org (Laravel, Python, Livewire, Filament, MySQL, Docker, PHP, JavaScript). Apply grayscale and opacity by default, full color on hover."
+    },
+    "testimonials": {
+      "layout": "3 columns grid on desktop, swipeable carousel on mobile.",
+      "style": "Neumorphic tactile dark cards."
+    },
+    "contact_cta": {
+      "layout": "Two-column. Left: persuasive text, Right: form.",
+      "form_style": "Custom Blade components. bg-slate-900/50 border border-slate-800 focus-within:border-cyan-500 focus-within:ring-1 focus-within:ring-cyan-500."
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/650a886f-1668-44a2-9945-55b3c7610be6/images/9e79daef6350eba990da5a8c664e04cd5ea52f81eb51dc5102f7eff4adce2b6d.png",
+        "category": "hero_background",
+        "description": "Abstract futuristic dark neon grid background. Use as hero section background with heavy dark overlay."
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/650a886f-1668-44a2-9945-55b3c7610be6/images/5016bb63739faf51f1ad3e7bc73e1724b40d6ecb73abc80e9553834cb7dd7084.png",
+        "category": "services_ai_workflow",
+        "description": "3D glowing digital interconnected nodes representing AI. Use in the AI Workflow Automation service card."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1649416097303-ddf0c8a68fc3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwyfHxqYWthcnRhJTIwc2t5bGluZSUyMG5pZ2h0fGVufDB8fHx8MTc3ODUxNDQ5Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "about_cityscape",
+        "description": "Jakarta skyline at night. Use for corporate/about section background."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzc4NTE0NDk3fDA&ixlib=rb-4.1.0&q=85",
+        "category": "testimonials_background",
+        "description": "Corporate business meeting. Use with heavy opacity overlay behind testimonials or CTA."
+      }
+    ],
+    "tech_logos": {
+      "laravel": "https://cdn.simpleicons.org/laravel/FF2D20",
+      "python": "https://cdn.simpleicons.org/python/3776AB",
+      "livewire": "https://cdn.simpleicons.org/livewire/FB70A9",
+      "filament": "https://cdn.simpleicons.org/filament/FBBF24",
+      "mysql": "https://cdn.simpleicons.org/mysql/4479A1",
+      "docker": "https://cdn.simpleicons.org/docker/2496ED",
+      "php": "https://cdn.simpleicons.org/php/777BB4",
+      "javascript": "https://cdn.simpleicons.org/javascript/F7DF1E"
+    }
+  },
+  "accessibility_and_testing": {
+    "data_testid": "ALL interactive elements (buttons, inputs, language toggles, carousel arrows) MUST have data-testid attributes (e.g., data-testid='lang-toggle', data-testid='submit-contact').",
+    "contrast": "Ensure text over images has sufficient contrast by applying bg-slate-950/70 overlays.",
+    "bilingual_state": "Use Alpine.js `x-data=\"{ lang: 'id' }\"` on a parent element and conditionally show text using `x-show=\"lang === 'id'\"`."
+  },
+  "instructions_to_main_agent": [
+    "DO NOT output React/JSX code. The project is Laravel 12 + Blade + Alpine.js + Tailwind CSS v4.",
+    "Build the UI using raw HTML with Tailwind classes in Blade files.",
+    "Implement interactivity (Bilingual toggle, mobile menu, testimonial slider) using Alpine.js.",
+    "For the Hero World Map, embed an inline SVG map of the world. Ensure the <path> for Indonesia has a specific ID or class, and apply `fill-cyan-400 drop-shadow-[0_0_15px_#00E5FF]` while other countries are `fill-slate-800`.",
+    "For the portfolio items, build a CSS/HTML browser frame mockup (rounded top corners, 3 colored dots in the top left) and use either an <iframe> pointing to the live site or a static div representation if iframes are blocked.",
+    "Do not use generic placeholder text; implement actual Indonesian/English bilingual copy for an enterprise AI company.",
+    "Use Phosphor icons via CDN or raw SVG for UI icons."
+  ]
+}
