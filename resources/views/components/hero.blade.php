@@ -11,35 +11,44 @@
             Berbasis di Medan, Melayani <span class="text-primary font-semibold">Seluruh Indonesia</span>
         </div>
 
-        <div class="scroll-reveal max-w-2xl mx-auto mb-8 opacity-10">
-            <svg viewBox="0 0 1000 500" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M120 280q10-15 25-12l15 3q8-20 25-18l20 5q5-25 30-20l18 5q12-30 35-18l12 8q20-25 40-10l8 12q15-20 35-8l10 10q18-15 30-5l8 8q22-18 40-2l10 15q25-15 38 5l5 15q15-12 30-2l8 12q20-8 35 5l12 10q18-10 30 5l10 10q22-5 38 8l15 8q20-8 35 5l10 12q25-5 40 10l12 15q28-5 45 12l10 15q25-2 38 18l5 15q15-5 30 10l8 12q20-2 35 18l5 10q15-8 28 8l10 15q15-5 25 18l5 8q10-5 18 12l8 15q12-2 22 18l5 10q8-5 15 12
-                     M150 320q5-10 18-5l12 8q10-5 20 5l10 10q8-2 15 12l5 10q12-5 22 8l8 12q15-2 25 15l5 10q18-8 30 8l10 12q15-5 25 15
-                     M200 350q8-10 20 2l10 10q12-5 22 12l5 10q15-8 28 8
-                     M300 280q5-15 22-8l8 10q12-10 25 5
-                     M400 250q10-15 30 5l10 10
-                     M500 220q8-12 22 5l8 10q15-10 28 8
-                     M600 250q12-15 30 5l10 12q18-8 35 10
-                     M700 280q15-12 32 8l10 12
-                     M800 300q10-15 28 5l10 10q15-8 25 12"
-                      stroke="#89ceff" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"
-                      class="opacity-40"/>
-                <path d="M150 340q5-8 18-2l10 8q10-3 20 8l8 10q12-5 22 10l5 8q15-8 25 10l8 10q18-5 30 12l10 10q15-8 28 15l5 10q20-5 35 15l8 12q15-5 30 18l10 12q18-8 35 20l5 10q22-10 40 22
-                     M200 370q8-5 18 10l8 10q12-5 22 15
-                     M350 310q5-10 20 5l10 12
-                     M450 280q10-15 25 10
-                     M550 290q8-12 22 10l8 10
-                     M650 320q12-10 28 15
-                     M750 340q10-12 22 18"
-                      stroke="#ffb95f" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"
-                      class="opacity-25"/>
-                <circle cx="450" cy="300" r="3" fill="#89ceff" class="opacity-80"/>
-                <circle cx="450" cy="300" r="8" fill="#89ceff" class="opacity-20"/>
-                <text x="455" y="315" fill="#89ceff" font-family="JetBrains Mono" font-size="8" class="opacity-60">Medan</text>
-                <circle cx="580" cy="250" r="1.5" fill="#89ceff" class="opacity-40"/>
-                <circle cx="350" cy="260" r="1.5" fill="#89ceff" class="opacity-40"/>
-                <circle cx="700" cy="280" r="1.5" fill="#89ceff" class="opacity-40"/>
-                <circle cx="500" cy="320" r="1" fill="#ffb95f" class="opacity-30"/>
+        <div class="scroll-reveal max-w-xl mx-auto mb-8 opacity-15">
+            <svg viewBox="0 0 800 400" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M95 178 C95 178 108 168 118 170 C128 172 138 165 148 168 C158 171 168 165 178 168
+                         C188 171 198 165 208 168 C218 171 228 163 238 166 C248 169 258 163 262 158
+                         C266 153 272 148 278 150 C284 152 290 148 298 150 C306 152 312 148 318 150
+                         C324 152 330 146 338 148 C346 150 352 146 358 148 C364 150 370 145 378 147
+                         C386 149 392 144 398 147 C404 150 410 145 418 148 C426 151 432 146 438 148
+                         C444 150 450 145 458 148 C466 151 472 146 478 149 C484 152 490 148 498 150
+                         C506 152 512 148 518 150 C524 152 530 148 538 150 C546 152 552 148 558 150
+                         C564 152 570 148 578 150 C586 152 592 148 598 151 C604 154 610 150 618 152"
+                      stroke="#89ceff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M55 168 C55 168 65 162 75 165 C85 168 95 162 105 165
+                         C115 168 125 161 135 164 C145 167 155 161 165 164
+                         C175 167 185 160 195 163 C205 166 215 160 218 156"
+                      stroke="#89ceff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M28 158 C28 158 35 153 45 156 C55 159 65 153 72 156"
+                      stroke="#89ceff" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M380 210 C380 210 388 203 398 206 C408 209 418 203 428 206
+                         C438 209 448 203 458 206 C468 209 478 203 488 206
+                         C498 209 508 203 518 206 C528 209 538 203 548 206
+                         C558 209 568 203 578 206 C588 209 598 203 608 206
+                         C618 209 628 203 638 206 C648 209 658 203 668 206
+                         C678 209 688 203 698 206 C708 209 718 203 728 206"
+                      stroke="#ffb95f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+                <path d="M320 225 C320 225 330 218 340 221 C350 224 360 218 370 221
+                         C380 224 390 218 400 221 C410 224 420 218 430 221
+                         C440 224 450 218 460 221 C470 224 480 218 490 221
+                         C500 224 510 218 520 221 C530 224 540 218 550 221
+                         C560 224 570 218 580 221"
+                      stroke="#ffb95f" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4"/>
+                <circle cx="118" cy="168" r="4" fill="#89ceff"/>
+                <circle cx="118" cy="168" r="10" fill="#89ceff" opacity="0.15"/>
+                <text x="108" y="158" fill="#89ceff" font-family="JetBrains Mono" font-size="9" font-weight="500">Medan</text>
+                <circle cx="498" cy="150" r="2" fill="#89ceff" opacity="0.5"/>
+                <circle cx="368" cy="147" r="2" fill="#89ceff" opacity="0.5"/>
+                <circle cx="208" cy="163" r="2" fill="#89ceff" opacity="0.4"/>
+                <circle cx="618" cy="206" r="2" fill="#ffb95f" opacity="0.4"/>
+                <circle cx="668" cy="206" r="2" fill="#ffb95f" opacity="0.4"/>
             </svg>
         </div>
 
