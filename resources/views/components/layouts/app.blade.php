@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" href="{{ asset('favicon/apple-touch-icon.png') }}">
     <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
 
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#0b1326">
 
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])

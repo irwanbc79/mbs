@@ -10,12 +10,12 @@ export default defineConfig({
             refresh: true,
             fonts: [
                 bunny('Inter', {
-                    weights: [300, 400, 500, 600, 700, 800],
+                    weights: [400, 500, 600, 700, 800],
                 }),
-                bunny('JetBrains Mono', {
+                bunny('Manrope', {
                     weights: [400, 500, 600, 700],
                 }),
-                bunny('Space Grotesk', {
+                bunny('JetBrains Mono', {
                     weights: [400, 500, 600, 700],
                 }),
             ],
