@@ -236,8 +236,18 @@
                             <path d="M 248,168 C 272,154 310,150 348,158 C 386,167 408,190 408,218 C 408,246 388,264 355,268 C 322,272 285,262 264,244 C 242,226 228,210 232,190 C 235,175 240,176 248,168 Z"
                                   fill="#00e5ff" opacity="0.92" filter="url(#neon-glow)"/>
 
-                            <!-- Sulawesi (distinctive K/cross shape) -->
-                            <path d="M 420,170 C 432,158 448,158 456,172 C 464,186 458,204 445,212 C 460,224 476,234 478,252 C 474,268 458,268 448,252 C 438,268 430,286 420,282 C 408,274 412,256 424,244 C 408,230 395,210 400,190 C 406,175 415,168 420,170 Z"
+                            <!-- Sulawesi (4-arm star / K shape) -->
+                            <path d="M 426,168
+                                     C 436,156 452,154 460,166
+                                     C 467,178 461,196 448,204
+                                     C 462,212 478,218 483,232
+                                     C 488,246 478,256 466,250
+                                     C 456,266 450,284 438,286
+                                     C 426,282 424,266 432,250
+                                     C 420,262 408,270 402,260
+                                     C 396,248 406,234 422,226
+                                     C 408,216 396,200 400,186
+                                     C 404,172 416,164 426,168 Z"
                                   fill="#00e5ff" opacity="0.92" filter="url(#neon-glow)"/>
 
                             <!-- Small islands (NTB, NTT, Maluku) -->
@@ -295,6 +305,22 @@
                             <!-- KL -->
                             <circle cx="230" cy="222" r="3" fill="#00e5ff" opacity="0.8"/>
                             <text x="218" y="232" fill="#64748b" font-size="7" font-family="monospace">KUL</text>
+
+                            <!-- Jakarta (west Java) -->
+                            <circle cx="264" cy="243" r="3" fill="#00e5ff" opacity="0.88"/>
+                            <circle cx="264" cy="243" r="7" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.35">
+                                <animate attributeName="r" values="4;10;4" dur="2.5s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="256" y="254" fill="#475569" font-size="7" font-family="monospace">JKT</text>
+
+                            <!-- Surabaya (east Java) -->
+                            <circle cx="334" cy="245" r="2.5" fill="#00e5ff" opacity="0.8"/>
+                            <text x="327" y="255" fill="#475569" font-size="7" font-family="monospace">SUB</text>
+
+                            <!-- Makassar (south Sulawesi) -->
+                            <circle cx="432" cy="262" r="2.5" fill="#00e5ff" opacity="0.78"/>
+                            <text x="436" y="270" fill="#475569" font-size="7" font-family="monospace">UPG</text>
 
                             <!-- Manila -->
                             <circle cx="428" cy="130" r="3" fill="#2962ff" opacity="0.8"/>

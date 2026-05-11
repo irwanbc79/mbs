@@ -114,14 +114,21 @@
                 <span x-show="$store.locale === 'id'">Hak cipta dilindungi.</span>
                 <span x-show="$store.locale === 'en'" x-cloak>All rights reserved.</span>
             </p>
-            <div class="flex items-center gap-2 text-xs text-slate-700">
-                <span>Built with</span>
-                <span class="text-red-400 font-medium">Laravel</span>
-                <span>&</span>
-                <span class="text-cyan-400 font-medium">Tailwind CSS v4</span>
-                <span>&bullet;</span>
-                <span>Powered by</span>
-                <span class="text-violet-400 font-medium">AI</span>
+            <div class="flex items-center gap-4 flex-wrap justify-center md:justify-end">
+                <div class="flex items-center gap-1.5 text-xs text-slate-600">
+                    <svg class="w-3 h-3 text-emerald-500/70" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                    <span>SSL Secured</span>
+                </div>
+                <span class="text-slate-800 hidden md:inline">·</span>
+                <div class="flex items-center gap-1.5 text-xs text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/70 animate-pulse inline-block"></span>
+                    <span>Production Ready</span>
+                </div>
+                <span class="text-slate-800 hidden md:inline">·</span>
+                <div class="flex items-center gap-1.5 text-xs text-slate-600">
+                    <svg class="w-4 h-3 rounded-sm flex-shrink-0" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
+                    <span>Made in Indonesia</span>
+                </div>
             </div>
         </div>
     </div>

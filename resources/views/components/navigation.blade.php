@@ -44,8 +44,14 @@
             <button @click="$store.locale = $store.locale === 'id' ? 'en' : 'id'"
                     data-testid="lang-toggle"
                     class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-cyan-500/40 text-xs font-medium text-slate-400 hover:text-cyan-400 transition-all">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
-                <span x-text="$store.locale === 'id' ? 'ID' : 'EN'">ID</span>
+                <span x-show="$store.locale === 'id'" class="flex items-center gap-1.5">
+                    <svg class="w-4 h-3 rounded-sm flex-shrink-0" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
+                    ID
+                </span>
+                <span x-show="$store.locale === 'en'" x-cloak class="flex items-center gap-1.5">
+                    <svg class="w-4 h-3 rounded-sm flex-shrink-0" viewBox="0 0 20 14"><rect width="20" height="14" fill="#012169"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#fff" stroke-width="2.8"/><path d="M10,0 V14 M0,7 H20" stroke="#fff" stroke-width="4.5"/><path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="2.8"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#C8102E" stroke-width="1.5"/></svg>
+                    EN
+                </span>
                 <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
 
@@ -63,8 +69,15 @@
         <div class="lg:hidden flex items-center gap-3">
             <button @click="$store.locale = $store.locale === 'id' ? 'en' : 'id'"
                     data-testid="lang-toggle-mobile"
-                    class="px-2.5 py-1 rounded text-xs font-medium border border-white/10 text-slate-400">
-                <span x-text="$store.locale === 'id' ? 'EN' : 'ID'">EN</span>
+                    class="px-2 py-1 rounded border border-white/10 text-xs font-medium text-slate-400 flex items-center gap-1.5">
+                <span x-show="$store.locale === 'id'" class="flex items-center gap-1">
+                    <svg class="w-3.5 h-2.5 rounded-sm flex-shrink-0" viewBox="0 0 20 14"><rect width="20" height="14" fill="#012169"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#fff" stroke-width="2.8"/><path d="M10,0 V14 M0,7 H20" stroke="#fff" stroke-width="4.5"/><path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="2.8"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#C8102E" stroke-width="1.5"/></svg>
+                    EN
+                </span>
+                <span x-show="$store.locale === 'en'" x-cloak class="flex items-center gap-1">
+                    <svg class="w-3.5 h-2.5 rounded-sm flex-shrink-0" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
+                    ID
+                </span>
             </button>
             <button @click="mobileOpen = !mobileOpen"
                     data-testid="mobile-menu-toggle"
