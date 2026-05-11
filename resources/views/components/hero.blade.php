@@ -71,7 +71,7 @@
                 </div>
 
                 <!-- Stats Row -->
-                <div class="scroll-reveal grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/60">
+                <div class="animate-visible grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/60">
                     <div>
                         <div class="text-3xl font-bold text-white" data-counter="50" data-suffix="+">50+</div>
                         <div class="text-xs text-slate-500 mt-1 font-body">

@@ -62,10 +62,14 @@
         <!-- Mobile Hamburger -->
         <div class="lg:hidden flex items-center gap-3">
             <button @click="$store.locale = $store.locale === 'id' ? 'en' : 'id'"
+                    data-testid="lang-toggle-mobile"
                     class="px-2.5 py-1 rounded text-xs font-medium border border-white/10 text-slate-400">
                 <span x-text="$store.locale === 'id' ? 'EN' : 'ID'">EN</span>
             </button>
-            <button @click="mobileOpen = !mobileOpen" class="p-2 text-slate-400 hover:text-white">
+            <button @click="mobileOpen = !mobileOpen"
+                    data-testid="mobile-menu-toggle"
+                    aria-label="Toggle menu"
+                    class="p-2 text-slate-400 hover:text-white">
                 <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg x-show="mobileOpen"  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
