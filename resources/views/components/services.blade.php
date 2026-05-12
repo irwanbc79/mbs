@@ -534,10 +534,9 @@
     {{-- ════ INFOGRAPHIC LIGHTBOX — teleported to <body> to escape stacking context ════ --}}
     <template x-teleport="body">
         <div x-show="zoom"
-             x-data
              style="display:none"
              class="fixed inset-0 z-[9999] flex items-start justify-center overflow-y-auto bg-black/95 backdrop-blur-md p-4 sm:p-8"
-             @keydown.escape.window="$root._x_dataStack && ($root._x_dataStack[0].zoom = false)"
+             @keydown.escape.window="zoom = false"
              x-transition:enter="transition ease-out duration-200"
              x-transition:enter-start="opacity-0"
              x-transition:enter-end="opacity-100"
