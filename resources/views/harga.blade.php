@@ -1,8 +1,8 @@
-<x-layouts.app
-    pageTitle="Harga & Paket Layanan — Mora Bangun Solutions"
-    metaDescription="Pilih paket layanan digital Mora Bangun Solutions yang sesuai kebutuhan bisnis Anda. Dari landing page UMKM hingga enterprise system korporasi. Harga transparan, hasil nyata."
-    ogTitle="Harga & Paket Layanan — Mora Bangun Solutions"
-    ogDescription="Paket Starter Rp 2,5jt, Professional, Enterprise, hingga Corporate custom. Temukan paket terbaik untuk transformasi digital bisnis Anda.">
+<x-layouts.app>
+<x-slot:pageTitle>Harga &amp; Paket Layanan — Mora Bangun Solutions</x-slot:pageTitle>
+<x-slot:metaDescription>Pilih paket layanan digital Mora Bangun Solutions yang sesuai kebutuhan bisnis Anda. Dari landing page UMKM hingga enterprise system korporasi. Harga transparan, hasil nyata.</x-slot:metaDescription>
+<x-slot:ogTitle>Harga &amp; Paket Layanan — Mora Bangun Solutions</x-slot:ogTitle>
+<x-slot:ogDescription>Paket Starter Rp 2,5jt, Professional, Enterprise, hingga Corporate custom. Temukan paket terbaik untuk transformasi digital bisnis Anda.</x-slot:ogDescription>
 
 @push('scripts')
 <script>

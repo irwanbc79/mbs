@@ -1,10 +1,3 @@
-@props([
-    'pageTitle'       => 'Mora Bangun Solutions — AI-Powered Enterprise Software Indonesia',
-    'metaDescription' => 'Mora Bangun Solutions — Partner transformasi digital berbasis AI dari Medan. Spesialis ERP, CRM, Corporate Portal & Workflow Automation untuk Korporasi, BUMN, dan UKM Indonesia.',
-    'ogTitle'         => 'Mora Bangun Solutions — AI-Powered Enterprise Software',
-    'ogDescription'   => 'Partner transformasi digital berbasis AI. ERP, CRM, Corporate Portal & Workflow Automation.',
-    'ogImage'         => null,
-])
 <!DOCTYPE html>
 <html lang="id" class="dark">
 <head>
@@ -12,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $pageTitle }}</title>
-    <meta name="description" content="{{ $metaDescription }}">
+    <title>{{ $pageTitle ?? 'Mora Bangun Solutions — AI-Powered Enterprise Software Indonesia' }}</title>
+    <meta name="description" content="{{ $metaDescription ?? 'Mora Bangun Solutions — Partner transformasi digital berbasis AI dari Medan. Spesialis ERP, CRM, Corporate Portal & Workflow Automation untuk Korporasi, BUMN, dan UKM Indonesia.' }}">
     <meta name="keywords" content="ERP Indonesia, CRM Indonesia, Corporate Portal, Workflow Automation, AI Software, BUMN, digital transformation, Medan, Laravel, PHP">
 
     <meta property="og:type"        content="website">
-    <meta property="og:title"       content="{{ $ogTitle }}">
-    <meta property="og:description" content="{{ $ogDescription }}">
+    <meta property="og:title"       content="{{ $ogTitle ?? 'Mora Bangun Solutions — AI-Powered Enterprise Software' }}">
+    <meta property="og:description" content="{{ $ogDescription ?? 'Partner transformasi digital berbasis AI. ERP, CRM, Corporate Portal & Workflow Automation.' }}">
     <meta property="og:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
     <meta property="og:url"         content="{{ url()->current() }}">
     <meta property="og:locale"      content="id_ID">
 
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="{{ $ogTitle }}">
-    <meta name="twitter:description" content="{{ $ogDescription }}">
+    <meta name="twitter:title"       content="{{ $ogTitle ?? 'Mora Bangun Solutions' }}">
+    <meta name="twitter:description" content="{{ $ogDescription ?? 'AI-Powered Enterprise Software Indonesia' }}">
     <meta name="twitter:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
 
     <link rel="icon"          type="image/svg+xml" href="{{ asset('favicon/favicon.svg') }}">
