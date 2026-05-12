@@ -5,6 +5,9 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* Safelist: dynamic color classes used by enterprise pricing tabs (ERP=cyan, CRM=blue, Portal=violet, AI=amber) */
+@source inline("{bg-,text-,border-,hover:bg-,hover:border-,hover:text-,shadow-,hover:shadow-}{cyan,blue,violet,amber,emerald}-{300,400,500}{,/5,/10,/15,/20,/25,/30,/40,/50}");
+
 @theme {
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
     --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;

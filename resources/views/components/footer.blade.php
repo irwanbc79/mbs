@@ -5,48 +5,12 @@
             <!-- Brand Col -->
             <div class="md:col-span-4">
                 <div class="flex items-center gap-3 mb-5">
-                    <div class="h-12 w-12 flex-shrink-0" style="filter:drop-shadow(0 0 10px rgba(34,211,238,0.35))">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
-                          <defs>
-                            <linearGradient id="fl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#0d1f42"/><stop offset="100%" stop-color="#060e1f"/>
-                            </linearGradient>
-                            <linearGradient id="fl-bd" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1e40af"/>
-                            </linearGradient>
-                            <linearGradient id="fl-bld" x1="0%" y1="100%" x2="60%" y2="0%">
-                              <stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#38bdf8"/>
-                            </linearGradient>
-                            <linearGradient id="fl-mb" x1="0%" y1="0%" x2="0%" y2="100%">
-                              <stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#2563eb"/>
-                            </linearGradient>
-                            <filter id="fl-gw" x="-30%" y="-30%" width="160%" height="160%">
-                              <feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                          </defs>
-                          <polygon points="50,1.5 93.5,25.5 93.5,74.5 50,98.5 6.5,74.5 6.5,25.5" fill="none" stroke="#22d3ee" stroke-width="0.7" opacity="0.18"/>
-                          <polygon points="50,4 90,27 90,73 50,96 10,73 10,27" fill="url(#fl-bg)"/>
-                          <polygon points="50,4 90,27 90,73 50,96 10,73 10,27" fill="none" stroke="url(#fl-bd)" stroke-width="2.5"/>
-                          <polygon points="50,11 83,30 83,70 50,89 17,70 17,30" fill="none" stroke="#22d3ee" stroke-width="0.5" opacity="0.2"/>
-                          <circle cx="50" cy="4"  r="3"   fill="#22d3ee" filter="url(#fl-gw)"/>
-                          <circle cx="90" cy="27" r="2.5" fill="#f0b429" filter="url(#fl-gw)"/>
-                          <circle cx="90" cy="73" r="2.5" fill="#22d3ee" filter="url(#fl-gw)"/>
-                          <circle cx="50" cy="96" r="3"   fill="#f0b429" filter="url(#fl-gw)"/>
-                          <circle cx="10" cy="73" r="2.5" fill="#22d3ee" filter="url(#fl-gw)"/>
-                          <circle cx="10" cy="27" r="2.5" fill="#f0b429" filter="url(#fl-gw)"/>
-                          <circle cx="50" cy="23" r="1.5" fill="#22d3ee" filter="url(#fl-gw)"/>
-                          <path d="M45.5,19.5 A6,6 0 0,1 54.5,19.5"   fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" opacity="0.9"/>
-                          <path d="M41,15.5 A11.5,11.5 0 0,1 59,15.5" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
-                          <path d="M37,11.5 A16,16 0 0,1 63,11.5"     fill="none" stroke="#22d3ee" stroke-width="1"   stroke-linecap="round" opacity="0.25"/>
-                          <rect x="34" y="44" width="7"  height="22" rx="0.5" fill="url(#fl-bld)" opacity="0.6"/>
-                          <rect x="42" y="34" width="11" height="32" rx="0.5" fill="url(#fl-bld)" opacity="0.85"/>
-                          <rect x="54" y="47" width="6"  height="19" rx="0.5" fill="url(#fl-bld)" opacity="0.55"/>
-                          <line x1="47.5" y1="34" x2="47.5" y2="26" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round"/>
-                          <circle cx="47.5" cy="25.5" r="1.4" fill="#22d3ee" filter="url(#fl-gw)"/>
-                          <text x="50" y="82" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="url(#fl-mb)" text-anchor="middle" letter-spacing="-0.5">MB</text>
-                          <path d="M20,54 Q35,41 50,54 Q65,67 80,54" fill="none" stroke="#22d3ee" stroke-width="0.7" opacity="0.28"/>
-                          <path d="M20,60 Q35,47 50,60 Q65,73 80,60" fill="none" stroke="#f0b429" stroke-width="0.7" opacity="0.2"/>
-                        </svg>
+                    <div class="h-14 w-14 flex-shrink-0" style="filter:drop-shadow(0 0 12px rgba(34,211,238,0.4))">
+                        <img src="{{ asset('images/brand/mbs-symbol-160.png') }}"
+                             alt="Mora Bangun Solutions"
+                             width="160" height="118"
+                             loading="lazy" decoding="async"
+                             class="w-full h-full object-contain">
                     </div>
                     <div>
                         <span class="font-bold text-base tracking-tight">

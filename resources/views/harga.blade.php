@@ -430,6 +430,57 @@ document.addEventListener('alpine:init', () => {
     </div>
 </section>
 
+{{-- ── ENTERPRISE SOLUTIONS PRICING (ERP, CRM, Portal, AI) ── --}}
+<section class="section-padding bg-slate-950/40 border-t border-white/5" x-data="{ activeTab: 'erp' }">
+    <div class="container-max px-6 lg:px-24">
+
+        {{-- Header --}}
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 mb-5">
+                <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse"></span>
+                <span class="text-violet-300 text-[10px] uppercase tracking-[0.25em] font-bold">Enterprise Systems</span>
+            </div>
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                <span x-show="$store.locale === 'id'">Paket <span class="text-cyan-400">Sistem Bisnis</span> Korporat</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Enterprise <span class="text-cyan-400">Business Systems</span> Packages</span>
+            </h2>
+            <p class="text-base md:text-lg text-slate-400 leading-relaxed font-body max-w-2xl mx-auto">
+                <span x-show="$store.locale === 'id'">ERP, CRM, Corporate Portal, dan AI Workflow Automation — solusi sistem yang scalable untuk UMKM hingga BUMN.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>ERP, CRM, Corporate Portal, and AI Workflow Automation — scalable systems from SMEs to large enterprises.</span>
+            </p>
+        </div>
+
+        {{-- Tabs --}}
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+            @php
+                $tabs = [
+                    ['key'=>'erp',    'id'=>'Sistem ERP',         'en'=>'ERP System',        'color'=>'cyan',    'icon'=>'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'],
+                    ['key'=>'crm',    'id'=>'CRM',                'en'=>'CRM',               'color'=>'blue',    'icon'=>'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'],
+                    ['key'=>'portal', 'id'=>'Corporate Portal',   'en'=>'Corporate Portal',  'color'=>'violet',  'icon'=>'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'],
+                    ['key'=>'ai',     'id'=>'AI Workflow',        'en'=>'AI Workflow',       'color'=>'amber',   'icon'=>'M13 10V3L4 14h7v7l9-11h-7z'],
+                ];
+            @endphp
+            @foreach($tabs as $tab)
+                <button @click="activeTab = '{{ $tab['key'] }}'"
+                        data-testid="tab-{{ $tab['key'] }}"
+                        class="group relative inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border"
+                        :class="activeTab === '{{ $tab['key'] }}'
+                            ? 'bg-{{ $tab['color'] }}-500/10 border-{{ $tab['color'] }}-500/40 text-{{ $tab['color'] }}-300 shadow-lg shadow-{{ $tab['color'] }}-500/10'
+                            : 'bg-slate-900/40 border-slate-800/60 text-slate-400 hover:text-white hover:border-slate-700'">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="{{ $tab['icon'] }}"/>
+                    </svg>
+                    <span x-show="$store.locale === 'id'">{{ $tab['id'] }}</span>
+                    <span x-show="$store.locale === 'en'" x-cloak>{{ $tab['en'] }}</span>
+                </button>
+            @endforeach
+        </div>
+
+        @include('partials.harga-enterprise-tabs')
+
+    </div>
+</section>
+
 {{-- ── COMPARISON TABLE ── --}}
 <section x-show="showCompare" x-cloak
          x-transition:enter="transition ease-out duration-300"

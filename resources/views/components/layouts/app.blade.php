@@ -28,10 +28,12 @@
     <meta name="twitter:description" content="{{ $ogDescription }}">
     <meta name="twitter:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
 
-    <link rel="icon"          type="image/svg+xml" href="{{ asset('favicon/favicon.svg') }}">
-    <link rel="apple-touch-icon" href="{{ asset('favicon/apple-touch-icon.png') }}">
-    <link rel="manifest"      href="{{ asset('favicon/site.webmanifest') }}">
-    <meta name="theme-color"  content="#030712">
+    <link rel="icon"             type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
+    <link rel="icon"             type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon"             type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+    <link rel="manifest"         href="{{ asset('favicon/site.webmanifest') }}">
+    <meta name="theme-color"     content="#030712">
 
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
