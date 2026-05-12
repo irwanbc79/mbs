@@ -1,9 +1,8 @@
-@extends('components.layouts.app')
-
-@section('title', 'Harga & Paket Layanan — Mora Bangun Solutions')
-@section('description', 'Pilih paket layanan digital Mora Bangun Solutions yang sesuai kebutuhan bisnis Anda. Dari landing page UMKM hingga enterprise system korporasi. Harga transparan, hasil nyata.')
-@section('og_title', 'Harga & Paket Layanan — Mora Bangun Solutions')
-@section('og_description', 'Paket Starter Rp 2,5jt, Professional, Enterprise, hingga Corporate custom. Temukan paket terbaik untuk transformasi digital bisnis Anda.')
+<x-layouts.app
+    pageTitle="Harga & Paket Layanan — Mora Bangun Solutions"
+    metaDescription="Pilih paket layanan digital Mora Bangun Solutions yang sesuai kebutuhan bisnis Anda. Dari landing page UMKM hingga enterprise system korporasi. Harga transparan, hasil nyata."
+    ogTitle="Harga & Paket Layanan — Mora Bangun Solutions"
+    ogDescription="Paket Starter Rp 2,5jt, Professional, Enterprise, hingga Corporate custom. Temukan paket terbaik untuk transformasi digital bisnis Anda.">
 
 @push('scripts')
 <script>
@@ -75,7 +74,6 @@ document.addEventListener('alpine:init', () => {
 </script>
 @endpush
 
-@section('content')
 <div x-data="pricing">
 
 {{-- ── HERO ── --}}
@@ -599,4 +597,4 @@ document.addEventListener('alpine:init', () => {
 </section>
 
 </div>
-@endsection
+</x-layouts.app>
