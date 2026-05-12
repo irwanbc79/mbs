@@ -9,7 +9,8 @@
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <img src="{{ asset('images/mbs-logo.png') }}"
                  alt="Mora Bangun Solutions"
-                 class="h-9 w-auto drop-shadow-[0_0_8px_rgba(34,211,238,0.25)] group-hover:drop-shadow-[0_0_14px_rgba(34,211,238,0.45)] transition-all duration-300"
+                 class="h-9 w-auto transition-all duration-300"
+                 style="filter: url('#rm-white') drop-shadow(0 0 8px rgba(34,211,238,0.3)); object-fit:contain;"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div style="display:none" class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 items-center justify-center font-bold text-slate-950 text-sm shadow-lg shadow-cyan-500/20">M</div>
             <span class="font-bold text-base tracking-tight">

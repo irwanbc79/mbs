@@ -7,7 +7,8 @@
                 <div class="flex items-center gap-3 mb-5">
                     <img src="{{ asset('images/mbs-logo.png') }}"
                          alt="Mora Bangun Solutions"
-                         class="h-11 w-auto drop-shadow-[0_0_10px_rgba(34,211,238,0.2)]"
+                         class="h-11 w-auto"
+                         style="filter: url('#rm-white') drop-shadow(0 0 10px rgba(34,211,238,0.2)); object-fit:contain;"
                          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
                     <div style="display:none" class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 items-center justify-center font-bold text-slate-950 text-sm shadow-lg shadow-cyan-500/20">M</div>
                     <div>
