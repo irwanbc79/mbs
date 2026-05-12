@@ -36,6 +36,11 @@
                 </div>
                 <!-- Preview Area -->
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                    <img src="{{ asset('images/portfolio/m2b.jpg') }}"
+                         alt="PT. Mora Multi Berkah"
+                         class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                         onerror="this.style.display='none'"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                         <!-- Nav bar -->
                         <div class="flex items-center px-3 bg-blue-900/70 border-b border-blue-700/30 shrink-0" style="height:26px">
@@ -102,6 +107,11 @@
                     <span class="text-[9px] text-emerald-400 font-medium">LIVE</span>
                 </div>
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                    <img src="{{ asset('images/portfolio/portal-m2b.jpg') }}"
+                         alt="Portal M2B"
+                         class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                         onerror="this.style.display='none'"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-br from-violet-950 via-purple-900 to-indigo-950 flex group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                         <!-- Sidebar -->
                         <div class="flex flex-col items-center pt-3 gap-2.5 shrink-0 bg-violet-950/80 border-r border-violet-800/30" style="width:42px">
@@ -177,6 +187,11 @@
                     <span class="text-[9px] text-emerald-400 font-medium">LIVE</span>
                 </div>
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                    <img src="{{ asset('images/portfolio/dira.jpg') }}"
+                         alt="PT. Dira Baraka Mulia"
+                         class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                         onerror="this.style.display='none'"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-br from-amber-950 via-orange-900 to-amber-950 flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                         <!-- Nav -->
                         <div class="flex items-center px-3 bg-amber-900/60 border-b border-amber-700/25 shrink-0" style="height:24px">
@@ -250,6 +265,11 @@
                     <span class="text-[9px] text-emerald-400 font-medium">LIVE</span>
                 </div>
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                    <img src="{{ asset('images/portfolio/indoplas.jpg') }}"
+                         alt="CV. Indoplas Mandiri Sejahtera"
+                         class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                         onerror="this.style.display='none'"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-950 via-teal-900 to-emerald-950 flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                         <!-- Nav -->
                         <div class="flex items-center px-3 bg-emerald-900/60 border-b border-emerald-700/25 shrink-0" style="height:24px">
@@ -320,6 +340,11 @@
                     <span class="text-[9px] text-emerald-400 font-medium">LIVE</span>
                 </div>
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                    <img src="{{ asset('images/portfolio/gma-world.jpg') }}"
+                         alt="PT. Geya Mora Agung"
+                         class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                         onerror="this.style.display='none'"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-br from-sky-950 via-blue-900 to-indigo-950 flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                         <!-- Top bar -->
                         <div class="flex items-center px-3 bg-sky-900/70 border-b border-sky-700/25 shrink-0 gap-3" style="height:24px">
@@ -398,6 +423,11 @@
                     <span class="text-[9px] text-emerald-400 font-medium">LIVE</span>
                 </div>
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                    <img src="{{ asset('images/portfolio/ladaik.jpg') }}"
+                         alt="Ladaik Store"
+                         class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                         onerror="this.style.display='none'"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-br from-rose-950 via-pink-900 to-rose-950 flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                         <!-- Nav / header -->
                         <div class="flex items-center px-3 bg-rose-900/60 border-b border-rose-700/25 shrink-0" style="height:24px">
