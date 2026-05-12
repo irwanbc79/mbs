@@ -8,13 +8,30 @@
         <!-- Logo -->
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
             <div class="h-9 w-9 flex-shrink-0 transition-all duration-300"
-                 style="filter: drop-shadow(0 0 6px rgba(34,211,238,0.25));"
-                 onmouseenter="this.style.filter='drop-shadow(0 0 10px rgba(34,211,238,0.55))'"
-                 onmouseleave="this.style.filter='drop-shadow(0 0 6px rgba(34,211,238,0.25))'">
-                <img src="{{ asset('favicon/favicon.svg') }}"
-                     alt="Mora Bangun Solutions"
-                     class="h-full w-full"
-                     onerror="this.parentElement.innerHTML='<div style=\'width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#22d3ee,#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#030712\'>M</div>'">
+                 style="filter:drop-shadow(0 0 6px rgba(34,211,238,0.28))"
+                 onmouseenter="this.style.filter='drop-shadow(0 0 12px rgba(34,211,238,0.65))'"
+                 onmouseleave="this.style.filter='drop-shadow(0 0 6px rgba(34,211,238,0.28))'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
+                  <defs>
+                    <linearGradient id="nl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0d2247"/>
+                    </linearGradient>
+                    <linearGradient id="nl-bd" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#f0b429"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon points="50,3 91,26 91,74 50,97 9,74 9,26" fill="url(#nl-bg)"/>
+                  <polygon points="50,3 91,26 91,74 50,97 9,74 9,26" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.3"/>
+                  <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="url(#nl-bd)" stroke-width="2.5"/>
+                  <circle cx="50" cy="5" r="3" fill="#22d3ee"/>
+                  <circle cx="89" cy="27.5" r="2.5" fill="#f0b429"/>
+                  <circle cx="89" cy="72.5" r="2.5" fill="#22d3ee"/>
+                  <circle cx="50" cy="95" r="3" fill="#22d3ee"/>
+                  <circle cx="11" cy="72.5" r="2.5" fill="#f0b429"/>
+                  <circle cx="11" cy="27.5" r="2.5" fill="#22d3ee"/>
+                  <text x="50" y="64" font-family="Arial Black,Impact,system-ui" font-size="34" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">MB</text>
+                  <line x1="28" y1="70" x2="72" y2="70" stroke="#22d3ee" stroke-width="1.5" opacity="0.5"/>
+                </svg>
             </div>
             <span class="font-bold text-base tracking-tight">
                 Mora <span class="text-cyan-400">Bangun</span>

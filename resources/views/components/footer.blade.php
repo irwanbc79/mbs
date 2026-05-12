@@ -5,12 +5,28 @@
             <!-- Brand Col -->
             <div class="md:col-span-4">
                 <div class="flex items-center gap-3 mb-5">
-                    <div class="h-12 w-12 flex-shrink-0"
-                         style="filter: drop-shadow(0 0 8px rgba(34,211,238,0.3));">
-                        <img src="{{ asset('favicon/favicon.svg') }}"
-                             alt="Mora Bangun Solutions"
-                             class="h-full w-full"
-                             onerror="this.parentElement.innerHTML='<div style=\'width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#030712\'>M</div>'">
+                    <div class="h-12 w-12 flex-shrink-0" style="filter:drop-shadow(0 0 8px rgba(34,211,238,0.3))">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
+                          <defs>
+                            <linearGradient id="fl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0d2247"/>
+                            </linearGradient>
+                            <linearGradient id="fl-bd" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#f0b429"/>
+                            </linearGradient>
+                          </defs>
+                          <polygon points="50,3 91,26 91,74 50,97 9,74 9,26" fill="url(#fl-bg)"/>
+                          <polygon points="50,3 91,26 91,74 50,97 9,74 9,26" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.3"/>
+                          <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="url(#fl-bd)" stroke-width="2.5"/>
+                          <circle cx="50" cy="5" r="3" fill="#22d3ee"/>
+                          <circle cx="89" cy="27.5" r="2.5" fill="#f0b429"/>
+                          <circle cx="89" cy="72.5" r="2.5" fill="#22d3ee"/>
+                          <circle cx="50" cy="95" r="3" fill="#22d3ee"/>
+                          <circle cx="11" cy="72.5" r="2.5" fill="#f0b429"/>
+                          <circle cx="11" cy="27.5" r="2.5" fill="#22d3ee"/>
+                          <text x="50" y="64" font-family="Arial Black,Impact,system-ui" font-size="34" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">MB</text>
+                          <line x1="28" y1="70" x2="72" y2="70" stroke="#22d3ee" stroke-width="1.5" opacity="0.5"/>
+                        </svg>
                     </div>
                     <div>
                         <span class="font-bold text-base tracking-tight">
