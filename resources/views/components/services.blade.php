@@ -379,8 +379,8 @@
             <template x-if="service">
             <div class="flex-1 min-h-0 overflow-hidden" style="display:flex; flex-direction:row;">
 
-                {{-- LEFT: Infographic (40%) --}}
-                <div style="width:42%; flex-shrink:0; display:flex; flex-direction:column; overflow:hidden; border-right:1px solid rgb(30 41 59 / 0.6); background:rgb(2 6 23 / 0.7);">
+                {{-- LEFT: Infographic (55%) --}}
+                <div style="width:55%; flex-shrink:0; display:flex; flex-direction:column; overflow:hidden; border-right:1px solid rgb(30 41 59 / 0.6); background:rgb(2 6 23 / 0.7);">
                     <div class="flex-1 p-3 flex flex-col gap-2 cursor-zoom-in group/img"
                          @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <div class="relative flex-1 rounded-xl overflow-hidden bg-white border border-slate-700/30">
@@ -403,11 +403,11 @@
                     <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:0; overflow:hidden;">
 
                         {{-- TEXT COL 1: Definisi + Fungsi --}}
-                        <div class="flex flex-col gap-3 px-5 py-5 overflow-hidden border-r border-slate-800/40">
+                        <div class="flex flex-col gap-2.5 px-4 py-4 overflow-hidden border-r border-slate-800/40">
 
                             <div>
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
+                                <div class="flex items-center gap-1.5 mb-1.5">
+                                    <span class="w-4 h-4 rounded flex items-center justify-center text-xs font-black"
                                           :class="{
                                             'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
                                             'bg-blue-500/15 text-blue-400': service.color === 'blue',
@@ -423,8 +423,8 @@
                             <div class="border-t border-slate-800/60"></div>
 
                             <div>
-                                <div class="flex items-center gap-2 mb-2">
-                                    <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
+                                <div class="flex items-center gap-1.5 mb-1.5">
+                                    <span class="w-4 h-4 rounded flex items-center justify-center text-xs font-black"
                                           :class="{
                                             'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
                                             'bg-blue-500/15 text-blue-400': service.color === 'blue',
@@ -434,10 +434,10 @@
                                           }">F</span>
                                     <h3 class="font-bold text-white text-xs uppercase tracking-widest">Fungsi Utama</h3>
                                 </div>
-                                <ul class="space-y-1.5">
+                                <ul class="space-y-1">
                                     <template x-for="(item, i) in ($store.locale === 'id' ? service.fungsi_id : service.fungsi_en)" :key="i">
-                                        <li class="flex items-start gap-2 text-xs text-slate-300 font-body">
-                                            <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
+                                        <li class="flex items-start gap-1.5 text-xs text-slate-300 font-body">
+                                            <svg class="w-3 h-3 flex-shrink-0 mt-0.5"
                                                  :class="{
                                                     'text-cyan-500': service.color === 'cyan',
                                                     'text-blue-500': service.color === 'blue',
@@ -456,14 +456,14 @@
                         </div>
 
                         {{-- TEXT COL 2: Akibat + Manfaat + CTA --}}
-                        <div class="flex flex-col gap-3 px-5 py-5 overflow-hidden">
+                        <div class="flex flex-col gap-2 px-4 py-4 overflow-hidden">
 
-                            <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-3">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            <div class="rounded-lg border border-red-500/20 bg-red-500/5 p-2.5">
+                                <div class="flex items-center gap-1.5 mb-1.5">
+                                    <svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                                     <h3 class="font-bold text-red-300 text-xs uppercase tracking-widest">Tanpa Sistem Ini…</h3>
                                 </div>
-                                <ul class="space-y-1.5">
+                                <ul class="space-y-1">
                                     <template x-for="(item, i) in ($store.locale === 'id' ? service.akibat_id : service.akibat_en)" :key="i">
                                         <li class="flex items-start gap-1.5 text-xs text-red-300/80 font-body">
                                             <svg class="w-3 h-3 flex-shrink-0 mt-0.5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
@@ -473,12 +473,12 @@
                                 </ul>
                             </div>
 
-                            <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3 flex-1">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div class="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-2.5 flex-1">
+                                <div class="flex items-center gap-1.5 mb-1.5">
+                                    <svg class="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     <h3 class="font-bold text-emerald-300 text-xs uppercase tracking-widest">Manfaat yang Anda Dapatkan</h3>
                                 </div>
-                                <ul class="space-y-1.5">
+                                <ul class="space-y-1">
                                     <template x-for="(item, i) in ($store.locale === 'id' ? service.benefit_id : service.benefit_en)" :key="i">
                                         <li class="flex items-start gap-1.5 text-xs text-emerald-200/80 font-body">
                                             <svg class="w-3 h-3 flex-shrink-0 mt-0.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -488,7 +488,7 @@
                                 </ul>
                             </div>
 
-                            <div class="flex flex-col gap-2 flex-shrink-0">
+                            <div class="flex flex-col gap-1.5 flex-shrink-0">
                                 <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%2C%20saya%20tertarik%20dengan%20layanan"
                                    target="_blank" rel="noopener"
                                    class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/25">
