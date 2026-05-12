@@ -31,19 +31,6 @@
 </head>
 <body x-data class="min-h-screen bg-surface text-white antialiased">
 
-    {{-- SVG filter: removes white/light background from logo PNG --}}
-    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;overflow:hidden;pointer-events:none">
-        <defs>
-            <filter id="rm-white" color-interpolation-filters="sRGB">
-                <feColorMatrix type="matrix"
-                    values="1 0 0 0 0
-                            0 1 0 0 0
-                            0 0 1 0 0
-                            -1.5 -1.5 -1.5 4.5 0"/>
-            </filter>
-        </defs>
-    </svg>
-
     <x-navigation />
 
     <main>

@@ -7,12 +7,12 @@
 
         <!-- Logo -->
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
-            <img src="{{ asset('images/mbs-logo.png') }}"
-                 alt="Mora Bangun Solutions"
-                 class="h-9 w-auto transition-all duration-300"
-                 style="filter: url('#rm-white') drop-shadow(0 0 8px rgba(34,211,238,0.3)); object-fit:contain;"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div style="display:none" class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 items-center justify-center font-bold text-slate-950 text-sm shadow-lg shadow-cyan-500/20">M</div>
+            <div class="h-9 w-9 rounded-xl bg-white flex-shrink-0 overflow-hidden shadow-md shadow-cyan-500/15 border border-white/10 group-hover:shadow-cyan-500/30 transition-shadow duration-300">
+                <img src="{{ asset('images/mbs-logo.png') }}"
+                     alt="Mora Bangun Solutions"
+                     class="h-full w-full object-contain p-0.5"
+                     onerror="this.parentElement.style.background='linear-gradient(135deg,#22d3ee,#3b82f6)';this.parentElement.innerHTML='<span style=\'display:flex;align-items:center;justify-content:center;height:100%;font-weight:700;font-size:14px;color:#030712\'>M</span>'">
+            </div>
             <span class="font-bold text-base tracking-tight">
                 Mora <span class="text-cyan-400">Bangun</span>
                 <span class="text-slate-500 font-normal text-xs ml-1">Solutions</span>
