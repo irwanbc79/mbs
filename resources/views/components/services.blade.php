@@ -382,7 +382,7 @@
                 {{-- LEFT: Infographic (55%) --}}
                 <div style="width:55%; flex-shrink:0; display:flex; flex-direction:column; overflow:hidden; border-right:1px solid rgb(30 41 59 / 0.6); background:rgb(2 6 23 / 0.7);">
                     <div class="flex-1 p-3 flex flex-col gap-2 cursor-zoom-in group/img"
-                         @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
+                         @click.stop="window.dispatchEvent(new CustomEvent('open-lightbox', { detail: { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) } }))">
                         <div class="relative flex-1 rounded-xl overflow-hidden bg-white border border-slate-700/30">
                             <img :src="service.infographic" :alt="service.title_id"
                                  class="w-full h-full object-contain object-center transition-transform duration-300 group-hover/img:scale-[1.02]"
