@@ -341,7 +341,7 @@
              @click="close()"></div>
 
         {{-- Panel --}}
-        <div class="relative z-10 w-full xl:max-w-6xl sm:max-w-2xl max-h-[92vh] xl:h-[88vh] bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60 flex flex-col"
+        <div class="relative z-10 w-full lg:max-w-5xl sm:max-w-2xl max-h-[92vh] lg:h-[88vh] bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60 flex flex-col"
              x-transition:enter="transition ease-out duration-250"
              x-transition:enter-start="opacity-0 translate-y-8 sm:translate-y-4 sm:scale-95"
              x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -376,12 +376,12 @@
 
             {{-- Body --}}
             <template x-if="service">
-            <div class="flex-1 min-h-0 flex flex-col xl:flex-row overflow-y-auto xl:overflow-hidden">
+            <div class="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
 
                 {{-- LEFT: Infographic --}}
-                <div class="xl:w-5/12 xl:flex-shrink-0 border-b xl:border-b-0 xl:border-r border-slate-800/60 bg-slate-950/70 flex flex-col overflow-hidden">
+                <div class="lg:w-2/5 lg:flex-shrink-0 border-b lg:border-b-0 lg:border-r border-slate-800/60 bg-slate-950/70 flex flex-col overflow-hidden">
                     {{-- Mobile strip --}}
-                    <div class="xl:hidden h-48 overflow-hidden relative cursor-zoom-in group/mimg"
+                    <div class="lg:hidden h-48 overflow-hidden relative cursor-zoom-in group/mimg"
                          @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <img :src="service.infographic" :alt="service.title_id"
                              class="w-full h-full object-cover object-top"
@@ -392,7 +392,7 @@
                         </div>
                     </div>
                     {{-- Desktop full height --}}
-                    <div class="hidden xl:flex flex-col flex-1 p-3 gap-2 cursor-zoom-in group/dimg"
+                    <div class="hidden lg:flex flex-col flex-1 p-3 gap-2 cursor-zoom-in group/dimg"
                          @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <div class="relative flex-1 rounded-xl overflow-hidden bg-white border border-slate-700/30">
                             <img :src="service.infographic" :alt="service.title_id"
@@ -410,11 +410,11 @@
                 </div>
 
                 {{-- RIGHT: 2-column text grid --}}
-                <div class="xl:flex-1 overflow-y-auto xl:overflow-hidden">
-                    <div class="p-5 flex flex-col gap-5 xl:grid xl:grid-cols-2 xl:h-full xl:gap-5">
+                <div class="lg:flex-1 overflow-y-auto">
+                    <div class="p-5 flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:h-full lg:gap-5">
 
                         {{-- TEXT COL 1: Definisi + Fungsi --}}
-                        <div class="xl:border-r xl:border-slate-800/60 xl:pr-5 flex flex-col gap-4 xl:overflow-hidden">
+                        <div class="lg:border-r lg:border-slate-800/60 lg:pr-5 flex flex-col gap-4">
 
                             <div>
                                 <div class="flex items-center gap-2 mb-2">
@@ -467,7 +467,7 @@
                         </div>
 
                         {{-- TEXT COL 2: Akibat + Manfaat + CTA --}}
-                        <div class="flex flex-col gap-3 xl:overflow-hidden">
+                        <div class="flex flex-col gap-3">
 
                             <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-3.5">
                                 <div class="flex items-center gap-2 mb-2">
