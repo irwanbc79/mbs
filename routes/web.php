@@ -8,6 +8,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/harga', fn() => view('harga'))->name('harga');
+
 Route::get('/blog',        [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 

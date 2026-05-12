@@ -90,6 +90,10 @@
                 <span x-show="$store.locale === 'id'">Kontak</span>
                 <span x-show="$store.locale === 'en'" x-cloak>Contact</span>
             </a>
+            <a href="{{ route('harga') }}" class="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">
+                <span x-show="$store.locale === 'id'">Harga</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Pricing</span>
+            </a>
             <a href="{{ route('blog.index') }}" class="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">
                 Blog
             </a>
@@ -167,6 +171,9 @@
             </a>
             <a @click="mobileOpen=false" href="{{ route('home') }}#contact"      class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">
                 <span x-show="$store.locale === 'id'">Kontak</span><span x-show="$store.locale === 'en'" x-cloak>Contact</span>
+            </a>
+            <a @click="mobileOpen=false" href="{{ route('harga') }}" class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">
+                <span x-show="$store.locale === 'id'">Harga</span><span x-show="$store.locale === 'en'" x-cloak>Pricing</span>
             </a>
             <a @click="mobileOpen=false" href="{{ route('blog.index') }}" class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Blog</a>
             <div class="pt-3">

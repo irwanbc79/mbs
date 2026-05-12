@@ -105,6 +105,10 @@
                     <span x-show="$store.locale === 'en'" x-cloak>Company</span>
                 </h4>
                 <ul class="space-y-3">
+                    <li><a href="{{ route('harga') }}" class="text-sm text-slate-500 hover:text-white transition-colors font-body">
+                        <span x-show="$store.locale === 'id'">Harga</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Pricing</span>
+                    </a></li>
                     <li><a href="#portfolio" class="text-sm text-slate-500 hover:text-white transition-colors font-body">Portfolio</a></li>
                     <li><a href="#tech" class="text-sm text-slate-500 hover:text-white transition-colors font-body">
                         <span x-show="$store.locale === 'id'">Teknologi</span>
