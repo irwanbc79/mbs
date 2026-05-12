@@ -1,6 +1,7 @@
 <section id="services" class="section-padding relative bg-surface"
     x-data="{
         open: false,
+        zoom: false,
         service: null,
         services: {
             erp: {
@@ -103,10 +104,12 @@
         openService(key) {
             this.service = this.services[key];
             this.open = true;
+            this.zoom = false;
             document.body.style.overflow = 'hidden';
         },
         close() {
             this.open = false;
+            this.zoom = false;
             document.body.style.overflow = '';
         }
     }">
@@ -380,18 +383,30 @@
 
                 {{-- LEFT: Infographic panel --}}
                 <div class="xl:w-[46%] xl:flex-shrink-0 bg-slate-950/60 border-b xl:border-b-0 xl:border-r border-slate-800/60 flex flex-col">
-                    {{-- Mobile: compact image strip --}}
-                    <div class="xl:hidden h-44 overflow-hidden relative">
+                    {{-- Mobile: compact image strip (tap to zoom) --}}
+                    <div class="xl:hidden h-44 overflow-hidden relative cursor-zoom-in group/mimg" @click="zoom = true">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
-                             class="w-full h-full object-cover object-top"
+                             class="w-full h-full object-cover object-top transition-transform duration-300 group-hover/mimg:scale-105"
                              x-on:error="$el.parentElement.classList.add('hidden')">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/mimg:opacity-100 transition-opacity">
+                            <div class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    {{-- Desktop: full-height scrollable image --}}
+                    {{-- Desktop: full-height scrollable image (click to zoom) --}}
                     <div class="hidden xl:flex flex-col flex-1 overflow-y-auto p-4 gap-4">
+                        <div class="relative cursor-zoom-in group/dimg" @click="zoom = true">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
-                             class="w-full rounded-xl border border-slate-700/40 shadow-lg object-contain bg-white"
-                             x-on:error="$el.parentElement.style.display='none'">
+                             class="w-full rounded-xl border border-slate-700/40 shadow-lg object-contain bg-white transition-transform duration-300 group-hover/dimg:scale-[1.02]"
+                             x-on:error="$el.parentElement.parentElement.style.display='none'">
+                        <div class="absolute inset-0 rounded-xl flex items-center justify-center opacity-0 group-hover/dimg:opacity-100 transition-opacity bg-black/10">
+                            <div class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                            </div>
+                        </div>
+                        </div>
                         {{-- Stats teaser below image --}}
                         <div class="rounded-xl border border-slate-700/40 bg-slate-900/60 p-4">
                             <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Quick Stats</p>
@@ -513,6 +528,41 @@
             </div>{{-- end two-column body --}}
             </template>
 
+        </div>
+    </div>
+
+    {{-- ════ INFOGRAPHIC LIGHTBOX ════ --}}
+    <div x-show="zoom" x-cloak
+         class="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto bg-black/95 backdrop-blur-md p-4 sm:p-8"
+         @keydown.escape.window="zoom = false"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         @click.self="zoom = false">
+
+        <div class="relative w-full max-w-5xl my-auto">
+            {{-- Close button --}}
+            <button @click="zoom = false"
+                    class="absolute -top-3 -right-3 z-10 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors shadow-xl">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            {{-- Image --}}
+            <template x-if="service">
+                <div>
+                    <img :src="service.infographic"
+                         :alt="service.title_id + ' — infographic'"
+                         class="w-full rounded-2xl shadow-2xl border border-slate-700/40 cursor-zoom-out"
+                         @click="zoom = false">
+                    <p class="text-center text-xs text-slate-500 mt-3">
+                        <span x-text="$store.locale === 'id' ? service.title_id : service.title_en"></span>
+                        &nbsp;·&nbsp; Klik gambar atau tekan ESC untuk menutup
+                    </p>
+                </div>
+            </template>
         </div>
     </div>
 
