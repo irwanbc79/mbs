@@ -531,39 +531,40 @@
         </div>
     </div>
 
-    {{-- ════ INFOGRAPHIC LIGHTBOX ════ --}}
-    <div x-show="zoom" x-cloak
-         class="fixed inset-0 z-[200] flex items-start justify-center overflow-y-auto bg-black/95 backdrop-blur-md p-4 sm:p-8"
-         @keydown.escape.window="zoom = false"
-         x-transition:enter="transition ease-out duration-200"
-         x-transition:enter-start="opacity-0"
-         x-transition:enter-end="opacity-100"
-         x-transition:leave="transition ease-in duration-150"
-         x-transition:leave-start="opacity-100"
-         x-transition:leave-end="opacity-0"
-         @click.self="zoom = false">
+    {{-- ════ INFOGRAPHIC LIGHTBOX — teleported to <body> to escape stacking context ════ --}}
+    <template x-teleport="body">
+        <div x-show="zoom"
+             x-data
+             style="display:none"
+             class="fixed inset-0 z-[9999] flex items-start justify-center overflow-y-auto bg-black/95 backdrop-blur-md p-4 sm:p-8"
+             @keydown.escape.window="$root._x_dataStack && ($root._x_dataStack[0].zoom = false)"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             @click.self="zoom = false">
 
-        <div class="relative w-full max-w-5xl my-auto">
-            {{-- Close button --}}
-            <button @click="zoom = false"
-                    class="absolute -top-3 -right-3 z-10 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors shadow-xl">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
-
-            {{-- Image --}}
-            <template x-if="service">
-                <div>
-                    <img :src="service.infographic"
-                         :alt="service.title_id + ' — infographic'"
-                         class="w-full rounded-2xl shadow-2xl border border-slate-700/40 cursor-zoom-out"
-                         @click="zoom = false">
-                    <p class="text-center text-xs text-slate-500 mt-3">
-                        <span x-text="$store.locale === 'id' ? service.title_id : service.title_en"></span>
-                        &nbsp;·&nbsp; Klik gambar atau tekan ESC untuk menutup
-                    </p>
-                </div>
-            </template>
+            <div class="relative w-full max-w-5xl my-auto">
+                <button @click="zoom = false"
+                        class="absolute -top-3 -right-3 z-10 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors shadow-xl">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+                <template x-if="service">
+                    <div>
+                        <img :src="service.infographic"
+                             :alt="service.title_id + ' — infographic'"
+                             class="w-full rounded-2xl shadow-2xl border border-slate-700/40 cursor-zoom-out"
+                             @click="zoom = false">
+                        <p class="text-center text-xs text-slate-500 mt-3">
+                            <span x-text="$store.locale === 'id' ? service.title_id : service.title_en"></span>
+                            &nbsp;·&nbsp; Klik gambar atau tekan ESC untuk menutup
+                        </p>
+                    </div>
+                </template>
+            </div>
         </div>
-    </div>
+    </template>
 
 </section>
