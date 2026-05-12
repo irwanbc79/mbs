@@ -16,7 +16,8 @@
                 akibat_en: ['Data scattered across dozens of unsynchronized spreadsheets', 'Financial reports take days to compile manually', 'Business decisions made on outdated data, not real-time', 'High human error due to repeated data entry', 'No cross-department visibility causes operational bottlenecks'],
                 benefit_id: ['Efisiensi operasional meningkat 30-45% sejak bulan pertama', 'Laporan keuangan otomatis siap dalam hitungan detik', 'Keputusan lebih cepat & akurat berbasis data real-time', 'Satu sumber kebenaran untuk seluruh data bisnis', 'Skalabel — tumbuh bersama bisnis Anda tanpa ganti sistem'],
                 benefit_en: ['Operational efficiency up 30-45% from the first month', 'Financial reports auto-generated in seconds', 'Faster & more accurate decisions based on real-time data', 'Single source of truth for all business data', 'Scalable — grows with your business without system replacement'],
-                tags: ['Inventori', 'Keuangan', 'HR', 'Supply Chain']
+                tags: ['Inventori', 'Keuangan', 'HR', 'Supply Chain'],
+                infographic: '/images/services/service-erp.jpg'
             },
             crm: {
                 icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z',
@@ -31,7 +32,8 @@
                 akibat_en: ['Leads forgotten because there\'s no tracking system', 'Sales team doesn\'t know what stage each deal is in', 'No data to analyze why deals fail', 'Slow customer service due to no interaction history', 'Unpredictable revenue due to no accurate sales forecast'],
                 benefit_id: ['Konversi penjualan meningkat rata-rata 29%', 'Zero prospek yang terlupakan dengan automated reminder', 'Sales forecast akurat untuk perencanaan bisnis yang lebih baik', 'Layanan pelanggan lebih personal dengan riwayat lengkap', 'Visibilitas penuh manajemen terhadap performa tim sales'],
                 benefit_en: ['Sales conversion increases by an average of 29%', 'Zero forgotten prospects with automated reminders', 'Accurate sales forecast for better business planning', 'More personal customer service with complete history', 'Full management visibility into sales team performance'],
-                tags: ['Pipeline', 'Analytics', 'Notifikasi', 'Follow-up']
+                tags: ['Pipeline', 'Analytics', 'Notifikasi', 'Follow-up'],
+                infographic: '/images/services/service-crm.jpg'
             },
             portal: {
                 icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
@@ -46,7 +48,8 @@
                 akibat_en: ['Employees must log in to 5-10 different systems daily', 'Company information scattered and hard to find', 'Slow approvals due to manual email/chat processes', 'Management lacks real-time operational visibility', 'New employee onboarding takes excessive time and effort'],
                 benefit_id: ['Produktivitas karyawan meningkat signifikan dengan one-stop platform', 'Transparansi dan akuntabilitas dengan audit trail lengkap', 'Compliance regulasi lebih mudah dengan sistem dokumentasi terstruktur', 'Onboarding karyawan baru 60% lebih cepat', 'Dirancang khusus untuk kebutuhan BUMN dan korporasi Indonesia'],
                 benefit_en: ['Employee productivity significantly improved with one-stop platform', 'Transparency and accountability with complete audit trail', 'Regulatory compliance easier with structured documentation', 'New employee onboarding 60% faster', 'Designed specifically for Indonesian SOEs and corporations'],
-                tags: ['SSO', 'Dashboard', 'RBAC', 'BUMN']
+                tags: ['SSO', 'Dashboard', 'RBAC', 'BUMN'],
+                infographic: '/images/services/service-portal.jpg'
             },
             automation: {
                 icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
@@ -61,7 +64,8 @@
                 akibat_en: ['Average employee wastes 19% of time on repetitive work', 'Human errors from repeated manual data entry', 'Slow processes waiting for human action at every step', 'High operational costs from administrative work volume', 'No real-time visibility into process status'],
                 benefit_id: ['Pengurangan human error hingga 90%', 'Kecepatan pemrosesan 5-10x lebih cepat dari proses manual', 'Karyawan fokus pada pekerjaan bernilai tinggi, bukan admin', 'ROI terukur dan terbukti dalam 3-6 bulan', 'Sistem berjalan 24/7 tanpa overtime atau sakit'],
                 benefit_en: ['Human error reduction up to 90%', 'Processing speed 5-10x faster than manual processes', 'Employees focus on high-value work, not admin', 'Measurable and proven ROI within 3-6 months', 'System runs 24/7 without overtime or sick days'],
-                tags: ['RPA', 'API Integration', 'OCR', 'AI']
+                tags: ['RPA', 'API Integration', 'OCR', 'AI'],
+                infographic: '/images/services/service-automation.jpg'
             },
             chatbot: {
                 icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
@@ -76,7 +80,8 @@
                 akibat_en: ['Slow customer response (avg. 4+ hours) causes lost deals', 'Customer service team overwhelmed with repetitive questions', 'No service outside office hours but customers are active 24/7', 'High CS costs but inconsistent service quality', 'WhatsApp leads not recorded and often missed'],
                 benefit_id: ['Respon instan < 3 detik untuk 80% pertanyaan pelanggan', 'Kepuasan pelanggan meningkat dengan layanan 24/7 tanpa delay', 'Biaya CS turun hingga 60% dengan otomatisasi pertanyaan rutin', 'Zero lead yang terlewat — semua percakapan terdata di CRM', 'Konsisten dan profesional di setiap interaksi'],
                 benefit_en: ['Instant response < 3 seconds for 80% of customer questions', 'Customer satisfaction improved with 24/7 service without delay', 'CS costs reduced by up to 60% with routine question automation', 'Zero missed leads — all conversations recorded in CRM', 'Consistent and professional in every interaction'],
-                tags: ['LLM', 'WhatsApp', '24/7', 'Customer Service']
+                tags: ['LLM', 'WhatsApp', '24/7', 'Customer Service'],
+                infographic: '/images/services/service-chatbot.jpg'
             },
             custom: {
                 icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
@@ -91,7 +96,8 @@
                 akibat_en: ['Off-the-shelf SaaS forces business to adapt processes to software, not the other way around', 'Per-user SaaS license costs keep growing with business', 'Features you need don\'t exist, but vendor won\'t customize', 'Old systems can\'t integrate, creating data silos', 'Vendor IT technicians don\'t understand local Indonesian business context'],
                 benefit_id: ['Sistem yang benar-benar sesuai kebutuhan bisnis Anda, bukan kompromi', 'Keunggulan kompetitif yang tidak bisa ditiru pesaing dengan SaaS generik', 'Ownership penuh — tidak ada vendor lock-in atau biaya lisensi per-user', 'Tim yang memahami regulasi dan konteks bisnis Indonesia', 'Support & maintenance jangka panjang dari tim yang sama yang membangunnya'],
                 benefit_en: ['System truly tailored to your business needs, no compromise', 'Competitive advantage that competitors can\'t replicate with generic SaaS', 'Full ownership — no vendor lock-in or per-user license fees', 'Team that understands Indonesian business regulations and context', 'Long-term support & maintenance from the same team that built it'],
-                tags: ['Web', 'Mobile', 'API', 'Audit IT']
+                tags: ['Web', 'Mobile', 'API', 'Audit IT'],
+                infographic: '/images/services/service-custom.jpg'
             }
         },
         openService(key) {
@@ -335,7 +341,7 @@
              @click="close()"></div>
 
         {{-- Panel --}}
-        <div class="relative z-10 w-full sm:max-w-2xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60"
+        <div class="relative z-10 w-full xl:max-w-5xl sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60 flex flex-col"
              x-transition:enter="transition ease-out duration-250"
              x-transition:enter-start="opacity-0 translate-y-8 sm:translate-y-4 sm:scale-95"
              x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -345,7 +351,7 @@
              @click.stop>
 
             {{-- Header --}}
-            <div class="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-slate-900/95 backdrop-blur border-b border-slate-800/60">
+            <div class="flex-shrink-0 flex items-center justify-between px-6 py-4 bg-slate-900/95 backdrop-blur border-b border-slate-800/60 sm:rounded-t-2xl">
                 <template x-if="service">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-xl flex items-center justify-center"
@@ -368,9 +374,42 @@
                 </button>
             </div>
 
-            {{-- Body --}}
+            {{-- Body: two-column on xl, single column on mobile --}}
             <template x-if="service">
-            <div class="px-6 py-6 space-y-7">
+            <div class="flex flex-col xl:flex-row flex-1 min-h-0 overflow-hidden">
+
+                {{-- LEFT: Infographic panel --}}
+                <div class="xl:w-[46%] xl:flex-shrink-0 bg-slate-950/60 border-b xl:border-b-0 xl:border-r border-slate-800/60 flex flex-col">
+                    {{-- Mobile: compact image strip --}}
+                    <div class="xl:hidden h-44 overflow-hidden relative">
+                        <img :src="service.infographic" :alt="service.title_id + ' infographic'"
+                             class="w-full h-full object-cover object-top"
+                             @error="$el.parentElement.classList.add('hidden')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+                    </div>
+                    {{-- Desktop: full-height scrollable image --}}
+                    <div class="hidden xl:flex flex-col flex-1 overflow-y-auto p-4 gap-4">
+                        <img :src="service.infographic" :alt="service.title_id + ' infographic'"
+                             class="w-full rounded-xl border border-slate-700/40 shadow-lg object-contain bg-white"
+                             @error="$el.parentElement.style.display='none'">
+                        {{-- Stats teaser below image --}}
+                        <div class="rounded-xl border border-slate-700/40 bg-slate-900/60 p-4">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Quick Stats</p>
+                            <div class="space-y-2">
+                                <template x-for="(b, i) in ($store.locale === 'id' ? service.benefit_id : service.benefit_en).slice(0,3)" :key="i">
+                                    <div class="flex items-start gap-2">
+                                        <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-cyan-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                        <span class="text-xs text-slate-400 font-body leading-tight" x-text="b"></span>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- RIGHT: Text content --}}
+                <div class="xl:flex-1 overflow-y-auto">
+                <div class="px-6 py-6 space-y-7">
 
                 {{-- Definisi --}}
                 <div>
@@ -455,7 +494,7 @@
 
                 {{-- CTA --}}
                 <div class="flex flex-col sm:flex-row gap-3 pt-2 pb-2">
-                    <a href="https://wa.me/6281266686678?text=Halo%20Mora%20Bangun%2C%20saya%20tertarik%20dengan%20layanan"
+                    <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%2C%20saya%20tertarik%20dengan%20layanan"
                        target="_blank" rel="noopener"
                        class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/25">
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -469,7 +508,9 @@
                     </a>
                 </div>
 
-            </div>
+            </div>{{-- end px-6 py-6 --}}
+                </div>{{-- end right scroll --}}
+            </div>{{-- end two-column body --}}
             </template>
 
         </div>

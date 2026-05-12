@@ -128,7 +128,7 @@
                         <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 text-center">
                             <p class="text-sm font-bold text-white mb-1.5">Siap Mulai?</p>
                             <p class="text-xs text-slate-400 font-body mb-4">Konsultasi gratis dengan tim kami</p>
-                            <a href="https://wa.me/6281266686678?text=Halo%20Mora%20Bangun%2C%20saya%20baru%20membaca%20artikel%20{{ urlencode($post->title) }}%20dan%20ingin%20konsultasi"
+                            <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%2C%20saya%20baru%20membaca%20artikel%20{{ urlencode($post->title) }}%20dan%20ingin%20konsultasi"
                                target="_blank" rel="noopener"
                                class="inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold rounded-xl transition-colors">
                                 Hubungi Kami

@@ -45,7 +45,7 @@
          class="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
 
         <!-- WhatsApp -->
-        <a href="https://wa.me/6281266686678?text=Halo%20Mora%20Bangun%20Solutions%2C%20saya%20ingin%20konsultasi"
+        <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%20Solutions%2C%20saya%20ingin%20konsultasi"
            target="_blank" rel="noopener noreferrer"
            title="Chat via WhatsApp"
            class="group w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#20b958] shadow-lg shadow-green-500/30 hover:shadow-green-500/50 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:scale-110">

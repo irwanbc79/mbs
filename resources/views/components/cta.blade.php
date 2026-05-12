@@ -34,7 +34,7 @@
 
             <!-- CTA Buttons -->
             <div class="scroll-reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-                <a href="https://wa.me/6281266686678?text=Halo%20Mora%20Bangun%20Solutions%2C%20saya%20ingin%20konsultasi%20gratis"
+                <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%20Solutions%2C%20saya%20ingin%20konsultasi%20gratis"
                    target="_blank"
                    data-testid="cta-whatsapp-btn"
                    class="inline-flex items-center gap-3 px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/40 hover:-translate-y-1 w-full sm:w-auto justify-center">
