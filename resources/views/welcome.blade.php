@@ -2,6 +2,7 @@
     <x-hero />
     <x-services />
     <x-portfolio />
+    <x-process />
     <x-tech-stack />
     <x-testimonials />
     <x-contact />

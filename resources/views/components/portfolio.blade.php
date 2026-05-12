@@ -308,15 +308,15 @@
                 </div>
             </a>
 
-            <!-- 5: gma-world.co.id -->
-            <a href="https://gma-world.co.id" target="_blank" rel="noopener noreferrer"
+            <!-- 5: gma-world.id -->
+            <a href="https://gma-world.id" target="_blank" rel="noopener noreferrer"
                data-testid="portfolio-gma"
                class="scroll-reveal group block browser-frame hover:border-sky-500/30 hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-300 hover:-translate-y-1">
                 <div class="browser-topbar">
                     <span class="browser-dot bg-[#FF5F57]"></span>
                     <span class="browser-dot bg-[#FFBD2E]"></span>
                     <span class="browser-dot bg-[#28CA41]"></span>
-                    <div class="browser-url">https://gma-world.co.id</div>
+                    <div class="browser-url">https://gma-world.id</div>
                     <span class="text-[9px] text-emerald-400 font-medium">LIVE</span>
                 </div>
                 <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
