@@ -17,6 +17,8 @@
                 benefit_id: ['Efisiensi operasional meningkat 30-45% sejak bulan pertama', 'Laporan keuangan otomatis siap dalam hitungan detik', 'Keputusan lebih cepat & akurat berbasis data real-time', 'Satu sumber kebenaran untuk seluruh data bisnis', 'Skalabel — tumbuh bersama bisnis Anda tanpa ganti sistem'],
                 benefit_en: ['Operational efficiency up 30-45% from the first month', 'Financial reports auto-generated in seconds', 'Faster & more accurate decisions based on real-time data', 'Single source of truth for all business data', 'Scalable — grows with your business without system replacement'],
                 tags: ['Inventori', 'Keuangan', 'HR', 'Supply Chain'],
+                cocok_id: ['Manufaktur', 'Retail', 'Logistik', 'BUMN', 'Konstruksi', 'Distribusi'],
+                cocok_en: ['Manufacturing', 'Retail', 'Logistics', 'SOE', 'Construction', 'Distribution'],
                 infographic: '/images/services/service-erp.jpg'
             },
             crm: {
@@ -33,6 +35,8 @@
                 benefit_id: ['Konversi penjualan meningkat rata-rata 29%', 'Zero prospek yang terlupakan dengan automated reminder', 'Sales forecast akurat untuk perencanaan bisnis yang lebih baik', 'Layanan pelanggan lebih personal dengan riwayat lengkap', 'Visibilitas penuh manajemen terhadap performa tim sales'],
                 benefit_en: ['Sales conversion increases by an average of 29%', 'Zero forgotten prospects with automated reminders', 'Accurate sales forecast for better business planning', 'More personal customer service with complete history', 'Full management visibility into sales team performance'],
                 tags: ['Pipeline', 'Analytics', 'Notifikasi', 'Follow-up'],
+                cocok_id: ['Properti', 'Perbankan', 'Asuransi', 'Jasa Profesional', 'Retail', 'Trading'],
+                cocok_en: ['Property', 'Banking', 'Insurance', 'Professional Services', 'Retail', 'Trading'],
                 infographic: '/images/services/service-crm.jpg'
             },
             portal: {
@@ -49,6 +53,8 @@
                 benefit_id: ['Produktivitas karyawan meningkat signifikan dengan one-stop platform', 'Transparansi dan akuntabilitas dengan audit trail lengkap', 'Compliance regulasi lebih mudah dengan sistem dokumentasi terstruktur', 'Onboarding karyawan baru 60% lebih cepat', 'Dirancang khusus untuk kebutuhan BUMN dan korporasi Indonesia'],
                 benefit_en: ['Employee productivity significantly improved with one-stop platform', 'Transparency and accountability with complete audit trail', 'Regulatory compliance easier with structured documentation', 'New employee onboarding 60% faster', 'Designed specifically for Indonesian SOEs and corporations'],
                 tags: ['SSO', 'Dashboard', 'RBAC', 'BUMN'],
+                cocok_id: ['BUMN', 'Holding Group', 'Korporasi', 'Pemerintahan', 'Universitas'],
+                cocok_en: ['SOE', 'Holding Group', 'Corporation', 'Government', 'University'],
                 infographic: '/images/services/service-portal.jpg'
             },
             automation: {
@@ -65,6 +71,8 @@
                 benefit_id: ['Pengurangan human error hingga 90%', 'Kecepatan pemrosesan 5-10x lebih cepat dari proses manual', 'Karyawan fokus pada pekerjaan bernilai tinggi, bukan admin', 'ROI terukur dan terbukti dalam 3-6 bulan', 'Sistem berjalan 24/7 tanpa overtime atau sakit'],
                 benefit_en: ['Human error reduction up to 90%', 'Processing speed 5-10x faster than manual processes', 'Employees focus on high-value work, not admin', 'Measurable and proven ROI within 3-6 months', 'System runs 24/7 without overtime or sick days'],
                 tags: ['RPA', 'API Integration', 'OCR', 'AI'],
+                cocok_id: ['Logistik', 'Keuangan', 'Healthcare', 'Manufaktur', 'Ekspor-Impor'],
+                cocok_en: ['Logistics', 'Finance', 'Healthcare', 'Manufacturing', 'Import-Export'],
                 infographic: '/images/services/service-automation.jpg'
             },
             chatbot: {
@@ -81,6 +89,8 @@
                 benefit_id: ['Respon instan < 3 detik untuk 80% pertanyaan pelanggan', 'Kepuasan pelanggan meningkat dengan layanan 24/7 tanpa delay', 'Biaya CS turun hingga 60% dengan otomatisasi pertanyaan rutin', 'Zero lead yang terlewat — semua percakapan terdata di CRM', 'Konsisten dan profesional di setiap interaksi'],
                 benefit_en: ['Instant response < 3 seconds for 80% of customer questions', 'Customer satisfaction improved with 24/7 service without delay', 'CS costs reduced by up to 60% with routine question automation', 'Zero missed leads — all conversations recorded in CRM', 'Consistent and professional in every interaction'],
                 tags: ['LLM', 'WhatsApp', '24/7', 'Customer Service'],
+                cocok_id: ['E-Commerce', 'Perbankan', 'Asuransi', 'Retail', 'Properti', 'BUMN'],
+                cocok_en: ['E-Commerce', 'Banking', 'Insurance', 'Retail', 'Property', 'SOE'],
                 infographic: '/images/services/service-chatbot.jpg'
             },
             custom: {
@@ -97,6 +107,8 @@
                 benefit_id: ['Sistem yang benar-benar sesuai kebutuhan bisnis Anda, bukan kompromi', 'Keunggulan kompetitif yang tidak bisa ditiru pesaing dengan SaaS generik', 'Ownership penuh — tidak ada vendor lock-in atau biaya lisensi per-user', 'Tim yang memahami regulasi dan konteks bisnis Indonesia', 'Support & maintenance jangka panjang dari tim yang sama yang membangunnya'],
                 benefit_en: ['System truly tailored to your business needs, no compromise', 'Competitive advantage that competitors can\'t replicate with generic SaaS', 'Full ownership — no vendor lock-in or per-user license fees', 'Team that understands Indonesian business regulations and context', 'Long-term support & maintenance from the same team that built it'],
                 tags: ['Web', 'Mobile', 'API', 'Audit IT'],
+                cocok_id: ['Semua Industri', 'Startup', 'UKM', 'Korporasi', 'Pemerintahan'],
+                cocok_en: ['All Industries', 'Startups', 'SME', 'Corporations', 'Government'],
                 infographic: '/images/services/service-custom.jpg'
             }
         },
@@ -452,6 +464,33 @@
                                         </li>
                                     </template>
                                 </ul>
+                            </div>
+
+                            <div class="border-t border-slate-800/60"></div>
+
+                            {{-- Cocok Untuk --}}
+                            <div>
+                                <div class="flex items-center gap-1.5 mb-2">
+                                    <svg class="w-3 h-3 flex-shrink-0"
+                                         :class="{ 'text-cyan-400': service.color === 'cyan', 'text-blue-400': service.color === 'blue', 'text-violet-400': service.color === 'violet', 'text-emerald-400': service.color === 'emerald', 'text-amber-400': service.color === 'amber' }"
+                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                    <h3 class="font-bold text-white text-xs uppercase tracking-widest">Cocok Untuk</h3>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <template x-for="(ind, i) in ($store.locale === 'id' ? service.cocok_id : service.cocok_en)" :key="i">
+                                        <span class="text-[10px] px-2 py-0.5 rounded-full border font-medium"
+                                              :class="{
+                                                'bg-cyan-500/8 border-cyan-500/25 text-cyan-400': service.color === 'cyan',
+                                                'bg-blue-500/8 border-blue-500/25 text-blue-400': service.color === 'blue',
+                                                'bg-violet-500/8 border-violet-500/25 text-violet-400': service.color === 'violet',
+                                                'bg-emerald-500/8 border-emerald-500/25 text-emerald-400': service.color === 'emerald',
+                                                'bg-amber-500/8 border-amber-500/25 text-amber-400': service.color === 'amber',
+                                              }"
+                                              x-text="ind"></span>
+                                    </template>
+                                </div>
                             </div>
                         </div>
 
