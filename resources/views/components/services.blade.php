@@ -1,7 +1,6 @@
 <section id="services" class="section-padding relative bg-surface"
     x-data="{
         open: false,
-        zoom: false,
         service: null,
         services: {
             erp: {
@@ -104,12 +103,10 @@
         openService(key) {
             this.service = this.services[key];
             this.open = true;
-            this.zoom = false;
             document.body.style.overflow = 'hidden';
         },
         close() {
             this.open = false;
-            this.zoom = false;
             document.body.style.overflow = '';
         }
     }">
@@ -384,7 +381,7 @@
                 {{-- LEFT: Infographic panel --}}
                 <div class="xl:w-[46%] xl:flex-shrink-0 bg-slate-950/60 border-b xl:border-b-0 xl:border-r border-slate-800/60 flex flex-col">
                     {{-- Mobile: compact image strip (tap to zoom) --}}
-                    <div class="xl:hidden h-44 overflow-hidden relative cursor-zoom-in group/mimg" @click="zoom = true">
+                    <div class="xl:hidden h-44 overflow-hidden relative cursor-zoom-in group/mimg" @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
                              class="w-full h-full object-cover object-top transition-transform duration-300 group-hover/mimg:scale-105"
                              x-on:error="$el.parentElement.classList.add('hidden')">
@@ -397,7 +394,7 @@
                     </div>
                     {{-- Desktop: full-height scrollable image (click to zoom) --}}
                     <div class="hidden xl:flex flex-col flex-1 overflow-y-auto p-4 gap-4">
-                        <div class="relative cursor-zoom-in group/dimg" @click="zoom = true">
+                        <div class="relative cursor-zoom-in group/dimg" @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
                              class="w-full rounded-xl border border-slate-700/40 shadow-lg object-contain bg-white transition-transform duration-300 group-hover/dimg:scale-[1.02]"
                              x-on:error="$el.parentElement.parentElement.style.display='none'">
@@ -531,39 +528,5 @@
         </div>
     </div>
 
-    {{-- ════ INFOGRAPHIC LIGHTBOX — teleported to <body> to escape stacking context ════ --}}
-    <template x-teleport="body">
-        <div x-show="zoom"
-             style="display:none"
-             class="fixed inset-0 z-[9999] flex items-start justify-center overflow-y-auto bg-black/95 backdrop-blur-md p-4 sm:p-8"
-             @keydown.escape.window="zoom = false"
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0"
-             x-transition:enter-end="opacity-100"
-             x-transition:leave="transition ease-in duration-150"
-             x-transition:leave-start="opacity-100"
-             x-transition:leave-end="opacity-0"
-             @click.self="zoom = false">
-
-            <div class="relative w-full max-w-5xl my-auto">
-                <button @click="zoom = false"
-                        class="absolute -top-3 -right-3 z-10 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors shadow-xl">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-                <template x-if="service">
-                    <div>
-                        <img :src="service.infographic"
-                             :alt="service.title_id + ' — infographic'"
-                             class="w-full rounded-2xl shadow-2xl border border-slate-700/40 cursor-zoom-out"
-                             @click="zoom = false">
-                        <p class="text-center text-xs text-slate-500 mt-3">
-                            <span x-text="$store.locale === 'id' ? service.title_id : service.title_en"></span>
-                            &nbsp;·&nbsp; Klik gambar atau tekan ESC untuk menutup
-                        </p>
-                    </div>
-                </template>
-            </div>
-        </div>
-    </template>
 
 </section>

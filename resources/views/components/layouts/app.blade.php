@@ -80,6 +80,32 @@
         </button>
     </div>
 
+    {{-- Global Infographic Lightbox --}}
+    <div x-data="{ visible: false, src: '', title: '' }"
+         @open-lightbox.window="visible = true; src = $event.detail.src; title = $event.detail.title; document.body.style.overflow = 'hidden'"
+         x-show="visible"
+         style="display:none"
+         class="fixed inset-0 z-[9999] flex items-center justify-center overflow-y-auto bg-black/95 backdrop-blur-md p-4 sm:p-8"
+         @keydown.escape.window="if(visible){ visible = false; document.body.style.overflow = '' }"
+         @click.self="visible = false; document.body.style.overflow = ''"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0">
+        <div class="relative w-full max-w-5xl my-auto">
+            <button @click="visible = false; document.body.style.overflow = ''"
+                    class="absolute -top-3 -right-3 z-10 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-600 flex items-center justify-center text-slate-300 hover:text-white transition-colors shadow-xl">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <img :src="src" :alt="title"
+                 class="w-full rounded-2xl shadow-2xl border border-slate-700/40 cursor-zoom-out"
+                 @click="visible = false; document.body.style.overflow = ''">
+            <p class="text-center text-xs text-slate-500 mt-3" x-text="title + ' · Klik gambar atau tekan ESC untuk menutup'"></p>
+        </div>
+    </div>
+
     @stack('scripts')
 </body>
 </html>
