@@ -327,7 +327,7 @@
 
     {{-- ════ SERVICE DETAIL MODAL ════ --}}
     <div x-show="open" x-cloak
-         class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-4"
+         class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-5"
          @keydown.escape.window="close()">
 
         {{-- Backdrop --}}
@@ -340,18 +340,19 @@
              x-transition:leave-end="opacity-0"
              @click="close()"></div>
 
-        {{-- Panel --}}
-        <div class="relative z-10 w-full lg:max-w-5xl sm:max-w-2xl max-h-[92vh] lg:h-[88vh] bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60 flex flex-col"
-             x-transition:enter="transition ease-out duration-250"
-             x-transition:enter-start="opacity-0 translate-y-8 sm:translate-y-4 sm:scale-95"
-             x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+        {{-- Panel: full screen 2-panel via inline style --}}
+        <div class="relative z-10 w-full max-w-6xl bg-slate-900 rounded-2xl border border-slate-700/60 shadow-2xl flex flex-col"
+             style="height: 90vh;"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
              x-transition:leave="transition ease-in duration-150"
-             x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-             x-transition:leave-end="opacity-0 translate-y-8 sm:translate-y-4 sm:scale-95"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95"
              @click.stop>
 
             {{-- Header --}}
-            <div class="flex-shrink-0 flex items-center justify-between px-5 py-3.5 border-b border-slate-800/60 sm:rounded-t-2xl">
+            <div class="flex-shrink-0 flex items-center justify-between px-5 py-3.5 border-b border-slate-800/60 rounded-t-2xl">
                 <template x-if="service">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-xl flex items-center justify-center"
@@ -374,47 +375,35 @@
                 </button>
             </div>
 
-            {{-- Body --}}
+            {{-- Body: 2-panel side by side via inline flex --}}
             <template x-if="service">
-            <div class="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
+            <div class="flex-1 min-h-0 overflow-hidden" style="display:flex; flex-direction:row;">
 
-                {{-- LEFT: Infographic --}}
-                <div class="lg:w-2/5 lg:flex-shrink-0 border-b lg:border-b-0 lg:border-r border-slate-800/60 bg-slate-950/70 flex flex-col overflow-hidden">
-                    {{-- Mobile strip --}}
-                    <div class="lg:hidden h-48 overflow-hidden relative cursor-zoom-in group/mimg"
-                         @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
-                        <img :src="service.infographic" :alt="service.title_id"
-                             class="w-full h-full object-cover object-top"
-                             x-on:error="$el.parentElement.classList.add('hidden')">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
-                        <div class="absolute bottom-2 right-2 w-7 h-7 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center">
-                            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
-                        </div>
-                    </div>
-                    {{-- Desktop full height --}}
-                    <div class="hidden lg:flex flex-col flex-1 p-3 gap-2 cursor-zoom-in group/dimg"
+                {{-- LEFT: Infographic (40%) --}}
+                <div style="width:42%; flex-shrink:0; display:flex; flex-direction:column; overflow:hidden; border-right:1px solid rgb(30 41 59 / 0.6); background:rgb(2 6 23 / 0.7);">
+                    <div class="flex-1 p-3 flex flex-col gap-2 cursor-zoom-in group/img"
                          @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <div class="relative flex-1 rounded-xl overflow-hidden bg-white border border-slate-700/30">
                             <img :src="service.infographic" :alt="service.title_id"
-                                 class="w-full h-full object-contain object-center transition-transform duration-300 group-hover/dimg:scale-[1.02]"
+                                 class="w-full h-full object-contain object-center transition-transform duration-300 group-hover/img:scale-[1.02]"
                                  x-on:error="$el.parentElement.style.display='none'">
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/dimg:opacity-100 transition-opacity bg-black/20 rounded-xl">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/20 rounded-xl">
                                 <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm">
                                     <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
                                     <span class="text-white text-xs font-medium">Klik untuk zoom</span>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-center text-xs text-slate-600 pb-1">Klik infografis untuk memperbesar</p>
+                        <p class="text-center text-xs text-slate-600 flex-shrink-0">Klik untuk memperbesar</p>
                     </div>
                 </div>
 
-                {{-- RIGHT: 2-column text grid --}}
-                <div class="lg:flex-1 overflow-y-auto">
-                    <div class="p-5 flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:h-full lg:gap-5">
+                {{-- RIGHT: All text content (58%), 2-col grid --}}
+                <div style="flex:1; overflow:hidden; display:flex; flex-direction:column;">
+                    <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:0; overflow:hidden;">
 
                         {{-- TEXT COL 1: Definisi + Fungsi --}}
-                        <div class="lg:border-r lg:border-slate-800/60 lg:pr-5 flex flex-col gap-4">
+                        <div class="flex flex-col gap-3 px-5 py-5 overflow-hidden border-r border-slate-800/40">
 
                             <div>
                                 <div class="flex items-center gap-2 mb-2">
@@ -433,8 +422,8 @@
 
                             <div class="border-t border-slate-800/60"></div>
 
-                            <div class="flex-1">
-                                <div class="flex items-center gap-2 mb-2.5">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2">
                                     <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
                                           :class="{
                                             'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
@@ -445,7 +434,7 @@
                                           }">F</span>
                                     <h3 class="font-bold text-white text-xs uppercase tracking-widest">Fungsi Utama</h3>
                                 </div>
-                                <ul class="space-y-2">
+                                <ul class="space-y-1.5">
                                     <template x-for="(item, i) in ($store.locale === 'id' ? service.fungsi_id : service.fungsi_en)" :key="i">
                                         <li class="flex items-start gap-2 text-xs text-slate-300 font-body">
                                             <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
@@ -467,9 +456,9 @@
                         </div>
 
                         {{-- TEXT COL 2: Akibat + Manfaat + CTA --}}
-                        <div class="flex flex-col gap-3">
+                        <div class="flex flex-col gap-3 px-5 py-5 overflow-hidden">
 
-                            <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-3.5">
+                            <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-3">
                                 <div class="flex items-center gap-2 mb-2">
                                     <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                                     <h3 class="font-bold text-red-300 text-xs uppercase tracking-widest">Tanpa Sistem Ini…</h3>
@@ -484,7 +473,7 @@
                                 </ul>
                             </div>
 
-                            <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3.5 flex-1">
+                            <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3 flex-1">
                                 <div class="flex items-center gap-2 mb-2">
                                     <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     <h3 class="font-bold text-emerald-300 text-xs uppercase tracking-widest">Manfaat yang Anda Dapatkan</h3>
@@ -499,7 +488,7 @@
                                 </ul>
                             </div>
 
-                            <div class="flex flex-col gap-2">
+                            <div class="flex flex-col gap-2 flex-shrink-0">
                                 <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%2C%20saya%20tertarik%20dengan%20layanan"
                                    target="_blank" rel="noopener"
                                    class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/25">
@@ -515,10 +504,10 @@
                             </div>
 
                         </div>{{-- end text col 2 --}}
-                    </div>{{-- end 2-col text grid --}}
-                </div>{{-- end right panel --}}
+                    </div>{{-- end grid --}}
+                </div>{{-- end right --}}
 
-            </div>{{-- end flex body --}}
+            </div>{{-- end 2-panel body --}}
             </template>
 
         </div>
