@@ -340,8 +340,8 @@
              x-transition:leave-end="opacity-0"
              @click="close()"></div>
 
-        {{-- Panel --}}
-        <div class="relative z-10 w-full xl:max-w-5xl sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60 flex flex-col"
+        {{-- Panel: 3-column on desktop, no scroll needed --}}
+        <div class="relative z-10 w-full xl:max-w-7xl sm:max-w-2xl xl:h-[90vh] max-h-[95vh] sm:max-h-[90vh] bg-slate-900 sm:rounded-2xl border border-slate-700/60 shadow-2xl shadow-black/60 flex flex-col"
              x-transition:enter="transition ease-out duration-250"
              x-transition:enter-start="opacity-0 translate-y-8 sm:translate-y-4 sm:scale-95"
              x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
@@ -351,10 +351,10 @@
              @click.stop>
 
             {{-- Header --}}
-            <div class="flex-shrink-0 flex items-center justify-between px-6 py-4 bg-slate-900/95 backdrop-blur border-b border-slate-800/60 sm:rounded-t-2xl">
+            <div class="flex-shrink-0 flex items-center justify-between px-5 py-3.5 bg-slate-900/95 backdrop-blur border-b border-slate-800/60 sm:rounded-t-2xl">
                 <template x-if="service">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl flex items-center justify-center"
+                        <div class="w-8 h-8 rounded-xl flex items-center justify-center"
                              :class="{
                                 'bg-cyan-500/10 border border-cyan-500/20 text-cyan-400': service.color === 'cyan',
                                 'bg-blue-500/10 border border-blue-500/20 text-blue-400': service.color === 'blue',
@@ -366,7 +366,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="service.icon"/>
                             </svg>
                         </div>
-                        <h2 class="font-bold text-white text-base" x-text="$store.locale === 'id' ? service.title_id : service.title_en"></h2>
+                        <h2 class="font-bold text-white text-sm" x-text="$store.locale === 'id' ? service.title_id : service.title_en"></h2>
                     </div>
                 </template>
                 <button @click="close()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700/60 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
@@ -374,155 +374,150 @@
                 </button>
             </div>
 
-            {{-- Body: two-column on xl, single column on mobile --}}
+            {{-- Body: 3-column on xl (no scroll), single column mobile (scroll ok) --}}
             <template x-if="service">
-            <div class="flex flex-col xl:flex-row flex-1 min-h-0 overflow-hidden">
+            <div class="flex-1 min-h-0 flex flex-col xl:grid xl:grid-cols-[44%_1fr_1fr] overflow-y-auto xl:overflow-hidden">
 
-                {{-- LEFT: Infographic panel --}}
-                <div class="xl:w-[46%] xl:flex-shrink-0 bg-slate-950/60 border-b xl:border-b-0 xl:border-r border-slate-800/60 flex flex-col">
-                    {{-- Mobile: compact image strip (tap to zoom) --}}
-                    <div class="xl:hidden h-44 overflow-hidden relative cursor-zoom-in group/mimg" @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
+                {{-- COL 1: Infographic (full height) --}}
+                <div class="xl:border-r border-b xl:border-b-0 border-slate-800/60 bg-slate-950/70 flex flex-col overflow-hidden">
+                    {{-- Mobile: compact strip --}}
+                    <div class="xl:hidden h-48 overflow-hidden relative cursor-zoom-in group/mimg"
+                         @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
-                             class="w-full h-full object-cover object-top transition-transform duration-300 group-hover/mimg:scale-105"
+                             class="w-full h-full object-cover object-top"
                              x-on:error="$el.parentElement.classList.add('hidden')">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/mimg:opacity-100 transition-opacity">
-                            <div class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        <div class="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                    {{-- Desktop: full height image --}}
+                    <div class="hidden xl:flex flex-col h-full p-3 gap-2 cursor-zoom-in group/dimg"
+                         @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
+                        <div class="relative flex-1 rounded-xl overflow-hidden border border-slate-700/30 bg-white">
+                            <img :src="service.infographic" :alt="service.title_id + ' infographic'"
+                                 class="w-full h-full object-contain object-center transition-transform duration-300 group-hover/dimg:scale-[1.02]"
+                                 x-on:error="$el.closest('.xl\\:flex').style.display='none'">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/dimg:opacity-100 transition-opacity bg-black/15 rounded-xl">
+                                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm">
+                                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                                    <span class="text-white text-xs font-medium">Klik untuk zoom</span>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-center text-xs text-slate-600 pb-1">Klik infografis untuk memperbesar</p>
                     </div>
-                    {{-- Desktop: full-height scrollable image (click to zoom) --}}
-                    <div class="hidden xl:flex flex-col flex-1 overflow-y-auto p-4 gap-4">
-                        <div class="relative cursor-zoom-in group/dimg" @click="$dispatch('open-lightbox', { src: service.infographic, title: ($store.locale === 'id' ? service.title_id : service.title_en) })">
-                        <img :src="service.infographic" :alt="service.title_id + ' infographic'"
-                             class="w-full rounded-xl border border-slate-700/40 shadow-lg object-contain bg-white transition-transform duration-300 group-hover/dimg:scale-[1.02]"
-                             x-on:error="$el.parentElement.parentElement.style.display='none'">
-                        <div class="absolute inset-0 rounded-xl flex items-center justify-center opacity-0 group-hover/dimg:opacity-100 transition-opacity bg-black/10">
-                            <div class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
-                            </div>
+                </div>
+
+                {{-- COL 2: Definisi + Fungsi Utama --}}
+                <div class="xl:border-r border-b xl:border-b-0 border-slate-800/60 px-5 py-5 flex flex-col gap-4 overflow-hidden">
+
+                    {{-- Definisi --}}
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
+                                  :class="{
+                                    'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
+                                    'bg-blue-500/15 text-blue-400': service.color === 'blue',
+                                    'bg-violet-500/15 text-violet-400': service.color === 'violet',
+                                    'bg-emerald-500/15 text-emerald-400': service.color === 'emerald',
+                                    'bg-amber-500/15 text-amber-400': service.color === 'amber',
+                                  }">D</span>
+                            <h3 class="font-bold text-white text-xs uppercase tracking-widest">Definisi</h3>
                         </div>
+                        <p class="text-slate-300 text-xs leading-relaxed font-body" x-text="$store.locale === 'id' ? service.definisi_id : service.definisi_en"></p>
+                    </div>
+
+                    <div class="border-t border-slate-800/60"></div>
+
+                    {{-- Fungsi Utama --}}
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2.5">
+                            <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
+                                  :class="{
+                                    'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
+                                    'bg-blue-500/15 text-blue-400': service.color === 'blue',
+                                    'bg-violet-500/15 text-violet-400': service.color === 'violet',
+                                    'bg-emerald-500/15 text-emerald-400': service.color === 'emerald',
+                                    'bg-amber-500/15 text-amber-400': service.color === 'amber',
+                                  }">F</span>
+                            <h3 class="font-bold text-white text-xs uppercase tracking-widest">Fungsi Utama</h3>
                         </div>
-                        {{-- Stats teaser below image --}}
-                        <div class="rounded-xl border border-slate-700/40 bg-slate-900/60 p-4">
-                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Quick Stats</p>
-                            <div class="space-y-2">
-                                <template x-for="(b, i) in ($store.locale === 'id' ? service.benefit_id : service.benefit_en).slice(0,3)" :key="i">
-                                    <div class="flex items-start gap-2">
-                                        <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-cyan-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                        <span class="text-xs text-slate-400 font-body leading-tight" x-text="b"></span>
-                                    </div>
-                                </template>
-                            </div>
+                        <ul class="space-y-2">
+                            <template x-for="(item, i) in ($store.locale === 'id' ? service.fungsi_id : service.fungsi_en)" :key="i">
+                                <li class="flex items-start gap-2 text-xs text-slate-300 font-body">
+                                    <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
+                                         :class="{
+                                            'text-cyan-500': service.color === 'cyan',
+                                            'text-blue-500': service.color === 'blue',
+                                            'text-violet-500': service.color === 'violet',
+                                            'text-emerald-500': service.color === 'emerald',
+                                            'text-amber-500': service.color === 'amber',
+                                         }"
+                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span x-text="item"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+
+                {{-- COL 3: Tanpa Sistem + Manfaat + CTA --}}
+                <div class="px-5 py-5 flex flex-col gap-3 overflow-hidden">
+
+                    {{-- Tanpa Sistem --}}
+                    <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-3.5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            <h3 class="font-bold text-red-300 text-xs uppercase tracking-widest">Tanpa Sistem Ini…</h3>
                         </div>
+                        <ul class="space-y-1.5">
+                            <template x-for="(item, i) in ($store.locale === 'id' ? service.akibat_id : service.akibat_en)" :key="i">
+                                <li class="flex items-start gap-1.5 text-xs text-red-300/80 font-body">
+                                    <svg class="w-3 h-3 flex-shrink-0 mt-0.5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+                                    <span x-text="item"></span>
+                                </li>
+                            </template>
+                        </ul>
                     </div>
-                </div>
 
-                {{-- RIGHT: Text content --}}
-                <div class="xl:flex-1 overflow-y-auto">
-                <div class="px-6 py-6 space-y-7">
-
-                {{-- Definisi --}}
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
-                              :class="{
-                                'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
-                                'bg-blue-500/15 text-blue-400': service.color === 'blue',
-                                'bg-violet-500/15 text-violet-400': service.color === 'violet',
-                                'bg-emerald-500/15 text-emerald-400': service.color === 'emerald',
-                                'bg-amber-500/15 text-amber-400': service.color === 'amber',
-                              }">D</span>
-                        <h3 class="font-bold text-white text-sm uppercase tracking-widest">Definisi</h3>
+                    {{-- Manfaat --}}
+                    <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3.5 flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <h3 class="font-bold text-emerald-300 text-xs uppercase tracking-widest">Manfaat yang Anda Dapatkan</h3>
+                        </div>
+                        <ul class="space-y-1.5">
+                            <template x-for="(item, i) in ($store.locale === 'id' ? service.benefit_id : service.benefit_en)" :key="i">
+                                <li class="flex items-start gap-1.5 text-xs text-emerald-200/80 font-body">
+                                    <svg class="w-3 h-3 flex-shrink-0 mt-0.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                    <span x-text="item"></span>
+                                </li>
+                            </template>
+                        </ul>
                     </div>
-                    <p class="text-slate-300 text-sm leading-relaxed font-body" x-text="$store.locale === 'id' ? service.definisi_id : service.definisi_en"></p>
-                </div>
 
-                {{-- Fungsi --}}
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="w-5 h-5 rounded flex items-center justify-center text-xs font-black"
-                              :class="{
-                                'bg-cyan-500/15 text-cyan-400': service.color === 'cyan',
-                                'bg-blue-500/15 text-blue-400': service.color === 'blue',
-                                'bg-violet-500/15 text-violet-400': service.color === 'violet',
-                                'bg-emerald-500/15 text-emerald-400': service.color === 'emerald',
-                                'bg-amber-500/15 text-amber-400': service.color === 'amber',
-                              }">F</span>
-                        <h3 class="font-bold text-white text-sm uppercase tracking-widest">Fungsi Utama</h3>
+                    {{-- CTA --}}
+                    <div class="flex flex-col gap-2 pt-1">
+                        <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%2C%20saya%20tertarik%20dengan%20layanan"
+                           target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/25">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <span x-show="$store.locale === 'id'">Konsultasi Gratis via WhatsApp</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Free Consultation via WhatsApp</span>
+                        </a>
+                        <a href="#contact" @click="close()"
+                           class="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700/60 hover:border-cyan-500/30 text-white font-semibold text-xs rounded-xl transition-all">
+                            <span x-show="$store.locale === 'id'">Isi Form Kebutuhan</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Fill Inquiry Form</span>
+                        </a>
                     </div>
-                    <ul class="space-y-2">
-                        <template x-for="(item, i) in ($store.locale === 'id' ? service.fungsi_id : service.fungsi_en)" :key="i">
-                            <li class="flex items-start gap-2.5 text-sm text-slate-300 font-body">
-                                <svg class="w-4 h-4 flex-shrink-0 mt-0.5"
-                                     :class="{
-                                        'text-cyan-500': service.color === 'cyan',
-                                        'text-blue-500': service.color === 'blue',
-                                        'text-violet-500': service.color === 'violet',
-                                        'text-emerald-500': service.color === 'emerald',
-                                        'text-amber-500': service.color === 'amber',
-                                     }"
-                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span x-text="item"></span>
-                            </li>
-                        </template>
-                    </ul>
-                </div>
 
-                {{-- Akibat --}}
-                <div class="rounded-xl border border-red-500/15 bg-red-500/5 p-4">
-                    <div class="flex items-center gap-2 mb-3">
-                        <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                        <h3 class="font-bold text-red-300 text-sm uppercase tracking-widest">Tanpa Sistem Ini…</h3>
-                    </div>
-                    <ul class="space-y-2">
-                        <template x-for="(item, i) in ($store.locale === 'id' ? service.akibat_id : service.akibat_en)" :key="i">
-                            <li class="flex items-start gap-2.5 text-sm text-red-300/80 font-body">
-                                <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-red-500/60" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
-                                <span x-text="item"></span>
-                            </li>
-                        </template>
-                    </ul>
-                </div>
+                </div>{{-- end col 3 --}}
 
-                {{-- Benefit --}}
-                <div class="rounded-xl border border-emerald-500/15 bg-emerald-500/5 p-4">
-                    <div class="flex items-center gap-2 mb-3">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <h3 class="font-bold text-emerald-300 text-sm uppercase tracking-widest">Manfaat yang Anda Dapatkan</h3>
-                    </div>
-                    <ul class="space-y-2">
-                        <template x-for="(item, i) in ($store.locale === 'id' ? service.benefit_id : service.benefit_en)" :key="i">
-                            <li class="flex items-start gap-2.5 text-sm text-emerald-200/80 font-body">
-                                <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                                <span x-text="item"></span>
-                            </li>
-                        </template>
-                    </ul>
-                </div>
-
-                {{-- CTA --}}
-                <div class="flex flex-col sm:flex-row gap-3 pt-2 pb-2">
-                    <a href="https://wa.me/6281399997132?text=Halo%20Mora%20Bangun%2C%20saya%20tertarik%20dengan%20layanan"
-                       target="_blank" rel="noopener"
-                       class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-500/25">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        <span x-show="$store.locale === 'id'">Konsultasi Gratis via WhatsApp</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Free Consultation via WhatsApp</span>
-                    </a>
-                    <a href="#contact" @click="close()"
-                       class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700/60 hover:border-cyan-500/30 text-white font-semibold text-sm rounded-xl transition-all">
-                        <span x-show="$store.locale === 'id'">Isi Form Kebutuhan</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Fill Inquiry Form</span>
-                    </a>
-                </div>
-
-            </div>{{-- end px-6 py-6 --}}
-                </div>{{-- end right scroll --}}
-            </div>{{-- end two-column body --}}
+            </div>{{-- end 3-column body --}}
             </template>
 
         </div>
