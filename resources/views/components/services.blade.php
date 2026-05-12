@@ -384,14 +384,14 @@
                     <div class="xl:hidden h-44 overflow-hidden relative">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
                              class="w-full h-full object-cover object-top"
-                             @error="$el.parentElement.classList.add('hidden')">
+                             x-on:error="$el.parentElement.classList.add('hidden')">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
                     </div>
                     {{-- Desktop: full-height scrollable image --}}
                     <div class="hidden xl:flex flex-col flex-1 overflow-y-auto p-4 gap-4">
                         <img :src="service.infographic" :alt="service.title_id + ' infographic'"
                              class="w-full rounded-xl border border-slate-700/40 shadow-lg object-contain bg-white"
-                             @error="$el.parentElement.style.display='none'">
+                             x-on:error="$el.parentElement.style.display='none'">
                         {{-- Stats teaser below image --}}
                         <div class="rounded-xl border border-slate-700/40 bg-slate-900/60 p-4">
                             <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Quick Stats</p>
