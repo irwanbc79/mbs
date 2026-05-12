@@ -7,32 +7,59 @@
 
         <!-- Logo -->
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
-            <div class="h-9 w-9 relative overflow-hidden flex-shrink-0 transition-all duration-300"
-                 style="filter:drop-shadow(0 0 6px rgba(34,211,238,0.28))"
+            <div class="h-9 w-9 flex-shrink-0 transition-all duration-300"
+                 style="filter:drop-shadow(0 0 6px rgba(34,211,238,0.3))"
                  onmouseenter="this.style.filter='drop-shadow(0 0 14px rgba(34,211,238,0.7))'"
-                 onmouseleave="this.style.filter='drop-shadow(0 0 6px rgba(34,211,238,0.28))'">
-                {{-- PNG logo: crop to hex mark only (bottom text area clipped by overflow-hidden) --}}
-                <img src="{{ asset('images/mbs-logo.png') }}"
-                     alt="MBS"
-                     style="position:absolute; width:auto; height:62px; top:0; left:50%; transform:translateX(-50%);"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-                {{-- Fallback inline SVG if PNG fails --}}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full" style="display:none">
+                 onmouseleave="this.style.filter='drop-shadow(0 0 6px rgba(34,211,238,0.3))'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-full">
                   <defs>
                     <linearGradient id="nl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0d2247"/>
+                      <stop offset="0%" stop-color="#0d1f42"/><stop offset="100%" stop-color="#060e1f"/>
                     </linearGradient>
                     <linearGradient id="nl-bd" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#f0b429"/>
+                      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1e40af"/>
                     </linearGradient>
+                    <linearGradient id="nl-bld" x1="0%" y1="100%" x2="60%" y2="0%">
+                      <stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#38bdf8"/>
+                    </linearGradient>
+                    <linearGradient id="nl-mb" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#2563eb"/>
+                    </linearGradient>
+                    <filter id="nl-gw" x="-30%" y="-30%" width="160%" height="160%">
+                      <feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
                   </defs>
-                  <polygon points="50,3 91,26 91,74 50,97 9,74 9,26" fill="url(#nl-bg)"/>
-                  <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="url(#nl-bd)" stroke-width="2.5"/>
-                  <circle cx="50" cy="5" r="3" fill="#22d3ee"/>
-                  <circle cx="89" cy="27.5" r="2.5" fill="#f0b429"/>
-                  <circle cx="50" cy="95" r="3" fill="#22d3ee"/>
-                  <circle cx="11" cy="27.5" r="2.5" fill="#22d3ee"/>
-                  <text x="50" y="64" font-family="Arial Black,Impact,system-ui" font-size="34" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">MB</text>
+                  <!-- Outer glow -->
+                  <polygon points="50,1.5 93.5,25.5 93.5,74.5 50,98.5 6.5,74.5 6.5,25.5" fill="none" stroke="#22d3ee" stroke-width="0.7" opacity="0.18"/>
+                  <!-- Hex fill -->
+                  <polygon points="50,4 90,27 90,73 50,96 10,73 10,27" fill="url(#nl-bg)"/>
+                  <!-- Hex border -->
+                  <polygon points="50,4 90,27 90,73 50,96 10,73 10,27" fill="none" stroke="url(#nl-bd)" stroke-width="2.5"/>
+                  <!-- Inner hex accent -->
+                  <polygon points="50,11 83,30 83,70 50,89 17,70 17,30" fill="none" stroke="#22d3ee" stroke-width="0.5" opacity="0.2"/>
+                  <!-- Corner dots -->
+                  <circle cx="50" cy="4"  r="3"   fill="#22d3ee" filter="url(#nl-gw)"/>
+                  <circle cx="90" cy="27" r="2.5" fill="#f0b429" filter="url(#nl-gw)"/>
+                  <circle cx="90" cy="73" r="2.5" fill="#22d3ee" filter="url(#nl-gw)"/>
+                  <circle cx="50" cy="96" r="3"   fill="#f0b429" filter="url(#nl-gw)"/>
+                  <circle cx="10" cy="73" r="2.5" fill="#22d3ee" filter="url(#nl-gw)"/>
+                  <circle cx="10" cy="27" r="2.5" fill="#f0b429" filter="url(#nl-gw)"/>
+                  <!-- Signal waves -->
+                  <circle cx="50" cy="23" r="1.5" fill="#22d3ee" filter="url(#nl-gw)"/>
+                  <path d="M45.5,19.5 A6,6 0 0,1 54.5,19.5"   fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" opacity="0.9"/>
+                  <path d="M41,15.5 A11.5,11.5 0 0,1 59,15.5" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+                  <path d="M37,11.5 A16,16 0 0,1 63,11.5"     fill="none" stroke="#22d3ee" stroke-width="1"   stroke-linecap="round" opacity="0.25"/>
+                  <!-- Building silhouette -->
+                  <rect x="34" y="44" width="7"  height="22" rx="0.5" fill="url(#nl-bld)" opacity="0.6"/>
+                  <rect x="42" y="34" width="11" height="32" rx="0.5" fill="url(#nl-bld)" opacity="0.85"/>
+                  <rect x="54" y="47" width="6"  height="19" rx="0.5" fill="url(#nl-bld)" opacity="0.55"/>
+                  <line x1="47.5" y1="34" x2="47.5" y2="26" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="47.5" cy="25.5" r="1.4" fill="#22d3ee" filter="url(#nl-gw)"/>
+                  <!-- MB text -->
+                  <text x="50" y="82" font-family="Arial Black,Arial,sans-serif" font-size="24" font-weight="900" fill="url(#nl-mb)" text-anchor="middle" letter-spacing="-0.5">MB</text>
+                  <!-- Circuit swirl accents -->
+                  <path d="M20,54 Q35,41 50,54 Q65,67 80,54" fill="none" stroke="#22d3ee" stroke-width="0.7" opacity="0.28"/>
+                  <path d="M20,60 Q35,47 50,60 Q65,73 80,60" fill="none" stroke="#f0b429" stroke-width="0.7" opacity="0.2"/>
                 </svg>
             </div>
             <span class="font-bold text-base tracking-tight">
