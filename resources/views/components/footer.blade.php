@@ -5,11 +5,12 @@
             <!-- Brand Col -->
             <div class="md:col-span-4">
                 <div class="flex items-center gap-3 mb-5">
-                    <div class="h-12 w-12 rounded-xl bg-white flex-shrink-0 overflow-hidden shadow-lg shadow-cyan-500/10 border border-white/10">
-                        <img src="{{ asset('images/mbs-logo.png') }}"
+                    <div class="h-12 w-12 flex-shrink-0"
+                         style="filter: drop-shadow(0 0 8px rgba(34,211,238,0.3));">
+                        <img src="{{ asset('favicon/favicon.svg') }}"
                              alt="Mora Bangun Solutions"
-                             class="h-full w-full object-contain p-0.5"
-                             onerror="this.parentElement.style.background='linear-gradient(135deg,#22d3ee,#3b82f6)';this.parentElement.innerHTML='<span style=\'display:flex;align-items:center;justify-content:center;height:100%;font-weight:700;font-size:16px;color:#030712\'>M</span>'">
+                             class="h-full w-full"
+                             onerror="this.parentElement.innerHTML='<div style=\'width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#22d3ee,#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#030712\'>M</div>'">
                     </div>
                     <div>
                         <span class="font-bold text-base tracking-tight">

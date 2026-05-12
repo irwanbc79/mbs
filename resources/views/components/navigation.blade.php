@@ -7,11 +7,14 @@
 
         <!-- Logo -->
         <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
-            <div class="h-9 w-9 rounded-xl bg-white flex-shrink-0 overflow-hidden shadow-md shadow-cyan-500/15 border border-white/10 group-hover:shadow-cyan-500/30 transition-shadow duration-300">
-                <img src="{{ asset('images/mbs-logo.png') }}"
+            <div class="h-9 w-9 flex-shrink-0 transition-all duration-300"
+                 style="filter: drop-shadow(0 0 6px rgba(34,211,238,0.25));"
+                 onmouseenter="this.style.filter='drop-shadow(0 0 10px rgba(34,211,238,0.55))'"
+                 onmouseleave="this.style.filter='drop-shadow(0 0 6px rgba(34,211,238,0.25))'">
+                <img src="{{ asset('favicon/favicon.svg') }}"
                      alt="Mora Bangun Solutions"
-                     class="h-full w-full object-contain p-0.5"
-                     onerror="this.parentElement.style.background='linear-gradient(135deg,#22d3ee,#3b82f6)';this.parentElement.innerHTML='<span style=\'display:flex;align-items:center;justify-content:center;height:100%;font-weight:700;font-size:14px;color:#030712\'>M</span>'">
+                     class="h-full w-full"
+                     onerror="this.parentElement.innerHTML='<div style=\'width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#22d3ee,#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#030712\'>M</div>'">
             </div>
             <span class="font-bold text-base tracking-tight">
                 Mora <span class="text-cyan-400">Bangun</span>
