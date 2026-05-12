@@ -63,4 +63,40 @@ document.addEventListener('DOMContentLoaded', () => {
         el.parentElement.addEventListener('mouseenter', () => (el.style.animationPlayState = 'paused'));
         el.parentElement.addEventListener('mouseleave', () => (el.style.animationPlayState = 'running'));
     });
+
+    // === PORTFOLIO LIVE SCREENSHOTS ===
+    // Inject real website screenshots via thum.io (free, no API key).
+    // Screenshots load on top of the UI mockup fallback — invisible until loaded.
+    const injectScreenshot = (card) => {
+        const urlEl  = card.querySelector('.browser-url');
+        const preview = card.querySelector('[style*="aspect-ratio"]');
+        if (!urlEl || !preview) return;
+
+        const siteUrl = urlEl.textContent.trim();
+        if (!siteUrl.startsWith('http')) return;
+
+        const img = document.createElement('img');
+        img.src     = `https://image.thum.io/get/width/1280/crop/720/${siteUrl}`;
+        img.alt     = `${siteUrl} preview`;
+        img.loading = 'lazy';
+        img.className = 'absolute inset-0 w-full h-full object-cover object-top';
+        img.style.cssText = 'opacity:0; transition:opacity 0.9s ease; z-index:1';
+        img.onload  = () => { img.style.opacity = '1'; };
+        preview.appendChild(img);
+    };
+
+    // Load screenshots when portfolio section scrolls into view
+    const screenshotObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Stagger each card slightly so requests don't all fire at once
+                const cards = entry.target.querySelectorAll('[data-testid^="portfolio-"]');
+                cards.forEach((card, i) => setTimeout(() => injectScreenshot(card), i * 300));
+                screenshotObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const portfolioSection = document.querySelector('#portfolio');
+    if (portfolioSection) screenshotObserver.observe(portfolioSection);
 });
