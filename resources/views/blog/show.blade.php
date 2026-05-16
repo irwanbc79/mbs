@@ -2,10 +2,6 @@
 @section('title', $post->title . ' — Mora Bangun Solutions Blog')
 @section('description', $post->excerpt)
 
-@push('head_scripts')
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"
-        crossorigin="anonymous"></script>
-@endpush
 
 <div class="min-h-screen bg-surface">
 
