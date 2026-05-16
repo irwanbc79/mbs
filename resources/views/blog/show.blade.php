@@ -2,6 +2,11 @@
 @section('title', $post->title . ' — Mora Bangun Solutions Blog')
 @section('description', $post->excerpt)
 
+@push('head_scripts')
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"
+        crossorigin="anonymous"></script>
+@endpush
+
 <div class="min-h-screen bg-surface">
 
     {{-- Top accent line --}}
@@ -70,6 +75,11 @@
         </div>
     </section>
 
+    {{-- ── AD: BANNER ATAS ARTIKEL ── --}}
+    <div class="container-max max-w-4xl px-6 lg:px-0 -mt-4 mb-2">
+        @include('partials.adsense', ['type' => 'horizontal', 'slot' => ''])
+    </div>
+
     {{-- ── ARTICLE BODY ── --}}
     <section class="pb-20">
         <div class="container-max max-w-4xl">
@@ -124,6 +134,9 @@
                             </div>
                         </div>
 
+                        {{-- AdSense Rectangle --}}
+                        @include('partials.adsense', ['type' => 'rectangle', 'slot' => ''])
+
                         {{-- CTA --}}
                         <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 text-center">
                             <p class="text-sm font-bold text-white mb-1.5">Siap Mulai?</p>
@@ -138,6 +151,9 @@
                     </div>
                 </aside>
             </div>
+
+            {{-- ── AD: BANNER BAWAH ARTIKEL ── --}}
+            @include('partials.adsense', ['type' => 'horizontal', 'slot' => ''])
 
             {{-- ── RELATED POSTS ── --}}
             @if($related->count())

@@ -37,6 +37,7 @@
 
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('head_scripts')
 </head>
 <body x-data class="min-h-screen bg-surface text-white antialiased">
 
