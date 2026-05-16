@@ -445,8 +445,8 @@ document.addEventListener('alpine:init', () => {
                 <span x-show="$store.locale === 'en'" x-cloak>Enterprise <span class="text-cyan-400">Business Systems</span> Packages</span>
             </h2>
             <p class="text-base md:text-lg text-slate-400 leading-relaxed font-body max-w-2xl mx-auto">
-                <span x-show="$store.locale === 'id'">ERP, CRM, Corporate Portal, dan AI Workflow Automation — solusi sistem yang scalable untuk UMKM hingga BUMN.</span>
-                <span x-show="$store.locale === 'en'" x-cloak>ERP, CRM, Corporate Portal, and AI Workflow Automation — scalable systems from SMEs to large enterprises.</span>
+                <span x-show="$store.locale === 'id'">ERP, CRM, Corporate Portal, AI Workflow, Chatbot AI, dan Custom Development — solusi sistem yang scalable untuk UMKM hingga BUMN.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>ERP, CRM, Corporate Portal, AI Workflow, AI Chatbot, and Custom Development — scalable systems from SMEs to large enterprises.</span>
             </p>
         </div>
 
