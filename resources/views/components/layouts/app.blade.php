@@ -37,8 +37,6 @@
 
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"
-            crossorigin="anonymous"></script>
     @stack('head_scripts')
 </head>
 <body x-data class="min-h-screen bg-surface text-white antialiased">
