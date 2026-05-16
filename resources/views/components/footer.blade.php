@@ -4,8 +4,8 @@
 
             <!-- Brand Col -->
             <div class="md:col-span-4">
-                <div class="flex items-center gap-3 mb-5">
-                    <div class="h-14 w-14 flex-shrink-0" style="filter:drop-shadow(0 0 12px rgba(34,211,238,0.4))">
+                <div class="mb-5">
+                    <div class="h-40 w-40 mb-3" style="filter:drop-shadow(0 0 20px rgba(34,211,238,0.5))">
                         <img src="{{ asset('images/brand/mbs-symbol-160.png') }}"
                              alt="Mora Bangun Solutions"
                              width="160" height="118"
@@ -13,10 +13,10 @@
                              class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <span class="font-bold text-base tracking-tight">
+                        <span class="font-bold text-2xl tracking-tight">
                             Mora <span class="text-cyan-400">Bangun</span>
                         </span>
-                        <p class="text-slate-600 text-xs font-mono">Solutions</p>
+                        <p class="text-slate-500 text-sm font-mono tracking-widest uppercase mt-0.5">Solutions</p>
                     </div>
                 </div>
                 <p class="text-sm text-slate-500 leading-relaxed mb-6 font-body max-w-xs">
