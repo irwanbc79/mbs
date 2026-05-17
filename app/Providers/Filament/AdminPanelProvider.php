@@ -50,11 +50,11 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->darkMode(true)
             ->navigationGroups([
-                NavigationGroup::make('CRM')->icon('heroicon-o-users'),
-                NavigationGroup::make('Keuangan')->icon('heroicon-o-banknotes'),
-                NavigationGroup::make('Proyek')->icon('heroicon-o-briefcase'),
-                NavigationGroup::make('Support')->icon('heroicon-o-lifebuoy'),
-                NavigationGroup::make('Pengaturan')->icon('heroicon-o-cog-6-tooth'),
+                NavigationGroup::make('CRM'),
+                NavigationGroup::make('Keuangan'),
+                NavigationGroup::make('Proyek'),
+                NavigationGroup::make('Support'),
+                NavigationGroup::make('Pengaturan'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
