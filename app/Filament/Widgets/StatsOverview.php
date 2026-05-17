@@ -5,6 +5,7 @@ namespace App\Filament\Widgets;
 use App\Models\Invoice;
 use App\Models\Lead;
 use App\Models\Project;
+use App\Models\Ticket;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
@@ -14,9 +15,9 @@ class StatsOverview extends StatsOverviewWidget
 
     protected function getStats(): array
     {
-        $pendingInvoices  = Invoice::whereIn('status', ['sent', 'partial', 'overdue'])->count();
-        $pendingTotal     = Invoice::whereIn('status', ['sent', 'partial', 'overdue'])->sum('total')
-            - Invoice::whereIn('status', ['sent', 'partial', 'overdue'])->sum('paid_amount');
+        $pendingInvoiceAmount = Invoice::whereIn('status', ['sent', 'partial', 'overdue'])
+            ->selectRaw('SUM(total - paid_amount) as remaining')
+            ->value('remaining') ?? 0;
 
         return [
             Stat::make('Total Leads', Lead::count())
@@ -31,17 +32,17 @@ class StatsOverview extends StatsOverviewWidget
                 ->color('violet')
                 ->icon('heroicon-o-briefcase'),
 
-            Stat::make('Invoice Pending', $pendingInvoices)
-                ->description('Rp ' . number_format($pendingTotal, 0, ',', '.') . ' belum terbayar')
+            Stat::make('Invoice Pending', Invoice::whereIn('status', ['sent', 'partial', 'overdue'])->count())
+                ->description('Rp ' . number_format($pendingInvoiceAmount, 0, ',', '.') . ' belum terbayar')
                 ->descriptionIcon('heroicon-m-exclamation-circle')
                 ->color('amber')
                 ->icon('heroicon-o-document-text'),
 
-            Stat::make('Invoice Lunas', Invoice::where('status', 'paid')->count())
-                ->description('Rp ' . number_format(Invoice::where('status', 'paid')->sum('total'), 0, ',', '.') . ' terkumpul')
-                ->descriptionIcon('heroicon-m-check-circle')
+            Stat::make('Tiket Open', Ticket::whereIn('status', ['open', 'in_progress'])->count())
+                ->description(Ticket::where('status', 'open')->where('priority', 'urgent')->count() . ' tiket urgent')
+                ->descriptionIcon('heroicon-m-lifebuoy')
                 ->color('emerald')
-                ->icon('heroicon-o-banknotes'),
+                ->icon('heroicon-o-lifebuoy'),
         ];
     }
 }
