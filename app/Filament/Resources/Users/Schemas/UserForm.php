@@ -45,7 +45,6 @@ class UserForm
                                 },
                             ]))
                             ->multiple()
-                            ->preloaded()
                             ->required(),
                     ]),
             ]);
