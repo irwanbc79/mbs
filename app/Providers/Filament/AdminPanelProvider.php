@@ -11,12 +11,14 @@ use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\View\PanelsRenderHook;
 use Filament\Widgets\AccountWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\HtmlString;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class AdminPanelProvider extends PanelProvider
@@ -30,7 +32,17 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->brandName('MBS Admin')
             ->brandLogo(asset('images/brand/mbs-symbol-160.png'))
-            ->brandLogoHeight('2rem')
+            ->brandLogoHeight('4rem')
+            ->renderHook(
+                PanelsRenderHook::HEAD_END,
+                fn (): HtmlString => new HtmlString(<<<'STYLE'
+                    <style>
+                    @keyframes logoPulse{0%,100%{filter:drop-shadow(0 0 18px rgba(34,211,238,.55))}50%{filter:drop-shadow(0 0 32px rgba(34,211,238,.9))}}
+                    .fi-logo{animation:logoPulse 3s ease-in-out infinite}
+                    body{background-image:radial-gradient(ellipse 90% 50% at 50% -8%,rgba(6,182,212,.1) 0%,transparent 55%)}
+                    </style>
+                    STYLE)
+            )
             ->favicon(asset('favicon/favicon.svg'))
             ->colors([
                 'primary' => Color::Cyan,
