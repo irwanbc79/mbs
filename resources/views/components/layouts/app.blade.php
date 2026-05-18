@@ -32,36 +32,8 @@
     <meta name="twitter:description" content="{{ $ogDescription }}">
     <meta name="twitter:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
 
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "Organization",
-        "name": "Mora Bangun Solutions",
-        "url": "{{ config('app.url') }}",
-        "logo": "{{ asset('images/brand/logo.png') }}",
-        "contactPoint": {
-            "@@type": "ContactPoint",
-            "telephone": "+62-813-9999-7132",
-            "contactType": "customer service",
-            "areaServed": "ID",
-            "availableLanguage": "Indonesian"
-        },
-        "sameAs": []
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@@context": "https://schema.org",
-        "@@type": "WebSite",
-        "name": "Mora Bangun Solutions",
-        "url": "{{ config('app.url') }}",
-        "potentialAction": {
-            "@@type": "SearchAction",
-            "target": "{{ config('app.url') }}/blog?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
+    <script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'Organization','name'=>'Mora Bangun Solutions','url'=>config('app.url'),'logo'=>asset('images/brand/logo.png'),'contactPoint'=>['@type'=>'ContactPoint','telephone'=>'+62-813-9999-7132','contactType'=>'customer service','areaServed'=>'ID','availableLanguage'=>'Indonesian'],'sameAs'=>[]], JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}</script>
+    <script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'WebSite','name'=>'Mora Bangun Solutions','url'=>config('app.url'),'potentialAction'=>['@type'=>'SearchAction','target'=>config('app.url').'/blog?q={search_term_string}','query-input'=>'required name=search_term_string']], JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}</script>
     @stack('json_ld')
 
     <link rel="icon"             type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
