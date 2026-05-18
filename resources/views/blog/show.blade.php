@@ -13,19 +13,19 @@
 @push('json_ld')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "Article",
+    "@@context": "https://schema.org",
+    "@@type": "Article",
     "headline": "{{ $post->title }}",
     "description": "{{ $post->excerpt }}",
     "author": {
-        "@type": "Person",
+        "@@type": "Person",
         "name": "{{ $post->author_name }}"
     },
     "publisher": {
-        "@type": "Organization",
+        "@@type": "Organization",
         "name": "Mora Bangun Solutions",
         "logo": {
-            "@type": "ImageObject",
+            "@@type": "ImageObject",
             "url": "{{ asset('images/brand/logo.png') }}"
         }
     },
@@ -33,15 +33,15 @@
     "dateModified": "{{ $post->updated_at->toIso8601String() }}",
     "url": "{{ url()->current() }}",
     "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ url()->current() }}"
+        "@@type": "WebPage",
+        "@@id": "{{ url()->current() }}"
     },
     "breadcrumb": {
-        "@type": "BreadcrumbList",
+        "@@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Beranda","item":"{{ config('app.url') }}"},
-            {"@type":"ListItem","position":2,"name":"Blog","item":"{{ route('blog.index') }}"},
-            {"@type":"ListItem","position":3,"name":"{{ $post->title }}","item":"{{ url()->current() }}"}
+            {"@@type":"ListItem","position":1,"name":"Beranda","item":"{{ config('app.url') }}"},
+            {"@@type":"ListItem","position":2,"name":"Blog","item":"{{ route('blog.index') }}"},
+            {"@@type":"ListItem","position":3,"name":"{{ $post->title }}","item":"{{ url()->current() }}"}
         ]
     }
 }

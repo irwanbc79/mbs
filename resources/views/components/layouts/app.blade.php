@@ -34,13 +34,13 @@
 
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Organization",
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
         "name": "Mora Bangun Solutions",
         "url": "{{ config('app.url') }}",
         "logo": "{{ asset('images/brand/logo.png') }}",
         "contactPoint": {
-            "@type": "ContactPoint",
+            "@@type": "ContactPoint",
             "telephone": "+62-813-9999-7132",
             "contactType": "customer service",
             "areaServed": "ID",
@@ -51,12 +51,12 @@
     </script>
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
         "name": "Mora Bangun Solutions",
         "url": "{{ config('app.url') }}",
         "potentialAction": {
-            "@type": "SearchAction",
+            "@@type": "SearchAction",
             "target": "{{ config('app.url') }}/blog?q={search_term_string}",
             "query-input": "required name=search_term_string"
         }
