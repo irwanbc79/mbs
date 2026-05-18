@@ -1,6 +1,8 @@
-<x-layouts.app>
-@section('title', 'Blog — Mora Bangun Solutions')
-@section('description', 'Insight dan artikel terbaru tentang transformasi digital, ERP, CRM, AI, dan strategi teknologi untuk bisnis Indonesia.')
+<x-layouts.app
+    pageTitle="Blog — Mora Bangun Solutions"
+    metaDescription="Insight dan artikel terbaru tentang transformasi digital, ERP, CRM, AI, dan strategi teknologi untuk bisnis Indonesia."
+    ogTitle="Blog — Mora Bangun Solutions"
+    ogDescription="Insight dan artikel terbaru tentang transformasi digital, ERP, CRM, AI, dan strategi teknologi untuk bisnis Indonesia.">
 
 @push('head_scripts')
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"

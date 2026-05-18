@@ -1,10 +1,51 @@
-<x-layouts.app>
-@section('title', $post->title . ' — Mora Bangun Solutions Blog')
-@section('description', $post->excerpt)
+<x-layouts.app
+    :pageTitle="$post->title . ' — Mora Bangun Solutions Blog'"
+    :metaDescription="$post->excerpt"
+    :ogTitle="$post->title"
+    :ogDescription="$post->excerpt"
+    ogType="article">
 
 @push('head_scripts')
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"
         crossorigin="anonymous"></script>
+@endpush
+
+@push('json_ld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ $post->title }}",
+    "description": "{{ $post->excerpt }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ $post->author_name }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Mora Bangun Solutions",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ asset('images/brand/logo.png') }}"
+        }
+    },
+    "datePublished": "{{ $post->published_at->toIso8601String() }}",
+    "dateModified": "{{ $post->updated_at->toIso8601String() }}",
+    "url": "{{ url()->current() }}",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ url()->current() }}"
+    },
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Beranda","item":"{{ config('app.url') }}"},
+            {"@type":"ListItem","position":2,"name":"Blog","item":"{{ route('blog.index') }}"},
+            {"@type":"ListItem","position":3,"name":"{{ $post->title }}","item":"{{ url()->current() }}"}
+        ]
+    }
+}
+</script>
 @endpush
 
 

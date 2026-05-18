@@ -4,6 +4,7 @@
     'ogTitle'         => 'Mora Bangun Solutions — AI-Powered Enterprise Software',
     'ogDescription'   => 'Partner transformasi digital berbasis AI. ERP, CRM, Corporate Portal & Workflow Automation.',
     'ogImage'         => null,
+    'ogType'          => 'website',
 ])
 <!DOCTYPE html>
 <html lang="id" class="dark">
@@ -16,7 +17,10 @@
     <meta name="description" content="{{ $metaDescription }}">
     <meta name="keywords" content="ERP Indonesia, CRM Indonesia, Corporate Portal, Workflow Automation, AI Software, BUMN, digital transformation, Medan, Laravel, PHP">
 
-    <meta property="og:type"        content="website">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <meta property="og:type"        content="{{ $ogType }}">
+    <meta property="og:site_name"   content="Mora Bangun Solutions">
     <meta property="og:title"       content="{{ $ogTitle }}">
     <meta property="og:description" content="{{ $ogDescription }}">
     <meta property="og:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
@@ -27,6 +31,38 @@
     <meta name="twitter:title"       content="{{ $ogTitle }}">
     <meta name="twitter:description" content="{{ $ogDescription }}">
     <meta name="twitter:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Mora Bangun Solutions",
+        "url": "{{ config('app.url') }}",
+        "logo": "{{ asset('images/brand/logo.png') }}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-813-9999-7132",
+            "contactType": "customer service",
+            "areaServed": "ID",
+            "availableLanguage": "Indonesian"
+        },
+        "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mora Bangun Solutions",
+        "url": "{{ config('app.url') }}",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{{ config('app.url') }}/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    @stack('json_ld')
 
     <link rel="icon"             type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
     <link rel="icon"             type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
