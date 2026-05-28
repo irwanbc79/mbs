@@ -16,6 +16,7 @@
     <title>{{ $pageTitle }}</title>
     <meta name="description" content="{{ $metaDescription }}">
     <meta name="keywords" content="ERP Indonesia, CRM Indonesia, Corporate Portal, Workflow Automation, AI Software, BUMN, digital transformation, Medan, Laravel, PHP">
+    <meta name="google-adsense-account" content="ca-pub-5616961797801657">
 
     <link rel="canonical" href="{{ url()->current() }}">
 
@@ -32,8 +33,63 @@
     <meta name="twitter:description" content="{{ $ogDescription }}">
     <meta name="twitter:image"       content="{{ $ogImage ?? asset('images/og-default.png') }}">
 
-    <script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'Organization','name'=>'Mora Bangun Solutions','url'=>config('app.url'),'logo'=>asset('images/brand/logo.png'),'contactPoint'=>['@type'=>'ContactPoint','telephone'=>'+62-813-9999-7132','contactType'=>'customer service','areaServed'=>'ID','availableLanguage'=>'Indonesian'],'sameAs'=>[]], JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}</script>
-    <script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'WebSite','name'=>'Mora Bangun Solutions','url'=>config('app.url'),'potentialAction'=>['@type'=>'SearchAction','target'=>config('app.url').'/blog?q={search_term_string}','query-input'=>'required name=search_term_string']], JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}</script>
+@php
+    $schemaOrganization = [
+        '@context'    => 'https://schema.org',
+        '@type'       => 'Organization',
+        'name'        => 'Mora Bangun Solutions',
+        'url'         => config('app.url'),
+        'logo'        => [
+            '@type' => 'ImageObject',
+            'url'   => asset('images/brand/logo.png'),
+        ],
+        'contactPoint' => [
+            '@type'             => 'ContactPoint',
+            'telephone'         => '+62-813-9999-7132',
+            'contactType'       => 'customer service',
+            'areaServed'        => 'ID',
+            'availableLanguage' => ['Indonesian', 'English'],
+        ],
+        'address' => [
+            '@type'           => 'PostalAddress',
+            'streetAddress'   => 'Medan',
+            'addressLocality' => 'Medan',
+            'addressRegion'   => 'Sumatera Utara',
+            'postalCode'      => '20111',
+            'addressCountry'  => 'ID',
+        ],
+        'sameAs' => [
+            'https://www.linkedin.com/company/mora-bangun-solutions',
+        ],
+        'foundingDate'  => '2020',
+        'description'   => 'Partner transformasi digital berbasis AI dari Medan. Spesialis ERP, CRM, Corporate Portal & Workflow Automation untuk Korporasi, BUMN, dan UKM Indonesia.',
+        'knowsAbout'    => ['ERP System', 'CRM', 'Corporate Portal', 'Workflow Automation', 'AI Integration', 'Digital Transformation'],
+        'areaServed'    => [
+            '@type' => 'Country',
+            'name'  => 'Indonesia',
+        ],
+        'priceRange'    => '$$',
+    ];
+
+    $schemaWebSite = [
+        '@context'  => 'https://schema.org',
+        '@type'     => 'WebSite',
+        'name'      => 'Mora Bangun Solutions',
+        'url'       => config('app.url'),
+        'inLanguage' => 'id-ID',
+        'description' => 'AI-Powered Enterprise Software Indonesia — ERP, CRM, Corporate Portal & Workflow Automation.',
+        'potentialAction' => [
+            '@type'        => 'SearchAction',
+            'target'       => [
+                '@type'       => 'EntryPoint',
+                'urlTemplate' => config('app.url') . '/blog?q={search_term_string}',
+            ],
+            'query-input' => 'required name=search_term_string',
+        ],
+    ];
+@endphp
+    <script type="application/ld+json">{!! json_encode($schemaOrganization, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
+    <script type="application/ld+json">{!! json_encode($schemaWebSite, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
     @stack('json_ld')
 
     <link rel="icon"             type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
