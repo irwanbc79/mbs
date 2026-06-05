@@ -4,6 +4,7 @@
     <x-portfolio />
     <x-process />
     <x-tech-stack />
+    <x-hostinger-promo />
     <x-testimonials />
     <x-contact />
     <x-cta />

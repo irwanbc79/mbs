@@ -4,10 +4,12 @@
     ogTitle="Blog — Mora Bangun Solutions"
     ogDescription="Insight dan artikel terbaru tentang transformasi digital, ERP, CRM, AI, dan strategi teknologi untuk bisnis Indonesia.">
 
+@if(config('services.adsense.enabled') && config('services.adsense.client_id'))
 @push('head_scripts')
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('services.adsense.client_id') }}"
         crossorigin="anonymous"></script>
 @endpush
+@endif
 
 <div class="min-h-screen bg-surface">
 

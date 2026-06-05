@@ -5,13 +5,77 @@
     :ogDescription="$post->excerpt"
     ogType="article">
 
+@if(config('services.adsense.enabled') && config('services.adsense.client_id'))
 @push('head_scripts')
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5616961797801657"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('services.adsense.client_id') }}"
         crossorigin="anonymous"></script>
 @endpush
+@endif
 
 @push('json_ld')
-<script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'Article','headline'=>$post->title,'description'=>$post->excerpt,'author'=>['@type'=>'Person','name'=>$post->author_name],'publisher'=>['@type'=>'Organization','name'=>'Mora Bangun Solutions','logo'=>['@type'=>'ImageObject','url'=>asset('images/brand/logo.png')]],'datePublished'=>$post->published_at->toIso8601String(),'dateModified'=>$post->updated_at->toIso8601String(),'url'=>url()->current(),'mainEntityOfPage'=>['@type'=>'WebPage','@id'=>url()->current()],'breadcrumb'=>['@type'=>'BreadcrumbList','itemListElement'=>[['@type'=>'ListItem','position'=>1,'name'=>'Beranda','item'=>config('app.url')],['@type'=>'ListItem','position'=>2,'name'=>'Blog','item'=>route('blog.index')],['@type'=>'ListItem','position'=>3,'name'=>$post->title,'item'=>url()->current()]]]], JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}</script>
+@php
+    $schemaArticle = [
+        '@context'        => 'https://schema.org',
+        '@type'           => 'Article',
+        'headline'        => $post->title,
+        'description'     => $post->excerpt,
+        'articleBody'     => strip_tags($post->content ?? ''),
+        'author'          => [
+            '@type' => 'Person',
+            'name'  => $post->author_name,
+        ],
+        'publisher'       => [
+            '@type' => 'Organization',
+            'name'  => 'Mora Bangun Solutions',
+            'logo'  => [
+                '@type' => 'ImageObject',
+                'url'   => asset('images/brand/logo.png'),
+            ],
+        ],
+        'datePublished'    => $post->published_at->toIso8601String(),
+        'dateModified'     => $post->updated_at->toIso8601String(),
+        'url'              => url()->current(),
+        'mainEntityOfPage' => [
+            '@type' => 'WebPage',
+            '@id'   => url()->current(),
+        ],
+        'inLanguage'       => 'id-ID',
+        'keywords'         => is_array($post->tags)
+            ? implode(', ', $post->tags)
+            : ($post->tags ?? $post->category),
+        'articleSection'   => $post->category,
+        'breadcrumb'       => [
+            '@type'           => 'BreadcrumbList',
+            'itemListElement' => [
+                [
+                    '@type'   => 'ListItem',
+                    'position' => 1,
+                    'name'    => 'Beranda',
+                    'item'    => config('app.url'),
+                ],
+                [
+                    '@type'   => 'ListItem',
+                    'position' => 2,
+                    'name'    => 'Blog',
+                    'item'    => route('blog.index'),
+                ],
+                [
+                    '@type'   => 'ListItem',
+                    'position' => 3,
+                    'name'    => $post->category,
+                    'item'    => route('blog.index', ['category' => $post->category]),
+                ],
+                [
+                    '@type'   => 'ListItem',
+                    'position' => 4,
+                    'name'    => $post->title,
+                    'item'    => url()->current(),
+                ],
+            ],
+        ],
+    ];
+@endphp
+<script type="application/ld+json">{!! json_encode($schemaArticle, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
 @endpush
 
 
@@ -85,7 +149,7 @@
 
     {{-- ── AD: BANNER ATAS ARTIKEL ── --}}
     <div class="container-max max-w-4xl px-6 lg:px-0 -mt-4 mb-2">
-        @include('partials.adsense', ['type' => 'horizontal', 'slot' => ''])
+        @include('partials.adsense', ['type' => 'horizontal', 'slot' => config('services.adsense.slots.top')])
     </div>
 
     {{-- ── ARTICLE BODY ── --}}
@@ -143,7 +207,7 @@
                         </div>
 
                         {{-- AdSense Rectangle --}}
-                        @include('partials.adsense', ['type' => 'rectangle', 'slot' => ''])
+                        @include('partials.adsense', ['type' => 'rectangle', 'slot' => config('services.adsense.slots.sidebar')])
 
                         {{-- CTA --}}
                         <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 text-center">
@@ -161,7 +225,7 @@
             </div>
 
             {{-- ── AD: BANNER BAWAH ARTIKEL ── --}}
-            @include('partials.adsense', ['type' => 'horizontal', 'slot' => ''])
+            @include('partials.adsense', ['type' => 'horizontal', 'slot' => config('services.adsense.slots.bottom')])
 
             {{-- ── RELATED POSTS ── --}}
             @if($related->count())

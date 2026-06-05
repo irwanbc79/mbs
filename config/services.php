@@ -35,4 +35,15 @@ return [
         ],
     ],
 
+    'adsense' => [
+        'enabled' => env('ADSENSE_ENABLED', false),
+        'client_id' => env('ADSENSE_CLIENT_ID', 'ca-pub-5616961797801657'),
+        'slots' => [
+            'top' => env('ADSENSE_SLOT_TOP'),
+            'sidebar' => env('ADSENSE_SLOT_SIDEBAR'),
+            'bottom' => env('ADSENSE_SLOT_BOTTOM'),
+        ],
+    ],
+
+
 ];
