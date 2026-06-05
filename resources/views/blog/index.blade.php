@@ -84,15 +84,20 @@
                             {{ $featured->category }}
                         </span>
                     </div>
-                    <div class="relative h-48 bg-gradient-to-br from-cyan-950 via-slate-900 to-slate-950 overflow-hidden">
+                    <div class="relative h-64 md:h-80 bg-gradient-to-br from-cyan-950 via-slate-900 to-slate-950 overflow-hidden">
                         <div class="absolute inset-0 grid-bg opacity-20"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-cyan-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
+                        @if($featured->featured_image)
+                            <img src="{{ $featured->featured_image }}" alt="{{ $featured->title }}" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent"></div>
+                        @else
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+                                    <svg class="w-10 h-10 text-cyan-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
+                        @endif
                     </div>
                     <div class="p-6">
                         <h2 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-2 leading-snug">
@@ -123,7 +128,7 @@
                         @endif
                         <a href="{{ route('blog.show', $post->slug) }}"
                            class="group flex flex-col rounded-2xl border border-slate-800/60 bg-slate-900/30 overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-500/5">
-                            <div class="h-32 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
+                            <div class="h-44 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
                                 <div class="absolute inset-0 grid-bg opacity-20"></div>
                                 @php
                                     $colorMap = [
@@ -135,11 +140,16 @@
                                     ];
                                     $iconColor = $colorMap[$post->category_color] ?? 'text-cyan-500/50';
                                 @endphp
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg class="w-8 h-8 {{ $iconColor }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                    </svg>
-                                </div>
+                                @if($post->featured_image)
+                                    <img src="{{ $post->featured_image }}" alt="{{ $post->title }}" class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent"></div>
+                                @else
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <svg class="w-8 h-8 {{ $iconColor }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </div>
+                                @endif
                                 <div class="absolute top-3 left-3">
                                     @php
                                         $badgeMap = [

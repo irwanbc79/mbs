@@ -168,6 +168,11 @@
                     prose-ol:text-slate-400 prose-ol:font-body
                     prose-li:my-1
                     prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:text-cyan-300">
+                    @if($post->featured_image)
+                        <div class="mb-8 rounded-2xl overflow-hidden border border-slate-800/60 bg-slate-950/50 relative" style="aspect-ratio:16/9">
+                            <img src="{{ $post->featured_image }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+                        </div>
+                    @endif
                     {!! $post->content !!}
                 </article>
 
@@ -235,8 +240,12 @@
                     @foreach($related as $rel)
                     <a href="{{ route('blog.show', $rel->slug) }}"
                        class="group flex flex-col rounded-2xl border border-slate-800/60 bg-slate-900/30 overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1">
-                        <div class="h-24 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
+                        <div class="h-32 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
                             <div class="absolute inset-0 grid-bg opacity-20"></div>
+                            @if($rel->featured_image)
+                                <img src="{{ $rel->featured_image }}" alt="{{ $rel->title }}" class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent"></div>
+                            @endif
                         </div>
                         <div class="p-4 flex flex-col flex-1">
                             <p class="text-xs text-cyan-400 mb-1.5">{{ $rel->category }}</p>
