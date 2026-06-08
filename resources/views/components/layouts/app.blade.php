@@ -15,7 +15,11 @@
 
     <title>{{ $pageTitle }}</title>
     <meta name="description" content="{{ $metaDescription }}">
+    @hasSection('keywords')
+    <meta name="keywords" content="@yield('keywords')">
+    @else
     <meta name="keywords" content="ERP Indonesia, CRM Indonesia, Corporate Portal, Workflow Automation, AI Software, BUMN, digital transformation, Medan, Laravel, PHP">
+    @endif
     <meta name="google-adsense-account" content="ca-pub-5616961797801657">
 
     <link rel="canonical" href="{{ url()->current() }}">

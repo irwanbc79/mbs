@@ -9,6 +9,7 @@ class Post extends Model
     protected $fillable = [
         'title', 'slug', 'category', 'category_color', 'excerpt', 'content',
         'author_name', 'author_role', 'reading_time', 'tags', 'is_featured', 'published_at',
+        'featured_image',
     ];
 
     protected $casts = [

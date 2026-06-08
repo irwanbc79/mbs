@@ -26,9 +26,9 @@ class BlogController extends Controller
         }
 
         $posts      = $query->paginate(6)->withQueryString();
-        $featured   = Post::published()->where('is_featured', true)->latest('published_at')->first();
+        $featured   = Post::published()->latest('published_at')->first();
         $categories = Post::published()->select('category', 'category_color')
-                         ->distinct()->orderBy('category')->get();
+                         ->orderBy('category')->get()->unique('category');
         $popular    = Post::published()->orderBy('reading_time', 'desc')->limit(4)->get();
 
         return view('blog.index', compact('posts', 'featured', 'categories', 'popular', 'category', 'search'));

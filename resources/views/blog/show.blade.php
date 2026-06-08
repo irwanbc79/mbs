@@ -5,12 +5,124 @@
     :ogDescription="$post->excerpt"
     ogType="article">
 
+@php
+    $keywords = is_array($post->tags) ? implode(', ', $post->tags) : ($post->tags ?: $post->category);
+@endphp
+@section('keywords', $keywords)
+
 @if(config('services.adsense.enabled') && config('services.adsense.client_id'))
 @push('head_scripts')
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('services.adsense.client_id') }}"
         crossorigin="anonymous"></script>
 @endpush
 @endif
+
+@push('head_scripts')
+<style>
+.prose-mora {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #94a3b8; /* slate-400 */
+}
+.prose-mora p {
+    margin-bottom: 1.5em; /* Jarak antar paragraf */
+}
+.prose-mora h2, .prose-mora h3, .prose-mora h4 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 1.8em;
+    margin-bottom: 0.6em;
+    line-height: 1.3;
+}
+.prose-mora h2 {
+    font-size: 22px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 8px;
+    color: #22d3ee;
+}
+.prose-mora h3 {
+    font-size: 18px;
+    color: #e2e8f0;
+}
+.prose-mora strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+.prose-mora em {
+    color: #cbd5e1;
+    font-style: italic;
+}
+.prose-mora a {
+    color: #22d3ee;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+}
+.prose-mora a:hover {
+    color: #67e8f9;
+}
+.prose-mora ul, .prose-mora ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+    list-style-position: outside;
+}
+.prose-mora ul {
+    list-style-type: disc;
+}
+.prose-mora ol {
+    list-style-type: decimal;
+}
+.prose-mora li {
+    margin-bottom: 0.5em;
+}
+.prose-mora blockquote {
+    border-left: 4px solid #06b6d4;
+    padding: 12px 20px;
+    margin: 24px 0;
+    background: #0f172a;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #cbd5e1;
+}
+.prose-mora figure {
+    margin: 24px 0;
+    text-align: center;
+}
+.prose-mora figcaption {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 8px;
+    font-style: italic;
+}
+.prose-mora table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+}
+.prose-mora th {
+    background: #0f172a;
+    color: #22d3ee;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+}
+.prose-mora td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #1e293b;
+    color: #94a3b8;
+}
+.prose-mora tr:last-child td {
+    border-bottom: none;
+}
+.prose-mora tr:nth-child(even) td {
+    background: #090d16;
+}
+</style>
+@endpush
 
 @push('json_ld')
 @php
@@ -158,22 +270,15 @@
             <div class="grid lg:grid-cols-[1fr_260px] gap-12">
 
                 {{-- Article Content --}}
-                <article class="prose prose-invert prose-slate max-w-none
-                    prose-headings:font-bold prose-headings:tracking-tight
-                    prose-h2:text-2xl prose-h2:text-white prose-h2:mt-10 prose-h2:mb-4
-                    prose-h3:text-lg prose-h3:text-slate-200 prose-h3:mt-6 prose-h3:mb-3
-                    prose-p:text-slate-400 prose-p:leading-relaxed prose-p:font-body
-                    prose-strong:text-white
-                    prose-ul:text-slate-400 prose-ul:font-body
-                    prose-ol:text-slate-400 prose-ol:font-body
-                    prose-li:my-1
-                    prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:text-cyan-300">
+                <article class="prose-mora max-w-none">
                     @if($post->featured_image)
                         <div class="mb-8 rounded-2xl overflow-hidden border border-slate-800/60 bg-slate-950/50 relative" style="aspect-ratio:16/9">
                             <img src="{{ $post->featured_image }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
                         </div>
                     @endif
+                    <!-- google_ad_section_start -->
                     {!! $post->content !!}
+                    <!-- google_ad_section_end -->
                 </article>
 
                 {{-- Sticky Sidebar --}}

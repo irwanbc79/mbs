@@ -123,7 +123,7 @@
                 @if($posts->count())
                     <div class="grid sm:grid-cols-2 gap-6">
                         @foreach($posts as $post)
-                        @if($post->is_featured && !$search && !$category)
+                        @if($featured && $post->id === $featured->id && !$search && !$category)
                             @continue
                         @endif
                         <a href="{{ route('blog.show', $post->slug) }}"
