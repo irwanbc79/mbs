@@ -217,6 +217,92 @@
                 ],
             ],
         ],
+        'moratrade' => [
+            'color' => 'cyan',
+            'name_id' => 'MoraTrade AI',
+            'name_en' => 'MoraTrade AI',
+            'tagline_id' => 'Otomasi Pabean & Logistik H2H Bea Cukai (CEISA 4.0, AI OCR, & Shipment Tracking).',
+            'tagline_en' => 'Customs & Logistics H2H Bea Cukai Automation (CEISA 4.0, AI OCR, & Shipment Tracking).',
+            'tiers' => [
+                [
+                    'badge' => 'CUSTOMS AI LITE', 'price' => '25.000.000', 'price_from' => true,
+                    'desc_id' => 'Ekstraksi dokumen pabean otomatis (OCR) & pembuatan draf PIB/PEB siap kirim.',
+                    'desc_en' => 'Auto customs document extraction (OCR) & ready-to-submit PIB/PEB draft generation.',
+                    'features_id' => [
+                        'AI OCR Invoice & Packing List',
+                        'Draft PIB / PEB Generator',
+                        'HS Code database & tariff calculation',
+                        'Export data ke excel / XML pabean',
+                        'Maks. 3 user aktif',
+                        'Training & Setup Dasar'
+                    ],
+                    'features_en' => [
+                        'AI OCR Invoice & Packing List',
+                        'Draft PIB / PEB Generator',
+                        'HS Code database & tariff calculation',
+                        'Export data to excel / customs XML',
+                        'Max 3 active users',
+                        'Training & Basic Setup'
+                    ],
+                    'target_id' => 'PPJK kecil, Importir/Eksportir pemula (kargo ≤ 20 shipment/bulan)',
+                    'target_en' => 'Small PPJK, beginner importers/exporters (≤ 20 shipments/month)',
+                ],
+                [
+                    'badge' => 'CEISA H2H SUITE', 'featured' => true, 'price' => '65.000.000', 'price_from' => true,
+                    'desc_id' => 'Integrasi API Host-to-Host langsung ke gateway CEISA Bea Cukai dengan AI Compliance Guard.',
+                    'desc_en' => 'Direct API Host-to-Host integration to CEISA Bea Cukai gateway with AI Compliance Guard.',
+                    'features_id' => [
+                        'Semua fitur Customs AI Lite',
+                        'Koneksi API H2H Bea Cukai (openapi.beacukai.go.id)',
+                        'AI Compliance Guard (Pre-submit Validator)',
+                        'Auto-Submit PIB / PEB ke CEISA 4.0',
+                        'Sync status respon DJBC (SPJM, SPPB, NPE)',
+                        'Notifikasi otomatis WhatsApp/email ke klien',
+                        'Maks. 15 user aktif',
+                        'Setup Security & SSL VPN Bea Cukai'
+                    ],
+                    'features_en' => [
+                        'All Customs AI Lite features',
+                        'Direct CEISA H2H API connection',
+                        'AI Compliance Guard (Pre-submit Validator)',
+                        'Auto-Submit PIB / PEB to CEISA 4.0',
+                        'DJP status sync (SPJM, SPPB, NPE)',
+                        'Auto WhatsApp/email notifications to clients',
+                        'Max 15 active users',
+                        'Setup Security & SSL VPN Bea Cukai'
+                    ],
+                    'target_id' => 'Freight Forwarder menengah, PPJK besar, Perusahaan dagang/trading aktif',
+                    'target_en' => 'Mid-size Freight Forwarders, large PPJK, active trading companies',
+                ],
+                [
+                    'badge' => 'CUSTOMS ENTERPRISE', 'price' => 'CUSTOM',
+                    'desc_id' => 'Sistem pabean & logistik custom terintegrasi penuh ke Core ERP/WMS perusahaan.',
+                    'desc_en' => 'Custom customs & logistics system fully integrated to company\'s Core ERP/WMS.',
+                    'features_id' => [
+                        'Semua fitur CEISA H2H Suite',
+                        'Integrasi penuh ke SAP / Oracle / Odoo existing',
+                        'Custom workflow multi-cabang & multi-entitas',
+                        'AI-Powered Intelligent Duty Optimization',
+                        'Dedicated VM/Server Hosting',
+                        'SLA Response & Support 24/7',
+                        'Source Code Ownership Penuh',
+                        'Dedicated Account Manager'
+                    ],
+                    'features_en' => [
+                        'All CEISA H2H Suite features',
+                        'Full integration to existing SAP / Oracle / Odoo',
+                        'Multi-branch & multi-entity custom workflows',
+                        'AI-Powered Intelligent Duty Optimization',
+                        'Dedicated VM/Server Hosting',
+                        '24/7 SLA Response & Support',
+                        'Full Source Code Ownership',
+                        'Dedicated Account Manager'
+                    ],
+                    'target_id' => 'Distributor multinasional, BUMN logistik, Kawasan Berikat/TPB besar',
+                    'target_en' => 'Multinational distributors, logistics SOEs, large Bonded Zones',
+                ],
+            ],
+        ],
     ];
 @endphp
 

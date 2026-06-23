@@ -1,6 +1,7 @@
 <x-layouts.app>
     <x-hero />
     <x-services />
+    <x-flagship-product />
     <x-portfolio />
     <x-process />
     <x-tech-stack />

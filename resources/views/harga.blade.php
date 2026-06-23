@@ -36,6 +36,15 @@ document.addEventListener('alpine:init', () => {
                     { label_id: 'Website lengkap yang bisa dikelola sendiri', label_en: 'Full website you can manage yourself', value: 'enterprise' },
                     { label_id: 'Sistem custom + integrasi ERP/API', label_en: 'Custom system + ERP/API integration', value: 'corporate' },
                 ]
+            },
+            {
+                key: 'logistics',
+                q_id: 'Apakah bisnis Anda memerlukan integrasi bea cukai (CEISA 4.0) atau logistik ekspor-impor?',
+                q_en: 'Does your business require customs (CEISA 4.0) or export-import logistics integration?',
+                options: [
+                    { label_id: 'Ya, kami butuh otomasi pabean / H2H CEISA', label_en: 'Yes, we need customs automation / CEISA H2H', value: 'moratrade' },
+                    { label_id: 'Tidak, kami tidak memerlukan sistem logistik khusus', label_en: 'No, we do not need custom logistics systems', value: 'no' }
+                ]
             }
         ],
 
@@ -49,14 +58,29 @@ document.addEventListener('alpine:init', () => {
         },
 
         calcRecommendation() {
-            const score = { starter: 0, professional: 0, enterprise: 0, corporate: 0 };
-            Object.values(this.quizAnswers).forEach(v => { if (score[v] !== undefined) score[v]++; });
-            this.recommended = Object.keys(score).reduce((a, b) => score[a] >= score[b] ? a : b);
-            this.quizStep = 99;
-            this.$nextTick(() => {
-                const el = document.getElementById('pkg-' + this.recommended);
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            });
+            if (this.quizAnswers['logistics'] === 'moratrade') {
+                this.recommended = 'corporate';
+                this.quizStep = 99;
+                this.$nextTick(() => {
+                    const el = document.getElementById('pkg-corporate');
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    setTimeout(() => {
+                        window.dispatchEvent(new CustomEvent('set-active-tab', { detail: 'moratrade' }));
+                        const tabEl = document.getElementById('enterprise-pricing-tabs');
+                        if (tabEl) tabEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 800);
+                });
+            } else {
+                const score = { starter: 0, professional: 0, enterprise: 0, corporate: 0 };
+                Object.values(this.quizAnswers).forEach(v => { if (score[v] !== undefined) score[v]++; });
+                this.recommended = Object.keys(score).reduce((a, b) => score[a] >= score[b] ? a : b);
+                this.quizStep = 99;
+                this.$nextTick(() => {
+                    const el = document.getElementById('pkg-' + this.recommended);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
         },
 
         resetQuiz() {
@@ -66,6 +90,9 @@ document.addEventListener('alpine:init', () => {
         },
 
         pkgLabel(key) {
+            if (this.quizAnswers['logistics'] === 'moratrade') {
+                return 'CORPORATE (MoraTrade AI Suite)';
+            }
             const labels = { starter: 'STARTER', professional: 'PROFESSIONAL', enterprise: 'ENTERPRISE', corporate: 'CORPORATE' };
             return labels[key] || key;
         }
@@ -376,6 +403,7 @@ document.addEventListener('alpine:init', () => {
                             'Semua fitur Paket Enterprise',
                             'Multi-user login dengan role & permission',
                             'Custom web application (bukan template)',
+                            'Otomasi Pabean (CEISA H2H & MoraTrade AI)',
                             'Customer portal (tracking order/status)',
                             'Dashboard analytics & laporan eksekutif',
                             'Integrasi API ke ERP / Odoo / Accurate',
@@ -431,7 +459,7 @@ document.addEventListener('alpine:init', () => {
 </section>
 
 {{-- ── ENTERPRISE SOLUTIONS PRICING (ERP, CRM, Portal, AI) ── --}}
-<section class="section-padding bg-slate-950/40 border-t border-white/5" x-data="{ activeTab: 'erp' }">
+<section id="enterprise-pricing-tabs" class="section-padding bg-slate-950/40 border-t border-white/5" x-data="{ activeTab: 'erp' }" @set-active-tab.window="activeTab = $event.detail">
     <div class="container-max px-6 lg:px-24">
 
         {{-- Header --}}
@@ -458,6 +486,7 @@ document.addEventListener('alpine:init', () => {
                     ['key'=>'crm',    'id'=>'CRM',                'en'=>'CRM',               'color'=>'blue',    'icon'=>'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'],
                     ['key'=>'portal', 'id'=>'Corporate Portal',   'en'=>'Corporate Portal',  'color'=>'violet',  'icon'=>'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'],
                     ['key'=>'ai',     'id'=>'AI Workflow',        'en'=>'AI Workflow',       'color'=>'amber',   'icon'=>'M13 10V3L4 14h7v7l9-11h-7z'],
+                    ['key'=>'moratrade','id'=>'MoraTrade AI',     'en'=>'MoraTrade AI',      'color'=>'cyan',    'icon'=>'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'],
                     ['key'=>'chatbot','id'=>'Chatbot AI',         'en'=>'AI Chatbot',        'color'=>'emerald', 'icon'=>'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'],
                     ['key'=>'custom', 'id'=>'Custom Dev',         'en'=>'Custom Dev',        'color'=>'amber',   'icon'=>'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'],
                 ];
@@ -521,6 +550,8 @@ document.addEventListener('alpine:init', () => {
                         ['Chatbot AI', false, false, false, true],
                         ['Custom web app', false, false, false, true],
                         ['Integrasi ERP/API', false, false, false, true],
+                        ['Otomasi Pabean (CEISA H2H)', false, false, false, 'Opsional (MoraTrade AI)'],
+                        ['AI OCR Dokumen Ekspor-Impor', false, false, false, 'Opsional (MoraTrade AI)'],
                         ['Speed optimization', false, 'Dasar', 'PageSpeed 90+', 'Core Web Vitals'],
                         ['Maintenance', false, 'Bug-fix 30 hari', '6 bulan', '12 bulan'],
                         ['Revisi desain', '1×', '3×', 'Unlimited', 'Unlimited'],
