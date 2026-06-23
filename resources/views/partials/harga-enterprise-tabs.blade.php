@@ -225,81 +225,85 @@
             'tagline_en' => 'Customs & Logistics H2H Bea Cukai Automation (CEISA 4.0, AI OCR, & Shipment Tracking).',
             'tiers' => [
                 [
-                    'badge' => 'CUSTOMS AI LITE', 'price' => '25.000.000', 'price_from' => true,
-                    'desc_id' => 'Ekstraksi dokumen pabean otomatis (OCR) & pembuatan draf PIB/PEB siap kirim.',
-                    'desc_en' => 'Auto customs document extraction (OCR) & ready-to-submit PIB/PEB draft generation.',
+                    'badge' => 'SaaS STARTER (UMKM)', 'price' => '499.000', 'price_from' => false, 'period' => '/ bulan',
+                    'desc_id' => 'Diskon khusus UMKM. Solusi cloud pabean instan tanpa biaya setup server. Kuota 25 dokumen/bulan.',
+                    'desc_en' => 'Special SME discount. Instant cloud customs solution with zero server setup cost. Quota of 25 docs/month.',
                     'features_id' => [
                         'AI OCR Invoice & Packing List',
                         'Draft PIB / PEB Generator',
-                        'HS Code database & tariff calculation',
-                        'Export data ke excel / XML pabean',
-                        'Maks. 3 user aktif',
-                        'Training & Setup Dasar'
+                        'HS Code Database & Tariff Calc',
+                        'Akses Web Portal MoraTrade AI',
+                        'Notifikasi WhatsApp & Email',
+                        'Kelebihan kuota: Rp 15.000 / dokumen',
+                        'Maks. 2 user aktif',
+                        'Shared H2H Cloud Gateway'
                     ],
                     'features_en' => [
                         'AI OCR Invoice & Packing List',
                         'Draft PIB / PEB Generator',
-                        'HS Code database & tariff calculation',
-                        'Export data to excel / customs XML',
-                        'Max 3 active users',
-                        'Training & Basic Setup'
+                        'HS Code Database & Tariff Calc',
+                        'MoraTrade AI Web Portal Access',
+                        'WhatsApp & Email Notifications',
+                        'Excess quota: Rp 15,000 / document',
+                        'Max 2 active users',
+                        'Shared H2H Cloud Gateway'
                     ],
-                    'target_id' => 'PPJK kecil, Importir/Eksportir pemula (kargo ≤ 20 shipment/bulan)',
-                    'target_en' => 'Small PPJK, beginner importers/exporters (≤ 20 shipments/month)',
+                    'target_id' => 'UMKM, eksportir/importir pemula dengan volume kargo kecil (≤ 25 shipment/bulan)',
+                    'target_en' => 'SMEs, beginner exporters/importers with small cargo volume (≤ 25 shipments/month)',
                 ],
                 [
-                    'badge' => 'CEISA H2H SUITE', 'featured' => true, 'price' => '65.000.000', 'price_from' => true,
-                    'desc_id' => 'Integrasi API Host-to-Host langsung ke gateway CEISA Bea Cukai dengan AI Compliance Guard.',
-                    'desc_en' => 'Direct API Host-to-Host integration to CEISA Bea Cukai gateway with AI Compliance Guard.',
+                    'badge' => 'SaaS PRO (FORWARDER)', 'featured' => true, 'price' => '1.990.000', 'price_from' => false, 'period' => '/ bulan',
+                    'desc_id' => 'Akses pabean H2H terotomasi dengan AI Compliance Guard. Kuota 150 dokumen/bulan.',
+                    'desc_en' => 'Automated H2H customs access with AI Compliance Guard. Quota of 150 docs/month.',
                     'features_id' => [
-                        'Semua fitur Customs AI Lite',
-                        'Koneksi API H2H Bea Cukai (openapi.beacukai.go.id)',
-                        'AI Compliance Guard (Pre-submit Validator)',
-                        'Auto-Submit PIB / PEB ke CEISA 4.0',
+                        'Semua fitur SaaS Starter',
+                        'AI Compliance Guard (Pre-submit Auditor)',
+                        'Auto-Submit PIB/PEB ke CEISA 4.0',
                         'Sync status respon DJBC (SPJM, SPPB, NPE)',
-                        'Notifikasi otomatis WhatsApp/email ke klien',
-                        'Maks. 15 user aktif',
-                        'Setup Security & SSL VPN Bea Cukai'
+                        'API Access untuk integrasi internal',
+                        'Kelebihan kuota: Rp 12.000 / dokumen',
+                        'Maks. 5 user aktif',
+                        'Shared H2H Cloud Gateway'
                     ],
                     'features_en' => [
-                        'All Customs AI Lite features',
-                        'Direct CEISA H2H API connection',
-                        'AI Compliance Guard (Pre-submit Validator)',
-                        'Auto-Submit PIB / PEB to CEISA 4.0',
+                        'All SaaS Starter features',
+                        'AI Compliance Guard (Pre-submit Auditor)',
+                        'Auto-Submit PIB/PEB to CEISA 4.0',
                         'DJP status sync (SPJM, SPPB, NPE)',
-                        'Auto WhatsApp/email notifications to clients',
-                        'Max 15 active users',
-                        'Setup Security & SSL VPN Bea Cukai'
+                        'API Access for internal integration',
+                        'Excess quota: Rp 12,000 / document',
+                        'Max 5 active users',
+                        'Shared H2H Cloud Gateway'
                     ],
-                    'target_id' => 'Freight Forwarder menengah, PPJK besar, Perusahaan dagang/trading aktif',
-                    'target_en' => 'Mid-size Freight Forwarders, large PPJK, active trading companies',
+                    'target_id' => 'Freight Forwarder menengah, PPJK aktif, perusahaan trading (≤ 150 shipment/bulan)',
+                    'target_en' => 'Mid-size Freight Forwarders, active PPJK, trading companies (≤ 150 shipments/month)',
                 ],
                 [
-                    'badge' => 'CUSTOMS ENTERPRISE', 'price' => 'CUSTOM',
-                    'desc_id' => 'Sistem pabean & logistik custom terintegrasi penuh ke Core ERP/WMS perusahaan.',
-                    'desc_en' => 'Custom customs & logistics system fully integrated to company\'s Core ERP/WMS.',
+                    'badge' => 'ON-PREMISE ENTERPRISE', 'price' => '65.000.000', 'price_from' => true, 'period' => 'sekali bayar',
+                    'desc_id' => 'Instalasi dedicated server mandiri. Integrasi pabean H2H & ERP penuh tanpa batasan dokumen.',
+                    'desc_en' => 'Dedicated self-hosted server installation. Full H2H customs & ERP integration with unlimited documents.',
                     'features_id' => [
-                        'Semua fitur CEISA H2H Suite',
-                        'Integrasi penuh ke SAP / Oracle / Odoo existing',
-                        'Custom workflow multi-cabang & multi-entitas',
-                        'AI-Powered Intelligent Duty Optimization',
+                        'Semua fitur SaaS Pro',
+                        'Dedicated H2H Gateway VPN Bea Cukai',
+                        'Integrasi penuh ke SAP / Oracle / Odoo',
+                        'Hak Milik Source Code (Ownership Penuh)',
+                        'Tanpa Batasan Dokumen (Unlimited)',
+                        'Kustomisasi workflow multi-cabang',
                         'Dedicated VM/Server Hosting',
-                        'SLA Response & Support 24/7',
-                        'Source Code Ownership Penuh',
-                        'Dedicated Account Manager'
+                        'SLA Response & Support 24/7'
                     ],
                     'features_en' => [
-                        'All CEISA H2H Suite features',
-                        'Full integration to existing SAP / Oracle / Odoo',
-                        'Multi-branch & multi-entity custom workflows',
-                        'AI-Powered Intelligent Duty Optimization',
-                        'Dedicated VM/Server Hosting',
-                        '24/7 SLA Response & Support',
+                        'All SaaS Pro features',
+                        'Dedicated H2H Gateway VPN Bea Cukai',
+                        'Full SAP / Oracle / Odoo integration',
                         'Full Source Code Ownership',
-                        'Dedicated Account Manager'
+                        'Unlimited Documents & Users',
+                        'Multi-branch workflow customization',
+                        'Dedicated VM/Server Hosting',
+                        '24/7 SLA Response & Support'
                     ],
-                    'target_id' => 'Distributor multinasional, BUMN logistik, Kawasan Berikat/TPB besar',
-                    'target_en' => 'Multinational distributors, logistics SOEs, large Bonded Zones',
+                    'target_id' => 'BUMN logistik, importir besar, PPJK nasional, Kawasan Berikat/TPB',
+                    'target_en' => 'Logistics SOEs, large importers, national PPJK, Bonded Zones',
                 ],
             ],
         ],
@@ -353,6 +357,11 @@
                                 @endif
                                 <span class="text-sm font-semibold text-slate-400 mb-2">Rp</span>
                                 <span class="text-3xl md:text-4xl font-black text-white tracking-tight">{{ $tier['price'] }}</span>
+                                @if(isset($tier['period']))
+                                    <span class="text-xs text-slate-500 mb-1.5 ml-0.5 font-body">
+                                        {{ $tier['period'] }}
+                                    </span>
+                                @endif
                             @endif
                         </div>
                     </div>

@@ -91,7 +91,14 @@ document.addEventListener('alpine:init', () => {
 
         pkgLabel(key) {
             if (this.quizAnswers['logistics'] === 'moratrade') {
-                return 'CORPORATE (MoraTrade AI Suite)';
+                const scale = this.quizAnswers['size'] || 'starter';
+                if (scale === 'starter' || scale === 'professional') {
+                    return 'MoraTrade SaaS Starter (UMKM Special)';
+                } else if (scale === 'enterprise') {
+                    return 'MoraTrade SaaS Pro (Forwarder)';
+                } else {
+                    return 'MoraTrade On-Premise Enterprise';
+                }
             }
             const labels = { starter: 'STARTER', professional: 'PROFESSIONAL', enterprise: 'ENTERPRISE', corporate: 'CORPORATE' };
             return labels[key] || key;
@@ -552,6 +559,27 @@ document.addEventListener('alpine:init', () => {
                         ['Integrasi ERP/API', false, false, false, true],
                         ['Otomasi Pabean (CEISA H2H)', false, false, false, 'Opsional (MoraTrade AI)'],
                         ['AI OCR Dokumen Ekspor-Impor', false, false, false, 'Opsional (MoraTrade AI)'],
+                        [
+                            ['id' => 'Langganan SaaS Cloud', 'en' => 'SaaS Cloud Subscription'],
+                            false,
+                            false,
+                            false,
+                            ['id' => 'Tersedia (Mulai Rp 499rb/bln)', 'en' => 'Available (From Rp 499k/mo)']
+                        ],
+                        [
+                            ['id' => 'Kuota Dokumen Bulanan', 'en' => 'Monthly Document Quota'],
+                            false,
+                            false,
+                            false,
+                            ['id' => '25 dok (Starter) / 150 dok (Pro) / Unlimited (On-Premise)', 'en' => '25 docs (Starter) / 150 docs (Pro) / Unlimited (On-Premise)']
+                        ],
+                        [
+                            ['id' => 'Biaya Kelebihan Dokumen', 'en' => 'Excess Document Fee'],
+                            false,
+                            false,
+                            false,
+                            ['id' => 'Rp 15k (Starter) / Rp 12k (Pro) / Bebas (On-Premise)', 'en' => 'Rp 15k (Starter) / Rp 12k (Pro) / Free (On-Premise)']
+                        ],
                         ['Speed optimization', false, 'Dasar', 'PageSpeed 90+', 'Core Web Vitals'],
                         ['Maintenance', false, 'Bug-fix 30 hari', '6 bulan', '12 bulan'],
                         ['Revisi desain', '1×', '3×', 'Unlimited', 'Unlimited'],
@@ -562,13 +590,25 @@ document.addEventListener('alpine:init', () => {
                     @endphp
                     @foreach($rows as $row)
                     <tr class="hover:bg-white/[0.02] transition-colors">
-                        <td class="px-4 py-2.5 text-slate-400 font-body text-xs">{{ $row[0] }}</td>
+                        <td class="px-4 py-2.5 text-slate-400 font-body text-xs">
+                            @if(is_array($row[0]))
+                                <span x-show="$store.locale === 'id'">{{ $row[0]['id'] }}</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>{{ $row[0]['en'] }}</span>
+                            @else
+                                {{ $row[0] }}
+                            @endif
+                        </td>
                         @foreach([1, 2, 3, 4] as $col)
                         <td class="px-3 py-2.5 text-center text-xs {{ $col === 2 ? 'bg-cyan-500/[0.03]' : '' }}">
                             @if($row[$col] === true)
                                 <svg class="w-4 h-4 mx-auto {{ $col === 2 ? 'text-cyan-400' : ($col === 3 ? 'text-violet-400' : ($col === 4 ? 'text-amber-400' : 'text-slate-400')) }}" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                             @elseif($row[$col] === false)
                                 <span class="text-slate-700">—</span>
+                            @elseif(is_array($row[$col]))
+                                <span class="{{ $col === 2 ? 'text-cyan-400/80' : ($col === 3 ? 'text-violet-400/80' : ($col === 4 ? 'text-amber-400/80' : 'text-slate-400')) }} font-medium">
+                                    <span x-show="$store.locale === 'id'">{{ $row[$col]['id'] }}</span>
+                                    <span x-show="$store.locale === 'en'" x-cloak>{{ $row[$col]['en'] }}</span>
+                                </span>
                             @else
                                 <span class="{{ $col === 2 ? 'text-cyan-400/80' : ($col === 3 ? 'text-violet-400/80' : ($col === 4 ? 'text-amber-400/80' : 'text-slate-400')) }} font-medium">{{ $row[$col] }}</span>
                             @endif

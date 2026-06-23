@@ -35,6 +35,15 @@
                         <span x-show="$store.locale === 'id'">Tidak ada lagi input manual lembar per lembar. MoraTrade AI bertindak sebagai jembatan pintar yang mengekstrak, memverifikasi, dan mensinkronisasikan dokumen ekspor-impor secara aman dan real-time.</span>
                         <span x-show="$store.locale === 'en'" x-cloak>No more manual sheet-by-sheet data entry. MoraTrade AI acts as a smart bridge that securely extracts, verifies, and synchronizes your import-export documents in real-time.</span>
                     </p>
+                    
+                    <!-- SaaS Model Highlight Badge -->
+                    <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-2.5 rounded-xl border border-cyan-500/20 bg-cyan-500/5 text-xs text-cyan-400 font-body">
+                        <span class="px-2 py-0.5 rounded bg-cyan-500 text-slate-950 font-bold tracking-wider uppercase text-[10px]">SaaS Cloud</span>
+                        <span class="font-semibold">
+                            <span x-show="$store.locale === 'id'">Tersedia Langganan Bulanan — Mulai Rp 499rb/bln (Spesial UMKM)</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Monthly Subscription Available — From Rp 499k/mo (SME Special)</span>
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Feature list -->
