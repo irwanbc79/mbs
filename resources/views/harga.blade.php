@@ -534,31 +534,58 @@ document.addEventListener('alpine:init', () => {
             <table class="w-full text-sm">
                 <thead>
                     <tr class="border-b border-slate-800/60">
-                        <th class="text-left px-4 py-3 text-slate-500 font-medium w-1/3">Fitur</th>
-                        <th class="text-center px-3 py-3 text-slate-300 font-bold text-xs">STARTER<br><span class="text-slate-500 font-normal">Rp 2,5jt</span></th>
-                        <th class="text-center px-3 py-3 text-cyan-400 font-bold text-xs bg-cyan-500/5">PROFESSIONAL<br><span class="text-slate-500 font-normal">Rp 5,5jt</span></th>
-                        <th class="text-center px-3 py-3 text-violet-400 font-bold text-xs">ENTERPRISE<br><span class="text-slate-500 font-normal">Rp 12jt</span></th>
-                        <th class="text-center px-3 py-3 text-amber-400 font-bold text-xs">CORPORATE<br><span class="text-slate-500 font-normal">Rp 25jt+</span></th>
+                        <th class="text-left px-4 py-3 text-slate-500 font-medium w-1/3">
+                            <span x-show="$store.locale === 'id'">Fitur</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Features</span>
+                        </th>
+                        <th class="text-center px-3 py-3 text-slate-300 font-bold text-xs">
+                            STARTER<br>
+                            <span class="text-slate-500 font-normal">
+                                <span x-show="$store.locale === 'id'">Rp 2,5jt</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Rp 2.5M</span>
+                            </span>
+                        </th>
+                        <th class="text-center px-3 py-3 text-cyan-400 font-bold text-xs bg-cyan-500/5">
+                            PROFESSIONAL<br>
+                            <span class="text-slate-500 font-normal">
+                                <span x-show="$store.locale === 'id'">Rp 5,5jt</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Rp 5.5M</span>
+                            </span>
+                        </th>
+                        <th class="text-center px-3 py-3 text-violet-400 font-bold text-xs">
+                            ENTERPRISE<br>
+                            <span class="text-slate-500 font-normal">
+                                <span x-show="$store.locale === 'id'">Rp 12jt</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Rp 12M</span>
+                            </span>
+                        </th>
+                        <th class="text-center px-3 py-3 text-amber-400 font-bold text-xs">
+                            CORPORATE<br>
+                            <span class="text-slate-500 font-normal">
+                                <span x-show="$store.locale === 'id'">Rp 25jt+</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Rp 25M+</span>
+                            </span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-800/40">
                     @php
                     $rows = [
-                        ['Landing page responsive', true, true, true, true],
-                        ['Multi-section website', false, true, true, true],
-                        ['Domain .com 1 tahun', false, true, true, true],
-                        ['Hosting cPanel / VPS', false, 'cPanel', 'VPS', 'Dedicated'],
-                        ['SSL Certificate', false, true, true, 'Wildcard'],
-                        ['CMS / Panel admin', false, false, true, true],
-                        ['Blog / Artikel', false, false, true, true],
-                        ['Katalog produk + filter', false, true, true, true],
-                        ['Google Analytics setup', false, true, true, true],
-                        ['WhatsApp integration', '1 WA', 'Multi WA', 'Business API', 'Multi-Agent'],
-                        ['Chatbot AI', false, false, false, true],
-                        ['Custom web app', false, false, false, true],
-                        ['Integrasi ERP/API', false, false, false, true],
-                        ['Otomasi Pabean (CEISA H2H)', false, false, false, 'Opsional (MoraTrade AI)'],
-                        ['AI OCR Dokumen Ekspor-Impor', false, false, false, 'Opsional (MoraTrade AI)'],
+                        [['id' => 'Landing page responsive', 'en' => 'Responsive landing page'], true, true, true, true],
+                        [['id' => 'Multi-section website', 'en' => 'Multi-section website'], false, true, true, true],
+                        [['id' => 'Domain .com 1 tahun', 'en' => '1-year .com domain'], false, true, true, true],
+                        [['id' => 'Hosting cPanel / VPS', 'en' => 'cPanel / VPS Hosting'], false, 'cPanel', 'VPS', 'Dedicated'],
+                        [['id' => 'SSL Certificate', 'en' => 'SSL Certificate'], false, true, true, 'Wildcard'],
+                        [['id' => 'CMS / Panel admin', 'en' => 'CMS / Admin panel'], false, false, true, true],
+                        [['id' => 'Blog / Artikel', 'en' => 'Blog / Articles'], false, false, true, true],
+                        [['id' => 'Katalog produk + filter', 'en' => 'Product catalog + filter'], false, true, true, true],
+                        [['id' => 'Google Analytics setup', 'en' => 'Google Analytics setup'], false, true, true, true],
+                        [['id' => 'Integrasi WhatsApp', 'en' => 'WhatsApp Integration'], '1 WA', 'Multi WA', 'Business API', 'Multi-Agent'],
+                        [['id' => 'Chatbot AI', 'en' => 'AI Chatbot'], false, false, false, true],
+                        [['id' => 'Custom web app', 'en' => 'Custom web app'], false, false, false, true],
+                        [['id' => 'Integrasi ERP/API', 'en' => 'ERP/API Integration'], false, false, false, true],
+                        [['id' => 'Otomasi Pabean (CEISA H2H)', 'en' => 'Customs Automation (CEISA H2H)'], false, false, false, ['id' => 'Opsional (MoraTrade AI)', 'en' => 'Optional (MoraTrade AI)']],
+                        [['id' => 'AI OCR Dokumen Ekspor-Impor', 'en' => 'Export-Import Document AI OCR'], false, false, false, ['id' => 'Opsional (MoraTrade AI)', 'en' => 'Optional (MoraTrade AI)']],
                         [
                             ['id' => 'Langganan SaaS Cloud', 'en' => 'SaaS Cloud Subscription'],
                             false,
@@ -580,12 +607,12 @@ document.addEventListener('alpine:init', () => {
                             false,
                             ['id' => 'Rp 15k (Starter) / Rp 12k (Pro) / Bebas (On-Premise)', 'en' => 'Rp 15k (Starter) / Rp 12k (Pro) / Free (On-Premise)']
                         ],
-                        ['Speed optimization', false, 'Dasar', 'PageSpeed 90+', 'Core Web Vitals'],
-                        ['Maintenance', false, 'Bug-fix 30 hari', '6 bulan', '12 bulan'],
-                        ['Revisi desain', '1×', '3×', 'Unlimited', 'Unlimited'],
-                        ['Source code ownership', false, false, false, true],
-                        ['Dedicated Acc. Manager', false, false, false, true],
-                        ['Estimasi pengerjaan', '3–5 hari', '5–7 hari', '14–21 hari', '30–90 hari'],
+                        [['id' => 'Optimasi kecepatan', 'en' => 'Speed optimization'], false, ['id' => 'Dasar', 'en' => 'Basic'], 'PageSpeed 90+', 'Core Web Vitals'],
+                        [['id' => 'Maintenance', 'en' => 'Maintenance'], false, ['id' => 'Bug-fix 30 hari', 'en' => '30-day bug-fix'], ['id' => '6 bulan', 'en' => '6 months'], ['id' => '12 bulan', 'en' => '12 months']],
+                        [['id' => 'Revisi desain', 'en' => 'Design revisions'], '1×', '3×', 'Unlimited', 'Unlimited'],
+                        [['id' => 'Kepemilikan source code', 'en' => 'Source code ownership'], false, false, false, true],
+                        [['id' => 'Dedicated Acc. Manager', 'en' => 'Dedicated Acc. Manager'], false, false, false, true],
+                        [['id' => 'Estimasi pengerjaan', 'en' => 'Estimated timeline'], ['id' => '3–5 hari', 'en' => '3–5 days'], ['id' => '5–7 hari', 'en' => '5–7 days'], ['id' => '14–21 hari', 'en' => '14–21 days'], ['id' => '30–90 hari', 'en' => '30–90 days']],
                     ];
                     @endphp
                     @foreach($rows as $row)

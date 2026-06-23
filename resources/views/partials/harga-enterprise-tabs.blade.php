@@ -225,7 +225,7 @@
             'tagline_en' => 'Customs & Logistics H2H Bea Cukai Automation (CEISA 4.0, AI OCR, & Shipment Tracking).',
             'tiers' => [
                 [
-                    'badge' => 'SaaS STARTER (UMKM)', 'price' => '499.000', 'price_from' => false, 'period' => '/ bulan',
+                    'badge' => 'SaaS STARTER (UMKM)', 'price' => '499.000', 'price_from' => false, 'period' => ['id' => '/ bulan', 'en' => '/ month'],
                     'desc_id' => 'Diskon khusus UMKM. Solusi cloud pabean instan tanpa biaya setup server. Kuota 25 dokumen/bulan.',
                     'desc_en' => 'Special SME discount. Instant cloud customs solution with zero server setup cost. Quota of 25 docs/month.',
                     'features_id' => [
@@ -252,7 +252,7 @@
                     'target_en' => 'SMEs, beginner exporters/importers with small cargo volume (≤ 25 shipments/month)',
                 ],
                 [
-                    'badge' => 'SaaS PRO (FORWARDER)', 'featured' => true, 'price' => '1.990.000', 'price_from' => false, 'period' => '/ bulan',
+                    'badge' => 'SaaS PRO (FORWARDER)', 'featured' => true, 'price' => '1.990.000', 'price_from' => false, 'period' => ['id' => '/ bulan', 'en' => '/ month'],
                     'desc_id' => 'Akses pabean H2H terotomasi dengan AI Compliance Guard. Kuota 150 dokumen/bulan.',
                     'desc_en' => 'Automated H2H customs access with AI Compliance Guard. Quota of 150 docs/month.',
                     'features_id' => [
@@ -279,7 +279,7 @@
                     'target_en' => 'Mid-size Freight Forwarders, active PPJK, trading companies (≤ 150 shipments/month)',
                 ],
                 [
-                    'badge' => 'ON-PREMISE ENTERPRISE', 'price' => '65.000.000', 'price_from' => true, 'period' => 'sekali bayar',
+                    'badge' => 'ON-PREMISE ENTERPRISE', 'price' => '65.000.000', 'price_from' => true, 'period' => ['id' => 'sekali bayar', 'en' => 'one-time'],
                     'desc_id' => 'Instalasi dedicated server mandiri. Integrasi pabean H2H & ERP penuh tanpa batasan dokumen.',
                     'desc_en' => 'Dedicated self-hosted server installation. Full H2H customs & ERP integration with unlimited documents.',
                     'features_id' => [
@@ -359,7 +359,12 @@
                                 <span class="text-3xl md:text-4xl font-black text-white tracking-tight">{{ $tier['price'] }}</span>
                                 @if(isset($tier['period']))
                                     <span class="text-xs text-slate-500 mb-1.5 ml-0.5 font-body">
-                                        {{ $tier['period'] }}
+                                        @if(is_array($tier['period']))
+                                            <span x-show="$store.locale === 'id'">{{ $tier['period']['id'] }}</span>
+                                            <span x-show="$store.locale === 'en'" x-cloak>{{ $tier['period']['en'] }}</span>
+                                        @else
+                                            {{ $tier['period'] }}
+                                        @endif
                                     </span>
                                 @endif
                             @endif
