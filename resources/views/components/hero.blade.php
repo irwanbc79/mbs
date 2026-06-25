@@ -17,8 +17,8 @@
                 <div data-testid="hero-badge" class="scroll-reveal inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-cyan-500/25 bg-cyan-500/5 text-sm">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
                     <span class="text-cyan-400 font-medium text-xs tracking-wide">
-                        <span x-show="$store.locale === 'id'">Berbasis AI &bull; Dari Medan, Melayani Seluruh Indonesia</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>AI-Powered &bull; From Medan, Serving All of Indonesia</span>
+                        <span x-show="$store.locale === 'id'">AI Operating System &bull; Transformasi Bisnis Otonom</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>AI Operating System &bull; Autonomous Business Transformation</span>
                     </span>
                 </div>
 
@@ -26,14 +26,14 @@
                 <div class="scroll-reveal">
                     <h1 class="text-5xl md:text-6xl font-bold leading-[1.1] tracking-tight">
                         <span x-show="$store.locale === 'id'">
-                            Transformasi Digital<br>
-                            <span class="gradient-text">Indonesia</span><br>
-                            Dimulai dari Sini
+                            Sistem Operasi AI<br>
+                            Untuk Bisnis yang<br>
+                            <span class="gradient-text">Berjalan Otonom</span>
                         </span>
                         <span x-show="$store.locale === 'en'" x-cloak>
-                            Indonesia's Digital<br>
-                            <span class="gradient-text">Transformation</span><br>
-                            Starts Here
+                            Building AI<br>
+                            Operating Systems<br>
+                            For <span class="gradient-text">Autonomous Business</span>
                         </span>
                     </h1>
                 </div>
@@ -41,10 +41,10 @@
                 <!-- Subtext -->
                 <p class="scroll-reveal text-lg text-slate-400 leading-relaxed max-w-xl font-body">
                     <span x-show="$store.locale === 'id'">
-                        Kami merancang <strong class="text-white font-semibold">ERP, CRM, Portal Korporat &amp; Workflow Automation</strong> berbasis AI untuk Korporasi, BUMN, dan UKM Indonesia yang ingin tumbuh lebih cepat.
+                        Kami mentransformasi bisnis tradisional menjadi bertenaga AI dengan membangun <strong class="text-white font-semibold">AI Business Brain</strong>—sistem yang tidak hanya menjawab pertanyaan, tetapi aktif menjalankan operasional Anda.
                     </span>
                     <span x-show="$store.locale === 'en'" x-cloak>
-                        We design <strong class="text-white font-semibold">AI-powered ERP, CRM, Corporate Portals &amp; Workflow Automation</strong> for Indonesia's corporations, SOEs, and SMEs ready to grow faster.
+                        We transform traditional businesses into AI-powered companies by building the <strong class="text-white font-semibold">AI Business Brain</strong>—operating systems that don't just answer questions, but run your business.
                     </span>
                 </p>
 

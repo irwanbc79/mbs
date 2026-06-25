@@ -135,12 +135,12 @@
                 <span x-show="$store.locale === 'en'" x-cloak>Our Services</span>
             </span>
             <h2 class="scroll-reveal text-4xl md:text-5xl font-bold tracking-tight mt-2 mb-4">
-                <span x-show="$store.locale === 'id'">Solusi Lengkap untuk <span class="gradient-text">Bisnis Digital</span></span>
-                <span x-show="$store.locale === 'en'" x-cloak>Complete Solutions for <span class="gradient-text">Digital Business</span></span>
+                <span x-show="$store.locale === 'id'">Komponen <span class="gradient-text">AI Business Brain</span></span>
+                <span x-show="$store.locale === 'en'" x-cloak>Components of the <span class="gradient-text">AI Business Brain</span></span>
             </h2>
             <p class="scroll-reveal text-slate-400 max-w-2xl mx-auto font-body">
-                <span x-show="$store.locale === 'id'">Dari kebutuhan internal hingga customer-facing, kami hadirkan platform IT yang scalable, terintegrasi, dan didukung kecerdasan buatan.</span>
-                <span x-show="$store.locale === 'en'" x-cloak>From internal operations to customer-facing solutions, we deliver scalable, integrated IT platforms powered by artificial intelligence.</span>
+                <span x-show="$store.locale === 'id'">Kami mengintegrasikan seluruh sistem operasional Anda ke dalam satu pusat saraf berbasis AI yang cerdas, scalable, dan berjalan secara otonom.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>We integrate all your core operational systems into a single AI-powered nerve center that is smart, scalable, and runs autonomously.</span>
             </p>
         </div>
 
