@@ -127,6 +127,8 @@
                 &copy; {{ date('Y') }} Mora Bangun Solutions.
                 <span x-show="$store.locale === 'id'">Hak cipta dilindungi.</span>
                 <span x-show="$store.locale === 'en'" x-cloak>All rights reserved.</span>
+                <span class="mx-1">&middot;</span>
+                <span>Powered by: <a href="https://morabangun.com" class="text-slate-500 hover:text-slate-400">morabangun.com</a></span>
             </p>
             <div class="flex items-center gap-4 flex-wrap justify-center md:justify-end">
                 <div class="flex items-center gap-1.5 text-xs text-slate-600">
