@@ -13,8 +13,10 @@ import time
 import pytest
 import requests
 
-BASE_URL = os.environ.get("REACT_APP_BACKEND_URL", "https://7d1ac202-8808-4950-ac95-2edd96b49e64.preview.emergentagent.com").rstrip("/")
-LOG_PATH = "/app/storage/logs/laravel.log"
+BASE_URL = os.environ.get("REACT_APP_BACKEND_URL", "http://127.0.0.1:8080").rstrip("/")
+# Detect if running in container (/app) or locally, and locate the laravel.log
+_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOG_PATH = os.environ.get("LARAVEL_LOG_PATH", os.path.join(_root, "storage", "logs", "laravel.log"))
 
 
 # ------------ shared session + csrf fixture ------------
@@ -57,6 +59,7 @@ class TestLanding:
         for tid in [
             "portfolio-m2b", "portfolio-portal-m2b", "portfolio-dira",
             "portfolio-indoplas", "portfolio-gma", "portfolio-ladaik",
+            "portfolio-indoessentialoil", "portfolio-ceisa",
         ]:
             assert f'data-testid="{tid}"' in html, f"missing data-testid={tid}"
 
@@ -82,7 +85,8 @@ class TestLanding:
     def test_landing_portfolio_live_links(self, session_with_csrf):
         _s, html = session_with_csrf
         for dom in ["m2b.co.id", "portal.m2b.co.id", "dira.co.id",
-                    "indoplas.co.id", "gma-world.co.id", "ladaik.store"]:
+                    "indoplas.co.id", "gma-world.id", "ladaik.store",
+                    "indoessentialoil.com", "ceisa.m2b.co.id"]:
             assert dom in html, f"portfolio link {dom} not present"
 
 

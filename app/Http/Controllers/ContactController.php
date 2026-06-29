@@ -18,7 +18,7 @@ class ContactController extends Controller
             'name'     => ['required', 'string', 'max:120'],
             'email'    => ['required', 'email', 'max:160'],
             'phone'    => ['nullable', 'string', 'max:40'],
-            'company'  => ['nullable', 'string', 'max:160'],
+            'company'  => ['required', 'string', 'max:160'],
             'industry' => ['nullable', 'string', 'max:60'],
             'message'  => ['required', 'string', 'max:5000'],
         ]);
@@ -37,11 +37,17 @@ class ContactController extends Controller
             'name'             => $data['name'],
             'email'            => $data['email'],
             'phone'            => $data['phone'] ?? null,
-            'company'          => $data['company'] ?? null,
+            'company'          => $data['company'],
             'service_interest' => $this->guessService($data['industry'] ?? ''),
             'source'           => 'website',
             'status'           => 'new',
             'notes'            => $data['message'],
+        ]);
+
+        Log::info('[MORABANGUN_CONTACT_LEAD] New contact lead created: ' . $lead->id, [
+            'name'    => $lead->name,
+            'company' => $lead->company,
+            'email'   => $lead->email,
         ]);
 
         try {

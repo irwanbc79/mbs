@@ -352,4 +352,38 @@
     .star-filled {
         color: #fbbf24;
     }
+
+    /* Film strip styles */
+    .film-track-top {
+        height: 18px;
+        background-color: #0c1322;
+        background-image: radial-gradient(ellipse 6px 4px at center, #050d1e 100%, transparent 100%);
+        background-size: 26px 18px;
+        background-repeat: repeat-x;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .film-track-bottom {
+        height: 18px;
+        background-color: #0c1322;
+        background-image: radial-gradient(ellipse 6px 4px at center, #050d1e 100%, transparent 100%);
+        background-size: 26px 18px;
+        background-repeat: repeat-x;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .film-strip-track {
+        transition: all 0.4s ease;
+    }
+
+    .film-strip-track:hover .browser-frame {
+        opacity: 0.4;
+        filter: blur(0.5px) grayscale(20%);
+    }
+
+    .film-strip-track .browser-frame:hover {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: scale(1.03);
+    }
 }

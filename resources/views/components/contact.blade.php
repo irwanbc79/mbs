@@ -205,7 +205,7 @@
                                        x-model="form.phone"
                                        data-testid="contact-phone"
                                        class="form-input"
-                                       placeholder="+62 812 xxxx xxxx">
+                                       placeholder="+62 812-XXXX-XXXX">
                             </div>
                             <!-- Company -->
                             <div>
