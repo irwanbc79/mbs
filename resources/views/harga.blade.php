@@ -264,12 +264,14 @@ document.addEventListener('alpine:init', () => {
 
             {{-- ── PROFESSIONAL (FEATURED) ── --}}
             <div id="pkg-professional"
-                 :class="recommended === 'professional' ? 'ring-2 ring-cyan-400/80 ring-offset-2 ring-offset-slate-950' : ''"
-                 class="rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-slate-900 to-slate-950 flex flex-col overflow-hidden transition-all duration-300 hover:border-cyan-500/50 shadow-xl shadow-cyan-500/10 relative">
+                 :class="recommended === 'professional' ? 'ring-2 ring-orange-500/80 ring-offset-2 ring-offset-slate-950' : ''"
+                 class="rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-slate-900 to-slate-950 flex flex-col overflow-visible transition-all duration-300 hover:border-orange-500/50 shadow-xl shadow-cyan-500/10 relative">
                 {{-- Featured badge --}}
-                <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-                <div class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-wider">
-                    ★ REKOMENDASI
+                <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 border border-orange-400/40 text-white text-[9px] font-black tracking-widest uppercase shadow-lg shadow-orange-500/25 flex items-center gap-1 z-20 whitespace-nowrap">
+                    <span>★</span>
+                    <span x-show="$store.locale === 'id'">REKOMENDASI</span>
+                    <span x-show="$store.locale === 'en'" x-cloak>RECOMMENDED</span>
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                     <div class="mb-4">
