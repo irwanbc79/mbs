@@ -622,6 +622,70 @@
                         </div>
                     </a>
 
+                    <!-- 9: darulfurqon.my -->
+                    <a href="https://darulfurqon.my" target="_blank" rel="noopener noreferrer"
+                       data-testid="portfolio-darulfurqon"
+                       class="group block browser-frame hover:border-[#d5a23b]/30 hover:shadow-xl hover:shadow-[#d5a23b]/5 transition-all duration-300 hover:-translate-y-1 w-[320px] sm:w-[360px] shrink-0">
+                        <div class="browser-topbar">
+                            <span class="browser-dot bg-[#FF5F57]"></span>
+                            <span class="browser-dot bg-[#FFBD2E]"></span>
+                            <span class="browser-dot bg-[#28CA41]"></span>
+                            <div class="browser-url">https://darulfurqon.my</div>
+                            <span class="text-[9px] text-[#d5a23b] font-medium">LIVE</span>
+                        </div>
+                        <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                            <img src="{{ asset('images/portfolio/darulfurqon.jpg') }}"
+                                 alt="Maahad Tahfidz Darul Furqon"
+                                 class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                                 onerror="this.style.display='none'"
+                                 loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#031f1a] via-[#062b23] to-[#0f5142] flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                                <div class="flex items-center px-3 bg-[#08382f]/60 border-b border-[#17634f]/20 shrink-0" style="height:24px">
+                                    <div class="w-12 h-2 bg-[#fff9ec]/40 rounded mr-auto"></div>
+                                    <div class="flex gap-1.5 items-center">
+                                        <div class="w-4 h-1 bg-[#fff9ec]/15 rounded"></div>
+                                        <div class="w-4 h-1 bg-[#fff9ec]/15 rounded"></div>
+                                        <div class="w-10 h-3.5 bg-[#bd8426]/30 rounded border border-[#bd8426]/30 flex items-center justify-center text-[5px] text-[#fff9ec]/80 font-bold font-mono">MY</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col grow justify-center px-4 relative">
+                                    <div class="absolute top-2 right-4 w-12 h-12 bg-gradient-to-br from-[#bd8426]/20 to-transparent rounded-full blur-sm"></div>
+                                    <!-- Islamic Rosette or Crest Placeholder -->
+                                    <div class="absolute right-6 top-1/2 -translate-y-1/2 w-16 h-16 opacity-20 border border-[#bd8426] rounded-full flex items-center justify-center" style="transform: rotate(22.5deg); background: radial-gradient(circle, rgba(213,162,59,0.1) 0%, transparent 70%);">
+                                        <div class="w-12 h-12 border border-[#f0c45a]/60 rounded-full" style="transform: rotate(45deg);"></div>
+                                    </div>
+                                    <div class="w-16 h-2 bg-[#bd8426]/45 rounded mb-1.5"></div>
+                                    <div class="w-32 h-3.5 bg-[#fff9ec]/70 rounded mb-1"></div>
+                                    <div class="w-40 h-1.5 bg-[#fff9ec]/35 rounded mb-0.5"></div>
+                                    <div class="w-28 h-1.5 bg-[#fff9ec]/20 rounded mb-3"></div>
+                                    <div class="flex gap-2">
+                                        <div class="w-12 h-4 bg-[#bd8426] border border-[#d5a23b]/40 rounded shadow-md flex items-center justify-center"><div class="w-6 h-1 bg-[#062b23] rounded"></div></div>
+                                        <div class="w-12 h-4 bg-transparent border border-[#fff9ec]/20 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between px-3 shrink-0 bg-[#031f1a]/60 border-t border-[#17634f]/15" style="height:22px">
+                                    <div class="w-16 h-1 bg-[#fff9ec]/20 rounded"></div>
+                                    <div class="w-6 h-2 bg-[#bd8426]/40 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="font-bold text-white group-hover:text-[#d5a23b] transition-colors">Darul Furqon</h3>
+                                <svg class="w-4 h-4 text-slate-600 group-hover:text-[#d5a23b] transition-colors flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-3 font-body">
+                                <span x-show="$store.locale === 'id'">Landing page modern untuk Maahad Tahfidz Darul Furqon di Selangor, Malaysia.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Modern landing page for Maahad Tahfidz Darul Furqon in Selangor, Malaysia.</span>
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-[#bd8426]/10 border border-[#bd8426]/20 text-[#d5a23b]">Landing Page</span>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">Islamic School</span>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">Tailwind</span>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
 
                 <!-- Set 2: Cloned Cards for Loop -->
@@ -1202,6 +1266,69 @@
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-[#C9A55C]/10 border border-[#C9A55C]/20 text-[#C9A55C]">API H2H</span>
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-[#0E867E]/10 border border-[#0E867E]/20 text-[#0E867E]">CEISA 4.0</span>
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">Laravel</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 9: darulfurqon.my -->
+                    <a href="https://darulfurqon.my" target="_blank" rel="noopener noreferrer"
+                       class="group block browser-frame hover:border-[#d5a23b]/30 hover:shadow-xl hover:shadow-[#d5a23b]/5 transition-all duration-300 hover:-translate-y-1 w-[320px] sm:w-[360px] shrink-0">
+                        <div class="browser-topbar">
+                            <span class="browser-dot bg-[#FF5F57]"></span>
+                            <span class="browser-dot bg-[#FFBD2E]"></span>
+                            <span class="browser-dot bg-[#28CA41]"></span>
+                            <div class="browser-url">https://darulfurqon.my</div>
+                            <span class="text-[9px] text-[#d5a23b] font-medium">LIVE</span>
+                        </div>
+                        <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
+                            <img src="{{ asset('images/portfolio/darulfurqon.jpg') }}"
+                                 alt="Maahad Tahfidz Darul Furqon"
+                                 class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 z-10"
+                                 onerror="this.style.display='none'"
+                                 loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#031f1a] via-[#062b23] to-[#0f5142] flex flex-col group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+                                <div class="flex items-center px-3 bg-[#08382f]/60 border-b border-[#17634f]/20 shrink-0" style="height:24px">
+                                    <div class="w-12 h-2 bg-[#fff9ec]/40 rounded mr-auto"></div>
+                                    <div class="flex gap-1.5 items-center">
+                                        <div class="w-4 h-1 bg-[#fff9ec]/15 rounded"></div>
+                                        <div class="w-4 h-1 bg-[#fff9ec]/15 rounded"></div>
+                                        <div class="w-10 h-3.5 bg-[#bd8426]/30 rounded border border-[#bd8426]/30 flex items-center justify-center text-[5px] text-[#fff9ec]/80 font-bold font-mono">MY</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col grow justify-center px-4 relative">
+                                    <div class="absolute top-2 right-4 w-12 h-12 bg-gradient-to-br from-[#bd8426]/20 to-transparent rounded-full blur-sm"></div>
+                                    <!-- Islamic Rosette or Crest Placeholder -->
+                                    <div class="absolute right-6 top-1/2 -translate-y-1/2 w-16 h-16 opacity-20 border border-[#bd8426] rounded-full flex items-center justify-center" style="transform: rotate(22.5deg); background: radial-gradient(circle, rgba(213,162,59,0.1) 0%, transparent 70%);">
+                                        <div class="w-12 h-12 border border-[#f0c45a]/60 rounded-full" style="transform: rotate(45deg);"></div>
+                                    </div>
+                                    <div class="w-16 h-2 bg-[#bd8426]/45 rounded mb-1.5"></div>
+                                    <div class="w-32 h-3.5 bg-[#fff9ec]/70 rounded mb-1"></div>
+                                    <div class="w-40 h-1.5 bg-[#fff9ec]/35 rounded mb-0.5"></div>
+                                    <div class="w-28 h-1.5 bg-[#fff9ec]/20 rounded mb-3"></div>
+                                    <div class="flex gap-2">
+                                        <div class="w-12 h-4 bg-[#bd8426] border border-[#d5a23b]/40 rounded shadow-md flex items-center justify-center"><div class="w-6 h-1 bg-[#062b23] rounded"></div></div>
+                                        <div class="w-12 h-4 bg-transparent border border-[#fff9ec]/20 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between px-3 shrink-0 bg-[#031f1a]/60 border-t border-[#17634f]/15" style="height:22px">
+                                    <div class="w-16 h-1 bg-[#fff9ec]/20 rounded"></div>
+                                    <div class="w-6 h-2 bg-[#bd8426]/40 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-start justify-between mb-2">
+                                <h3 class="font-bold text-white group-hover:text-[#d5a23b] transition-colors">Darul Furqon</h3>
+                                <svg class="w-4 h-4 text-slate-600 group-hover:text-[#d5a23b] transition-colors flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-3 font-body">
+                                <span x-show="$store.locale === 'id'">Landing page modern untuk Maahad Tahfidz Darul Furqon di Selangor, Malaysia.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Modern landing page for Maahad Tahfidz Darul Furqon in Selangor, Malaysia.</span>
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-[#bd8426]/10 border border-[#bd8426]/20 text-[#d5a23b]">Landing Page</span>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">Islamic School</span>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">Tailwind</span>
                             </div>
                         </div>
                     </a>

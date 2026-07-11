@@ -59,7 +59,7 @@ class TestLanding:
         for tid in [
             "portfolio-m2b", "portfolio-portal-m2b", "portfolio-dira",
             "portfolio-indoplas", "portfolio-gma", "portfolio-ladaik",
-            "portfolio-indoessentialoil", "portfolio-ceisa",
+            "portfolio-indoessentialoil", "portfolio-ceisa", "portfolio-darulfurqon",
         ]:
             assert f'data-testid="{tid}"' in html, f"missing data-testid={tid}"
 
@@ -86,7 +86,7 @@ class TestLanding:
         _s, html = session_with_csrf
         for dom in ["m2b.co.id", "portal.m2b.co.id", "dira.co.id",
                     "indoplas.co.id", "gma-world.id", "ladaik.store",
-                    "indoessentialoil.com", "ceisa.m2b.co.id"]:
+                    "indoessentialoil.com", "ceisa.m2b.co.id", "darulfurqon.my"]:
             assert dom in html, f"portfolio link {dom} not present"
 
 
