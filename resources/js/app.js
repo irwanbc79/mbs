@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!urlEl || !preview) return;
 
         const siteUrl = urlEl.textContent.trim();
-        if (!siteUrl.startsWith('http')) return;
+        if (!siteUrl.startsWith('http') || siteUrl.includes('darulfurqon.my')) return;
 
         const img = document.createElement('img');
         img.src     = `https://image.thum.io/get/width/1280/crop/720/${siteUrl}`;
