@@ -2,6 +2,12 @@
 
 return [
 
+    'cms' => [
+        'url'   => env('CMS_API_URL'),
+        'token' => env('CMS_API_TOKEN'),
+    ],
+
+
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
