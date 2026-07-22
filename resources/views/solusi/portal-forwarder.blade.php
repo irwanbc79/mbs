@@ -262,6 +262,10 @@
   .foot-dot{opacity:.5}
 
   .fab-wa{position:fixed;bottom:24px;right:24px;z-index:60;width:58px;height:58px;border-radius:50%;background:#16a34a;display:grid;place-items:center;box-shadow:0 10px 30px rgba(22,163,74,.45);font-size:1.6rem;transition:.2s}
+  .scroll-top{position:fixed;bottom:94px;right:24px;z-index:60;width:48px;height:48px;border-radius:50%;background:var(--card);border:1px solid var(--border);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35);color:var(--dim);cursor:pointer;opacity:0;pointer-events:none;transform:scale(.8);transition:opacity .2s,transform .2s,color .2s,border-color .2s}
+  .scroll-top.show{opacity:1;pointer-events:auto;transform:scale(1)}
+  .scroll-top:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px) scale(1.04)}
+  .scroll-top svg{width:20px;height:20px}
   .fab-wa:hover{transform:scale(1.08)}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -660,6 +664,9 @@
 </footer>
 
 <a class="fab-wa" data-wa data-pkg="Portal Forwarder" data-pos="fab" href="https://wa.me/6281399997132" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas" title="Kembali ke atas">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+</button>
 
 <script>
   /* ===== white-label demo ===== */
@@ -789,6 +796,15 @@
   }
 
   refreshWa();
+
+  /* ===== FIX: scroll-to-top — muncul setelah scroll > 400px, konsisten dgn homepage ===== */
+  (function(){
+    var btn = document.getElementById('scrollTopBtn');
+    if (!btn) return;
+    window.addEventListener('scroll', function(){
+      btn.classList.toggle('show', window.scrollY > 400);
+    });
+  })();
 </script>
 </body>
 </html>
