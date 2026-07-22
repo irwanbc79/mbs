@@ -749,5 +749,22 @@ document.addEventListener('alpine:init', () => {
     </div>
 </section>
 
+<section class="py-14 border-t border-white/5">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+        <div class="rounded-2xl border border-white/10 bg-white/[.02] p-8">
+            <p class="text-sm text-slate-400 font-body mb-4">
+                <span x-show="$store.locale === 'id'">Butuh paket spesifik industri Anda — CEISA, klinik, sekolah, distributor, dan lainnya?</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Need a plan built for your specific industry — CEISA, clinics, schools, distributors, and more?</span>
+            </p>
+            <a href="{{ route('solusi.index') }}"
+               class="inline-flex items-center gap-2 px-6 py-3 border border-cyan-500/30 hover:border-cyan-500/60 hover:bg-cyan-500/10 text-cyan-400 font-semibold rounded-xl transition-all">
+                <span x-show="$store.locale === 'id'">Lihat Solusi per Industri</span>
+                <span x-show="$store.locale === 'en'" x-cloak>See Industry Solutions</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
 </div>
 </x-layouts.app>

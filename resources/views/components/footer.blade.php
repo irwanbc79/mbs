@@ -77,6 +77,10 @@
                         <span x-show="$store.locale === 'id'">Harga</span>
                         <span x-show="$store.locale === 'en'" x-cloak>Pricing</span>
                     </a></li>
+                    <li><a href="{{ route('solusi.index') }}" class="text-sm text-slate-500 hover:text-white transition-colors font-body">
+                        <span x-show="$store.locale === 'id'">Solusi Industri</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Industry Solutions</span>
+                    </a></li>
                     <li><a href="#portfolio" class="text-sm text-slate-500 hover:text-white transition-colors font-body">Portfolio</a></li>
                     <li><a href="#tech" class="text-sm text-slate-500 hover:text-white transition-colors font-body">
                         <span x-show="$store.locale === 'id'">Teknologi</span>

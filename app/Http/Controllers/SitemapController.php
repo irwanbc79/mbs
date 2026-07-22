@@ -15,7 +15,17 @@ class SitemapController extends Controller
             ['url' => url('/'),        'priority' => '1.0',  'changefreq' => 'weekly'],
             ['url' => url('/harga'),   'priority' => '0.8',  'changefreq' => 'monthly'],
             ['url' => url('/blog'),    'priority' => '0.8',  'changefreq' => 'daily'],
+            ['url' => url('/solusi'),  'priority' => '0.9',  'changefreq' => 'monthly'],
         ];
+
+        $solusiSlugs = [
+            'portal-forwarder', 'ceisa', 'sekolah', 'distributor', 'klinik', 'umroh',
+            'kontraktor', 'bengkel', 'properti', 'koperasi', 'trucking', 'percetakan',
+            'reseller', 'kos',
+        ];
+        foreach ($solusiSlugs as $slug) {
+            $staticPages[] = ['url' => url('/solusi/' . $slug), 'priority' => '0.85', 'changefreq' => 'monthly'];
+        }
 
         $xml = view('sitemap', compact('staticPages', 'posts'))->render();
 

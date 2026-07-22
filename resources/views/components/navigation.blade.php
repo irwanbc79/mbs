@@ -29,6 +29,10 @@
                 <span x-show="$store.locale === 'id'">Layanan</span>
                 <span x-show="$store.locale === 'en'" x-cloak>Services</span>
             </a>
+            <a href="{{ route('solusi.index') }}" class="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">
+                <span x-show="$store.locale === 'id'">Solusi</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Solutions</span>
+            </a>
             <a href="{{ route('home') }}#portfolio" class="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">
                 <span x-show="$store.locale === 'id'">Portfolio</span>
                 <span x-show="$store.locale === 'en'" x-cloak>Portfolio</span>
@@ -116,6 +120,9 @@
         <div class="px-6 py-5 space-y-1">
             <a @click="mobileOpen=false" href="{{ route('home') }}#services"     class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">
                 <span x-show="$store.locale === 'id'">Layanan</span><span x-show="$store.locale === 'en'" x-cloak>Services</span>
+            </a>
+            <a @click="mobileOpen=false" href="{{ route('solusi.index') }}" class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">
+                <span x-show="$store.locale === 'id'">Solusi</span><span x-show="$store.locale === 'en'" x-cloak>Solutions</span>
             </a>
             <a @click="mobileOpen=false" href="{{ route('home') }}#portfolio"    class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Portfolio</a>
             <a @click="mobileOpen=false" href="{{ route('home') }}#tech"         class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">

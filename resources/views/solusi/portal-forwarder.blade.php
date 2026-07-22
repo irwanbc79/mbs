@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Forwarder — Portal Customer White-Label untuk Freight Forwarder | Mora Bangun Solutions</title>
+<meta name="description" content="Portal customer white-label untuk freight forwarder Indonesia. Customer lacak shipment, dokumen & invoice sendiri — tanpa banjir WA. Live dalam 14 hari. Dari Rp 8,5 juta.">
+<link rel="canonical" href="https://morabangun.com/solusi/portal-forwarder">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚢</text></svg>">
+<meta property="og:title" content="Portal Forwarder — Berhenti Jawab 'Kontainer Saya di Mana?' 30x Sehari">
+<meta property="og:description" content="Portal customer white-label untuk freight forwarder. Tracking, dokumen, invoice — dengan logo & warna perusahaan Anda.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://morabangun.com/solusi/portal-forwarder">
+<meta property="og:image" content="https://morabangun.com/images/og/portal-forwarder.jpg">
+<meta property="og:locale" content="id_ID">
+<!-- TODO deploy: buat gambar OG 1200x630 bermerek di public/images/og/portal-forwarder.jpg -->
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "Product",
+  "name": "Portal Forwarder by Mora Bangun Solutions",
+  "description": "Portal customer white-label untuk perusahaan freight forwarding dan logistik Indonesia",
+  "brand": {"@@type": "Organization", "name": "Mora Bangun Solutions", "url": "https://morabangun.com"},
+  "offers": {"@@type": "AggregateOffer", "priceCurrency": "IDR", "lowPrice": "8500000", "highPrice": "35000000"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "FAQPage",
+  "mainEntity": [
+    {"@@type":"Question","name":"Data operasional kami sudah di Excel. Harus input ulang?","acceptedAnswer":{"@@type":"Answer","text":"Tidak. Paket Professional termasuk import data dari Excel existing. Tim ops Anda cukup update status — atau kami integrasikan dengan sistem yang sudah jalan."}},
+    {"@@type":"Question","name":"Apakah customer kami harus bayar atau install aplikasi?","acceptedAnswer":{"@@type":"Answer","text":"Tidak. Customer cukup buka portal.namaperusahaan.co.id dari browser HP/laptop, login, selesai. Tanpa install, tanpa biaya untuk mereka."}},
+    {"@@type":"Question","name":"Bagaimana keamanan data shipment kami?","acceptedAnswer":{"@@type":"Answer","text":"Setiap customer hanya melihat shipment miliknya sendiri (isolasi per akun). Server di Indonesia, backup harian, dan audit log semua aktivitas."}},
+    {"@@type":"Question","name":"14 hari tayang itu benar realistis?","acceptedAnswer":{"@@type":"Answer","text":"Ya, karena kami tidak membangun dari nol — portal ini sudah jadi dan teruji. Yang kami kerjakan: branding Anda, subdomain, import data, dan training."}},
+    {"@@type":"Question","name":"Kalau kami mau tambah fitur nanti?","acceptedAnswer":{"@@type":"Answer","text":"Bisa upgrade paket kapan saja — hanya bayar selisih setup. Add-on bisa dipasang belakangan tanpa ganggu sistem berjalan."}},
+    {"@@type":"Question","name":"Kenapa tidak pakai software forwarding luar negeri saja?","acceptedAnswer":{"@@type":"Answer","text":"Software luar berlangganan $200–500/bulan per user, tidak paham CEISA/PEB/PIB, dan support beda zona waktu. Kami lokal, paham regulasi Indonesia, dan Anda bisa telepon langsung."}}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#030712; --surface:#0b1120; --card:#0f172a; --border:#1e293b;
+    --text:#e2e8f0; --muted:#94a3b8; --dim:#64748b;
+    --accent:#3b82f6; --accent-soft:rgba(59,130,246,.12);
+    --green:#34d399; --amber:#fbbf24; --red:#f87171;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border:1px solid rgba(59,130,246,.25);padding:6px 14px;border-radius:999px;margin-bottom:20px}
+  h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.15;font-weight:800;letter-spacing:-.02em}
+  h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:750;letter-spacing:-.01em;margin-bottom:14px}
+  .sub{color:var(--muted);font-size:1.08rem;max-width:640px}
+  .center{text-align:center}.center .sub{margin:0 auto}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:12px;font-weight:650;font-size:1rem;transition:.2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 30px rgba(59,130,246,.35)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(59,130,246,.45)}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-wa{background:#16a34a;color:#fff}
+  .btn-wa:hover{transform:translateY(-2px)}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(3,7,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem}
+  .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#fff}
+  .nav-links{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .lang-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 13px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer;letter-spacing:.04em}
+  .lang-btn:hover{color:var(--text);border-color:var(--accent)}
+  @media(max-width:820px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{padding:96px 0 72px;position:relative}
+  .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(59,130,246,.14),transparent 65%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr}}
+  .hero h1 .hl{background:linear-gradient(90deg,var(--accent),#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{margin:22px 0 30px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}
+  .trust div{font-size:.85rem;color:var(--dim)}
+  .trust b{display:block;color:var(--text);font-size:1.25rem;font-weight:750}
+
+  /* mini dashboard illustration in hero */
+  .hero-visual{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:rotate(1.2deg)}
+  .hv-head{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+  .hv-dot{width:10px;height:10px;border-radius:50%}
+  .hv-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+  .hv-card{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:12px}
+  .hv-card small{font-size:.66rem;color:var(--dim)}
+  .hv-card b{display:block;font-size:1.15rem}
+  .hv-row{display:flex;justify-content:space-between;align-items:center;padding:9px 4px;border-top:1px solid var(--border);font-size:.74rem;color:var(--muted)}
+  .pill{font-size:.62rem;padding:3px 9px;border-radius:999px;font-weight:600}
+  .pill-blue{background:rgba(59,130,246,.15);color:#60a5fa}
+  .pill-amber{background:rgba(251,191,36,.13);color:var(--amber)}
+  .pill-green{background:rgba(52,211,153,.13);color:var(--green)}
+
+  /* PAIN */
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  @media(max-width:820px){.cards3{grid-template-columns:1fr}}
+  .pain-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px}
+  .pain-card .ico{font-size:1.7rem;margin-bottom:14px}
+  .pain-card h3{font-size:1.08rem;margin-bottom:8px}
+  .pain-card p{color:var(--muted);font-size:.93rem}
+  .pain-card .fix{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border);font-size:.88rem;color:var(--green)}
+
+  /* DEMO */
+  .demo-wrap{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;margin-top:44px;box-shadow:0 40px 100px rgba(0,0,0,.45)}
+  .demo-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;background:var(--card);border-bottom:1px solid var(--border);flex-wrap:wrap}
+  .demo-toolbar .lbl{font-size:.78rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+  .swatches{display:flex;gap:8px}
+  .swatch{width:30px;height:30px;border-radius:9px;cursor:pointer;border:2px solid transparent;transition:.15s}
+  .swatch.active{border-color:#fff;transform:scale(1.08)}
+  .tenant-input{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:9px;font-size:.9rem;width:200px}
+  .wa-hint{font-size:.72rem;color:var(--green);margin-top:5px}
+  .demo-app{display:grid;grid-template-columns:220px 1fr;min-height:480px}
+  .demo-side{background:var(--card);border-right:1px solid var(--border);padding:20px 14px}
+  .tenant-badge{display:flex;align-items:center;gap:11px;padding:10px;margin-bottom:20px}
+  .tenant-avatar{width:38px;height:38px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-weight:750;font-size:.85rem;color:#fff}
+  .tenant-badge b{font-size:.9rem;display:block}
+  .tenant-badge small{color:var(--dim);font-size:.72rem}
+  .side-item{display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:10px;color:var(--muted);font-size:.9rem;cursor:pointer;margin-bottom:4px}
+  .side-item:hover{background:var(--surface)}
+  .side-item.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+
+  /* FIX: demo tetap bisa dioperasikan di mobile — sidebar jadi tab bar horizontal
+     (versi lama: display:none = demo mati di HP, padahal buyer UMKM mobile-first) */
+  @media(max-width:820px){
+    .demo-app{grid-template-columns:1fr}
+    .demo-side{border-right:none;border-bottom:1px solid var(--border);display:flex;gap:6px;overflow-x:auto;padding:10px 12px;align-items:center}
+    .tenant-badge{margin-bottom:0;padding:4px 6px;flex-shrink:0}
+    .tenant-badge b{font-size:.72rem;white-space:nowrap}
+    .tenant-badge small{display:none}
+    .side-item{width:auto;white-space:nowrap;padding:8px 12px;flex-shrink:0;font-size:.8rem;margin-bottom:0}
+  }
+  .demo-main{padding:26px 28px;background:var(--bg);overflow-x:auto}
+  .demo-main h4{font-size:1.25rem;margin-bottom:2px}
+  .demo-date{font-size:.8rem;color:var(--dim);margin-bottom:20px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+  @media(max-width:640px){.kpis{grid-template-columns:1fr}}
+  .kpi{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:16px}
+  .kpi small{font-size:.74rem;color:var(--dim)}
+  .kpi b{display:block;font-size:1.6rem;margin:4px 0 2px}
+  .kpi span{font-size:.72rem}
+  .kpi .up{color:var(--green)}.kpi .warn{color:var(--amber)}.kpi .due{color:var(--red)}
+  .demo-table{background:var(--card);border:1px solid var(--border);border-radius:13px;overflow:hidden}
+  .demo-table .tt{display:flex;justify-content:space-between;padding:14px 18px;font-weight:650;font-size:.95rem;border-bottom:1px solid var(--border)}
+  .demo-table .tt a{color:var(--accent);font-size:.8rem;font-weight:600}
+  .scrollx{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:480px}
+  th{text-align:left;padding:10px 18px;color:var(--dim);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border)}
+  td{padding:12px 18px;border-bottom:1px solid var(--border);color:var(--muted)}
+  td:first-child{color:var(--text);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  tr.clickable{cursor:pointer}
+  tr.clickable:hover{background:var(--surface)}
+  .demo-screen{display:none}.demo-screen.active{display:block}
+  .doc-row{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-bottom:1px solid var(--border);font-size:.85rem}
+  .doc-row:last-child{border-bottom:none}
+  .doc-row .nm{color:var(--text);font-weight:550}
+  .doc-row small{color:var(--dim);display:block;font-size:.72rem}
+  .dl{color:var(--accent);font-size:.78rem;font-weight:600;cursor:pointer}
+  .demo-note{padding:13px 20px;background:var(--card);border-top:1px solid var(--border);font-size:.82rem;color:var(--dim);text-align:center}
+  .demo-note b{color:var(--accent)}
+
+  /* FEATURES */
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  @media(max-width:820px){.feat-grid{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:24px;transition:.2s}
+  .feat:hover{border-color:rgba(59,130,246,.4);transform:translateY(-3px)}
+  .feat .ico{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);display:grid;place-items:center;font-size:1.2rem;margin-bottom:14px}
+  .feat h3{font-size:1rem;margin-bottom:6px}
+  .feat p{font-size:.88rem;color:var(--muted)}
+  .feat .tag{display:inline-block;margin-top:10px;font-size:.68rem;padding:3px 10px;border-radius:999px;background:rgba(139,92,246,.14);color:#a78bfa;font-weight:600}
+
+  /* PRICING */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;align-items:stretch}
+  @media(max-width:920px){.price-grid{grid-template-columns:1fr}}
+  .price{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column;position:relative}
+  .price.popular{border-color:var(--accent);box-shadow:0 20px 60px rgba(59,130,246,.18)}
+  .badge-pop{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;padding:5px 16px;border-radius:999px;letter-spacing:.04em}
+  .price h3{font-size:1.1rem}
+  .price .for{font-size:.82rem;color:var(--dim);margin:4px 0 18px}
+  .amount{font-size:2rem;font-weight:800;letter-spacing:-.02em}
+  .amount small{font-size:.85rem;color:var(--dim);font-weight:500}
+  .monthly{font-size:.88rem;color:var(--muted);margin:4px 0 22px}
+  .monthly b{color:var(--accent)}
+  .price ul{list-style:none;margin-bottom:26px;flex:1}
+  .price li{padding:7px 0;font-size:.89rem;color:var(--muted);display:flex;gap:10px}
+  .price li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+  .price li.no::before{content:'✕';color:var(--dim)}
+  .price li.no{color:var(--dim)}
+  .price .btn{width:100%;justify-content:center}
+  .price-note{text-align:center;margin-top:26px;font-size:.85rem;color:var(--dim)}
+
+  /* PROOF */
+  .proof{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media(max-width:820px){.proof-grid{grid-template-columns:1fr}}
+  .quote{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px}
+  .quote p{font-style:italic;color:var(--text);font-size:1.02rem;margin-bottom:18px}
+  .quote .who{display:flex;align-items:center;gap:13px}
+  .quote .who .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,var(--accent));display:grid;place-items:center;font-weight:750;color:#fff}
+  .quote .who b{display:block;font-size:.92rem}
+  .quote .who small{color:var(--dim);font-size:.78rem}
+  .proof-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .pstat{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:18px}
+  .pstat b{font-size:1.5rem;display:block}
+  .pstat small{color:var(--dim);font-size:.8rem}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:44px auto 0}
+  details{background:var(--card);border:1px solid var(--border);border-radius:13px;margin-bottom:12px;overflow:hidden}
+  summary{padding:18px 22px;cursor:pointer;font-weight:600;font-size:.97rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:'+';font-size:1.3rem;color:var(--accent);transition:.2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 22px 18px;color:var(--muted);font-size:.92rem}
+
+  /* CTA FINAL */
+  .final{text-align:center;position:relative}
+  .final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(59,130,246,.1),transparent 70%);pointer-events:none}
+  .final .btn{margin-top:28px}
+  .final .micro{margin-top:16px;font-size:.83rem;color:var(--dim)}
+
+  footer{border-top:1px solid var(--border);padding:36px 0;font-size:.85rem;color:var(--dim)}
+  .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+
+  .fab-wa{position:fixed;bottom:24px;right:24px;z-index:60;width:58px;height:58px;border-radius:50%;background:#16a34a;display:grid;place-items:center;box-shadow:0 10px 30px rgba(22,163,74,.45);font-size:1.6rem;transition:.2s}
+  .fab-wa:hover{transform:scale(1.08)}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="https://morabangun.com"><span class="logo-mark">MB</span> Mora Bangun <span style="color:var(--accent)">Solutions</span></a>
+    <div class="nav-links">
+      <a href="#demo" data-i18n="nav1">Demo</a><a href="#fitur" data-i18n="nav2">Fitur</a><a href="#harga" data-i18n="nav3">Harga</a><a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
+      <a class="btn btn-primary" style="padding:10px 20px;font-size:.9rem" href="#demo" data-i18n="navCta">Coba Demo →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="eyebrow">🚢 Khusus Freight Forwarder & Logistik</span>
+      <h1 data-i18n="h1">Berhenti Menjawab <span class="hl">"Kontainer Saya di Mana?"</span> 30 Kali Sehari</h1>
+      <p class="sub" data-i18n="hsub">Portal Forwarder memberi customer Anda akses mandiri untuk lacak shipment, unduh dokumen, dan cek invoice — <b style="color:var(--text)">dengan logo dan warna perusahaan Anda sendiri.</b> Tim CS fokus jualan, bukan copy-paste status.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#demo" data-i18n="ctaDemo">▶ Lihat Demo Langsung</a>
+        <a class="btn btn-wa" data-wa data-pkg="Portal Forwarder" data-pos="hero" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="ctaWa">💬 Konsultasi Gratis</a>
+      </div>
+      <div class="trust">
+        <div><b data-i18n="t1b">20+ tahun</b><span data-i18n="t1">pengalaman kepabeanan</span></div>
+        <div><b>Live</b><span data-i18n="t2">dipakai forwarder aktif</span></div>
+        <div><b data-i18n="t3b">14 hari</b><span data-i18n="t3">portal Anda tayang</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-head">
+        <span class="hv-dot" style="background:#f87171"></span><span class="hv-dot" style="background:#fbbf24"></span><span class="hv-dot" style="background:#34d399"></span>
+        <small style="color:var(--dim);font-size:.72rem;margin-left:8px">portal.perusahaan-anda.co.id</small>
+      </div>
+      <div class="hv-cards">
+        <div class="hv-card"><small data-i18n="hv1">Shipment Aktif</small><b>24</b></div>
+        <div class="hv-card"><small data-i18n="hv2">Menunggu Dokumen</small><b>7</b></div>
+        <div class="hv-card"><small data-i18n="hv3">Invoice Belum Bayar</small><b>Rp 18jt</b></div>
+      </div>
+      <div class="hv-row"><span><b style="color:var(--text)">JOB-2607-014</b> · Jakarta → Singapore</span><span class="pill pill-blue">On Vessel</span></div>
+      <div class="hv-row"><span><b style="color:var(--text)">JOB-2607-013</b> · Semarang → Busan</span><span class="pill pill-amber">Custom Clearance</span></div>
+      <div class="hv-row"><span><b style="color:var(--text)">JOB-2607-009</b> · Surabaya → Rotterdam</span><span class="pill pill-green" data-i18n="hvArr">Tiba</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- PAIN -->
+<section>
+  <div class="container center">
+    <span class="eyebrow" data-i18n="painEye">Masalah yang Anda Rasakan Tiap Hari</span>
+    <h2 data-i18n="painH2">Forwarder Kecil Kalah Bukan Karena Harga.<br>Kalah Karena Pengalaman Customer.</h2>
+    <div class="cards3" style="text-align:left">
+      <div class="pain-card">
+        <div class="ico">📱</div>
+        <h3 data-i18n="p1h">CS Kebanjiran WhatsApp</h3>
+        <p data-i18n="p1p">Setiap customer tanya status shipment lewat WA. Tim Anda sibuk copy-paste tracking, bukan mengerjakan clearance.</p>
+        <div class="fix" data-i18n="p1f">✓ Customer cek sendiri di portal, 24/7</div>
+      </div>
+      <div class="pain-card">
+        <div class="ico">📄</div>
+        <h3 data-i18n="p2h">Dokumen Tercecer</h3>
+        <p data-i18n="p2p">B/L, PIB, COO dikirim via email & WA berulang kali. "Pak, tolong kirim ulang invoicenya" — familiar?</p>
+        <div class="fix" data-i18n="p2f">✓ Semua dokumen rapi per shipment, tinggal unduh</div>
+      </div>
+      <div class="pain-card">
+        <div class="ico">💸</div>
+        <h3 data-i18n="p3h">Invoice Telat Dibayar</h3>
+        <p data-i18n="p3p">Customer bilang "belum terima tagihan". Piutang menumpuk karena tidak ada satu tempat untuk cek outstanding.</p>
+        <div class="fix" data-i18n="p3f">✓ Reminder otomatis + status invoice transparan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo" style="padding-top:40px">
+  <div class="container center">
+    <span class="eyebrow" data-i18n="demoEye">Demo Interaktif — Coba Sekarang</span>
+    <h2 data-i18n="demoH2">Ini Portal yang Akan Dipakai Customer Anda</h2>
+    <p class="sub" data-i18n="demoSub">Klik menu di kiri, klik baris shipment, lalu <b style="color:var(--text)">ganti warna & nama perusahaan</b> di atas — beginilah white-label bekerja untuk brand Anda.</p>
+
+    <div class="demo-wrap" style="text-align:left">
+      <div class="demo-toolbar">
+        <div>
+          <div class="lbl" data-i18n="wlLbl">White-label: warna brand Anda</div>
+          <div class="swatches" style="margin-top:6px">
+            <div class="swatch active" style="background:#3b82f6" onclick="setAccent('#3b82f6',this)"></div>
+            <div class="swatch" style="background:#14b8a6" onclick="setAccent('#14b8a6',this)"></div>
+            <div class="swatch" style="background:#f59e0b" onclick="setAccent('#f59e0b',this)"></div>
+            <div class="swatch" style="background:#8b5cf6" onclick="setAccent('#8b5cf6',this)"></div>
+          </div>
+        </div>
+        <div>
+          <div class="lbl" data-i18n="tenLbl">Nama perusahaan Anda</div>
+          <input class="tenant-input" style="margin-top:6px" value="PT Samudra Jaya" oninput="setTenant(this.value)">
+          <div class="wa-hint" data-i18n="waHint">↳ nama ini otomatis masuk ke chat WA Anda</div>
+        </div>
+      </div>
+
+      <div class="demo-app" id="demoApp">
+        <aside class="demo-side">
+          <div class="tenant-badge">
+            <div class="tenant-avatar" id="tAvatar">SJ</div>
+            <div><b class="tenant-name">PT Samudra Jaya</b><small>Portal Forwarder</small></div>
+          </div>
+          <div class="side-item active" data-screen="dashboard" onclick="go('dashboard',this)">📊 Dashboard</div>
+          <div class="side-item" data-screen="shipment" onclick="go('shipment',this)">🚢 Shipment</div>
+          <div class="side-item" data-screen="invoice" onclick="go('invoice',this)">🧾 Invoice</div>
+          <div class="side-item" data-screen="dokumen" onclick="go('dokumen',this)">📄 Dokumen</div>
+        </aside>
+
+        <main class="demo-main">
+          <!-- DASHBOARD -->
+          <div class="demo-screen active" id="scr-dashboard">
+            <h4>Dashboard</h4>
+            <div class="demo-date"><span class="jdate"></span> · Ringkasan operasional hari ini</div>
+            <div class="kpis">
+              <div class="kpi"><small>Shipment Aktif</small><b>24</b><span class="up">+3 dari minggu lalu</span></div>
+              <div class="kpi"><small>Menunggu Dokumen</small><b>7</b><span class="warn">2 perlu tindakan hari ini</span></div>
+              <div class="kpi"><small>Invoice Belum Dibayar</small><b>Rp 18jt</b><span class="due">2 jatuh tempo</span></div>
+            </div>
+            <div class="demo-table">
+              <div class="tt">Shipment Terbaru <a onclick="go('shipment',document.querySelector('[data-screen=shipment]'))" style="cursor:pointer">Lihat Semua →</a></div>
+              <div class="scrollx"><table>
+                <thead><tr><th>No. Job</th><th>Rute</th><th>Status</th><th>ETA</th></tr></thead>
+                <tbody>
+                  <tr class="clickable" onclick="go('shipment',document.querySelector('[data-screen=shipment]'))"><td>JOB-2607-014</td><td>Jakarta → Singapore</td><td><span class="pill pill-blue">On Vessel</span></td><td>28 Jul 2026</td></tr>
+                  <tr class="clickable" onclick="go('shipment',document.querySelector('[data-screen=shipment]'))"><td>JOB-2607-013</td><td>Semarang → Busan</td><td><span class="pill pill-amber">Custom Clearance</span></td><td>02 Agu 2026</td></tr>
+                  <tr class="clickable" onclick="go('shipment',document.querySelector('[data-screen=shipment]'))"><td>JOB-2607-009</td><td>Surabaya → Rotterdam</td><td><span class="pill pill-green">Tiba</span></td><td>15 Agu 2026</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <!-- SHIPMENT -->
+          <div class="demo-screen" id="scr-shipment">
+            <h4>Shipment · JOB-2607-014</h4>
+            <div class="demo-date">Jakarta (IDJKT) → Singapore (SGSIN) · FCL 1×40HC · MV Ever Glory V.0426</div>
+            <div class="kpis" style="grid-template-columns:repeat(4,1fr)">
+              <div class="kpi"><small>Pickup</small><b style="font-size:.95rem;color:var(--green)">✓ 12 Jul</b></div>
+              <div class="kpi"><small>Stuffing</small><b style="font-size:.95rem;color:var(--green)">✓ 14 Jul</b></div>
+              <div class="kpi"><small>On Vessel</small><b style="font-size:.95rem;color:var(--accent)">● 18 Jul</b></div>
+              <div class="kpi"><small>ETA Tiba</small><b style="font-size:.95rem;color:var(--dim)">28 Jul</b></div>
+            </div>
+            <div class="demo-table">
+              <div class="tt">Riwayat Status</div>
+              <div class="scrollx"><table>
+                <thead><tr><th>Waktu</th><th>Kejadian</th><th>Lokasi</th></tr></thead>
+                <tbody>
+                  <tr><td>18 Jul 09:40</td><td>Kapal berangkat (ATD)</td><td>Tj. Priok</td></tr>
+                  <tr><td>16 Jul 15:20</td><td>Gate in CY, NPE terbit</td><td>Tj. Priok</td></tr>
+                  <tr><td>14 Jul 11:00</td><td>Stuffing selesai, PEB disampaikan</td><td>Gudang Cakung</td></tr>
+                  <tr><td>12 Jul 08:30</td><td>Pickup kargo dari shipper</td><td>Bekasi</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <!-- INVOICE -->
+          <div class="demo-screen" id="scr-invoice">
+            <h4>Invoice</h4>
+            <div class="demo-date">Outstanding: Rp 18.500.000 · 2 invoice jatuh tempo</div>
+            <div class="demo-table">
+              <div class="tt">Daftar Invoice</div>
+              <div class="scrollx"><table>
+                <thead><tr><th>No. Invoice</th><th>Job</th><th>Nominal</th><th>Jatuh Tempo</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>INV-2026-0192</td><td>JOB-2607-014</td><td>Rp 12.500.000</td><td>25 Jul 2026</td><td><span class="pill pill-amber">Belum Bayar</span></td></tr>
+                  <tr><td>INV-2026-0188</td><td>JOB-2607-011</td><td>Rp 6.000.000</td><td>20 Jul 2026</td><td><span class="pill pill-amber">Jatuh Tempo</span></td></tr>
+                  <tr><td>INV-2026-0181</td><td>JOB-2606-042</td><td>Rp 9.750.000</td><td>10 Jul 2026</td><td><span class="pill pill-green">Lunas</span></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <!-- DOKUMEN -->
+          <div class="demo-screen" id="scr-dokumen">
+            <h4>Dokumen</h4>
+            <div class="demo-date">JOB-2607-014 · Semua dokumen dalam satu tempat</div>
+            <div class="demo-table">
+              <div class="tt">File Shipment</div>
+              <div class="doc-row"><div class="nm">Bill of Lading (Draft)<small>PDF · 240 KB · diunggah 17 Jul</small></div><span class="dl">⬇ Unduh</span></div>
+              <div class="doc-row"><div class="nm">PEB & NPE<small>PDF · 180 KB · diunggah 16 Jul</small></div><span class="dl">⬇ Unduh</span></div>
+              <div class="doc-row"><div class="nm">Packing List & Commercial Invoice<small>PDF · 320 KB · diunggah 14 Jul</small></div><span class="dl">⬇ Unduh</span></div>
+              <div class="doc-row"><div class="nm">Certificate of Origin<small>Menunggu terbit — notifikasi otomatis saat siap</small></div><span class="pill pill-amber">Proses</span></div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="demo-note" data-i18n="demoNote">ℹ️ Ini <b>demo statis</b>. Versi asli terhubung data operasional Anda + notifikasi WhatsApp otomatis ke customer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="fitur" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container center">
+    <span class="eyebrow" data-i18n="featEye">Fitur Lengkap</span>
+    <h2 data-i18n="featH2">Dibangun oleh Orang yang Paham Kepabeanan,<br>Bukan Sekadar Programmer</h2>
+    <p class="sub" data-i18n="featSub">Setiap modul dirancang dari alur kerja forwarder sungguhan — pickup, stuffing, PEB/PIB, clearance, sampai penagihan.</p>
+    <div class="feat-grid" style="text-align:left">
+      <div class="feat"><div class="ico">🛰️</div><h3 data-i18n="f1h">Tracking Shipment Real-Time</h3><p data-i18n="f1p">Timeline milestone dari pickup sampai delivered. Customer tahu posisi kargo tanpa bertanya.</p></div>
+      <div class="feat"><div class="ico">🎨</div><h3 data-i18n="f2h">White-Label Penuh</h3><p data-i18n="f2p">Logo, warna, dan subdomain perusahaan Anda (portal.namaanda.co.id). Customer melihat brand Anda, bukan kami.</p></div>
+      <div class="feat"><div class="ico">📁</div><h3 data-i18n="f3h">Manajemen Dokumen</h3><p data-i18n="f3p">B/L, PEB/PIB, COO, invoice — terorganisir per job. Riwayat unduhan tercatat.</p></div>
+      <div class="feat"><div class="ico">💬</div><h3 data-i18n="f4h">Notifikasi WhatsApp Otomatis</h3><p data-i18n="f4p">Status berubah → customer dapat WA otomatis. Vessel departed, clearance selesai, invoice terbit.</p></div>
+      <div class="feat"><div class="ico">🧾</div><h3 data-i18n="f5h">Invoice & Outstanding</h3><p data-i18n="f5p">Customer lihat tagihan & jatuh tempo sendiri. Reminder otomatis menekan umur piutang.</p></div>
+      <div class="feat"><div class="ico">👥</div><h3 data-i18n="f6h">Multi-User & Role</h3><p data-i18n="f6p">Admin, ops, finance, dan login terpisah untuk tiap customer. Audit log lengkap.</p></div>
+      <div class="feat"><div class="ico">🌐</div><h3 data-i18n="f7h">Multi-Bahasa (ID/EN)</h3><p data-i18n="f7p">Portal customer tersedia dwibahasa — siap dipakai customer asing/prinsipal luar negeri Anda.</p></div>
+      <div class="feat"><div class="ico">🔗</div><h3 data-i18n="f8h">Integrasi CEISA H2H</h3><p data-i18n="f8p">Status dokumen kepabeanan tarik otomatis dari CEISA. Tanpa input manual ganda.</p><span class="tag">Add-on Enterprise</span></div>
+      <div class="feat"><div class="ico">🤖</div><h3 data-i18n="f9h">Chatbot AI Customer</h3><p data-i18n="f9p">Customer tanya "status JOB-014?" → bot jawab dari data portal, 24 jam.</p><span class="tag">Add-on</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="harga">
+  <div class="container center">
+    <span class="eyebrow" data-i18n="prEye">Investasi</span>
+    <h2 data-i18n="prH2">Harga Khusus Vertikal Logistik</h2>
+    <p class="sub" data-i18n="prSub">Sekali setup, langganan ringan. Bandingkan: satu staf CS = Rp 3–4 juta/bulan. Portal ini bekerja 24 jam, tidak cuti.</p>
+    <div class="price-grid" style="text-align:left">
+      <div class="price">
+        <h3>Starter Port</h3>
+        <div class="for" data-i18n="pr1for">Forwarder baru · < 50 shipment/bulan</div>
+        <div class="amount">Rp 8,5jt <small>setup</small></div>
+        <div class="monthly">+ <b>Rp 500rb/bulan</b> <span data-i18n="prHost">hosting & maintenance</span></div>
+        <ul>
+          <li data-i18n="pr1a">Dashboard + tracking shipment</li>
+          <li data-i18n="pr1b">Manajemen dokumen per job</li>
+          <li data-i18n="pr1c">White-label logo & warna</li>
+          <li data-i18n="pr1d">Subdomain sendiri</li>
+          <li data-i18n="pr1e">Login customer unlimited</li>
+          <li class="no" data-i18n="pr1f">Notifikasi WA otomatis</li>
+          <li class="no" data-i18n="pr1g">Modul invoice</li>
+        </ul>
+        <a class="btn btn-ghost" data-wa data-pkg="paket Starter Port" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="pr1cta">Pilih Starter</a>
+      </div>
+      <div class="price popular">
+        <span class="badge-pop" data-i18n="prPop">PALING LARIS</span>
+        <h3>Professional Port</h3>
+        <div class="for" data-i18n="pr2for">Forwarder berkembang · butuh otomasi</div>
+        <div class="amount">Rp 15jt <small>setup</small></div>
+        <div class="monthly">+ <b>Rp 950rb/bulan</b> <span data-i18n="prHost2">hosting & maintenance</span></div>
+        <ul>
+          <li data-i18n="pr2a"><b style="color:var(--text)">Semua fitur Starter</b>, plus:</li>
+          <li data-i18n="pr2b">Notifikasi WhatsApp otomatis</li>
+          <li data-i18n="pr2c">Modul invoice & outstanding</li>
+          <li data-i18n="pr2d">Multi-user role (ops/finance/admin)</li>
+          <li data-i18n="pr2e">Laporan volume & piutang</li>
+          <li data-i18n="pr2f">Import data dari Excel existing</li>
+          <li data-i18n="pr2g">Training tim + panduan</li>
+        </ul>
+        <a class="btn btn-primary" data-wa data-pkg="paket Professional Port" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="pr2cta">Pilih Professional</a>
+      </div>
+      <div class="price">
+        <h3>Enterprise Port</h3>
+        <div class="for" data-i18n="pr3for">Forwarder besar · integrasi sistem</div>
+        <div class="amount"><span data-i18n="pr3amt">Mulai</span> Rp 35jt <small>custom</small></div>
+        <div class="monthly" data-i18n="pr3mo">langganan sesuai <b>SLA & modul</b></div>
+        <ul>
+          <li data-i18n="pr3a"><b style="color:var(--text)">Semua fitur Professional</b>, plus:</li>
+          <li>Integrasi CEISA H2H</li>
+          <li data-i18n="pr3c">Chatbot AI customer service</li>
+          <li data-i18n="pr3d">API ke sistem internal / accounting</li>
+          <li data-i18n="pr3e">Server dedicated + SLA uptime</li>
+          <li data-i18n="pr3f">Custom modul sesuai alur kerja</li>
+        </ul>
+        <a class="btn btn-ghost" data-wa data-pkg="paket Enterprise Port" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="pr3cta">Diskusi Kebutuhan</a>
+      </div>
+    </div>
+    <div class="price-note" data-i18n="prNote">🛡️ Garansi: portal tayang dalam <b style="color:var(--text)">14 hari kerja</b> (Starter/Professional) atau biaya setup kami kembalikan 50%.</div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof">
+  <div class="container proof-grid">
+    <div>
+      <span class="eyebrow" data-i18n="prfEye">Bukti, Bukan Janji</span>
+      <h2 data-i18n="prfH2">Sudah Dipakai Forwarder Sungguhan Setiap Hari</h2>
+      <p class="sub" data-i18n="prfSub">Portal ini bukan produk coba-coba. Ia lahir dari kebutuhan operasional PT Mora Multi Berkah — forwarder aktif — lalu kami produktisasi untuk Anda.</p>
+      <div class="proof-stats">
+        <div class="pstat"><b>portal.m2b.co.id</b><small data-i18n="ps1">Implementasi live pertama</small></div>
+        <div class="pstat"><b data-i18n="ps2b">20+ tahun</b><small data-i18n="ps2">Pengalaman kepabeanan di balik desainnya</small></div>
+        <div class="pstat"><b>CEISA-ready</b><small data-i18n="ps3">Paham PEB, PIB, NPE — bukan sekadar CRUD</small></div>
+        <div class="pstat"><b data-i18n="ps4b">14 hari</b><small data-i18n="ps4">Rata-rata waktu tayang</small></div>
+      </div>
+    </div>
+    <div class="quote">
+      <p data-i18n="qt">"Dulu tim kami habis waktu jawab WA status shipment. Sekarang customer cek sendiri di portal — komplain turun, pembayaran invoice lebih cepat karena semua transparan."</p>
+      <div class="who">
+        <div class="av">M2B</div>
+        <div><b data-i18n="qtWho">Tim Operasional</b><small data-i18n="qtCo">PT Mora Multi Berkah — Freight Forwarder, Medan</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container center">
+    <span class="eyebrow" data-i18n="faqEye">Pertanyaan Umum</span>
+    <h2 data-i18n="faqH2">Yang Sering Ditanyakan Pemilik Forwarder</h2>
+    <div class="faq" style="text-align:left">
+      <details><summary data-i18n="fq1">Data operasional kami sudah di Excel. Harus input ulang?</summary><p data-i18n="fa1">Tidak. Paket Professional termasuk import data dari Excel existing. Tim ops Anda cukup update status — atau kami integrasikan dengan sistem yang sudah jalan.</p></details>
+      <details><summary data-i18n="fq2">Apakah customer kami harus bayar atau install aplikasi?</summary><p data-i18n="fa2">Tidak. Customer cukup buka portal.namaperusahaan.co.id dari browser HP/laptop, login, selesai. Tanpa install, tanpa biaya untuk mereka.</p></details>
+      <details><summary data-i18n="fq3">Bagaimana keamanan data shipment kami?</summary><p data-i18n="fa3">Setiap customer hanya melihat shipment miliknya sendiri (isolasi per akun). Server di Indonesia, backup harian, dan audit log semua aktivitas. Dibangun oleh tim yang paham kerahasiaan dokumen kepabeanan.</p></details>
+      <details><summary data-i18n="fq4">14 hari tayang itu benar realistis?</summary><p data-i18n="fa4">Ya, karena kami tidak membangun dari nol — portal ini sudah jadi dan teruji. Yang kami kerjakan: branding Anda, subdomain, import data, dan training. Enterprise dengan integrasi custom: 6–8 minggu.</p></details>
+      <details><summary data-i18n="fq5">Kalau kami mau tambah fitur nanti?</summary><p data-i18n="fa5">Bisa upgrade paket kapan saja — hanya bayar selisih setup. Add-on (chatbot AI, CEISA H2H) bisa dipasang belakangan tanpa ganggu sistem berjalan.</p></details>
+      <details><summary data-i18n="fq6">Kenapa tidak pakai software forwarding luar negeri saja?</summary><p data-i18n="fa6">Software luar berlangganan $200–500/bulan per user, tidak paham CEISA/PEB/PIB, dan support beda zona waktu. Kami lokal, paham regulasi Indonesia, dan Anda bisa telepon langsung.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final">
+  <div class="container">
+    <span class="eyebrow" data-i18n="finEye">Langkah Berikutnya</span>
+    <h2 data-i18n="finH2">Customer Anda Sudah Menunggu Portal Ini.<br>Kompetitor Anda Mungkin Sudah Duluan.</h2>
+    <p class="sub" style="margin:16px auto 0" data-i18n="finSub">Konsultasi 30 menit gratis — kami petakan alur kerja forwarder Anda dan tunjukkan demo dengan nama & warna perusahaan Anda.</p>
+    <a class="btn btn-wa" style="font-size:1.05rem;padding:16px 36px" data-wa data-pkg="Portal Forwarder" data-pos="final" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="finCta">💬 Jadwalkan Demo via WhatsApp</a>
+    <div class="micro" data-i18n="finMicro">Tanpa komitmen · Balasan < 1 jam di jam kerja · Medan & seluruh Indonesia</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-inner">
+    <div data-i18n="ft1">© 2026 Mora Bangun Solutions · morabangun.com — Software house untuk logistik & ekspor-impor, Medan, Indonesia</div>
+    <div data-i18n="ft2">Produk: Portal Forwarder · ERP · CRM · Chatbot AI · Integrasi CEISA · <a href="https://morabangun.com/solusi" style="color:var(--accent)">Solusi industri lain →</a></div>
+  </div>
+</footer>
+
+<a class="fab-wa" data-wa data-pkg="Portal Forwarder" data-pos="fab" href="https://wa.me/6281399997132" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+  /* ===== white-label demo ===== */
+  var tenantName = 'PT Samudra Jaya';
+  function setAccent(color, el){
+    document.documentElement.style.setProperty('--accent', color);
+    var rgb = hexRgb(color);
+    document.documentElement.style.setProperty('--accent-soft', 'rgba('+rgb+',.12)');
+    document.querySelectorAll('.swatch').forEach(function(s){s.classList.remove('active')});
+    el.classList.add('active');
+  }
+  function hexRgb(h){
+    var n = parseInt(h.slice(1),16);
+    return ((n>>16)&255)+','+((n>>8)&255)+','+(n&255);
+  }
+  function setTenant(name){
+    tenantName = name.trim() || 'Perusahaan Anda';
+    document.querySelectorAll('.tenant-name').forEach(function(e){e.textContent=tenantName});
+    var initials = tenantName.replace(/^(PT|CV|UD)\.?\s+/i,'').split(/\s+/).map(function(w){return w[0]||''}).join('').slice(0,2).toUpperCase();
+    document.getElementById('tAvatar').textContent = initials || 'PA';
+    refreshWa();
+  }
+  function go(screen, el){
+    document.querySelectorAll('.demo-screen').forEach(function(s){s.classList.remove('active')});
+    document.getElementById('scr-'+screen).classList.add('active');
+    document.querySelectorAll('.side-item').forEach(function(i){i.classList.remove('active')});
+    if(el) el.classList.add('active');
+  }
+
+  /* ===== FIX: WA prefill — bawa nama perusahaan dari demo + posisi CTA (atribusi) ===== */
+  function refreshWa(){
+    document.querySelectorAll('[data-wa]').forEach(function(a){
+      var pkg = a.dataset.pkg || 'Portal Forwarder';
+      var pos = a.dataset.pos || '';
+      var txt = 'Halo MBS, saya dari '+tenantName+', tertarik '+pkg+(pos?' ['+pos+']':'');
+      a.href = 'https://wa.me/6281399997132?text='+encodeURIComponent(txt);
+    });
+  }
+
+  /* ===== FIX: tanggal dinamis — demo tidak pernah basi ===== */
+  (function(){
+    var d = new Date().toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    document.querySelectorAll('.jdate').forEach(function(e){e.textContent=d});
+  })();
+
+  /* ===== i18n: default ID, toggle EN (marketing copy; konten demo tetap ID) ===== */
+  var EN = {
+    nav1:'Demo', nav2:'Features', nav3:'Pricing', navCta:'Try the Demo →',
+    eyebrow:'🚢 Built for Freight Forwarders & Logistics',
+    h1:'Stop Answering <span class="hl">"Where Is My Container?"</span> 30 Times a Day',
+    hsub:'Portal Forwarder gives your customers self-service access to track shipments, download documents and check invoices — <b style="color:var(--text)">under your own logo and brand colors.</b> Your CS team sells; no more copy-pasting statuses.',
+    ctaDemo:'▶ See the Live Demo', ctaWa:'💬 Free Consultation',
+    t1b:'20+ years', t1:'of customs expertise', t2:'used daily by an active forwarder', t3b:'14 days', t3:'until your portal goes live',
+    hv1:'Active Shipments', hv2:'Awaiting Documents', hv3:'Unpaid Invoices', hvArr:'Arrived',
+    painEye:'The Problems You Face Every Day',
+    painH2:'Small Forwarders Don\'t Lose on Price.<br>They Lose on Customer Experience.',
+    p1h:'CS Drowning in WhatsApp', p1p:'Every customer asks for shipment status via WA. Your team copy-pastes tracking instead of working on clearance.', p1f:'✓ Customers self-check in the portal, 24/7',
+    p2h:'Documents Everywhere', p2p:'B/L, import declarations, COO sent over email & WA again and again. "Please resend the invoice" — sound familiar?', p2f:'✓ Every document tidy per shipment, ready to download',
+    p3h:'Invoices Paid Late', p3p:'Customers claim they "never got the bill". Receivables pile up with no single place to check outstanding.', p3f:'✓ Automatic reminders + transparent invoice status',
+    demoEye:'Interactive Demo — Try It Now', demoH2:'This Is the Portal Your Customers Will Use',
+    demoSub:'Click the menu, open a shipment row, then <b style="color:var(--text)">change the color & company name</b> above — that\'s white-label working for your brand.',
+    wlLbl:'White-label: your brand color', tenLbl:'Your company name', waHint:'↳ this name is auto-inserted into your WA chat',
+    demoNote:'ℹ️ This is a <b>static demo</b>. The real version connects to your operational data + automatic WhatsApp notifications to customers.',
+    featEye:'Complete Features', featH2:'Built by People Who Understand Customs,<br>Not Just Programmers',
+    featSub:'Every module is designed from a real forwarder\'s workflow — pickup, stuffing, export/import declarations, clearance, through billing.',
+    f1h:'Real-Time Shipment Tracking', f1p:'Milestone timeline from pickup to delivered. Customers know where cargo is without asking.',
+    f2h:'Full White-Label', f2p:'Your logo, colors and subdomain (portal.yourcompany.co.id). Customers see your brand, not ours.',
+    f3h:'Document Management', f3p:'B/L, customs docs, COO, invoices — organized per job. Download history recorded.',
+    f4h:'Automatic WhatsApp Notifications', f4p:'Status changes → customers get WA automatically. Vessel departed, clearance done, invoice issued.',
+    f5h:'Invoices & Outstanding', f5p:'Customers see their own bills & due dates. Automatic reminders shorten receivable age.',
+    f6h:'Multi-User & Roles', f6p:'Admin, ops, finance, and separate logins per customer. Full audit log.',
+    f7h:'Multi-Language (ID/EN)', f7p:'The customer portal is bilingual — ready for your foreign customers and overseas principals.',
+    f8h:'CEISA H2H Integration', f8p:'Customs document status pulled automatically from CEISA. No double manual entry.',
+    f9h:'AI Customer Chatbot', f9p:'Customer asks "status of JOB-014?" → the bot answers from portal data, 24/7.',
+    prEye:'Investment', prH2:'Pricing Built for the Logistics Vertical',
+    prSub:'One-time setup, light subscription. Compare: one CS staffer costs Rp 3–4 million/month. This portal works 24/7 and never takes leave.',
+    pr1for:'New forwarders · < 50 shipments/month', prHost:'hosting & maintenance', prHost2:'hosting & maintenance',
+    pr1a:'Dashboard + shipment tracking', pr1b:'Document management per job', pr1c:'White-label logo & colors', pr1d:'Your own subdomain', pr1e:'Unlimited customer logins', pr1f:'Automatic WA notifications', pr1g:'Invoice module',
+    pr1cta:'Choose Starter', prPop:'MOST POPULAR',
+    pr2for:'Growing forwarders · need automation',
+    pr2a:'<b style="color:var(--text)">Everything in Starter</b>, plus:', pr2b:'Automatic WhatsApp notifications', pr2c:'Invoice & outstanding module', pr2d:'Multi-user roles (ops/finance/admin)', pr2e:'Volume & receivables reports', pr2f:'Import from your existing Excel', pr2g:'Team training + guides',
+    pr2cta:'Choose Professional',
+    pr3for:'Large forwarders · system integration', pr3amt:'From', pr3mo:'subscription based on <b>SLA & modules</b>',
+    pr3a:'<b style="color:var(--text)">Everything in Professional</b>, plus:', pr3c:'AI customer-service chatbot', pr3d:'API to internal / accounting systems', pr3e:'Dedicated server + uptime SLA', pr3f:'Custom modules for your workflow',
+    pr3cta:'Discuss Your Needs',
+    prNote:'🛡️ Guarantee: your portal goes live within <b style="color:var(--text)">14 working days</b> (Starter/Professional) or we refund 50% of the setup fee.',
+    prfEye:'Proof, Not Promises', prfH2:'Used by a Real Forwarder Every Single Day',
+    prfSub:'This portal is not an experiment. It was born from the operations of PT Mora Multi Berkah — an active forwarder — then productized for you.',
+    ps1:'First live implementation', ps2b:'20+ years', ps2:'Customs expertise behind its design', ps3:'Understands export/import declarations — not just CRUD', ps4b:'14 days', ps4:'Average time to go live',
+    qt:'"Our team used to burn hours answering WA status requests. Now customers self-check in the portal — complaints dropped and invoices get paid faster because everything is transparent."',
+    qtWho:'Operations Team', qtCo:'PT Mora Multi Berkah — Freight Forwarder, Medan',
+    faqEye:'Common Questions', faqH2:'What Forwarder Owners Usually Ask',
+    fq1:'Our data lives in Excel. Do we re-enter everything?', fa1:'No. The Professional plan includes importing your existing Excel data. Your ops team just updates statuses — or we integrate with the system you already run.',
+    fq2:'Do our customers pay or install an app?', fa2:'No. Customers open portal.yourcompany.co.id in any browser, log in, done. No install, no cost for them.',
+    fq3:'How is our shipment data secured?', fa3:'Each customer sees only their own shipments (per-account isolation). Servers in Indonesia, daily backups, full audit logs — built by a team that understands customs-document confidentiality.',
+    fq4:'Is 14 days to go live realistic?', fa4:'Yes — we\'re not building from scratch. The portal is finished and battle-tested; we do your branding, subdomain, data import and training. Enterprise with custom integrations: 6–8 weeks.',
+    fq5:'What if we want more features later?', fa5:'Upgrade anytime — you only pay the setup difference. Add-ons (AI chatbot, CEISA H2H) can be installed later without disturbing the running system.',
+    fq6:'Why not just use foreign forwarding software?', fa6:'Foreign SaaS runs $200–500/month per user, doesn\'t understand Indonesian customs (CEISA), and support sits in another timezone. We\'re local, we know the regulations, and you can call us directly.',
+    finEye:'Next Step', finH2:'Your Customers Are Already Waiting for This Portal.<br>Your Competitor Might Be Ahead of You.',
+    finSub:'Free 30-minute consultation — we map your forwarding workflow and show you the demo in your company\'s name and colors.',
+    finCta:'💬 Book a Demo via WhatsApp', finMicro:'No commitment · Reply < 1 hour on business hours · Medan & all of Indonesia',
+    ft1:'© 2026 Mora Bangun Solutions · morabangun.com — Software house for logistics & export-import, Medan, Indonesia',
+    ft2:'Products: Portal Forwarder · ERP · CRM · AI Chatbot · CEISA Integration · <a href="https://morabangun.com/solusi" style="color:var(--accent)">More industry solutions →</a>'
+  };
+  var lang = 'id';
+  function toggleLang(){
+    lang = lang === 'id' ? 'en' : 'id';
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('langBtn').textContent = lang === 'id' ? 'EN' : 'ID';
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k = el.dataset.i18n;
+      if(lang === 'en'){
+        if(el.dataset.orig === undefined) el.dataset.orig = el.innerHTML; // simpan versi ID
+        if(EN[k]) el.innerHTML = EN[k];
+      } else if(el.dataset.orig !== undefined){
+        el.innerHTML = el.dataset.orig;
+      }
+    });
+  }
+
+  refreshWa();
+</script>
+</body>
+</html>
