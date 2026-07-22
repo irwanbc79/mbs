@@ -46,7 +46,9 @@
   nav{position:sticky;top:0;z-index:50;background:rgba(3,7,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem}
-  .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#08101e}
+  .logo-mark{width:34px;height:34px;flex-shrink:0;filter:drop-shadow(0 0 6px var(--accent-soft));transition:filter .2s}
+  .logo:hover .logo-mark{filter:drop-shadow(0 0 12px var(--accent))}
+  .logo-mark img{width:100%;height:100%;object-fit:contain}
   .nav-links{display:flex;align-items:center;gap:18px;font-size:.87rem;color:var(--muted);flex-wrap:wrap}
   .nav-links a:hover{color:var(--text)}
   .nav-sep{width:1px;height:16px;background:var(--border);display:inline-block}
@@ -248,7 +250,10 @@
 <body>
 <nav>
   <div class="container nav-inner">
-    <a class="logo" href="https://morabangun.com"><span class="logo-mark">MB</span> Mora Bangun <span style="color:var(--accent)">Solutions</span></a>
+    <a class="logo" href="https://morabangun.com">
+      <span class="logo-mark"><img src="/images/brand/mbs-symbol-160.png" alt="MBS" width="160" height="118" loading="eager"></span>
+      Mora Bangun <span style="color:var(--accent)">Solutions</span>
+    </a>
     <div class="nav-links">
       <a href="https://morabangun.com" data-i18n="crossHome">Beranda</a><a href="/solusi" data-i18n="navSolusi">Solusi</a><a href="#demo" data-i18n="nav1">Demo</a><a href="#fitur" data-i18n="nav2">Fitur</a><a href="#harga" data-i18n="nav3">Harga</a><a href="#faq">FAQ</a>
       <span class="nav-sep"></span>
