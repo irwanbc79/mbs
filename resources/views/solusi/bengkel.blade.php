@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Live</b><span data-i18n="t0">Portal Forwarder — fondasi teknis sama</span></div><div><b data-i18n="t1b">Riwayat</b><span data-i18n="t1">lengkap per kendaraan</span></div><div><b data-i18n="t2b">Tanpa install</b><span data-i18n="t2">cukup browser HP</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🔧</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/bengkel</div>
+      <img src="/images/solusi/bengkel-hero.webp" alt="Bengkel & Servis Kendaraan" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

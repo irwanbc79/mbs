@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">SHU</b><span data-i18n="t0">transparan per anggota</span></div><div><b data-i18n="t1b">Reminder</b><span data-i18n="t1">angsuran via WA otomatis</span></div><div><b data-i18n="t2b">RAT</b><span data-i18n="t2">digital & tertib administrasi</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🤝</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/koperasi</div>
+      <img src="/images/solusi/koperasi-hero.webp" alt="Koperasi Simpan Pinjam" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

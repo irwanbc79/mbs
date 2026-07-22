@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Live</b><span data-i18n="t0">Portal Forwarder — fondasi teknis sama</span></div><div><b data-i18n="t1b">Tanpa install</b><span data-i18n="t1">cukup browser HP</span></div><div><b data-i18n="t2b">Piutang</b><span data-i18n="t2">umur 30/60/90 hari terpantau</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🧱</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/distributor</div>
+      <img src="/images/solusi/distributor-hero.webp" alt="Distributor & Grosir B2B" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

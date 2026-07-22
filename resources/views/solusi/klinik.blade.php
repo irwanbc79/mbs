@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Permenkes 24/2022</b><span data-i18n="t0">RME wajib semua faskes</span></div><div><b data-i18n="t1b">SATUSEHAT</b><span data-i18n="t1">sinkron otomatis (FHIR)</span></div><div><b data-i18n="t2b">Server</b><span data-i18n="t2">Indonesia · data terenkripsi</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🏥</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/klinik</div>
+      <img src="/images/solusi/klinik-hero.webp" alt="Klinik & Praktek Mandiri" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

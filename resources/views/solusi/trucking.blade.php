@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">POD digital</b><span data-i18n="t0">foto + tanda tangan di HP sopir</span></div><div><b data-i18n="t1b">DNA logistik</b><span data-i18n="t1">satu keluarga dgn Portal Forwarder</span></div><div><b data-i18n="t2b">Uang jalan</b><span data-i18n="t2">& BBM tercatat per rit</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🚚</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/trucking</div>
+      <img src="/images/solusi/trucking-hero.webp" alt="Ekspedisi Domestik & Trucking" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

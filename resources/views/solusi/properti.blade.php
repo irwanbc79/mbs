@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">KPR/FLPP</b><span data-i18n="t0">tracking berkas transparan</span></div><div><b data-i18n="t1b">Siteplan</b><span data-i18n="t1">status unit real-time</span></div><div><b data-i18n="t2b">Foto progress</b><span data-i18n="t2">per rumah, per minggu</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🏠</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/properti</div>
+      <img src="/images/solusi/properti-hero.webp" alt="Developer Perumahan" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

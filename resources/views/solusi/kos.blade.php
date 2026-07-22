@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Reminder</b><span data-i18n="t0">H-3 jatuh tempo via WA</span></div><div><b data-i18n="t1b">QRIS</b><span data-i18n="t1">bayar tanpa transfer manual</span></div><div><b data-i18n="t2b">Tiket komplain</b><span data-i18n="t2">tidak hilang di chat</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🏘️</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/kos</div>
+      <img src="/images/solusi/kos-hero.webp" alt="Kos & Rumah Sewa" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

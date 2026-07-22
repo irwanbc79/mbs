@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Tertib</b><span data-i18n="t0">administrasi untuk pelaporan PPIU</span></div><div><b data-i18n="t1b">Dipercaya</b><span data-i18n="t1">institusi muslim (darulfurqon.my)</span></div><div><b data-i18n="t2b">Tabungan</b><span data-i18n="t2">& cicilan transparan</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🕋</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/umroh</div>
+      <img src="/images/solusi/umroh-hero.webp" alt="Travel Umroh & Haji" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

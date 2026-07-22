@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Approve proof</b><span data-i18n="t0">tercatat & mengikat</span></div><div><b data-i18n="t1b">Status produksi</b><span data-i18n="t1">per tahap real-time</span></div><div><b data-i18n="t2b">DP–pelunasan</b><span data-i18n="t2">jelas per order</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🖨️</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/percetakan</div>
+      <img src="/images/solusi/percetakan-hero.webp" alt="Percetakan & Konveksi" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

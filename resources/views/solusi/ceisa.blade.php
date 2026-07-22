@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">20+ tahun</b><span data-i18n="t0">praktisi kepabeanan</span></div><div><b data-i18n="t1b">Live</b><span data-i18n="t1">ceisa.m2b.co.id (H2H DJBC)</span></div><div><b data-i18n="t2b">BC 2.0 & 3.0</b><span data-i18n="t2">impor + ekspor</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🛃</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/ceisa</div>
+      <img src="/images/solusi/ceisa-hero.webp" alt="CEISA H2H — PPJK & Ekspor-Impor" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

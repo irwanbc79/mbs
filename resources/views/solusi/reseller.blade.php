@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Harga bertingkat</b><span data-i18n="t0">Silver/Gold/Platinum</span></div><div><b data-i18n="t1b">Dropship</b><span data-i18n="t1">resi atas nama brand Anda</span></div><div><b data-i18n="t2b">Komisi</b><span data-i18n="t2">terhitung & ditarik otomatis</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🛍️</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/reseller</div>
+      <img src="/images/solusi/reseller-hero.webp" alt="Brand Online & Reseller" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>

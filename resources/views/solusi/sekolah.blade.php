@@ -303,8 +303,7 @@
       <div class="trust"><div><b data-i18n="t0b">Dipercaya</b><span data-i18n="t0">lembaga pendidikan Islam</span></div><div><b data-i18n="t1b">QRIS</b><span data-i18n="t1">& transfer otomatis</span></div><div><b data-i18n="t2b">< honor</b><span data-i18n="t2">1 staf TU paruh waktu</span></div></div>
     </div>
     <div class="hero-visual">
-      <div style="text-align:center;padding:40px 20px;font-size:3rem">🕌</div>
-      <div style="text-align:center;color:var(--dim);font-size:.8rem">morabangun.com/solusi/sekolah</div>
+      <img src="/images/solusi/sekolah-hero.webp" alt="Sekolah, Pesantren & Yayasan" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
     </div>
   </div>
 </header>
