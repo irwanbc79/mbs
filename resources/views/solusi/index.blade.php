@@ -275,8 +275,9 @@
   @media(max-width:820px){.hubgrid{grid-template-columns:1fr}}
   .hubcard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:17px;text-align:left;cursor:pointer;transition:.15s;display:flex;flex-direction:column;gap:6px;color:var(--text);text-decoration:none}
   .hubcard:hover{border-color:var(--hc);transform:translateY(-2px)}
-  .hubcard .hemoji{font-size:1.45rem}
-  .hubcard b{font-size:.92rem}
+  .hubcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .hubcard .hemoji{font-size:1.7rem;flex-shrink:0;line-height:1}
+  .hubcard b{font-size:1.55rem;line-height:1.2;font-weight:750}
   .hubcard p{font-size:.76rem;color:var(--muted);flex:1;line-height:1.5}
   .hubcard .hfoot{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--dim);margin-top:6px}
   .hubcard .hgo{color:var(--hc);font-weight:700}
@@ -319,17 +320,26 @@
     <div class="hublabel" data-i18n="grp_ceisa">🏛️ Integrasi Sistem Pemerintah — Moat Kami</div>
     <div class="hubgrid">
       <a class="hubcard" style="--hc:#f59e0b" href="/solusi/ceisa">
-        <span class="hemoji">🛃</span><b data-i18n="hub_ceisa_t">CEISA H2H — PPJK & Ekspor-Impor</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_ceisa_t">CEISA H2H — PPJK & Ekspor-Impor</b>
+          <span class="hemoji">🛃</span>
+        </div>
         <p data-i18n="hub_ceisa_p">OCR baca dokumen, AI auditor cek sebelum kirim</p>
         <div class="hfoot"><span>mulai Rp 12jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#0ea5e9" href="/solusi/klinik">
-        <span class="hemoji">🏥</span><b data-i18n="hub_klinik_t">Klinik & Praktek Mandiri</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_klinik_t">Klinik & Praktek Mandiri</b>
+          <span class="hemoji">🏥</span>
+        </div>
         <p data-i18n="hub_klinik_p">Rekam medis digital, tercari dalam detik</p>
         <div class="hfoot"><span>mulai Rp 9jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#22c55e" href="/solusi/umroh">
-        <span class="hemoji">🕋</span><b data-i18n="hub_umroh_t">Travel Umroh & Haji</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_umroh_t">Travel Umroh & Haji</b>
+          <span class="hemoji">🕋</span>
+        </div>
         <p data-i18n="hub_umroh_p">Checklist dokumen per jamaah, terlihat jelas</p>
         <div class="hfoot"><span>mulai Rp 8jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
@@ -337,17 +347,26 @@
     <div class="hublabel" data-i18n="grp_portal-forwarder">🚢 Logistik & Supply Chain — DNA Kami 20+ Tahun</div>
     <div class="hubgrid">
       <a class="hubcard" style="--hc:#3b82f6" href="/solusi/portal-forwarder">
-        <span class="hemoji">🚢</span><b data-i18n="hub_portal-forwarder_t">Portal Forwarder</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_portal-forwarder_t">Portal Forwarder</b>
+          <span class="hemoji">🚢</span>
+        </div>
         <p data-i18n="hub_portal-forwarder_p">Customer lacak shipment, dokumen & invoice sendiri — CS bebas dari "kontainer saya di mana?".</p>
         <div class="hfoot"><span>mulai Rp 8,5jt</span><span class="pill pill-g">✓ Master approved</span></div>
       </a>
       <a class="hubcard" style="--hc:#eab308" href="/solusi/trucking">
-        <span class="hemoji">🚚</span><b data-i18n="hub_trucking_t">Ekspedisi Domestik & Trucking</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_trucking_t">Ekspedisi Domestik & Trucking</b>
+          <span class="hemoji">🚚</span>
+        </div>
         <p data-i18n="hub_trucking_p">Posisi & status armada terpantau dari dashboard</p>
         <div class="hfoot"><span>mulai Rp 8jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#8b5cf6" href="/solusi/distributor">
-        <span class="hemoji">🧱</span><b data-i18n="hub_distributor_t">Distributor & Grosir B2B</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_distributor_t">Distributor & Grosir B2B</b>
+          <span class="hemoji">🧱</span>
+        </div>
         <p data-i18n="hub_distributor_p">Semua PO tercatat rapi di satu portal</p>
         <div class="hfoot"><span>mulai Rp 8jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
@@ -355,42 +374,66 @@
     <div class="hublabel" data-i18n="grp_sekolah">🏢 Operasional Bisnis & Layanan</div>
     <div class="hubgrid">
       <a class="hubcard" style="--hc:#14b8a6" href="/solusi/sekolah">
-        <span class="hemoji">🕌</span><b data-i18n="hub_sekolah_t">Sekolah, Pesantren & Yayasan</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_sekolah_t">Sekolah, Pesantren & Yayasan</b>
+          <span class="hemoji">🕌</span>
+        </div>
         <p data-i18n="hub_sekolah_p">Reminder otomatis terkirim sopan & tepat waktu</p>
         <div class="hfoot"><span>mulai Rp 6jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#f97316" href="/solusi/kontraktor">
-        <span class="hemoji">🏗️</span><b data-i18n="hub_kontraktor_t">Kontraktor & Proyek</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_kontraktor_t">Kontraktor & Proyek</b>
+          <span class="hemoji">🏗️</span>
+        </div>
         <p data-i18n="hub_kontraktor_p">Progress terlihat jelas dari HP owner kapan saja</p>
         <div class="hfoot"><span>mulai Rp 10jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#6366f1" href="/solusi/properti">
-        <span class="hemoji">🏠</span><b data-i18n="hub_properti_t">Developer Perumahan</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_properti_t">Developer Perumahan</b>
+          <span class="hemoji">🏠</span>
+        </div>
         <p data-i18n="hub_properti_p">Foto progress mingguan terlihat dari HP konsumen</p>
         <div class="hfoot"><span>mulai Rp 10jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#06b6d4" href="/solusi/koperasi">
-        <span class="hemoji">🤝</span><b data-i18n="hub_koperasi_t">Koperasi Simpan Pinjam</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_koperasi_t">Koperasi Simpan Pinjam</b>
+          <span class="hemoji">🤝</span>
+        </div>
         <p data-i18n="hub_koperasi_p">Saldo simpanan terlihat kapan saja dari HP</p>
         <div class="hfoot"><span>mulai Rp 7jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#d946ef" href="/solusi/percetakan">
-        <span class="hemoji">🖨️</span><b data-i18n="hub_percetakan_t">Percetakan & Konveksi</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_percetakan_t">Percetakan & Konveksi</b>
+          <span class="hemoji">🖨️</span>
+        </div>
         <p data-i18n="hub_percetakan_p">Approve proof tercatat dengan waktu & nama jelas</p>
         <div class="hfoot"><span>mulai Rp 6jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#84cc16" href="/solusi/reseller">
-        <span class="hemoji">🛍️</span><b data-i18n="hub_reseller_t">Brand Online & Reseller</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_reseller_t">Brand Online & Reseller</b>
+          <span class="hemoji">🛍️</span>
+        </div>
         <p data-i18n="hub_reseller_p">Reseller akses katalog & harga sendiri, real-time</p>
         <div class="hfoot"><span>mulai Rp 8jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#f43f5e" href="/solusi/bengkel">
-        <span class="hemoji">🔧</span><b data-i18n="hub_bengkel_t">Bengkel & Servis Kendaraan</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_bengkel_t">Bengkel & Servis Kendaraan</b>
+          <span class="hemoji">🔧</span>
+        </div>
         <p data-i18n="hub_bengkel_p">Reminder servis otomatis terkirim tepat waktu</p>
         <div class="hfoot"><span>mulai Rp 5jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
       <a class="hubcard" style="--hc:#f472b6" href="/solusi/kos">
-        <span class="hemoji">🏘️</span><b data-i18n="hub_kos_t">Kos & Rumah Sewa</b>
+        <div class="hubcard-head">
+          <b data-i18n="hub_kos_t">Kos & Rumah Sewa</b>
+          <span class="hemoji">🏘️</span>
+        </div>
         <p data-i18n="hub_kos_p">Reminder otomatis, sopan & tepat waktu</p>
         <div class="hfoot"><span>mulai Rp 5jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
