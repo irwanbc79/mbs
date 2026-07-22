@@ -41,8 +41,10 @@
   .btn-wa{background:#16a34a;color:#fff}
   .btn-wa:hover{transform:translateY(-2px)}
   nav{position:sticky;top:0;z-index:50;background:rgba(3,7,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:66px;gap:12px;padding:10px 0;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem;flex-shrink:0;white-space:nowrap}
+  .logo-text{display:flex;flex-direction:column;line-height:1.15}
+  .logo-sub{font-size:.62rem;font-weight:500;color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
   .logo-mark{width:34px;height:34px;flex-shrink:0;filter:drop-shadow(0 0 6px var(--accent-soft));transition:filter .2s}
   .logo:hover .logo-mark{filter:drop-shadow(0 0 12px var(--accent))}
   .logo-mark img{width:100%;height:100%;object-fit:contain}
@@ -51,7 +53,7 @@
   .nav-sep{width:1px;height:16px;background:var(--border);display:inline-block}
   .nav-links a[data-i18n^="cross"]{color:var(--dim);font-size:.82rem}
   .nav-links a[data-i18n^="cross"]:hover{color:var(--accent)}
-  .nav-right{display:flex;align-items:center;gap:10px}
+  .nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
   .lang-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 13px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer}
   .lang-btn:hover{color:var(--text);border-color:var(--accent)}
   @media(max-width:820px){.nav-links{display:none}}
@@ -268,7 +270,7 @@
   <div class="container nav-inner">
     <a class="logo" href="https://morabangun.com">
       <span class="logo-mark"><img src="/images/brand/mbs-symbol-160.png" alt="MBS" width="160" height="118" loading="eager"></span>
-      Mora Bangun <span style="color:var(--accent)">Solutions</span>
+      <span class="logo-text">Mora <span style="color:var(--accent)">Bangun</span><span class="logo-sub">Solutions</span></span>
     </a>
     <div class="nav-links">
       <a href="https://morabangun.com" data-i18n="crossHome">Beranda</a><a href="/solusi" data-i18n="navSolusi">Solusi</a><a href="#daftar-solusi" data-i18n="nav4">Semua Solusi</a>
@@ -447,13 +449,13 @@
     'crossTesti': 'Testimonials',
     'crossContact': 'Contact',
     'crossBlog': 'Blog',
-    'heroEye': '\\U0001F5C2\\uFE0F morabangun.com/solusi \\u2014 Solutions Hub',
+    'heroEye': '🗂️ morabangun.com/solusi — Solutions Hub',
     'heroH1': 'A System That Speaks <span class="hl">Your Industry’s Language</span>',
-    'heroSub': 'Not generic software. One proven technology foundation \\u2014 white-label portal, tracking, billing, automatic WhatsApp \\u2014 shaped for 13 industries. Pick yours.',
-    'govline': '\\U0001F3DB\\uFE0F <b>We understand Indonesia\'s government systems:</b> CEISA (Customs) \\u00b7 SATUSEHAT (Health Ministry) \\u00b7 SISKOPATUH (Religious Affairs) \\u2014 official integration, not guesswork.',
+    'heroSub': 'Not generic software. One proven technology foundation — white-label portal, tracking, billing, automatic WhatsApp — shaped for 13 industries. Pick yours.',
+    'govline': '🏛️ <b>We understand Indonesia\'s government systems:</b> CEISA (Customs) · SATUSEHAT (Health Ministry) · SISKOPATUH (Religious Affairs) — official integration, not guesswork.',
     'hubCtaB': 'Don\'t see your industry?',
-    'hubCtaP': 'Our foundation is the same \\u2014 portal, tracking, billing, automatic WhatsApp. Tell us your workflow, we\'ll shape the system.',
-    'hubCtaBtn': '\\U0001F4AC Free 30-Minute Consultation',
+    'hubCtaP': 'Our foundation is the same — portal, tracking, billing, automatic WhatsApp. Tell us your workflow, we\'ll shape the system.',
+    'hubCtaBtn': '💬 Free 30-Minute Consultation',
     'ft1': '&copy; 2026 Mora Bangun Solutions &middot; morabangun.com &mdash; Software house for logistics & export-import, Medan, Indonesia',
     'ft2': 'Products: Portal Forwarder &middot; ERP &middot; CRM &middot; AI Chatbot &middot; CEISA Integration'
   };
