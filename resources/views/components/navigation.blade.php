@@ -75,6 +75,16 @@
                 <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
 
+            <!-- Admin Login -->
+            <a href="https://admin.morabangun.com/admin"
+               data-testid="nav-admin-btn"
+               title="Admin Portal"
+               class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-cyan-500/40 text-xs font-medium text-slate-400 hover:text-cyan-400 transition-all">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span x-show="$store.locale === 'id'">Admin</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Admin</span>
+            </a>
+
             <!-- CTA Button -->
             <a href="#contact"
                data-testid="nav-cta-btn"
@@ -138,6 +148,15 @@
                 <span x-show="$store.locale === 'id'">Harga</span><span x-show="$store.locale === 'en'" x-cloak>Pricing</span>
             </a>
             <a @click="mobileOpen=false" href="{{ route('blog.index') }}" class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Blog</a>
+            <a @click="mobileOpen=false" href="https://admin.morabangun.com/admin"
+               data-testid="mobile-admin-link"
+               class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">
+                <span class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span x-show="$store.locale === 'id'">Login Admin</span>
+                    <span x-show="$store.locale === 'en'" x-cloak>Admin Login</span>
+                </span>
+            </a>
             <div class="pt-3">
                 <a href="#contact" @click="mobileOpen=false"
                    class="flex items-center justify-center gap-2 w-full px-5 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-bold rounded-lg transition-all">

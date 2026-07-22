@@ -149,6 +149,13 @@
                     <svg class="w-4 h-3 rounded-sm flex-shrink-0" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
                     <span>Made in Indonesia</span>
                 </div>
+                <span class="text-slate-800 hidden md:inline">·</span>
+                <a href="https://admin.morabangun.com/admin"
+                   data-testid="footer-admin-link"
+                   class="flex items-center gap-1.5 text-xs text-slate-600 hover:text-cyan-400 transition-colors">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span>Admin</span>
+                </a>
             </div>
         </div>
     </div>
