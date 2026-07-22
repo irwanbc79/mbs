@@ -69,8 +69,11 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem}
   .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#fff}
-  .nav-links{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+  .nav-links{display:flex;align-items:center;gap:18px;font-size:.87rem;color:var(--muted);flex-wrap:wrap}
   .nav-links a:hover{color:var(--text)}
+  .nav-sep{width:1px;height:16px;background:var(--border);display:inline-block}
+  .nav-links a[data-i18n^="cross"]{color:var(--dim);font-size:.82rem}
+  .nav-links a[data-i18n^="cross"]:hover{color:var(--accent)}
   .nav-right{display:flex;align-items:center;gap:10px}
   .lang-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 13px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer;letter-spacing:.04em}
   .lang-btn:hover{color:var(--text);border-color:var(--accent)}
@@ -243,7 +246,9 @@
   <div class="container nav-inner">
     <a class="logo" href="https://morabangun.com"><span class="logo-mark">MB</span> Mora Bangun <span style="color:var(--accent)">Solutions</span></a>
     <div class="nav-links">
-      <a href="#demo" data-i18n="nav1">Demo</a><a href="#fitur" data-i18n="nav2">Fitur</a><a href="#harga" data-i18n="nav3">Harga</a><a href="#faq">FAQ</a>
+      <a href="https://morabangun.com" data-i18n="crossHome">Beranda</a><a href="/solusi" data-i18n="navSolusi">Solusi</a><a href="#demo" data-i18n="nav1">Demo</a><a href="#fitur" data-i18n="nav2">Fitur</a><a href="#harga" data-i18n="nav3">Harga</a><a href="#faq">FAQ</a>
+      <span class="nav-sep"></span>
+      <a href="https://morabangun.com/#portfolio" data-i18n="crossPortfolio">Portfolio</a><a href="https://morabangun.com/#tech" data-i18n="crossTech">Teknologi</a><a href="https://morabangun.com/#testimonials" data-i18n="crossTesti">Testimoni</a><a href="https://morabangun.com/#contact" data-i18n="crossContact">Kontak</a><a href="https://morabangun.com/blog" data-i18n="crossBlog">Blog</a>
     </div>
     <div class="nav-right">
       <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
@@ -620,6 +625,8 @@
 
   /* ===== i18n: default ID, toggle EN (marketing copy; konten demo tetap ID) ===== */
   var EN = {
+    navSolusi:'Solutions', crossHome:'Home', crossPortfolio:'Portfolio', crossTech:'Technology',
+    crossTesti:'Testimonials', crossContact:'Contact', crossBlog:'Blog',
     nav1:'Demo', nav2:'Features', nav3:'Pricing', navCta:'Try the Demo →',
     eyebrow:'🚢 Built for Freight Forwarders & Logistics',
     h1:'Stop Answering <span class="hl">"Where Is My Container?"</span> 30 Times a Day',

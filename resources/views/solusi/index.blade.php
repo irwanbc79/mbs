@@ -44,8 +44,11 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:750;font-size:1.05rem}
   .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#08101e}
-  .nav-links{display:flex;gap:24px;font-size:.9rem;color:var(--muted)}
+  .nav-links{display:flex;align-items:center;gap:18px;font-size:.87rem;color:var(--muted);flex-wrap:wrap}
   .nav-links a:hover{color:var(--text)}
+  .nav-sep{width:1px;height:16px;background:var(--border);display:inline-block}
+  .nav-links a[data-i18n^="cross"]{color:var(--dim);font-size:.82rem}
+  .nav-links a[data-i18n^="cross"]:hover{color:var(--accent)}
   .nav-right{display:flex;align-items:center;gap:10px}
   .lang-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 13px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer}
   .lang-btn:hover{color:var(--text);border-color:var(--accent)}
@@ -263,11 +266,13 @@
   <div class="container nav-inner">
     <a class="logo" href="https://morabangun.com"><span class="logo-mark">MB</span> Mora Bangun <span style="color:var(--accent)">Solutions</span></a>
     <div class="nav-links">
-      <a href="/solusi" data-i18n="navSolusi">Solusi</a><a href="#demo" data-i18n="nav1">Demo</a><a href="#fitur" data-i18n="nav2">Fitur</a><a href="#harga" data-i18n="nav3">Harga</a><a href="#faq">FAQ</a>
+      <a href="https://morabangun.com" data-i18n="crossHome">Beranda</a><a href="/solusi" data-i18n="navSolusi">Solusi</a><a href="#daftar-solusi" data-i18n="nav4">Semua Solusi</a>
+      <span class="nav-sep"></span>
+      <a href="https://morabangun.com/#portfolio" data-i18n="crossPortfolio">Portfolio</a><a href="https://morabangun.com/#tech" data-i18n="crossTech">Teknologi</a><a href="https://morabangun.com/#testimonials" data-i18n="crossTesti">Testimoni</a><a href="https://morabangun.com/#contact" data-i18n="crossContact">Kontak</a><a href="https://morabangun.com/blog" data-i18n="crossBlog">Blog</a>
     </div>
     <div class="nav-right">
       <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
-      <a class="btn btn-primary" style="padding:10px 20px;font-size:.9rem" href="#demo" data-i18n="navCta">Coba Demo →</a>
+      <a class="btn btn-primary" style="padding:10px 20px;font-size:.9rem" href="#daftar-solusi" data-i18n="navCtaHub">Lihat Semua Solusi ↓</a>
     </div>
   </div>
 </nav>
@@ -281,7 +286,7 @@
   </div>
 </div>
 
-<div class="container hubwrap">
+<div class="container hubwrap" id="daftar-solusi">
     <div class="hublabel" data-i18n="grp_ceisa">🏛️ Integrasi Sistem Pemerintah — Moat Kami</div>
     <div class="hubgrid">
       <a class="hubcard" style="--hc:#f59e0b" href="/solusi/ceisa">
@@ -396,52 +401,56 @@
 
   var lang = 'id';
   var EN = {
-    grp_ceisa: '🏛️ Official Government System Integration — Our Moat',
-    grp_portal-forwarder: '🚢 Logistics & Supply Chain — Our 20+ Year DNA',
-    grp_sekolah: '🏢 Business Operations & Services',
-    hub_portal-forwarder_t: 'Portal Forwarder',
-    hub_portal-forwarder_p: 'Customers track shipments, documents & invoices themselves — CS is free from "where\'s my container?".',
-    hub_ceisa_t: 'CEISA H2H — PPJK & Ekspor-Impor',
-    hub_ceisa_p: 'OCR reads documents, AI audits before submission',
-    hub_sekolah_t: 'Sekolah, Pesantren & Yayasan',
-    hub_sekolah_p: 'Automatic, polite, on-time reminders',
-    hub_distributor_t: 'Distributor & Grosir B2B',
-    hub_distributor_p: 'Every PO recorded neatly in one portal',
-    hub_klinik_t: 'Klinik & Praktek Mandiri',
-    hub_klinik_p: 'Digital records, searchable in seconds',
-    hub_umroh_t: 'Travel Umroh & Haji',
-    hub_umroh_p: 'Per-pilgrim document checklist, clearly visible',
-    hub_kontraktor_t: 'Kontraktor & Proyek',
-    hub_kontraktor_p: 'Progress clearly visible from the owner\'s phone anytime',
-    hub_bengkel_t: 'Bengkel & Servis Kendaraan',
-    hub_bengkel_p: 'Automatic service reminders sent right on time',
-    hub_properti_t: 'Developer Perumahan',
-    hub_properti_p: 'Weekly progress photos visible from the buyer\'s phone',
-    hub_koperasi_t: 'Koperasi Simpan Pinjam',
-    hub_koperasi_p: 'Savings balance visible anytime from their phone',
-    hub_trucking_t: 'Ekspedisi Domestik & Trucking',
-    hub_trucking_p: 'Fleet position & status tracked from a dashboard',
-    hub_percetakan_t: 'Percetakan & Konveksi',
-    hub_percetakan_p: 'Proof approval recorded with clear time & name',
-    hub_reseller_t: 'Brand Online & Reseller',
-    hub_reseller_p: 'Resellers access their own catalog & pricing, real-time',
-    hub_kos_t: 'Kos & Rumah Sewa',
-    hub_kos_p: 'Automatic, polite, on-time reminders',
-    hub_go: 'See solution &rarr;',
-    navSolusi: 'Solutions',
-    nav1: 'Demo',
-    nav2: 'Features',
-    nav3: 'Pricing',
-    navCta: 'Explore &rarr;',
-    heroEye: '\\U0001F5C2\\uFE0F morabangun.com/solusi \\u2014 Solutions Hub',
-    heroH1: 'A System That Speaks <span class="hl">Your Industry’s Language</span>',
-    heroSub: 'Not generic software. One proven technology foundation \\u2014 white-label portal, tracking, billing, automatic WhatsApp \\u2014 shaped for 13 industries. Pick yours.',
-    govline: '\\U0001F3DB\\uFE0F <b>We understand Indonesia\'s government systems:</b> CEISA (Customs) \\u00b7 SATUSEHAT (Health Ministry) \\u00b7 SISKOPATUH (Religious Affairs) \\u2014 official integration, not guesswork.',
-    hubCtaB: 'Don\'t see your industry?',
-    hubCtaP: 'Our foundation is the same \\u2014 portal, tracking, billing, automatic WhatsApp. Tell us your workflow, we\'ll shape the system.',
-    hubCtaBtn: '\\U0001F4AC Free 30-Minute Consultation',
-    ft1: '&copy; 2026 Mora Bangun Solutions &middot; morabangun.com &mdash; Software house for logistics & export-import, Medan, Indonesia',
-    ft2: 'Products: Portal Forwarder &middot; ERP &middot; CRM &middot; AI Chatbot &middot; CEISA Integration'
+    'grp_ceisa': '🏛️ Official Government System Integration — Our Moat',
+    'grp_portal-forwarder': '🚢 Logistics & Supply Chain — Our 20+ Year DNA',
+    'grp_sekolah': '🏢 Business Operations & Services',
+    'hub_portal-forwarder_t': 'Portal Forwarder',
+    'hub_portal-forwarder_p': 'Customers track shipments, documents & invoices themselves — CS is free from "where\'s my container?".',
+    'hub_ceisa_t': 'CEISA H2H — PPJK & Ekspor-Impor',
+    'hub_ceisa_p': 'OCR reads documents, AI audits before submission',
+    'hub_sekolah_t': 'Sekolah, Pesantren & Yayasan',
+    'hub_sekolah_p': 'Automatic, polite, on-time reminders',
+    'hub_distributor_t': 'Distributor & Grosir B2B',
+    'hub_distributor_p': 'Every PO recorded neatly in one portal',
+    'hub_klinik_t': 'Klinik & Praktek Mandiri',
+    'hub_klinik_p': 'Digital records, searchable in seconds',
+    'hub_umroh_t': 'Travel Umroh & Haji',
+    'hub_umroh_p': 'Per-pilgrim document checklist, clearly visible',
+    'hub_kontraktor_t': 'Kontraktor & Proyek',
+    'hub_kontraktor_p': 'Progress clearly visible from the owner\'s phone anytime',
+    'hub_bengkel_t': 'Bengkel & Servis Kendaraan',
+    'hub_bengkel_p': 'Automatic service reminders sent right on time',
+    'hub_properti_t': 'Developer Perumahan',
+    'hub_properti_p': 'Weekly progress photos visible from the buyer\'s phone',
+    'hub_koperasi_t': 'Koperasi Simpan Pinjam',
+    'hub_koperasi_p': 'Savings balance visible anytime from their phone',
+    'hub_trucking_t': 'Ekspedisi Domestik & Trucking',
+    'hub_trucking_p': 'Fleet position & status tracked from a dashboard',
+    'hub_percetakan_t': 'Percetakan & Konveksi',
+    'hub_percetakan_p': 'Proof approval recorded with clear time & name',
+    'hub_reseller_t': 'Brand Online & Reseller',
+    'hub_reseller_p': 'Resellers access their own catalog & pricing, real-time',
+    'hub_kos_t': 'Kos & Rumah Sewa',
+    'hub_kos_p': 'Automatic, polite, on-time reminders',
+    'hub_go': 'See solution &rarr;',
+    'navSolusi': 'Solutions',
+    'nav4': 'All Solutions',
+    'navCtaHub': 'See All Solutions ↓',
+    'crossHome': 'Home',
+    'crossPortfolio': 'Portfolio',
+    'crossTech': 'Technology',
+    'crossTesti': 'Testimonials',
+    'crossContact': 'Contact',
+    'crossBlog': 'Blog',
+    'heroEye': '\\U0001F5C2\\uFE0F morabangun.com/solusi \\u2014 Solutions Hub',
+    'heroH1': 'A System That Speaks <span class="hl">Your Industry’s Language</span>',
+    'heroSub': 'Not generic software. One proven technology foundation \\u2014 white-label portal, tracking, billing, automatic WhatsApp \\u2014 shaped for 13 industries. Pick yours.',
+    'govline': '\\U0001F3DB\\uFE0F <b>We understand Indonesia\'s government systems:</b> CEISA (Customs) \\u00b7 SATUSEHAT (Health Ministry) \\u00b7 SISKOPATUH (Religious Affairs) \\u2014 official integration, not guesswork.',
+    'hubCtaB': 'Don\'t see your industry?',
+    'hubCtaP': 'Our foundation is the same \\u2014 portal, tracking, billing, automatic WhatsApp. Tell us your workflow, we\'ll shape the system.',
+    'hubCtaBtn': '\\U0001F4AC Free 30-Minute Consultation',
+    'ft1': '&copy; 2026 Mora Bangun Solutions &middot; morabangun.com &mdash; Software house for logistics & export-import, Medan, Indonesia',
+    'ft2': 'Products: Portal Forwarder &middot; ERP &middot; CRM &middot; AI Chatbot &middot; CEISA Integration'
   };
   function toggleLang(){
     lang = lang === 'id' ? 'en' : 'id';
