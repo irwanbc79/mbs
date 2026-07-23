@@ -308,6 +308,10 @@
       </div>
     </div>
     <div class="hero-visual">
+      <img src="/images/solusi/portal-forwarder-hero.webp" alt="Portal Forwarder — Mora Bangun Solutions" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
+    </div>
+    <!-- Mockup dashboard lama (sebelum diganti hero AI 2026-07-23) — disimpan sbg cadangan:
+    <div class="hero-visual">
       <div class="hv-head">
         <span class="hv-dot" style="background:#f87171"></span><span class="hv-dot" style="background:#fbbf24"></span><span class="hv-dot" style="background:#34d399"></span>
         <small style="color:var(--dim);font-size:.72rem;margin-left:8px">portal.perusahaan-anda.co.id</small>
@@ -321,6 +325,7 @@
       <div class="hv-row"><span><b style="color:var(--text)">JOB-2607-013</b> · Semarang → Busan</span><span class="pill pill-amber">Custom Clearance</span></div>
       <div class="hv-row"><span><b style="color:var(--text)">JOB-2607-009</b> · Surabaya → Rotterdam</span><span class="pill pill-green" data-i18n="hvArr">Tiba</span></div>
     </div>
+    -->
   </div>
 </header>
 
