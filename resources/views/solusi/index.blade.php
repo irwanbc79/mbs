@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://morabangun.com/solusi">
 <meta property="og:locale" content="id_ID">
 <script type="application/ld+json">
-{"@@context":"https://schema.org","@@type":"ItemList","itemListElement":[{"@@type":"ListItem","position":1,"url":"https://morabangun.com/solusi/portal-forwarder","name":"Portal Forwarder"},{"@@type":"ListItem","position":2,"url":"https://morabangun.com/solusi/ceisa","name":"CEISA H2H — PPJK & Ekspor-Impor"},{"@@type":"ListItem","position":3,"url":"https://morabangun.com/solusi/sekolah","name":"Sekolah, Pesantren & Yayasan"},{"@@type":"ListItem","position":4,"url":"https://morabangun.com/solusi/distributor","name":"Distributor & Grosir B2B"},{"@@type":"ListItem","position":5,"url":"https://morabangun.com/solusi/klinik","name":"Klinik & Praktek Mandiri"},{"@@type":"ListItem","position":6,"url":"https://morabangun.com/solusi/umroh","name":"Travel Umroh & Haji"},{"@@type":"ListItem","position":7,"url":"https://morabangun.com/solusi/kontraktor","name":"Kontraktor & Proyek"},{"@@type":"ListItem","position":8,"url":"https://morabangun.com/solusi/bengkel","name":"Bengkel & Servis Kendaraan"},{"@@type":"ListItem","position":9,"url":"https://morabangun.com/solusi/properti","name":"Developer Perumahan"},{"@@type":"ListItem","position":10,"url":"https://morabangun.com/solusi/koperasi","name":"Koperasi Simpan Pinjam"},{"@@type":"ListItem","position":11,"url":"https://morabangun.com/solusi/trucking","name":"Ekspedisi Domestik & Trucking"},{"@@type":"ListItem","position":12,"url":"https://morabangun.com/solusi/percetakan","name":"Percetakan & Konveksi"},{"@@type":"ListItem","position":13,"url":"https://morabangun.com/solusi/reseller","name":"Brand Online & Reseller"},{"@@type":"ListItem","position":14,"url":"https://morabangun.com/solusi/kos","name":"Kos & Rumah Sewa"}]}
+{"@@context":"https://schema.org","@@type":"ItemList","itemListElement":[{"@@type":"ListItem","position":1,"url":"https://morabangun.com/solusi/portal-forwarder","name":"Portal Forwarder"},{"@@type":"ListItem","position":2,"url":"https://morabangun.com/solusi/ceisa","name":"CEISA H2H — PPJK & Ekspor-Impor"},{"@@type":"ListItem","position":3,"url":"https://morabangun.com/solusi/sekolah","name":"Sekolah, Pesantren & Yayasan"},{"@@type":"ListItem","position":4,"url":"https://morabangun.com/solusi/distributor","name":"Distributor & Grosir B2B"},{"@@type":"ListItem","position":5,"url":"https://morabangun.com/solusi/klinik","name":"Klinik & Praktek Mandiri"},{"@@type":"ListItem","position":6,"url":"https://morabangun.com/solusi/umroh","name":"Travel Umroh & Haji"},{"@@type":"ListItem","position":7,"url":"https://morabangun.com/solusi/kontraktor","name":"Kontraktor & Proyek"},{"@@type":"ListItem","position":8,"url":"https://morabangun.com/solusi/bengkel","name":"Bengkel & Servis Kendaraan"},{"@@type":"ListItem","position":9,"url":"https://morabangun.com/solusi/properti","name":"Developer Perumahan"},{"@@type":"ListItem","position":10,"url":"https://morabangun.com/solusi/koperasi","name":"Koperasi Simpan Pinjam"},{"@@type":"ListItem","position":11,"url":"https://morabangun.com/solusi/trucking","name":"Ekspedisi Domestik & Trucking"},{"@@type":"ListItem","position":12,"url":"https://morabangun.com/solusi/percetakan","name":"Percetakan & Konveksi"},{"@@type":"ListItem","position":13,"url":"https://morabangun.com/solusi/reseller","name":"Brand Online & Reseller"},{"@@type":"ListItem","position":14,"url":"https://morabangun.com/solusi/kos","name":"Kos & Rumah Sewa"},{"@@type":"ListItem","position":15,"url":"https://morabangun.com/solusi/jastip","name":"Jastip — Jasa Titip Barang"}]}
 </script>
 <style>
   :root{
@@ -441,6 +441,14 @@
         <p data-i18n="hub_kos_p">Reminder otomatis, sopan & tepat waktu</p>
         <div class="hfoot"><span>mulai Rp 5jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
+      <a class="hubcard" style="--hc:#a855f7" href="/solusi/jastip">
+        <div class="hubcard-head">
+          <b data-i18n="hub_jastip_t">Jastip — Jasa Titip Barang</b>
+          <span class="hemoji">🧳</span>
+        </div>
+        <p data-i18n="hub_jastip_p">Form order terstruktur, semua rapi di satu tempat</p>
+        <div class="hfoot"><span>mulai Rp 6jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
+      </a>
     </div>
     <div class="hubcta">
       <b data-i18n="hubCtaB">Industri Anda tidak ada di daftar?</b>
@@ -573,6 +581,8 @@
     'hub_reseller_p': 'Resellers access their own catalog & pricing, real-time',
     'hub_kos_t': 'Kos & Rumah Sewa',
     'hub_kos_p': 'Automatic, polite, on-time reminders',
+    'hub_jastip_t': 'Jastip — Jasa Titip Barang',
+    'hub_jastip_p': 'Structured order form, everything organized in one place',
     'hub_go': 'See solution &rarr;',
     'navSolusi': 'Solutions',
     'nav4': 'All Solutions',

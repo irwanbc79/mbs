@@ -27,6 +27,7 @@
                 ['slug' => 'reseller', 'emoji' => '🛍️', 'id' => 'Reseller', 'en' => 'Resellers'],
                 ['slug' => 'bengkel', 'emoji' => '🔧', 'id' => 'Bengkel', 'en' => 'Workshops'],
                 ['slug' => 'kos', 'emoji' => '🏘️', 'id' => 'Kos & Sewa', 'en' => 'Rentals'],
+                ['slug' => 'jastip', 'emoji' => '🧳', 'id' => 'Jastip', 'en' => 'Jastip'],
             ] as $s)
             <a href="{{ route('solusi.' . $s['slug']) }}"
                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-white/10 hover:border-cyan-500/40 bg-white/[.02] hover:bg-white/5 text-xs text-slate-400 hover:text-white transition-all">

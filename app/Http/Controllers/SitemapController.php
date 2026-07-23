@@ -21,7 +21,7 @@ class SitemapController extends Controller
         $solusiSlugs = [
             'portal-forwarder', 'ceisa', 'sekolah', 'distributor', 'klinik', 'umroh',
             'kontraktor', 'bengkel', 'properti', 'koperasi', 'trucking', 'percetakan',
-            'reseller', 'kos',
+            'reseller', 'kos', 'jastip',
         ];
         foreach ($solusiSlugs as $slug) {
             $staticPages[] = ['url' => url('/solusi/' . $slug), 'priority' => '0.85', 'changefreq' => 'monthly'];

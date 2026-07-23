@@ -38,3 +38,4 @@ Route::view('/solusi/trucking', 'solusi.trucking')->name('solusi.trucking');
 Route::view('/solusi/percetakan', 'solusi.percetakan')->name('solusi.percetakan');
 Route::view('/solusi/reseller', 'solusi.reseller')->name('solusi.reseller');
 Route::view('/solusi/kos', 'solusi.kos')->name('solusi.kos');
+Route::view('/solusi/jastip', 'solusi.jastip')->name('solusi.jastip');
