@@ -57,8 +57,10 @@
   .nav-links a[data-i18n^="cross"]{color:var(--dim);font-size:.82rem}
   .nav-links a[data-i18n^="cross"]:hover{color:var(--accent)}
   .nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
-  .lang-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 13px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer}
+  .lang-btn{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--border);color:var(--muted);padding:7px 12px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer}
   .lang-btn:hover{color:var(--text);border-color:var(--accent)}
+  .lang-btn svg{width:16px;height:12px;border-radius:2px;flex-shrink:0}
+  .lang-btn .flag-en{display:none}
   @media(max-width:820px){.nav-links{display:none}}
   .hero{padding:80px 0 60px;position:relative}
   .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,var(--accent-soft),transparent 65%);pointer-events:none}
@@ -288,7 +290,11 @@
       <a href="https://morabangun.com/#portfolio" data-i18n="crossPortfolio">Portfolio</a><a href="https://morabangun.com/#tech" data-i18n="crossTech">Teknologi</a><a href="https://morabangun.com/#testimonials" data-i18n="crossTesti">Testimoni</a><a href="https://morabangun.com/#contact" data-i18n="crossContact">Kontak</a><a href="https://morabangun.com/blog" data-i18n="crossBlog">Blog</a>
     </div>
     <div class="nav-right">
-      <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">
+        <svg class="flag-id" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
+        <svg class="flag-en" viewBox="0 0 20 14"><rect width="20" height="14" fill="#012169"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#fff" stroke-width="2.8"/><path d="M10,0 V14 M0,7 H20" stroke="#fff" stroke-width="4.5"/><path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="2.8"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#C8102E" stroke-width="1.5"/></svg>
+        <span id="langLabel">EN</span>
+      </button>
       <a class="btn btn-primary" style="padding:10px 20px;font-size:.9rem" href="#demo" data-i18n="navCta">Coba Demo →</a>
     </div>
   </div>
@@ -518,7 +524,7 @@
         <h3>Starter</h3>
         <div class="for" data-i18n="umroh_pr_Starter_for">Manifest + dokumen + pengumuman</div>
         <div class="amount">Rp 8jt <small>setup</small></div>
-        <div class="monthly">+ <b>Rp 500rb/bulan</b></div>
+        <div class="monthly">+ <b>Rp 500rb/bulan</b> <span data-i18n="prHostLabel">hosting &amp; maintenance</span></div>
         <ul><li data-i18n="umroh_pr_Starter_i0">Manifest jamaah digital</li><li data-i18n="umroh_pr_Starter_i1">Checklist dokumen</li><li data-i18n="umroh_pr_Starter_i2">White-label logo & warna</li><li data-i18n="umroh_pr_Starter_i3">Login jamaah unlimited</li><li class="no" data-i18n="umroh_pr_Starter_n0">Tabungan & cicilan</li><li class="no" data-i18n="umroh_pr_Starter_n1">Reminder WA otomatis</li></ul>
         <a class="btn btn-ghost" data-wa data-pkg="paket Starter Travel Umroh & Haji" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="umroh_pr_Starter_cta">Pilih Starter</a>
       </div>
@@ -527,7 +533,7 @@
         <h3>Professional</h3>
         <div class="for" data-i18n="umroh_pr_Professional_for">+ tabungan/cicilan, WA otomatis, laporan</div>
         <div class="amount">Rp 15jt <small>setup</small></div>
-        <div class="monthly">+ <b>Rp 950rb/bulan</b></div>
+        <div class="monthly">+ <b>Rp 950rb/bulan</b> <span data-i18n="prHostLabel">hosting &amp; maintenance</span></div>
         <ul><li data-i18n="umroh_pr_Professional_i0"><b style="color:var(--text)">Semua fitur Starter</b>, plus:</li><li data-i18n="umroh_pr_Professional_i1">Tabungan & cicilan transparan</li><li data-i18n="umroh_pr_Professional_i2">Reminder WA otomatis</li><li data-i18n="umroh_pr_Professional_i3">Jadwal manasik & itinerary digital</li><li data-i18n="umroh_pr_Professional_i4">Laporan untuk kebutuhan administrasi</li><li data-i18n="umroh_pr_Professional_i5">Training tim + panduan</li></ul>
         <a class="btn btn-primary" data-wa data-pkg="paket Professional Travel Umroh & Haji" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="umroh_pr_Professional_cta">Pilih Professional</a>
       </div>
@@ -536,7 +542,7 @@
         <h3>Enterprise</h3>
         <div class="for" data-i18n="umroh_pr_Enterprise_for">Multi-cabang · keuangan · custom</div>
         <div class="amount"><span data-i18n="amtFrom">Mulai</span> Rp 30jt+ <small>custom</small></div>
-        <div class="monthly">+ <b>langganan sesuai modul</b></div>
+        <div class="monthly" data-i18n="umroh_pr_Enterprise_mo">langganan sesuai modul</div>
         <ul><li data-i18n="umroh_pr_Enterprise_i0"><b style="color:var(--text)">Semua fitur Professional</b>, plus:</li><li data-i18n="umroh_pr_Enterprise_i1">Multi-cabang & multi-agen</li><li data-i18n="umroh_pr_Enterprise_i2">Modul keuangan terintegrasi</li><li data-i18n="umroh_pr_Enterprise_i3">Server dedicated + SLA</li><li data-i18n="umroh_pr_Enterprise_i4">Custom modul sesuai kebutuhan</li></ul>
         <a class="btn btn-ghost" data-wa data-pkg="paket Enterprise Travel Umroh & Haji" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="umroh_pr_Enterprise_cta">Diskusi Kebutuhan</a>
       </div>
@@ -774,6 +780,7 @@
     'prSub': 'One-time setup, light subscription. Compare: one admin staffer costs Rp 3&ndash;4 million/month. This system works 24/7.',
     'prPop': 'MOST POPULAR',
     'amtFrom': 'From',
+    'prHostLabel': 'hosting &amp; maintenance',
     'umroh_pr_Starter_for': 'Manifest + documents + announcements',
     'umroh_pr_Starter_i0': 'Digital pilgrim manifest',
     'umroh_pr_Starter_i1': 'Document checklist',
@@ -791,6 +798,7 @@
     'umroh_pr_Professional_i5': 'Team training + guides',
     'umroh_pr_Professional_cta': 'Choose Professional',
     'umroh_pr_Enterprise_for': 'Multi-branch · finance · custom',
+    'umroh_pr_Enterprise_mo': 'subscription based on modules',
     'umroh_pr_Enterprise_i0': '<b style="color:var(--text)">Everything in Professional</b>, plus:',
     'umroh_pr_Enterprise_i1': 'Multi-branch & multi-agent',
     'umroh_pr_Enterprise_i2': 'Integrated finance module',
@@ -851,10 +859,20 @@
     'footProd': '● Production Ready',
     'footMade': '🇮🇩 Made in Indonesia'
   };
-  function toggleLang(){
-    lang = lang === 'id' ? 'en' : 'id';
+
+  /* ===== FIX: bahasa disamakan dgn homepage — baca/tulis localStorage
+     key 'mbs_locale' yg sama dipakai Alpine.store('locale') di
+     resources/js/app.js. Pilih EN di homepage -> tetap EN di /solusi,
+     dan sebaliknya. ===== */
+  function applyLang(target, persist){
+    lang = target;
     document.documentElement.setAttribute('lang', lang);
-    document.getElementById('langBtn').textContent = lang === 'id' ? 'EN' : 'ID';
+    var btn = document.getElementById('langBtn');
+    if(btn){
+      btn.querySelector('.flag-id').style.display = lang === 'id' ? '' : 'none';
+      btn.querySelector('.flag-en').style.display = lang === 'en' ? '' : 'none';
+      document.getElementById('langLabel').textContent = lang === 'id' ? 'ID' : 'EN';
+    }
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var k = el.dataset.i18n;
       if(lang === 'en'){
@@ -864,7 +882,18 @@
         el.innerHTML = el.dataset.orig;
       }
     });
+    if(persist){
+      try { localStorage.setItem('mbs_locale', lang); } catch(e){}
+    }
   }
+  function toggleLang(){
+    applyLang(lang === 'id' ? 'en' : 'id', true);
+  }
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('mbs_locale'); } catch(e){}
+    if(saved === 'en') applyLang('en', false);
+  })();
 
   refreshWa();
 </script>

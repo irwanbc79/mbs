@@ -57,8 +57,10 @@
   .nav-links a[data-i18n^="cross"]{color:var(--dim);font-size:.82rem}
   .nav-links a[data-i18n^="cross"]:hover{color:var(--accent)}
   .nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
-  .lang-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 13px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer}
+  .lang-btn{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--border);color:var(--muted);padding:7px 12px;border-radius:9px;font-size:.8rem;font-weight:700;cursor:pointer}
   .lang-btn:hover{color:var(--text);border-color:var(--accent)}
+  .lang-btn svg{width:16px;height:12px;border-radius:2px;flex-shrink:0}
+  .lang-btn .flag-en{display:none}
   @media(max-width:820px){.nav-links{display:none}}
   .hero{padding:80px 0 60px;position:relative}
   .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,var(--accent-soft),transparent 65%);pointer-events:none}
@@ -288,7 +290,11 @@
       <a href="https://morabangun.com/#portfolio" data-i18n="crossPortfolio">Portfolio</a><a href="https://morabangun.com/#tech" data-i18n="crossTech">Teknologi</a><a href="https://morabangun.com/#testimonials" data-i18n="crossTesti">Testimoni</a><a href="https://morabangun.com/#contact" data-i18n="crossContact">Kontak</a><a href="https://morabangun.com/blog" data-i18n="crossBlog">Blog</a>
     </div>
     <div class="nav-right">
-      <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">
+        <svg class="flag-id" viewBox="0 0 20 14" fill="none"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
+        <svg class="flag-en" viewBox="0 0 20 14"><rect width="20" height="14" fill="#012169"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#fff" stroke-width="2.8"/><path d="M10,0 V14 M0,7 H20" stroke="#fff" stroke-width="4.5"/><path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="2.8"/><path d="M0,0 L20,14 M20,0 L0,14" stroke="#C8102E" stroke-width="1.5"/></svg>
+        <span id="langLabel">EN</span>
+      </button>
       <a class="btn btn-primary" style="padding:10px 20px;font-size:.9rem" href="#demo" data-i18n="navCta">Coba Demo →</a>
     </div>
   </div>
@@ -455,7 +461,7 @@
         <h3>Starter</h3>
         <div class="for" data-i18n="ceisa_pr_Starter_for">Monitor status + arsip dokumen</div>
         <div class="amount">Rp 12jt <small>setup</small></div>
-        <div class="monthly">+ <b>Rp 750rb/bulan</b></div>
+        <div class="monthly">+ <b>Rp 750rb/bulan</b> <span data-i18n="prHostLabel">hosting &amp; maintenance</span></div>
         <ul><li data-i18n="ceisa_pr_Starter_i0">Dashboard status AJU/SPPB/NPE</li><li data-i18n="ceisa_pr_Starter_i1">Arsip dokumen per AJU</li><li data-i18n="ceisa_pr_Starter_i2">White-label logo & warna</li><li data-i18n="ceisa_pr_Starter_i3">Login staf unlimited</li><li data-i18n="ceisa_pr_Starter_i4">Laporan volume dokumen</li><li class="no" data-i18n="ceisa_pr_Starter_n0">OCR & kirim H2H otomatis</li><li class="no" data-i18n="ceisa_pr_Starter_n1">Notifikasi WA otomatis</li></ul>
         <a class="btn btn-ghost" data-wa data-pkg="paket Starter CEISA H2H — PPJK & Ekspor-Impor" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="ceisa_pr_Starter_cta">Pilih Starter</a>
       </div>
@@ -464,7 +470,7 @@
         <h3>Professional</h3>
         <div class="for" data-i18n="ceisa_pr_Professional_for">OCR + kirim H2H + notifikasi WA</div>
         <div class="amount">Rp 25jt <small>setup</small></div>
-        <div class="monthly">+ <b>Rp 1,5jt/bulan</b></div>
+        <div class="monthly">+ <b>Rp 1,5jt/bulan</b> <span data-i18n="prHostLabel">hosting &amp; maintenance</span></div>
         <ul><li data-i18n="ceisa_pr_Professional_i0"><b style="color:var(--text)">Semua fitur Starter</b>, plus:</li><li data-i18n="ceisa_pr_Professional_i1">OCR dokumen otomatis</li><li data-i18n="ceisa_pr_Professional_i2">AI auditor HS code</li><li data-i18n="ceisa_pr_Professional_i3">Kirim H2H otomatis ke CEISA</li><li data-i18n="ceisa_pr_Professional_i4">Notifikasi WA saat status berubah</li><li data-i18n="ceisa_pr_Professional_i5">Import data dari sistem existing</li></ul>
         <a class="btn btn-primary" data-wa data-pkg="paket Professional CEISA H2H — PPJK & Ekspor-Impor" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="ceisa_pr_Professional_cta">Pilih Professional</a>
       </div>
@@ -473,7 +479,7 @@
         <h3>Enterprise</h3>
         <div class="for" data-i18n="ceisa_pr_Enterprise_for">Multi-perusahaan PPJK · API · SLA</div>
         <div class="amount"><span data-i18n="amtFrom">Mulai</span> Rp 50jt+ <small>custom</small></div>
-        <div class="monthly">+ <b>langganan sesuai SLA & modul</b></div>
+        <div class="monthly" data-i18n="ceisa_pr_Enterprise_mo">langganan sesuai SLA & modul</div>
         <ul><li data-i18n="ceisa_pr_Enterprise_i0"><b style="color:var(--text)">Semua fitur Professional</b>, plus:</li><li data-i18n="ceisa_pr_Enterprise_i1">Multi-perusahaan (PPJK banyak klien)</li><li data-i18n="ceisa_pr_Enterprise_i2">API ke sistem internal/accounting</li><li data-i18n="ceisa_pr_Enterprise_i3">Server dedicated + SLA uptime</li><li data-i18n="ceisa_pr_Enterprise_i4">Custom modul sesuai alur kerja</li></ul>
         <a class="btn btn-ghost" data-wa data-pkg="paket Enterprise CEISA H2H — PPJK & Ekspor-Impor" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="ceisa_pr_Enterprise_cta">Diskusi Kebutuhan</a>
       </div>
@@ -729,6 +735,7 @@ function pickDoc(d){
     'prSub': 'One-time setup, light subscription. Compare: one admin staffer costs Rp 3&ndash;4 million/month. This system works 24/7.',
     'prPop': 'MOST POPULAR',
     'amtFrom': 'From',
+    'prHostLabel': 'hosting &amp; maintenance',
     'ceisa_pr_Starter_for': 'Status monitoring + document archive',
     'ceisa_pr_Starter_i0': 'AJU/SPPB/NPE status dashboard',
     'ceisa_pr_Starter_i1': 'Document archive per AJU',
@@ -747,6 +754,7 @@ function pickDoc(d){
     'ceisa_pr_Professional_i5': 'Import from your existing system',
     'ceisa_pr_Professional_cta': 'Choose Professional',
     'ceisa_pr_Enterprise_for': 'Multi-company PPJK · API · SLA',
+    'ceisa_pr_Enterprise_mo': 'subscription based on SLA & modules',
     'ceisa_pr_Enterprise_i0': '<b style="color:var(--text)">Everything in Professional</b>, plus:',
     'ceisa_pr_Enterprise_i1': 'Multi-company (PPJK with many clients)',
     'ceisa_pr_Enterprise_i2': 'API to internal/accounting systems',
@@ -807,10 +815,20 @@ function pickDoc(d){
     'footProd': '● Production Ready',
     'footMade': '🇮🇩 Made in Indonesia'
   };
-  function toggleLang(){
-    lang = lang === 'id' ? 'en' : 'id';
+
+  /* ===== FIX: bahasa disamakan dgn homepage — baca/tulis localStorage
+     key 'mbs_locale' yg sama dipakai Alpine.store('locale') di
+     resources/js/app.js. Pilih EN di homepage -> tetap EN di /solusi,
+     dan sebaliknya. ===== */
+  function applyLang(target, persist){
+    lang = target;
     document.documentElement.setAttribute('lang', lang);
-    document.getElementById('langBtn').textContent = lang === 'id' ? 'EN' : 'ID';
+    var btn = document.getElementById('langBtn');
+    if(btn){
+      btn.querySelector('.flag-id').style.display = lang === 'id' ? '' : 'none';
+      btn.querySelector('.flag-en').style.display = lang === 'en' ? '' : 'none';
+      document.getElementById('langLabel').textContent = lang === 'id' ? 'ID' : 'EN';
+    }
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var k = el.dataset.i18n;
       if(lang === 'en'){
@@ -820,7 +838,18 @@ function pickDoc(d){
         el.innerHTML = el.dataset.orig;
       }
     });
+    if(persist){
+      try { localStorage.setItem('mbs_locale', lang); } catch(e){}
+    }
   }
+  function toggleLang(){
+    applyLang(lang === 'id' ? 'en' : 'id', true);
+  }
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('mbs_locale'); } catch(e){}
+    if(saved === 'en') applyLang('en', false);
+  })();
 
   refreshWa();
 </script>
