@@ -573,6 +573,8 @@
   </div>
 </section>
 
+<x-related-articles vertical="trucking" />
+
 <section class="final">
   <div class="container">
     <span class="eyebrow" data-i18n="finEye">Langkah Berikutnya</span>
