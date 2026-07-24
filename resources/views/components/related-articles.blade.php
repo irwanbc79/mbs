@@ -21,16 +21,23 @@
 
     $terms = $keywordMap[$vertical] ?? [$vertical];
 
+    // Word-boundary match di PHP (bukan SQL LIKE polos) — LIKE '%kos%' juga kena
+    // "ekosistem", '%rab%' bisa kena kata lain, dst. Tabel posts kecil (~50-100
+    // baris) jadi filter di memori aman dan portable lintas MySQL/SQLite.
     $relatedArticles = \App\Models\Post::published()
-        ->where(function ($q) use ($terms) {
-            foreach ($terms as $term) {
-                $q->orWhere('title', 'like', "%{$term}%")
-                  ->orWhere('excerpt', 'like', "%{$term}%");
-            }
-        })
         ->orderByDesc('published_at')
-        ->limit(3)
-        ->get(['title', 'slug', 'excerpt']);
+        ->get(['title', 'slug', 'excerpt'])
+        ->filter(function ($post) use ($terms) {
+            $haystack = strtolower($post->title . ' ' . $post->excerpt);
+            foreach ($terms as $term) {
+                $pattern = '/(?<![a-z0-9])' . preg_quote(strtolower($term), '/') . '(?![a-z0-9])/';
+                if (preg_match($pattern, $haystack)) {
+                    return true;
+                }
+            }
+            return false;
+        })
+        ->take(3);
 @endphp
 
 @if($relatedArticles->isNotEmpty())
