@@ -27,6 +27,7 @@ class SyncBlogFromCms extends Command
         'crm-sales'            => ['CRM & Sales', 'blue'],
         'ai-teknologi'         => ['AI & Teknologi', 'cyan'],
         'transformasi-digital' => ['Transformasi Digital', 'violet'],
+        'solusi-industri'      => ['Solusi Industri', 'amber'],
     ];
 
     /** kategori -> author_role (pola byline existing "Tim Mora Bangun") */
@@ -35,6 +36,7 @@ class SyncBlogFromCms extends Command
         'CRM & Sales'          => 'CRM Consultant',
         'AI & Teknologi'       => 'AI Solution Architect',
         'Transformasi Digital' => 'Digital Transformation Expert',
+        'Solusi Industri'      => 'Business Solutions Consultant',
     ];
 
     public function handle(): int

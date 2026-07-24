@@ -604,6 +604,8 @@
 </section>
 
 <!-- CTA FINAL -->
+<x-related-articles vertical="portal-forwarder" />
+
 <section class="final">
   <div class="container">
     <span class="eyebrow" data-i18n="finEye">Langkah Berikutnya</span>
