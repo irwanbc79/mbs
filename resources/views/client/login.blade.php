@@ -30,18 +30,20 @@
     <div class="min-h-screen flex flex-col justify-between">
         
         <!-- Header Nav -->
-        <header class="max-w-7xl w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-5">
-            <a href="https://morabangun.com" class="flex items-center gap-2.5 group" aria-label="Mora Bangun Solutions">
-                <div class="h-10 w-10 flex-shrink-0 transition-all duration-300 group-hover:scale-105"
-                     style="filter:drop-shadow(0 0 8px rgba(34,211,238,0.35))">
+        <header class="max-w-7xl w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-6">
+            <a href="https://morabangun.com" class="flex items-center gap-3.5 group" aria-label="Mora Bangun Solutions">
+                <div class="h-20 w-20 flex-shrink-0 transition-all duration-300 group-hover:scale-105"
+                     style="filter:drop-shadow(0 0 16px rgba(34,211,238,0.45))">
                     <img src="{{ asset('images/brand/mbs-symbol-160.png') }}"
                          alt="MBS" width="160" height="118"
                          class="w-full h-full object-contain">
                 </div>
-                <span class="font-bold text-base tracking-tight text-white">
-                    Mora <span class="text-cyan-400">Bangun</span>
-                    <span class="text-slate-500 font-normal text-xs ml-1 hidden sm:inline">Solutions</span>
-                </span>
+                <div>
+                    <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-white block leading-tight">
+                        Mora <span class="text-cyan-400">Bangun</span>
+                    </span>
+                    <span class="text-slate-400 font-mono tracking-widest uppercase text-xs sm:text-sm block font-semibold">Solutions</span>
+                </div>
             </a>
 
             <div class="flex items-center gap-3">

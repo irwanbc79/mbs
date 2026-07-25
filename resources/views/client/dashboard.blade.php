@@ -33,15 +33,17 @@
         <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-40">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
                 
-                <div class="flex items-center gap-3">
-                    <a href="https://morabangun.com" class="flex items-center gap-2.5 group">
-                        <div class="h-9 w-9 flex-shrink-0" style="filter:drop-shadow(0 0 8px rgba(34,211,238,0.35))">
+                <div class="flex items-center gap-3.5">
+                    <a href="https://morabangun.com" class="flex items-center gap-3 group">
+                        <div class="h-16 w-16 flex-shrink-0" style="filter:drop-shadow(0 0 12px rgba(34,211,238,0.4))">
                             <img src="{{ asset('images/brand/mbs-symbol-160.png') }}" alt="MBS" width="160" height="118" class="w-full h-full object-contain">
                         </div>
-                        <span class="font-bold text-base tracking-tight text-white hidden sm:inline">
-                            Mora <span class="text-cyan-400">Bangun</span>
-                            <span class="text-slate-500 font-normal text-xs ml-1">Solutions</span>
-                        </span>
+                        <div class="hidden sm:block">
+                            <span class="font-extrabold text-base tracking-tight text-white block leading-tight">
+                                Mora <span class="text-cyan-400">Bangun</span>
+                            </span>
+                            <span class="text-slate-400 font-mono tracking-widest uppercase text-[10px] block font-semibold">Solutions</span>
+                        </div>
                     </a>
 
                     <div class="h-5 w-[1px] bg-slate-800 hidden sm:block"></div>

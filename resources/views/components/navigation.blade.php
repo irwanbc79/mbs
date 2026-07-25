@@ -6,21 +6,21 @@
     <div class="container-max flex items-center justify-between h-16 px-6 lg:px-24">
 
         <!-- Logo -->
-        <a href="{{ route('home') }}" class="flex items-center gap-2.5 group" aria-label="Mora Bangun Solutions">
-            <div class="h-10 w-10 flex-shrink-0 transition-all duration-300 group-hover:scale-105"
-                 style="filter:drop-shadow(0 0 8px rgba(34,211,238,0.35))"
-                 onmouseenter="this.style.filter='drop-shadow(0 0 16px rgba(34,211,238,0.8))'"
-                 onmouseleave="this.style.filter='drop-shadow(0 0 8px rgba(34,211,238,0.35))'">
+        <a href="{{ route('home') }}" class="flex items-center gap-3 group" aria-label="Mora Bangun Solutions">
+            <div class="h-16 w-16 flex-shrink-0 transition-all duration-300 group-hover:scale-105"
+                 style="filter:drop-shadow(0 0 14px rgba(34,211,238,0.45))">
                 <img src="{{ asset('images/brand/mbs-symbol-160.png') }}"
                      alt="MBS"
                      width="160" height="118"
                      loading="eager" decoding="async"
                      class="w-full h-full object-contain">
             </div>
-            <span class="font-bold text-base tracking-tight">
-                Mora <span class="text-cyan-400">Bangun</span>
-                <span class="text-slate-500 font-normal text-xs ml-1 hidden sm:inline">Solutions</span>
-            </span>
+            <div>
+                <span class="font-extrabold text-base tracking-tight text-white block leading-tight">
+                    Mora <span class="text-cyan-400">Bangun</span>
+                </span>
+                <span class="text-slate-400 font-mono tracking-widest uppercase text-[10px] block font-semibold">Solutions</span>
+            </div>
         </a>
 
         <!-- Desktop Nav -->
