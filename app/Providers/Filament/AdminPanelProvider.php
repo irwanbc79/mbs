@@ -36,6 +36,10 @@ class AdminPanelProvider extends PanelProvider
             ->renderHook(
                 PanelsRenderHook::HEAD_END,
                 fn (): HtmlString => new HtmlString(<<<'STYLE'
+                    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+                    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+                    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+                    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
                     <style>
                     @keyframes logoPulse{0%,100%{filter:drop-shadow(0 0 18px rgba(34,211,238,.55))}50%{filter:drop-shadow(0 0 32px rgba(34,211,238,.9))}}
                     .fi-logo{animation:logoPulse 3s ease-in-out infinite}
@@ -43,7 +47,7 @@ class AdminPanelProvider extends PanelProvider
                     </style>
                     STYLE)
             )
-            ->favicon(asset('favicon/favicon.svg'))
+            ->favicon(asset('favicon/favicon.ico'))
             ->colors([
                 'primary' => Color::Cyan,
                 'gray'    => Color::Slate,
