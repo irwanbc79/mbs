@@ -37,24 +37,19 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(asset('images/brand/mbs-symbol-160.png'))
             ->brandLogoHeight('4rem')
             ->renderHook(
-                PanelsRenderHook::HEAD_END,
-                fn (): HtmlString => new HtmlString(sprintf(
-                    '<link rel="shortcut icon" href="%s" type="image/x-icon">'.
-                    '<link rel="icon" href="%s" type="image/x-icon">'.
-                    '<link rel="icon" type="image/png" sizes="32x32" href="%s">'.
-                    '<link rel="icon" type="image/png" sizes="16x16" href="%s">'.
-                    '<link rel="apple-touch-icon" sizes="180x180" href="%s">'.
-                    '<style>'.
-                    '@keyframes logoPulse{0%%,100%%{filter:drop-shadow(0 0 18px rgba(34,211,238,.55))}50%%{filter:drop-shadow(0 0 32px rgba(34,211,238,.9))}}'.
-                    '.fi-logo{animation:logoPulse 3s ease-in-out infinite}'.
-                    'body{background-image:radial-gradient(ellipse 90%% 50%% at 50%% -8%%,rgba(6,182,212,.1) 0%%,transparent 55%%)}'.
-                    '</style>',
-                    asset('favicon.ico'),
-                    asset('favicon.ico'),
-                    asset('favicon/favicon-32x32.png'),
-                    asset('favicon/favicon-16x16.png'),
-                    asset('favicon/apple-touch-icon.png')
-                ))
+                PanelsRenderHook::HEAD_START,
+                fn (): HtmlString => new HtmlString('
+                    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+                    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+                    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+                    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+                    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+                    <style>
+                    @keyframes logoPulse{0%,100%{filter:drop-shadow(0 0 18px rgba(34,211,238,.55))}50%{filter:drop-shadow(0 0 32px rgba(34,211,238,.9))}}
+                    .fi-logo{animation:logoPulse 3s ease-in-out infinite}
+                    body{background-image:radial-gradient(ellipse 90% 50% at 50% -8%,rgba(6,182,212,.1) 0%,transparent 55%)}
+                    </style>
+                ')
             )
             ->renderHook(
                 PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE,
@@ -62,6 +57,10 @@ class AdminPanelProvider extends PanelProvider
             )
             ->renderHook(
                 PanelsRenderHook::USER_MENU_BEFORE,
+                fn (): string => view('filament.components.locale-switcher')->render()
+            )
+            ->renderHook(
+                PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
                 fn (): string => view('filament.components.locale-switcher')->render()
             )
             ->favicon(asset('favicon.ico'))
