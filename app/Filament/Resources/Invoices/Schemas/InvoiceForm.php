@@ -55,7 +55,7 @@ class InvoiceForm
                             ->placeholder('Pilih proyek (opsional)'),
                         Select::make('proposal_id')
                             ->label('Penawaran')
-                            ->options(Proposal::pluck('title', 'id'))
+                            ->options(fn () => \Illuminate\Support\Facades\Schema::hasTable('proposals') ? Proposal::pluck('title', 'id') : [])
                             ->searchable()
                             ->placeholder('Pilih penawaran (opsional)'),
                     ]),
