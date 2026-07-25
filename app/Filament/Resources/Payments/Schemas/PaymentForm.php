@@ -22,9 +22,20 @@ class PaymentForm
                     ->schema([
                         Select::make('invoice_id')
                             ->label('Invoice')
-                            ->options(Invoice::where('status', '!=', 'paid')
-                                ->get()
-                                ->mapWithKeys(fn ($inv) => [$inv->id => $inv->invoice_number . ' — ' . $inv->client_name]))
+                            ->options(function () {
+                                if (!\Illuminate\Support\Facades\Schema::hasTable('invoices')) {
+                                    return [];
+                                }
+                                $query = Invoice::query();
+                                if (\Illuminate\Support\Facades\Schema::hasColumn('invoices', 'status')) {
+                                    $query->where('status', '!=', 'paid');
+                                }
+                                return $query->get()->mapWithKeys(function ($inv) {
+                                    $number = $inv->invoice_number ?? $inv->number ?? ('INV-' . $inv->id);
+                                    $client = $inv->client_name ?? ('Klien #' . ($inv->customer_id ?? $inv->id));
+                                    return [$inv->id => $number . ' — ' . $client];
+                                });
+                            })
                             ->searchable()
                             ->required(),
                         DatePicker::make('payment_date')
