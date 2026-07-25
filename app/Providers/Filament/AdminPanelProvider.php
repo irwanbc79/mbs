@@ -59,10 +59,6 @@ class AdminPanelProvider extends PanelProvider
                 PanelsRenderHook::USER_MENU_BEFORE,
                 fn (): HtmlString => new HtmlString(view('filament.components.locale-switcher')->render())
             )
-            ->renderHook(
-                PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
-                fn (): HtmlString => new HtmlString(view('filament.components.locale-switcher')->render())
-            )
             ->favicon(asset('favicon.ico'))
             ->colors([
                 'primary' => Color::Cyan,
