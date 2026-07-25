@@ -4,17 +4,23 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PublicTicketController;
 use App\Http\Controllers\SitemapController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Main Website Routes (For main domain and local development)
 Route::group([], function () {
-    Route::get('/', function () {
+    Route::get('/', function (Request $request) {
         $host = request()->getHost();
         $clientDomain = config('domains.client', 'client.morabangun.com');
         
-        if ($host === $clientDomain) {
-            return redirect()->route('client.index');
+        if ($host === $clientDomain || str_starts_with($host, 'client.')) {
+            if (Auth::guard('client')->check() || $request->has('demo')) {
+                return view('client.dashboard');
+            }
+            return view('client.login');
         }
+
         return view('welcome');
     })->name('home');
 
