@@ -37,7 +37,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(asset('images/brand/mbs-symbol-160.png'))
             ->brandLogoHeight('4rem')
             ->renderHook(
-                PanelsRenderHook::STYLES_AFTER,
+                PanelsRenderHook::HEAD_START,
                 fn (): HtmlString => new HtmlString('
                     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
                     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -52,12 +52,16 @@ class AdminPanelProvider extends PanelProvider
                 ')
             )
             ->renderHook(
-                PanelsRenderHook::SIMPLE_PAGE_START,
-                fn (): string => view('filament.components.locale-switcher')->render()
+                PanelsRenderHook::AUTH_LOGIN_FORM_BEFORE,
+                fn (): HtmlString => new HtmlString(view('filament.components.locale-switcher')->render())
             )
             ->renderHook(
                 PanelsRenderHook::USER_MENU_BEFORE,
-                fn (): string => view('filament.components.locale-switcher')->render()
+                fn (): HtmlString => new HtmlString(view('filament.components.locale-switcher')->render())
+            )
+            ->renderHook(
+                PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
+                fn (): HtmlString => new HtmlString(view('filament.components.locale-switcher')->render())
             )
             ->favicon(asset('favicon.ico'))
             ->colors([
