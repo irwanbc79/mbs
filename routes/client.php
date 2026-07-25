@@ -24,7 +24,12 @@ Route::domain(config('domains.client', 'client.morabangun.com'))
                 return redirect()->route('client.dashboard');
             }
             return view('client.login');
-        })->name('client.login')->name('login');
+        })->name('client.login');
+
+        // Alias default 'login' named route for Laravel auth redirects
+        Route::get('/login-auth', function () {
+            return redirect()->route('client.login');
+        })->name('login');
 
         Route::get('/dashboard', function () {
             return view('client.dashboard');
