@@ -1,4 +1,4 @@
-<nav x-data="{ mobileOpen: false, scrolled: false }"
+<nav x-data="{ mobileOpen: false, scrolled: false, openPortal: false, openPortalMobile: false }"
      x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
      :class="scrolled ? 'bg-slate-950/80 backdrop-blur-2xl border-b border-white/5 shadow-2xl shadow-black/40' : 'bg-transparent'">
@@ -75,15 +75,43 @@
                 <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
 
-            <!-- Admin Login -->
-            <a href="https://admin.morabangun.com/admin"
-               data-testid="nav-admin-btn"
-               title="Admin Portal"
-               class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-cyan-500/40 text-xs font-medium text-slate-400 hover:text-cyan-400 transition-all">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
-                <span x-show="$store.locale === 'id'">Admin</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Admin</span>
-            </a>
+            <!-- Portals Dropdown (Admin & Client) -->
+            <div class="relative" @click.outside="openPortal = false">
+                <button @click="openPortal = !openPortal"
+                        data-testid="nav-portals-btn"
+                        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-cyan-500/40 text-xs font-medium text-slate-300 hover:text-cyan-400 transition-all">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <span>Portals</span>
+                    <svg class="w-3 h-3 opacity-50 transition-transform duration-200" :class="openPortal ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div x-show="openPortal"
+                     x-cloak
+                     x-transition:enter="transition ease-out duration-150"
+                     x-transition:enter-start="opacity-0 scale-95"
+                     x-transition:enter-end="opacity-100 scale-100"
+                     class="absolute right-0 mt-2 w-48 bg-slate-950/95 backdrop-blur-2xl border border-slate-800 rounded-xl shadow-2xl p-1.5 space-y-1 z-50">
+                    <a href="https://admin.morabangun.com/admin"
+                       target="_blank"
+                       class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                        <div>
+                            <div class="font-bold text-white">Admin Portal</div>
+                            <div class="text-[10px] text-slate-500">Filament Management</div>
+                        </div>
+                    </a>
+                    <a href="https://client.morabangun.com"
+                       target="_blank"
+                       class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        <div>
+                            <div class="font-bold text-white">Client Portal</div>
+                            <div class="text-[10px] text-slate-500">Customer Workspace</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
             <!-- CTA Button -->
             <a href="#contact"
@@ -148,15 +176,24 @@
                 <span x-show="$store.locale === 'id'">Harga</span><span x-show="$store.locale === 'en'" x-cloak>Pricing</span>
             </a>
             <a @click="mobileOpen=false" href="{{ route('blog.index') }}" class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Blog</a>
-            <a @click="mobileOpen=false" href="https://admin.morabangun.com/admin"
-               data-testid="mobile-admin-link"
-               class="block px-3 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">
-                <span class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
-                    <span x-show="$store.locale === 'id'">Login Admin</span>
-                    <span x-show="$store.locale === 'en'" x-cloak>Admin Login</span>
-                </span>
-            </a>
+            
+            <!-- Mobile Portals Section -->
+            <div class="pt-2 border-t border-white/5 space-y-1">
+                <div class="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider">Portals</div>
+                <a @click="mobileOpen=false" href="https://admin.morabangun.com/admin" target="_blank" class="block px-3 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-semibold">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                        <span>Admin Portal</span>
+                    </span>
+                </a>
+                <a @click="mobileOpen=false" href="https://client.morabangun.com" target="_blank" class="block px-3 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-semibold">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        <span>Client Portal</span>
+                    </span>
+                </a>
+            </div>
+
             <div class="pt-3">
                 <a href="#contact" @click="mobileOpen=false"
                    class="flex items-center justify-center gap-2 w-full px-5 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-bold rounded-lg transition-all">
