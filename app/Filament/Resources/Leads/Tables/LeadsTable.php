@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Leads\Tables;
 
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -108,7 +109,7 @@ class LeadsTable
                     ]),
             ])
             ->recordActions([
-                \Filament\Tables\Actions\Action::make('jawabAi')
+                Action::make('jawabAi')
                     ->label('Jawab dengan AI')
                     ->icon('heroicon-o-sparkles')
                     ->color('primary')
@@ -127,7 +128,7 @@ class LeadsTable
                             ->success()
                             ->send();
                     }),
-                \Filament\Tables\Actions\Action::make('kirimWa')
+                Action::make('kirimWa')
                     ->label('Kirim WA')
                     ->icon('heroicon-o-paper-airplane')
                     ->color('success')

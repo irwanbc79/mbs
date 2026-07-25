@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Invoices\Tables;
 
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -80,7 +81,7 @@ class InvoicesTable
                     ]),
             ])
             ->recordActions([
-                \Filament\Tables\Actions\Action::make('kirimReminder')
+                Action::make('kirimReminder')
                     ->label('Reminder WA')
                     ->icon('heroicon-o-bell')
                     ->color('warning')
