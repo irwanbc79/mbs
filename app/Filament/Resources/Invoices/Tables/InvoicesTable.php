@@ -80,6 +80,31 @@ class InvoicesTable
                     ]),
             ])
             ->recordActions([
+                \Filament\Tables\Actions\Action::make('kirimReminder')
+                    ->label('Reminder WA')
+                    ->icon('heroicon-o-bell')
+                    ->color('warning')
+                    ->requiresConfirmation()
+                    ->visible(fn (\App\Models\Invoice $record) => in_array($record->status, ['sent', 'partial', 'overdue']) && !empty($record->client_phone))
+                    ->action(function (\App\Models\Invoice $record) {
+                        $remaining = number_format($record->remaining, 0, ',', '.');
+                        $msg = "Halo Bpk/Ibu {$record->client_name}, ini pengingat tagihan dari PT Mora Bangun Nusantara (MBS).\n\nInvoice: {$record->invoice_number}\nTotal Tagihan: Rp {$remaining}\nJatuh Tempo: " . ($record->due_date ? $record->due_date->format('d M Y') : '-') . "\n\nTerima kasih atas kerja samanya.";
+                        
+                        $waService = new \App\Services\WhatsAppNotificationService();
+                        $sent = $waService->sendMessage($record->client_phone, $msg);
+                        if ($sent) {
+                            $record->update(['last_reminder_sent_at' => now()]);
+                            \Filament\Notifications\Notification::make()
+                                ->title('Reminder WA Berhasil Terkirim')
+                                ->success()
+                                ->send();
+                        } else {
+                            \Filament\Notifications\Notification::make()
+                                ->title('Gagal Mengirim Reminder WA')
+                                ->danger()
+                                ->send();
+                        }
+                    }),
                 EditAction::make(),
             ])
             ->toolbarActions([
