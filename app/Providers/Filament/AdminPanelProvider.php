@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Http\Middleware\SetAdminLocaleMiddleware;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -25,6 +26,8 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
+        $isEn = app()->getLocale() === 'en';
+
         return $panel
             ->default()
             ->id('admin')
@@ -47,6 +50,10 @@ class AdminPanelProvider extends PanelProvider
                     </style>
                     STYLE)
             )
+            ->renderHook(
+                PanelsRenderHook::USER_MENU_BEFORE,
+                fn (): string => view('filament.components.locale-switcher')->render()
+            )
             ->favicon(asset('favicon/favicon.ico'))
             ->colors([
                 'primary' => Color::Cyan,
@@ -54,11 +61,11 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->darkMode(true)
             ->navigationGroups([
-                NavigationGroup::make('CRM'),
-                NavigationGroup::make('Keuangan'),
-                NavigationGroup::make('Proyek'),
-                NavigationGroup::make('Support'),
-                NavigationGroup::make('Pengaturan'),
+                NavigationGroup::make($isEn ? 'CRM & Sales' : 'CRM & Penjualan'),
+                NavigationGroup::make($isEn ? 'Finance & Invoices' : 'Keuangan & Tagihan'),
+                NavigationGroup::make($isEn ? 'Projects & Assets' : 'Proyek & Layanan'),
+                NavigationGroup::make($isEn ? 'Support & Observability' : 'Dukungan & Log'),
+                NavigationGroup::make($isEn ? 'Settings & System' : 'Pengaturan Sistem'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
@@ -74,6 +81,7 @@ class AdminPanelProvider extends PanelProvider
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
                 StartSession::class,
+                SetAdminLocaleMiddleware::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
                 PreventRequestForgery::class,

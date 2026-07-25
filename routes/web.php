@@ -54,3 +54,12 @@ Route::post('/api/contact', [ContactController::class, 'store'])->name('contact.
 
 Route::post('/support',     [PublicTicketController::class, 'store'])->name('support.store');
 Route::post('/api/support', [PublicTicketController::class, 'store'])->name('support.store.api');
+
+// Admin Locale Switcher Route
+Route::get('/admin/locale/{lang}', function (string $lang) {
+    if (in_array($lang, ['id', 'en'])) {
+        session(['admin_locale' => $lang]);
+    }
+    return back();
+})->name('admin.locale.switch');
+
