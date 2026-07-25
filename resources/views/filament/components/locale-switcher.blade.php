@@ -1,5 +1,5 @@
-<div class="flex items-center justify-center mb-4 sm:mb-0 me-0 sm:me-3">
-    <a href="{{ route('admin.locale.switch', ['lang' => app()->getLocale() === 'id' ? 'en' : 'id']) }}"
+<div class="flex items-center justify-center mb-4 text-center">
+    <a href="/admin/locale/{{ app()->getLocale() === 'id' ? 'en' : 'id' }}"
        title="{{ app()->getLocale() === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia' }}"
        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-700/80 hover:border-cyan-400 bg-slate-900/90 hover:bg-slate-800 text-xs font-bold text-slate-200 hover:text-cyan-400 transition-all shadow-md">
         @if(app()->getLocale() === 'id')
