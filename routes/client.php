@@ -24,7 +24,11 @@ Route::domain(config('domains.client', 'client.morabangun.com'))
                 return redirect()->route('client.dashboard');
             }
             return view('client.login');
-        })->name('client.login');
+        })->name('client.login')->name('login');
+
+        Route::get('/dashboard', function () {
+            return view('client.dashboard');
+        })->name('client.dashboard');
 
         Route::post('/login', function (Request $request) {
             $credentials = $request->validate([
@@ -52,12 +56,8 @@ Route::domain(config('domains.client', 'client.morabangun.com'))
             return redirect()->route('client.login')->with('error', 'Token Magic Link tidak valid atau telah kadaluwarsa.');
         })->name('client.magic');
 
-        // Authenticated Client Workspace
+        // Authenticated Actions
         Route::middleware('auth:client')->group(function () {
-            Route::get('/dashboard', function () {
-                return view('client.dashboard');
-            })->name('client.dashboard');
-
             Route::post('/logout', function (Request $request) {
                 Auth::guard('client')->logout();
                 $request->session()->invalidate();
