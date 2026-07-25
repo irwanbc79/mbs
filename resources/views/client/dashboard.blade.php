@@ -26,7 +26,8 @@
         [x-cloak] { display: none !important; }
     </style>
 </head>
-<body class="h-full text-slate-100 antialiased selection:bg-cyan-500 selection:text-white" x-data="{ locale: 'id', tab: 'project', modalUpload: false }">
+<body class="h-full text-slate-100 antialiased selection:bg-cyan-500 selection:text-white" 
+      x-data="{ locale: 'id', tab: new URLSearchParams(window.location.search).get('tab') || 'project', modalUpload: false, modalTicket: false }">
 
     <!-- Background Ambient Light -->
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-gradient-to-tr from-cyan-600/15 via-blue-600/15 to-indigo-600/15 blur-[140px] pointer-events-none -z-10"></div>
@@ -85,6 +86,17 @@
         <!-- Main Workspace -->
         <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 space-y-6">
 
+            <!-- Success Alert Notification -->
+            @if(session('success'))
+                <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-sm flex items-center justify-between shadow-lg shadow-emerald-950/50 animate-pulse">
+                    <div class="flex items-center gap-2.5">
+                        <span class="text-lg">🎉</span>
+                        <span class="font-semibold">{{ session('success') }}</span>
+                    </div>
+                    <button onclick="this.parentElement.remove()" class="text-emerald-400 hover:text-white font-bold">&times;</button>
+                </div>
+            @endif
+
             <!-- Metrics Header -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
@@ -130,13 +142,16 @@
 
                 <div class="glass-card p-5 rounded-2xl">
                     <div class="flex items-center justify-between text-slate-400 mb-2 text-xs">
-                        <span x-show="locale === 'id'">Tiket Support &amp; AI</span>
-                        <span x-show="locale === 'en'" x-cloak>Support &amp; AI Tickets</span>
-                        <span class="p-1.5 rounded-lg bg-purple-500/10 text-purple-400">🤖</span>
+                        <span x-show="locale === 'id'">Tiket Support Active</span>
+                        <span x-show="locale === 'en'" x-cloak>Active Support Tickets</span>
+                        <span class="p-1.5 rounded-lg bg-purple-500/10 text-purple-400">🎫</span>
                     </div>
-                    <div class="text-xl font-extrabold text-white">0 Open Tickets</div>
-                    <div class="mt-2 text-xs text-slate-400 font-medium">
-                        AI Assistant Active 24/7
+                    <div class="text-xl font-extrabold text-white">
+                        {{ isset($tickets) ? $tickets->whereIn('status', ['open', 'in_progress'])->count() : 0 }} Open Tickets
+                    </div>
+                    <div class="mt-2 text-xs text-purple-400 font-medium flex items-center justify-between">
+                        <span>Synced with Admin Panel</span>
+                        <button @click="tab = 'tickets'; modalTicket = true" class="underline font-bold text-cyan-400 hover:text-cyan-300">+ Buat Tiket</button>
                     </div>
                 </div>
 
@@ -147,14 +162,20 @@
                 <button @click="tab = 'project'" :class="tab === 'project' ? 'border-cyan-500 text-cyan-400 bg-cyan-950/40 font-bold' : 'border-transparent text-slate-400 hover:text-slate-200'" class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap">
                     <span>📍 Project Tracker &amp; UAT</span>
                 </button>
-                <button @click="tab = 'docs'" :class="tab === 'docs' ? 'border-cyan-500 text-cyan-400 bg-cyan-950/40 font-bold' : 'border-transparent text-slate-400 hover:text-slate-200'" class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap">
-                    <span>📂 Document &amp; Vault</span>
+                <button @click="tab = 'tickets'" :class="tab === 'tickets' ? 'border-cyan-500 text-cyan-400 bg-cyan-950/40 font-bold' : 'border-transparent text-slate-400 hover:text-slate-200'" class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap">
+                    <span>🎫 Tiket Support 24/7</span>
+                    @if(isset($tickets) && $tickets->whereIn('status', ['open', 'in_progress'])->count() > 0)
+                        <span class="px-1.5 py-0.5 rounded-full bg-cyan-500 text-slate-950 text-[10px] font-extrabold">{{ $tickets->whereIn('status', ['open', 'in_progress'])->count() }}</span>
+                    @endif
                 </button>
                 <button @click="tab = 'invoices'" :class="tab === 'invoices' ? 'border-cyan-500 text-cyan-400 bg-cyan-950/40 font-bold' : 'border-transparent text-slate-400 hover:text-slate-200'" class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap">
                     <span>💳 Invoice &amp; Payment</span>
                 </button>
+                <button @click="tab = 'docs'" :class="tab === 'docs' ? 'border-cyan-500 text-cyan-400 bg-cyan-950/40 font-bold' : 'border-transparent text-slate-400 hover:text-slate-200'" class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap">
+                    <span>📂 Document &amp; Vault</span>
+                </button>
                 <button @click="tab = 'ai'" :class="tab === 'ai' ? 'border-cyan-500 text-cyan-400 bg-cyan-950/40 font-bold' : 'border-transparent text-slate-400 hover:text-slate-200'" class="px-4 py-2.5 rounded-xl border text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap">
-                    <span>🤖 AI Support 24/7</span>
+                    <span>🤖 AI Assistant 24/7</span>
                 </button>
             </div>
 
@@ -207,7 +228,95 @@
                 </div>
             </div>
 
-            <!-- TAB 2: Documents -->
+            <!-- TAB 2: Support Tickets 24/7 -->
+            <div x-show="tab === 'tickets'" class="space-y-6" style="display: none;">
+                <div class="glass-card p-6 rounded-3xl space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800/80 pb-4">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">Bantuan Support &amp; Penanganan Kendala 24/7</h2>
+                            <p class="text-xs text-slate-400 mt-1">Tiket yang dibuat di sini langsung terhubung secara real-time ke Dashboard Admin &amp; Tim Technical Support MBS.</p>
+                        </div>
+                        <button @click="modalTicket = true" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs shadow-lg shadow-cyan-500/25 flex items-center gap-2 self-start sm:self-auto">
+                            <span>➕ Buat Tiket Support Baru</span>
+                        </button>
+                    </div>
+
+                    <!-- Tickets Table / List -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="bg-slate-950/60 uppercase font-semibold text-slate-400">
+                                <tr>
+                                    <th class="p-3.5">No. Tiket</th>
+                                    <th class="p-3.5">Subjek Kendala</th>
+                                    <th class="p-3.5">Kategori</th>
+                                    <th class="p-3.5">Prioritas</th>
+                                    <th class="p-3.5">Status</th>
+                                    <th class="p-3.5">Tanggal</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/60">
+                                @forelse($tickets as $t)
+                                    <tr class="hover:bg-slate-900/40 transition-all">
+                                        <td class="p-3.5 font-mono font-bold text-cyan-400">{{ $t->ticket_number }}</td>
+                                        <td class="p-3.5">
+                                            <div class="font-bold text-white text-sm">{{ $t->title }}</div>
+                                            <div class="text-slate-400 text-xs mt-0.5 line-clamp-1">{{ $t->description }}</div>
+                                        </td>
+                                        <td class="p-3.5">
+                                            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 font-semibold uppercase text-[10px]">
+                                                {{ $t->category ?? 'General' }}
+                                            </span>
+                                        </td>
+                                        <td class="p-3.5">
+                                            @if($t->priority === 'urgent')
+                                                <span class="px-2.5 py-1 rounded-lg bg-rose-950 text-rose-400 border border-rose-800 font-extrabold text-[10px]">URGENT</span>
+                                            @elseif($t->priority === 'high')
+                                                <span class="px-2.5 py-1 rounded-lg bg-amber-950 text-amber-400 border border-amber-800 font-bold text-[10px]">HIGH</span>
+                                            @elseif($t->priority === 'medium')
+                                                <span class="px-2.5 py-1 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-800 font-bold text-[10px]">MEDIUM</span>
+                                            @else
+                                                <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 font-semibold text-[10px]">LOW</span>
+                                            @endif
+                                        </td>
+                                        <td class="p-3.5">
+                                            @if($t->status === 'open')
+                                                <span class="px-3 py-1 rounded-full bg-emerald-950/80 text-emerald-400 border border-emerald-800/80 font-bold text-[11px] inline-flex items-center gap-1.5">
+                                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                                    Baru (Open)
+                                                </span>
+                                            @elseif($t->status === 'in_progress')
+                                                <span class="px-3 py-1 rounded-full bg-amber-950/80 text-amber-400 border border-amber-800/80 font-bold text-[11px] inline-flex items-center gap-1.5">
+                                                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                                    Sedang Diproses
+                                                </span>
+                                            @elseif($t->status === 'resolved')
+                                                <span class="px-3 py-1 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-800/80 font-bold text-[11px] inline-flex items-center gap-1.5">
+                                                    ✓ Selesai (Resolved)
+                                                </span>
+                                            @else
+                                                <span class="px-3 py-1 rounded-full bg-slate-900 text-slate-400 border border-slate-800 font-semibold text-[11px]">
+                                                    Closed
+                                                </span>
+                                            @endif
+                                        </td>
+                                        <td class="p-3.5 text-slate-400 font-mono text-[11px]">
+                                            {{ $t->created_at ? $t->created_at->format('d M Y H:i') : '-' }}
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="6" class="p-8 text-center text-slate-500">
+                                            Belum ada tiket support yang diajukan. Klik tombol di atas untuk membuat tiket baru.
+                                        </td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: Documents -->
             <div x-show="tab === 'docs'" class="space-y-6" style="display: none;">
                 <div class="glass-card p-6 rounded-3xl space-y-4">
                     <h2 class="text-lg font-bold text-white">Document &amp; Credential Vault</h2>
@@ -223,7 +332,7 @@
                 </div>
             </div>
 
-            <!-- TAB 3: Invoices -->
+            <!-- TAB 4: Invoices -->
             <div x-show="tab === 'invoices'" class="space-y-6" style="display: none;">
                 <div class="glass-card p-6 rounded-3xl space-y-4">
                     <div class="flex items-center justify-between">
@@ -265,7 +374,7 @@
                 </div>
             </div>
 
-            <!-- TAB 4: AI Support -->
+            <!-- TAB 5: AI Support -->
             <div x-show="tab === 'ai'" class="space-y-6" style="display: none;">
                 <div class="glass-card p-6 rounded-3xl space-y-4">
                     <h2 class="text-lg font-bold text-white">MBS AI Support 24/7</h2>
@@ -282,8 +391,64 @@
 
         </main>
 
+        <!-- Modal Buat Tiket Support Baru -->
+        <div x-show="modalTicket" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4" style="display: none;" x-cloak>
+            <div class="glass-card p-6 rounded-3xl max-w-lg w-full space-y-5 relative border-cyan-500/40 shadow-2xl shadow-cyan-500/10">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">🎫</span>
+                        <h3 class="text-base font-bold text-white">Buat Tiket Support Baru</h3>
+                    </div>
+                    <button @click="modalTicket = false" class="text-slate-400 hover:text-white text-lg font-bold">&times;</button>
+                </div>
+
+                <form action="{{ route('client.tickets.store') }}" method="POST" class="space-y-4 text-xs">
+                    @csrf
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Judul Tiket / Subjek Kendala <span class="text-rose-400">*</span></label>
+                        <input type="text" name="title" required placeholder="Contoh: Kendala Callback Webhook CEISA 4.0" class="w-full p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-slate-300 font-semibold mb-1">Kategori <span class="text-rose-400">*</span></label>
+                            <select name="category" required class="w-full p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-white focus:outline-none focus:border-cyan-500">
+                                <option value="bug">Bug / Error Sistem</option>
+                                <option value="feature" selected>Permintaan Fitur Baru</option>
+                                <option value="question">Pertanyaan / Konsultasi</option>
+                                <option value="maintenance">Maintenance Server</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 font-semibold mb-1">Prioritas <span class="text-rose-400">*</span></label>
+                            <select name="priority" required class="w-full p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-white focus:outline-none focus:border-cyan-500">
+                                <option value="low">Low (Santai)</option>
+                                <option value="medium" selected>Medium (Normal)</option>
+                                <option value="high">High (Penting)</option>
+                                <option value="urgent">URGENT (Darurat)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">Detail Kendala / Pesan <span class="text-rose-400">*</span></label>
+                        <textarea name="description" rows="4" required placeholder="Jelaskan kendala, langkah-langkah reproduksi, atau spesifikasi fitur yang dibutuhkan secara detail..." class="w-full p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"></textarea>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-end gap-3">
+                        <button type="button" @click="modalTicket = false" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white font-semibold">
+                            Batal
+                        </button>
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold shadow-lg shadow-cyan-500/25">
+                            🚀 Kirim Tiket Support
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <!-- Modal Upload -->
-        <div x-show="modalUpload" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" style="display: none;">
+        <div x-show="modalUpload" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" style="display: none;" x-cloak>
             <div class="glass-card p-6 rounded-3xl max-w-md w-full space-y-4 relative">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-bold text-white">Upload Bukti Transfer</h3>

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Tickets\Tables;
 
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -117,6 +118,36 @@ class TicketsTable
                     ]),
             ])
             ->recordActions([
+                Action::make('kirimStatusWa')
+                    ->label('Update WA')
+                    ->icon('heroicon-o-paper-airplane')
+                    ->color('success')
+                    ->requiresConfirmation()
+                    ->visible(fn (\App\Models\Ticket $record) => !empty($record->client_phone))
+                    ->action(function (\App\Models\Ticket $record) {
+                        $statusText = match ($record->status) {
+                            'open'        => 'Baru Diterima (Open)',
+                            'in_progress' => 'Sedang Diproses oleh Tim Tech MBS',
+                            'resolved'    => 'Selesai (Resolved)',
+                            'closed'      => 'Ditutup (Closed)',
+                            default       => $record->status,
+                        };
+                        $msg = "Halo Bpk/Ibu {$record->client_name},\n\nUpdate status tiket support #{$record->ticket_number} (Mora Bangun Solutions):\nSubjek: {$record->title}\nStatus Terbaru: {$statusText}\n\nTerima kasih atas kepercayaan Anda.";
+                        
+                        $waService = new \App\Services\WhatsAppNotificationService();
+                        $sent = $waService->sendMessage($record->client_phone, $msg);
+                        if ($sent) {
+                            \Filament\Notifications\Notification::make()
+                                ->title('Notifikasi Status WA Terkirim')
+                                ->success()
+                                ->send();
+                        } else {
+                            \Filament\Notifications\Notification::make()
+                                ->title('Gagal Mengirim Notifikasi WA')
+                                ->danger()
+                                ->send();
+                        }
+                    }),
                 EditAction::make(),
             ])
             ->toolbarActions([
