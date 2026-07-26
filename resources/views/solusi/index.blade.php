@@ -7,7 +7,6 @@
 <meta name="description" content="13 sistem siap pakai per industri: CEISA, klinik, sekolah, distributor, umroh, kontraktor, properti, koperasi, trucking, percetakan, reseller, bengkel, kos. Live dalam 14 hari.">
 <link rel="canonical" href="https://morabangun.com/solusi">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗂️</text></svg>">
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 <meta property="og:title" content="Solusi Sistem per Industri — Mora Bangun Solutions">
 <meta property="og:description" content="13 sistem siap pakai per industri, live dalam 14 hari.">
 <meta property="og:type" content="website">

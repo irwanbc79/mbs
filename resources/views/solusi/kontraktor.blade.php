@@ -7,7 +7,6 @@
 <meta name="description" content="Portal owner proyek: progress, foto lapangan, termin & RAB vs realisasi. Termin cair lebih cepat. Dari Rp 10 juta.">
 <link rel="canonical" href="https://morabangun.com/solusi/kontraktor">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 <meta property="og:title" content="Kontraktor & Proyek — Mora Bangun Solutions">
 <meta property="og:description" content="Portal owner proyek: progress, foto lapangan, termin & RAB vs realisasi. Termin cair lebih cepat. Dari Rp 10 juta.">
 <meta property="og:type" content="website">

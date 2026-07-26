@@ -7,7 +7,6 @@
 <meta name="description" content="Sistem ERP Pabrik Pengolahan Kopi (Roastery & Ekspor) terintegrasi Lot Traceability Petani, Roasting Yield Loss Tracker, Cupping Score, dan Ketertelusuran EUDR Uni Eropa.">
 <link rel="canonical" href="https://morabangun.com/solusi/pabrik-kopi">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-@vite(['resources/css/app.css', 'resources/js/app.js'])
 <meta property="og:title" content="Software ERP Pabrik Pengolahan Kopi & Roastery Ekspor">
 <meta property="og:description" content="Lacak asal-usul lot single origin dari kebun, kontrol penyusutan bobot sangrai, dan terbitkan paspor EUDR ekspor.">
 <meta property="og:type" content="website">
