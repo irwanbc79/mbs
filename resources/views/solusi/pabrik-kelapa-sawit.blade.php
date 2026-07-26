@@ -14,23 +14,23 @@
 <meta property="og:locale" content="id_ID">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Product",
+  "@@context": "https://schema.org",
+  "@@type": "Product",
   "name": "ERP Pabrik Kelapa Sawit (PKS) by Mora Bangun Solutions",
   "description": "Sistem informasi manajemen pabrik kelapa sawit terintegrasi IoT jembatan timbang, sortasi TBS, dan ketertelusuran EUDR/ISPO.",
-  "brand": {"@type": "Organization", "name": "Mora Bangun Solutions", "url": "https://morabangun.com"},
-  "offers": {"@type": "AggregateOffer", "priceCurrency": "IDR", "lowPrice": "15000000", "highPrice": "45000000"}
+  "brand": {"@@type": "Organization", "name": "Mora Bangun Solutions", "url": "https://morabangun.com"},
+  "offers": {"@@type": "AggregateOffer", "priceCurrency": "IDR", "lowPrice": "15000000", "highPrice": "45000000"}
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@@context": "https://schema.org",
+  "@@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Apakah indikator jembatan timbang merek lama kami bisa dihubungkan?","acceptedAnswer":{"@type":"Answer","text":"Bisa. Sistem MBS mendukung berbagai indikator timbangan digital populer (Avery Weigh-Tronix, RICE LAKE, GSC, Sonic, Toledo, Dini Argeo) via RS-232, RS-485, maupun Converter Modbus/IP."}},
-    {"@type":"Question","name":"Bagaimana jika koneksi internet di lokasi pabrik (PKS) terputus?","acceptedAnswer":{"@type":"Answer","text":"Sistem dilengkapi arsitektur Hybrid Offline-First Sync. Timbangan & E-Karcis tetap beroperasi 100% lancar secara lokal, dan data otomatis disinkronkan ke Cloud begitu internet kembali stabil."}},
-    {"@type":"Question","name":"Apakah sistem ini sudah mendukung kepatuhan regulasi EUDR & ISPO?","acceptedAnswer":{"@type":"Answer","text":"Ya. Modul Traceability kami mencakup pemetaan koordinat geolokasi polygon kebun asal (Kebun Inti, Plasma, Swadaya), sertifikat ISPO/RSPO supplier, dan dokumen melacak rantai pasok CPO."}},
-    {"@type":"Question","name":"Berapa lama proses instalasi dan implementasi di PKS?","acceptedAnswer":{"@type":"Answer","text":"Implementasi standar siap beroperasi dalam 14–21 hari kerja termasuk pemasangan converter hardware timbangan, setting master data supplier, dan pelatihan operator timbang."}}
+    {"@@type":"Question","name":"Apakah indikator jembatan timbang merek lama kami bisa dihubungkan?","acceptedAnswer":{"@@type":"Answer","text":"Bisa. Sistem MBS mendukung berbagai indikator timbangan digital populer (Avery Weigh-Tronix, RICE LAKE, GSC, Sonic, Toledo, Dini Argeo) via RS-232, RS-485, maupun Converter Modbus/IP."}},
+    {"@@type":"Question","name":"Bagaimana jika koneksi internet di lokasi pabrik (PKS) terputus?","acceptedAnswer":{"@@type":"Answer","text":"Sistem dilengkapi arsitektur Hybrid Offline-First Sync. Timbangan & E-Karcis tetap beroperasi 100% lancar secara lokal, dan data otomatis disinkronkan ke Cloud begitu internet kembali stabil."}},
+    {"@@type":"Question","name":"Apakah sistem ini sudah mendukung kepatuhan regulasi EUDR & ISPO?","acceptedAnswer":{"@@type":"Answer","text":"Ya. Modul Traceability kami mencakup pemetaan koordinat geolokasi polygon kebun asal (Kebun Inti, Plasma, Swadaya), sertifikat ISPO/RSPO supplier, dan dokumen melacak rantai pasok CPO."}},
+    {"@@type":"Question","name":"Berapa lama proses instalasi dan implementasi di PKS?","acceptedAnswer":{"@@type":"Answer","text":"Implementasi standar siap beroperasi dalam 14–21 hari kerja termasuk pemasangan converter hardware timbangan, setting master data supplier, dan pelatihan operator timbang."}}
   ]
 }
 </script>
