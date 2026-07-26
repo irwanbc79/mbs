@@ -17,6 +17,8 @@
         'kos'               => ['kos', 'kontrakan', 'rumah sewa'],
         'jastip'            => ['jastip', 'jasa titip', 'jastiper'],
         'portal-forwarder'  => ['forwarder', 'freight forwarding', 'shipment', 'ekspor impor'],
+        'pabrik-kelapa-sawit' => ['kelapa sawit', 'pks', 'cpo', 'timbangan', 'rendemen'],
+        'pks'               => ['kelapa sawit', 'pks', 'cpo', 'timbangan', 'rendemen'],
     ];
 
     $terms = $keywordMap[$vertical] ?? [$vertical];
