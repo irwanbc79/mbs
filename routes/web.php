@@ -48,6 +48,8 @@ Route::group([], function () {
     Route::view('/solusi/jastip', 'solusi.jastip')->name('solusi.jastip');
     Route::view('/solusi/pabrik-kelapa-sawit', 'solusi.pabrik-kelapa-sawit')->name('solusi.pabrik-kelapa-sawit');
     Route::view('/solusi/pks', 'solusi.pabrik-kelapa-sawit')->name('solusi.pks');
+    Route::view('/solusi/pabrik-kopi', 'solusi.pabrik-kopi')->name('solusi.pabrik-kopi');
+    Route::view('/solusi/kopi', 'solusi.pabrik-kopi')->name('solusi.kopi');
 });
 
 // Global API & Post Endpoints

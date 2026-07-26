@@ -361,8 +361,15 @@
           <b data-i18n="hub_pks_t">Pabrik Kelapa Sawit (PKS) & ERP Timbangan</b>
           <span class="hemoji">🌴</span>
         </div>
-        <p data-i18n="hub_pks_p">Integrasi jembatan timbang IoT anti-kecurangan, sortasi TBS, Rendemen (OER/KER) & ketertelusuran EUDR/ISPO.</p>
         <div class="hfoot"><span>mulai Rp 15jt</span><span class="pill pill-g">✓ Industrial Grade</span></div>
+      </a>
+      <a class="hubcard" style="--hc:#d97706" href="/solusi/pabrik-kopi">
+        <div class="hubcard-head">
+          <b data-i18n="hub_kopi_t">Pabrik Pengolahan Kopi & Roastery ERP</b>
+          <span class="hemoji">☕</span>
+        </div>
+        <p data-i18n="hub_kopi_p">Tracking lot single-origin kebun, kalkulator susut sangrai (roasting yield), cupping score & sertifikasi EUDR.</p>
+        <div class="hfoot"><span>mulai Rp 12jt</span><span class="pill pill-g">✓ Specialty Grade</span></div>
       </a>
     </div>
     <div class="hublabel" data-i18n="grp_portal-forwarder">🚢 Logistik & Supply Chain — DNA Kami 20+ Tahun</div>
