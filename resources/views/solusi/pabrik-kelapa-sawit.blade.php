@@ -149,35 +149,8 @@
           <a href="#fitur" class="btn btn-ghost">Pelajari Fitur →</a>
         </div>
       </div>
-      <div>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.6)">
-          <div style="display:flex;justify-content:space-between;align-items:center;border-b:1px solid var(--border);padding-bottom:14px;margin-bottom:16px">
-            <span style="font-weight:800;font-size:.9rem;color:var(--accent)">⚖️ LIVE WEIGHBRIDGE DASHBOARD</span>
-            <span style="font-size:.7rem;background:rgba(52,211,153,.15);color:var(--green);padding:3px 10px;border-radius:999px;font-weight:700">IoT Connected</span>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
-            <div style="background:var(--surface);padding:12px;border-radius:12px;border:1px solid var(--border)">
-              <small style="color:var(--dim);font-size:.7rem">TONASE TBS MASUK (HARI INI)</small>
-              <b style="display:block;font-size:1.3rem;color:var(--text)">485,20 Ton</b>
-              <span style="color:var(--green);font-size:.7rem">38 Truk Ditimbang</span>
-            </div>
-            <div style="background:var(--surface);padding:12px;border-radius:12px;border:1px solid var(--border)">
-              <small style="color:var(--dim);font-size:.7rem">ESTIMASI RENDEMEN OER</small>
-              <b style="display:block;font-size:1.3rem;color:var(--accent)">21,85 %</b>
-              <span style="color:var(--green);font-size:.7rem">Target: &gt; 21.5% (Optimal)</span>
-            </div>
-          </div>
-          <div style="background:var(--surface);padding:14px;border-radius:12px;border:1px solid var(--border);font-size:.8rem">
-            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-              <span>Truck #BK-8842-YL (Koperasi Sawit Sejahtera)</span>
-              <span style="color:var(--green);font-weight:700">Gross: 24.120 kg</span>
-            </div>
-            <div style="height:6px;background:var(--border);border-radius:999px;overflow:hidden">
-              <div style="width:85%;height:100%;background:var(--accent)"></div>
-            </div>
-            <small style="color:var(--dim);display:block;margin-top:6px">Automatic E-Karcis Printed &amp; Sent via WhatsApp</small>
-          </div>
-        </div>
+      <div class="hero-visual" style="background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 30px 80px rgba(0,0,0,.6);transform:rotate(1deg)">
+        <img src="/images/solusi/pabrik-kelapa-sawit-hero.webp" alt="ERP Pabrik Kelapa Sawit (PKS) &amp; Timbangan IoT" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:12px">
       </div>
     </div>
   </div>
