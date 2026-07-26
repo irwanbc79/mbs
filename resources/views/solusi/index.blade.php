@@ -354,6 +354,17 @@
         <div class="hfoot"><span>mulai Rp 8jt</span><span class="hgo" data-i18n="hub_go">Lihat solusi →</span></div>
       </a>
     </div>
+    <div class="hublabel" data-i18n="grp_pks">🌴 Manufaktur & Agroindustri — PKS & ERP Industri</div>
+    <div class="hubgrid">
+      <a class="hubcard" style="--hc:#10b981" href="/solusi/pabrik-kelapa-sawit">
+        <div class="hubcard-head">
+          <b data-i18n="hub_pks_t">Pabrik Kelapa Sawit (PKS) & ERP Timbangan</b>
+          <span class="hemoji">🌴</span>
+        </div>
+        <p data-i18n="hub_pks_p">Integrasi jembatan timbang IoT anti-kecurangan, sortasi TBS, Rendemen (OER/KER) & ketertelusuran EUDR/ISPO.</p>
+        <div class="hfoot"><span>mulai Rp 15jt</span><span class="pill pill-g">✓ Industrial Grade</span></div>
+      </a>
+    </div>
     <div class="hublabel" data-i18n="grp_portal-forwarder">🚢 Logistik & Supply Chain — DNA Kami 20+ Tahun</div>
     <div class="hubgrid">
       <a class="hubcard" style="--hc:#3b82f6" href="/solusi/portal-forwarder">

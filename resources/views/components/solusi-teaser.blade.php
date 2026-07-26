@@ -13,6 +13,7 @@
 
         <div class="flex flex-wrap justify-center gap-2.5 mb-9">
             @foreach([
+                ['slug' => 'pabrik-kelapa-sawit', 'emoji' => '🌴', 'id' => 'Pabrik Sawit (PKS)', 'en' => 'Palm Oil Mill'],
                 ['slug' => 'ceisa', 'emoji' => '🛃', 'id' => 'CEISA H2H', 'en' => 'CEISA H2H'],
                 ['slug' => 'portal-forwarder', 'emoji' => '🚢', 'id' => 'Forwarder', 'en' => 'Forwarder'],
                 ['slug' => 'klinik', 'emoji' => '🏥', 'id' => 'Klinik', 'en' => 'Clinics'],

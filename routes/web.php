@@ -46,6 +46,8 @@ Route::group([], function () {
     Route::view('/solusi/reseller', 'solusi.reseller')->name('solusi.reseller');
     Route::view('/solusi/kos', 'solusi.kos')->name('solusi.kos');
     Route::view('/solusi/jastip', 'solusi.jastip')->name('solusi.jastip');
+    Route::view('/solusi/pabrik-kelapa-sawit', 'solusi.pabrik-kelapa-sawit')->name('solusi.pabrik-kelapa-sawit');
+    Route::view('/solusi/pks', 'solusi.pabrik-kelapa-sawit')->name('solusi.pks');
 });
 
 // Global API & Post Endpoints
