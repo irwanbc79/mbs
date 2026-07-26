@@ -380,9 +380,9 @@
             <h4>Gudang & Kantor 2 Lantai — Jl. Ring Road, Medan</h4>
             <div class="ddate jdate"></div>
             <div class="kpis">
-              <div class="kpi"><small>Progress Fisik</small><b>62%</b><span class="up">+4% minggu ini · sesuai kurva-S</span><div class="pbar"><i style="width:62%"></i></div></div>
+              <div class="kpi"><small>Progress Fisik</small><b id="kpiProgress">62%</b><span class="up">+4% minggu ini · sesuai kurva-S</span><div class="pbar"><i id="pbarInner" style="width:62%"></i></div></div>
               <div class="kpi"><small>Nilai Kontrak</small><b>Rp 4,8M</b><span class="up">realisasi biaya 59% · on budget</span></div>
-              <div class="kpi"><small>Termin Cair</small><b>2 / 5</b><span class="warn">termin 3 menunggu approval Anda</span></div>
+              <div class="kpi" id="kpiTerminCair"><small>Termin Cair</small><b style="color:var(--amber)">2 / 5</b><span class="warn">termin 3 menunggu approval Anda</span></div>
             </div>
             <div class="dtable">
               <div class="tt">Aktivitas Minggu Ini</div>
@@ -410,10 +410,10 @@
             <h4>Foto Lapangan</h4>
             <div class="ddate">Dokumentasi harian ber-stempel waktu & lokasi — bukti untuk termin</div>
             <div class="dtable">
-              <div class="ann"><div><b>📷 Pengecoran plat lantai 2 (12 foto)</b><small>hari ini · 09.40 · pelaksana: Andi</small></div><span class="dl">Lihat Galeri</span></div>
-              <div class="ann"><div><b>📷 Pemasangan kusen aluminium (8 foto)</b><small>kemarin · 15.20</small></div><span class="dl">Lihat Galeri</span></div>
-              <div class="ann"><div><b>📷 Kedatangan material besi (5 foto)</b><small>Senin · 11.05 · + surat jalan</small></div><span class="dl">Lihat Galeri</span></div>
-              <div class="ann"><div><b>📷 Slump test & sampel beton (6 foto)</b><small>Senin · 08.30 · QC</small></div><span class="dl">Lihat Galeri</span></div>
+              <div class="ann"><div><b>📷 Pengecoran plat lantai 2 (12 foto)</b><small>hari ini · 09.40 · pelaksana: Andi</small></div><span class="dl" onclick="openGallery('Pengecoran Plat Lantai 2', 'Hari Ini 09.40')">📷 Lihat Galeri (12 Foto)</span></div>
+              <div class="ann"><div><b>📷 Pemasangan kusen aluminium (8 foto)</b><small>kemarin · 15.20</small></div><span class="dl" onclick="openGallery('Pemasangan Kusen Aluminium', 'Kemarin 15.20')">📷 Lihat Galeri (8 Foto)</span></div>
+              <div class="ann"><div><b>📷 Kedatangan material besi (5 foto)</b><small>Senin · 11.05 · + surat jalan</small></div><span class="dl" onclick="openGallery('Kedatangan Material Besi 10mm', 'Senin 11.05')">📷 Lihat Galeri (5 Foto)</span></div>
+              <div class="ann"><div><b>📷 Slump test & sampel beton (6 foto)</b><small>Senin · 08.30 · QC</small></div><span class="dl" onclick="openGallery('Slump Test & Sampel Beton', 'Senin 08.30')">📷 Lihat Galeri (6 Foto)</span></div>
             </div>
           </div>
           <div class="scr" id="kon-termin">
@@ -425,7 +425,7 @@
                 <tbody>
                   <tr><td>DP (Termin 1)</td><td>Rp 960jt</td><td>Tanda tangan kontrak</td><td><span class="pill pill-g">Cair</span></td></tr>
                   <tr><td>Termin 2</td><td>Rp 1,20M</td><td>Progress 35%</td><td><span class="pill pill-g">Cair</span></td></tr>
-                  <tr><td>Termin 3</td><td>Rp 1,20M</td><td>Progress 60% ✓ tercapai</td><td><button class="addbtn" style="width:auto;padding:5px 12px;background:rgba(249,115,22,.15);color:var(--kontr);border-color:rgba(249,115,22,.3)" onclick="approveTermin(this)">✍️ Setujui & Cairkan</button></td></tr>
+                  <tr id="rowTermin3"><td>Termin 3</td><td>Rp 1,20M</td><td>Progress 60% ✓ tercapai</td><td><button class="btn btn-primary" style="padding:6px 14px;font-size:.78rem;border-radius:8px" onclick="approveTermin(this)">✍️ Setujui & Cairkan</button></td></tr>
                   <tr><td>Termin 4</td><td>Rp 960jt</td><td>Progress 85%</td><td><span class="pill pill-b">Menunggu</span></td></tr>
                   <tr><td>Retensi (5%)</td><td>Rp 240jt</td><td>Serah terima + masa pemeliharaan</td><td><span class="pill pill-b">Menunggu</span></td></tr>
                 </tbody>
@@ -436,7 +436,7 @@
       </div>
     </div>
     </div>
-    <div class="demo-note" data-i18n="demoNote">ℹ️ Ini <b>demo statis</b>. Versi asli terhubung data operasional Anda + notifikasi WhatsApp otomatis.</div>
+    <div class="demo-note" data-i18n="demoNote">ℹ️ Ini <b>demo interaktif live</b>. Anda dapat mengubah nama perusahaan, warna branding, membuka galeri foto, dan menguji approval termin.</div>
   </div>
 </section>
 
@@ -656,6 +656,31 @@
   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
 </button>
 
+<!-- PHOTO GALLERY MODAL -->
+<div id="photoModal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(3,7,18,.85);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;padding:24px;position:relative;box-shadow:0 25px 60px rgba(0,0,0,.8)">
+    <button onclick="closeGallery()" style="position:absolute;top:18px;right:18px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer">✕</button>
+    <h3 id="modalTitle" style="font-size:1.2rem;margin-bottom:4px">Galeri Dokumentasi Lapangan</h3>
+    <small id="modalMeta" style="color:var(--dim);display:block;margin-bottom:18px;font-size:.78rem">GPS Stamp: 3.5952° N, 98.6722° E · Terverifikasi</small>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=600&q=80" alt="Pengecoran 1" style="width:100%;height:140px;object-fit:cover">
+        <div style="padding:10px;font-size:.75rem;color:var(--muted)">Foto 1 — Slump Test & K-300 Batch #1</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Pengecoran 2" style="width:100%;height:140px;object-fit:cover">
+        <div style="padding:10px;font-size:.75rem;color:var(--muted)">Foto 2 — Pembesian Rebar & Bond Beam</div>
+      </div>
+    </div>
+    <div style="margin-top:18px;text-align:right">
+      <button class="btn btn-ghost" onclick="closeGallery()" style="padding:8px 18px;font-size:.85rem">Tutup Galeri</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div id="toast" style="position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--accent);color:var(--text);padding:14px 28px;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.7);z-index:999;display:none;font-weight:600;font-size:.9rem;align-items:center;gap:10px"></div>
+
 <script>
   var tenantName = 'CV Karya Beton';
   function setTenant(pre, name){
@@ -665,6 +690,24 @@
     var initials = v.replace(/^(PT|CV|UD|TB|Ponpes|Yayasan)\.?\s+/i,'').split(/\s+/).map(function(w){return w[0]||''}).join('').slice(0,2).toUpperCase();
     var av = document.getElementById('av-'+pre); if(av) av.textContent = initials || 'PA';
     refreshWa();
+  }
+
+  function openGallery(title, meta) {
+    var modal = document.getElementById('photoModal');
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalMeta').innerText = meta + ' · GPS: 3.5952° N, 98.6722° E (Stempel Validasi Operasional)';
+    modal.style.display = 'flex';
+  }
+
+  function closeGallery() {
+    document.getElementById('photoModal').style.display = 'none';
+  }
+
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.innerHTML = msg;
+    t.style.display = 'flex';
+    setTimeout(function(){ t.style.display = 'none'; }, 4000);
   }
 
   /* ===== FIX: tanggal dinamis — demo tidak pernah basi ===== */
@@ -710,7 +753,14 @@
   function hexRgb(h){var n=parseInt(h.slice(1),16);return ((n>>16)&255)+','+((n>>8)&255)+','+(n&255);}
 
   function approveTermin(btn){
-    btn.outerHTML='<span class="pill pill-g">Disetujui ✓ · dana diproses</span>';
+    btn.outerHTML='<span class="pill pill-g" style="padding:6px 12px;font-size:.8rem">✓ Disetujui by Owner · Dana Diproses</span>';
+    var kpi = document.getElementById('kpiTerminCair');
+    if (kpi) {
+      kpi.innerHTML = '<small>Termin Cair</small><b style="color:var(--green)">3 / 5</b><span class="up">✓ Termin 3 disetujui hari ini</span>';
+    }
+    var bdg = document.querySelector('.side-item .bdg');
+    if (bdg) bdg.style.display = 'none';
+    showToast('🎉 <b>Termin 3 (Rp 1,20M) Disetujui!</b> Notifikasi WhatsApp otomatis dikirim ke kontraktor.');
   }
 
   var lang = 'id';
@@ -749,7 +799,7 @@
     'kontraktor_pain_2_p': 'Actual costs are only found to deviate from budget after the project is well underway — too late to correct.',
     'kontraktor_pain_2_f': '✓ Cost realization per line item tracked from the start',
     'demoEye': 'Interactive Demo &mdash; Try It Now',
-    'demoNote': 'ℹ️ This is a <b>static demo</b>. The real version connects to your operational data + automatic WhatsApp notifications.',
+    'demoNote': 'ℹ️ This is a <b>live interactive demo</b>. You can customize the company name, brand colors, view photo galleries, and test payment approval.',
     'demoH2': 'This Is the System Your Users Will Use',
     'featEye': 'Complete Features',
     'featH2': 'Every Module Built From a Real Workflow,<br>Not Just a Generic App',
@@ -859,10 +909,6 @@
     'footMade': '🇮🇩 Made in Indonesia'
   };
 
-  /* ===== FIX: bahasa disamakan dgn homepage — baca/tulis localStorage
-     key 'mbs_locale' yg sama dipakai Alpine.store('locale') di
-     resources/js/app.js. Pilih EN di homepage -> tetap EN di /solusi,
-     dan sebaliknya. ===== */
   function applyLang(target, persist){
     lang = target;
     document.documentElement.setAttribute('lang', lang);
