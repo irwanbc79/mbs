@@ -28,7 +28,7 @@
                     </h3>
                     
                     <p class="text-slate-400 text-base leading-relaxed font-body">
-                        <span x-show="$store.locale === 'id'">Nikmati kecepatan server Jakarta ultra-cepat dengan uptime maksimal. Morabangun merekomendasikan Hostinger untuk skalabilitas tinggi, proteksi DDoS, dan kemudahan manajemen. Klaim diskon eksklusif <strong class="text-violet-400 font-bold">20% + Domain Gratis</strong> untuk Anda sekarang!</span>
+                        <span x-show="$store.locale === 'id'">Mau bikin website toko atau bisnis yang kencang, aman, dan tanpa pusing teknis? Morabangun merekomendasikan Hostinger karena sangat gampang dipakai pemula dengan server lokal Jakarta. Klaim diskon eksklusif <strong class="text-violet-400 font-bold">20% + Domain Gratis</strong> untuk Anda sekarang!</span>
                         <span x-show="$store.locale === 'en'" x-cloak>Enjoy ultra-fast Jakarta server speeds with maximum uptime. Morabangun recommends Hostinger for high scalability, DDoS protection, and easy management. Claim an exclusive <strong class="text-violet-400 font-bold">20% discount + Free Domain</strong> for you now!</span>
                     </p>
                     
