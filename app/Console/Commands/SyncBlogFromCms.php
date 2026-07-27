@@ -100,7 +100,7 @@ class SyncBlogFromCms extends Command
                 $data = [
                     'title'          => $a['title'] ?? $slug,
                     'content'        => $html,
-                    'excerpt'        => $a['excerpt'] ?? null,
+                    'excerpt'        => !empty($a['excerpt']) ? $a['excerpt'] : (substr(trim(strip_tags($html)), 0, 160) ?: $a['title'] ?? ''),
                     'featured_image' => $a['featured_image_url'] ?? null,
                     'category'       => $category,
                     'category_color' => $color,
