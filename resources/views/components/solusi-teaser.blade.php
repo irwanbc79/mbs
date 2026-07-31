@@ -6,8 +6,8 @@
                 <span x-show="$store.locale === 'en'" x-cloak>Ready-Made Solutions per Industry</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-xl mx-auto font-body">
-                <span x-show="$store.locale === 'id'">Fondasi teknologi teruji, dibentuk untuk 13 industri — dari CEISA, klinik, sekolah, sampai distributor.</span>
-                <span x-show="$store.locale === 'en'" x-cloak>A proven technology foundation, shaped for 13 industries — from CEISA to clinics, schools, and distributors.</span>
+                <span x-show="$store.locale === 'id'">Fondasi teknologi teruji, dibentuk untuk 18 industri — dari CEISA, klinik, sekolah, sampai distributor.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>A proven technology foundation, shaped for 18 industries — from CEISA to clinics, schools, and distributors.</span>
             </p>
         </div>
 

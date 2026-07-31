@@ -19,6 +19,8 @@
         'portal-forwarder'  => ['forwarder', 'freight forwarding', 'shipment', 'ekspor impor'],
         'pabrik-kelapa-sawit' => ['kelapa sawit', 'pks', 'cpo', 'timbangan', 'rendemen'],
         'pks'               => ['kelapa sawit', 'pks', 'cpo', 'timbangan', 'rendemen'],
+        'pabrik-kopi'       => ['kopi', 'roastery', 'green bean', 'sangrai', 'cupping', 'eudr'],
+        'atsiri'            => ['atsiri', 'nilam', 'patchouli', 'penyulingan', 'serai wangi', 'minyak nilam', 'essential oil'],
     ];
 
     $terms = $keywordMap[$vertical] ?? [$vertical];

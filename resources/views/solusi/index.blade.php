@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solusi Sistem per Industri — Mora Bangun Solutions</title>
-<meta name="description" content="13 sistem siap pakai per industri: CEISA, klinik, sekolah, distributor, umroh, kontraktor, properti, koperasi, trucking, percetakan, reseller, bengkel, kos. Live dalam 14 hari.">
+<meta name="description" content="18 sistem siap pakai per industri: CEISA, pabrik kelapa sawit, pabrik kopi, penyulingan minyak atsiri, klinik, sekolah, distributor, umroh, kontraktor, properti, koperasi, trucking, percetakan, reseller, bengkel, kos. Live dalam 14 hari.">
 <link rel="canonical" href="https://morabangun.com/solusi">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗂️</text></svg>">
 <meta property="og:title" content="Solusi Sistem per Industri — Mora Bangun Solutions">
-<meta property="og:description" content="13 sistem siap pakai per industri, live dalam 14 hari.">
+<meta property="og:description" content="18 sistem siap pakai per industri, live dalam 14 hari.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://morabangun.com/solusi">
 <meta property="og:locale" content="id_ID">
 <script type="application/ld+json">
-{"@@context":"https://schema.org","@@type":"ItemList","itemListElement":[{"@@type":"ListItem","position":1,"url":"https://morabangun.com/solusi/portal-forwarder","name":"Portal Forwarder"},{"@@type":"ListItem","position":2,"url":"https://morabangun.com/solusi/ceisa","name":"CEISA H2H — PPJK & Ekspor-Impor"},{"@@type":"ListItem","position":3,"url":"https://morabangun.com/solusi/sekolah","name":"Sekolah, Pesantren & Yayasan"},{"@@type":"ListItem","position":4,"url":"https://morabangun.com/solusi/distributor","name":"Distributor & Grosir B2B"},{"@@type":"ListItem","position":5,"url":"https://morabangun.com/solusi/klinik","name":"Klinik & Praktek Mandiri"},{"@@type":"ListItem","position":6,"url":"https://morabangun.com/solusi/umroh","name":"Travel Umroh & Haji"},{"@@type":"ListItem","position":7,"url":"https://morabangun.com/solusi/kontraktor","name":"Kontraktor & Proyek"},{"@@type":"ListItem","position":8,"url":"https://morabangun.com/solusi/bengkel","name":"Bengkel & Servis Kendaraan"},{"@@type":"ListItem","position":9,"url":"https://morabangun.com/solusi/properti","name":"Developer Perumahan"},{"@@type":"ListItem","position":10,"url":"https://morabangun.com/solusi/koperasi","name":"Koperasi Simpan Pinjam"},{"@@type":"ListItem","position":11,"url":"https://morabangun.com/solusi/trucking","name":"Ekspedisi Domestik & Trucking"},{"@@type":"ListItem","position":12,"url":"https://morabangun.com/solusi/percetakan","name":"Percetakan & Konveksi"},{"@@type":"ListItem","position":13,"url":"https://morabangun.com/solusi/reseller","name":"Brand Online & Reseller"},{"@@type":"ListItem","position":14,"url":"https://morabangun.com/solusi/kos","name":"Kos & Rumah Sewa"},{"@@type":"ListItem","position":15,"url":"https://morabangun.com/solusi/jastip","name":"Jastip — Jasa Titip Barang"}]}
+{"@@context":"https://schema.org","@@type":"ItemList","itemListElement":[{"@@type":"ListItem","position":1,"url":"https://morabangun.com/solusi/portal-forwarder","name":"Portal Forwarder"},{"@@type":"ListItem","position":2,"url":"https://morabangun.com/solusi/ceisa","name":"CEISA H2H — PPJK & Ekspor-Impor"},{"@@type":"ListItem","position":3,"url":"https://morabangun.com/solusi/sekolah","name":"Sekolah, Pesantren & Yayasan"},{"@@type":"ListItem","position":4,"url":"https://morabangun.com/solusi/distributor","name":"Distributor & Grosir B2B"},{"@@type":"ListItem","position":5,"url":"https://morabangun.com/solusi/klinik","name":"Klinik & Praktek Mandiri"},{"@@type":"ListItem","position":6,"url":"https://morabangun.com/solusi/umroh","name":"Travel Umroh & Haji"},{"@@type":"ListItem","position":7,"url":"https://morabangun.com/solusi/kontraktor","name":"Kontraktor & Proyek"},{"@@type":"ListItem","position":8,"url":"https://morabangun.com/solusi/bengkel","name":"Bengkel & Servis Kendaraan"},{"@@type":"ListItem","position":9,"url":"https://morabangun.com/solusi/properti","name":"Developer Perumahan"},{"@@type":"ListItem","position":10,"url":"https://morabangun.com/solusi/koperasi","name":"Koperasi Simpan Pinjam"},{"@@type":"ListItem","position":11,"url":"https://morabangun.com/solusi/trucking","name":"Ekspedisi Domestik & Trucking"},{"@@type":"ListItem","position":12,"url":"https://morabangun.com/solusi/percetakan","name":"Percetakan & Konveksi"},{"@@type":"ListItem","position":13,"url":"https://morabangun.com/solusi/reseller","name":"Brand Online & Reseller"},{"@@type":"ListItem","position":14,"url":"https://morabangun.com/solusi/kos","name":"Kos & Rumah Sewa"},{"@@type":"ListItem","position":15,"url":"https://morabangun.com/solusi/jastip","name":"Jastip — Jasa Titip Barang"},{"@@type":"ListItem","position":16,"url":"https://morabangun.com/solusi/pabrik-kelapa-sawit","name":"Pabrik Kelapa Sawit (PKS) & ERP Timbangan"},{"@@type":"ListItem","position":17,"url":"https://morabangun.com/solusi/pabrik-kopi","name":"Pabrik Pengolahan Kopi & Roastery ERP"},{"@@type":"ListItem","position":18,"url":"https://morabangun.com/solusi/atsiri","name":"Penyulingan Minyak Atsiri & Ekspor"}]}
 </script>
 <style>
   :root{
@@ -321,7 +321,7 @@
   <div class="container">
     <span class="eyebrow" data-i18n="heroEye">🗂️ morabangun.com/solusi — Hub Solusi</span>
     <h1 data-i18n="heroH1">Sistem yang Paham <span class="hl">Bahasa Industri Anda</span></h1>
-    <p class="sub" data-i18n="heroSub">Bukan software generik. Satu fondasi teknologi teruji — portal white-label, tracking, tagihan, WhatsApp otomatis — dibentuk khusus untuk 13 industri. Pilih milik Anda.</p>
+    <p class="sub" data-i18n="heroSub">Bukan software generik. Satu fondasi teknologi teruji — portal white-label, tracking, tagihan, WhatsApp otomatis — dibentuk khusus untuk 18 industri. Pilih milik Anda.</p>
     <div class="govline" data-i18n="govline">🏛️ <b>Kami paham sistem pemerintah Indonesia:</b> CEISA (Bea Cukai) · SATUSEHAT (Kemenkes) · SISKOPATUH (Kemenag) — integrasi resmi, bukan coba-coba.</div>
   </div>
 </div>
@@ -361,6 +361,7 @@
           <b data-i18n="hub_pks_t">Pabrik Kelapa Sawit (PKS) & ERP Timbangan</b>
           <span class="hemoji">🌴</span>
         </div>
+        <p data-i18n="hub_pks_p">Jembatan timbang terintegrasi, sortasi & potongan TBS, rendemen CPO per shift, sampai kontrak pengiriman.</p>
         <div class="hfoot"><span>mulai Rp 15jt</span><span class="pill pill-g">✓ Industrial Grade</span></div>
       </a>
       <a class="hubcard" style="--hc:#d97706" href="/solusi/pabrik-kopi">
@@ -370,6 +371,14 @@
         </div>
         <p data-i18n="hub_kopi_p">Tracking lot single-origin kebun, kalkulator susut sangrai (roasting yield), cupping score & sertifikasi EUDR.</p>
         <div class="hfoot"><span>mulai Rp 12jt</span><span class="pill pill-g">✓ Specialty Grade</span></div>
+      </a>
+      <a class="hubcard" style="--hc:#7c3aed" href="/solusi/atsiri">
+        <div class="hubcard-head">
+          <b data-i18n="hub_atsiri_t">Penyulingan Minyak Atsiri & Ekspor</b>
+          <span class="hemoji">🌿</span>
+        </div>
+        <p data-i18n="hub_atsiri_p">Rendemen per ketel, timbang daun petani, lab QC kadar PA & Certificate of Analysis otomatis — nilam, serai wangi, cengkeh.</p>
+        <div class="hfoot"><span>mulai Rp 12jt</span><span class="pill pill-g">✓ Export Grade</span></div>
       </a>
     </div>
     <div class="hublabel" data-i18n="grp_portal-forwarder">🚢 Logistik & Supply Chain — DNA Kami 20+ Tahun</div>
@@ -580,6 +589,13 @@
     'hub_kos_p': 'Automatic, polite, on-time reminders',
     'hub_jastip_t': 'Jastip — Jasa Titip Barang',
     'hub_jastip_p': 'Structured order form, everything organized in one place',
+    'grp_pks': '🌴 Manufacturing & Agroindustry — Mills & Industrial ERP',
+    'hub_pks_t': 'Palm Oil Mill (PKS) & Weighbridge ERP',
+    'hub_pks_p': 'Integrated weighbridge, FFB grading & deductions, CPO yield per shift, through to delivery contracts.',
+    'hub_kopi_t': 'Coffee Processing & Roastery ERP',
+    'hub_kopi_p': 'Single-origin lot tracking, roasting yield loss calculator, cupping scores & EUDR certification.',
+    'hub_atsiri_t': 'Essential Oil Distillation & Export',
+    'hub_atsiri_p': 'Yield per still, farmer leaf weighing, lab QC on PA content & automatic Certificate of Analysis — patchouli, citronella, clove.',
     'hub_go': 'See solution &rarr;',
     'navSolusi': 'Solutions',
     'nav4': 'All Solutions',
@@ -592,7 +608,7 @@
     'crossBlog': 'Blog',
     'heroEye': '🗂️ morabangun.com/solusi — Solutions Hub',
     'heroH1': 'A System That Speaks <span class="hl">Your Industry’s Language</span>',
-    'heroSub': 'Not generic software. One proven technology foundation — white-label portal, tracking, billing, automatic WhatsApp — shaped for 13 industries. Pick yours.',
+    'heroSub': 'Not generic software. One proven technology foundation — white-label portal, tracking, billing, automatic WhatsApp — shaped for 18 industries. Pick yours.',
     'govline': '🏛️ <b>We understand Indonesia\'s government systems:</b> CEISA (Customs) · SATUSEHAT (Health Ministry) · SISKOPATUH (Religious Affairs) — official integration, not guesswork.',
     'hubCtaB': 'Don\'t see your industry?',
     'hubCtaP': 'Our foundation is the same — portal, tracking, billing, automatic WhatsApp. Tell us your workflow, we\'ll shape the system.',
