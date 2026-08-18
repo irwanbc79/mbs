@@ -1,0 +1,41 @@
+<?php
+
+namespace Tests\Feature;
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
+
+class AdSenseReadinessRoutesTest extends TestCase
+{
+    use RefreshDatabase;
+
+    public function test_legal_pages_are_public_and_linked_from_the_footer(): void
+    {
+        $this->get('/privacy-policy')
+            ->assertOk()
+            ->assertSee('Kebijakan Privasi')
+            ->assertSee('/terms-of-service', false)
+            ->assertSee('/disclaimer', false);
+
+        $this->get('/terms-of-service')->assertOk()->assertSee('Syarat dan Ketentuan');
+        $this->get('/disclaimer')->assertOk()->assertSee('Disclaimer Editorial');
+    }
+
+    public function test_blog_feed_is_valid_public_rss(): void
+    {
+        $this->get('/blog/feed.xml')
+            ->assertOk()
+            ->assertHeader('Content-Type', 'application/rss+xml; charset=UTF-8')
+            ->assertSee('<rss version="2.0"', false);
+    }
+
+    public function test_blog_sitemap_alias_is_public(): void
+    {
+        $this->get('/blog/sitemap.xml')
+            ->assertOk()
+            ->assertHeader('Content-Type', 'application/xml')
+            ->assertSee('/privacy-policy', false)
+            ->assertSee('/terms-of-service', false)
+            ->assertSee('/disclaimer', false);
+    }
+}

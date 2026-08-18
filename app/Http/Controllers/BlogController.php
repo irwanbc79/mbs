@@ -54,4 +54,16 @@ class BlogController extends Controller
 
         return view('blog.show', compact('post', 'related'));
     }
+
+    public function feed()
+    {
+        $posts = Post::published()
+            ->latest('published_at')
+            ->limit(20)
+            ->get(['title', 'slug', 'excerpt', 'published_at', 'updated_at']);
+
+        return response()
+            ->view('blog.feed', compact('posts'))
+            ->header('Content-Type', 'application/rss+xml; charset=UTF-8');
+    }
 }

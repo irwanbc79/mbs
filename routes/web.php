@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LegalPageController;
 use App\Http\Controllers\PublicTicketController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Http\Request;
@@ -28,7 +29,13 @@ Route::group([], function () {
     Route::get('/harga', fn() => view('harga'))->name('harga');
 
     Route::get('/blog',        [BlogController::class, 'index'])->name('blog.index');
+    Route::get('/blog/feed.xml', [BlogController::class, 'feed'])->name('blog.feed');
+    Route::get('/blog/sitemap.xml', [SitemapController::class, 'index'])->name('blog.sitemap');
     Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+
+    Route::get('/privacy-policy', [LegalPageController::class, 'privacy'])->name('privacy');
+    Route::get('/terms-of-service', [LegalPageController::class, 'terms'])->name('terms');
+    Route::get('/disclaimer', [LegalPageController::class, 'disclaimer'])->name('disclaimer');
 
     Route::view('/solusi', 'solusi.index')->name('solusi.index');
     Route::view('/solusi/portal-forwarder', 'solusi.portal-forwarder')->name('solusi.portal-forwarder');
@@ -69,4 +76,3 @@ Route::get('/admin/locale/{lang}', function (string $lang) {
     }
     return back();
 })->name('admin.locale.switch');
-

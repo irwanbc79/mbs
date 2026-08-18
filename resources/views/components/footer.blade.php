@@ -135,6 +135,10 @@
                 <span>Powered by: <a href="https://morabangun.com" class="text-slate-500 hover:text-slate-400">morabangun.com</a></span>
             </p>
             <div class="flex items-center gap-4 flex-wrap justify-center md:justify-end">
+                <a href="{{ route('privacy') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Privasi</a>
+                <a href="{{ route('terms') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Ketentuan</a>
+                <a href="{{ route('disclaimer') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Disclaimer</a>
+                <span class="text-slate-800 hidden md:inline">·</span>
                 <div class="flex items-center gap-1.5 text-xs text-slate-600">
                     <svg class="w-3 h-3 text-emerald-500/70" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
                     <span>SSL Secured</span>
