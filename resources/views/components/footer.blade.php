@@ -135,6 +135,7 @@
                 <span>Powered by: <a href="https://morabangun.com" class="text-slate-500 hover:text-slate-400">morabangun.com</a></span>
             </p>
             <div class="flex items-center gap-4 flex-wrap justify-center md:justify-end">
+                <a href="{{ route('blog.about') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Tentang Editorial</a>
                 <a href="{{ route('privacy') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Privasi</a>
                 <a href="{{ route('terms') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Ketentuan</a>
                 <a href="{{ route('disclaimer') }}" class="text-xs text-slate-600 hover:text-cyan-400 transition-colors">Disclaimer</a>

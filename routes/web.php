@@ -31,6 +31,7 @@ Route::group([], function () {
     Route::get('/blog',        [BlogController::class, 'index'])->name('blog.index');
     Route::get('/blog/feed.xml', [BlogController::class, 'feed'])->name('blog.feed');
     Route::get('/blog/sitemap.xml', [SitemapController::class, 'index'])->name('blog.sitemap');
+    Route::view('/blog/about', 'blog.about')->name('blog.about');
     Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
     Route::get('/privacy-policy', [LegalPageController::class, 'privacy'])->name('privacy');

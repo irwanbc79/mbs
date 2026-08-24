@@ -34,8 +34,18 @@ class AdSenseReadinessRoutesTest extends TestCase
         $this->get('/blog/sitemap.xml')
             ->assertOk()
             ->assertHeader('Content-Type', 'application/xml')
+            ->assertSee('/blog/about', false)
             ->assertSee('/privacy-policy', false)
             ->assertSee('/terms-of-service', false)
             ->assertSee('/disclaimer', false);
+    }
+
+    public function test_blog_about_page_is_public_and_not_captured_as_an_article_slug(): void
+    {
+        $this->get('/blog/about')
+            ->assertOk()
+            ->assertSee('Tentang Editorial Mora Bangun')
+            ->assertSee('Standar editorial')
+            ->assertSee('info@morabangun.com');
     }
 }

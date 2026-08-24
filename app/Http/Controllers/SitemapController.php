@@ -15,6 +15,7 @@ class SitemapController extends Controller
             ['url' => url('/'),        'priority' => '1.0',  'changefreq' => 'weekly'],
             ['url' => url('/harga'),   'priority' => '0.8',  'changefreq' => 'monthly'],
             ['url' => url('/blog'),    'priority' => '0.8',  'changefreq' => 'daily'],
+            ['url' => url('/blog/about'), 'priority' => '0.5', 'changefreq' => 'yearly'],
             ['url' => url('/solusi'),  'priority' => '0.9',  'changefreq' => 'monthly'],
             ['url' => url('/privacy-policy'),   'priority' => '0.3', 'changefreq' => 'yearly'],
             ['url' => url('/terms-of-service'), 'priority' => '0.3', 'changefreq' => 'yearly'],
