@@ -147,7 +147,7 @@
                 <span class="text-slate-800 hidden md:inline">·</span>
                 <div class="flex items-center gap-1.5 text-xs text-slate-600">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/70 animate-pulse inline-block"></span>
-                    <span>Production Ready</span>
+                    <span>Enterprise Architecture</span>
                 </div>
                 <span class="text-slate-800 hidden md:inline">·</span>
                 <div class="flex items-center gap-1.5 text-xs text-slate-600">

@@ -38,10 +38,10 @@
                     
                     <!-- SaaS Model Highlight Badge -->
                     <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-2.5 rounded-xl border border-cyan-500/20 bg-cyan-500/5 text-xs text-cyan-400 font-body">
-                        <span class="px-2 py-0.5 rounded bg-cyan-500 text-slate-950 font-bold tracking-wider uppercase text-[10px]">Hasil Nyata</span>
+                        <span class="px-2 py-0.5 rounded bg-cyan-500 text-slate-950 font-bold tracking-wider uppercase text-[10px]">Arsitektur</span>
                         <span class="font-semibold">
-                            <span x-show="$store.locale === 'id'">Kecepatan Input ↑ 85% &bull; Reduksi Error Dokumen ↓ 70%</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Input Speed ↑ 85% &bull; Document Errors ↓ 70%</span>
+                            <span x-show="$store.locale === 'id'">Otomasi Alur Dokumen &bull; Validasi Standar Kepabeanan</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Document Flow Automation &bull; Customs Standard Validation</span>
                         </span>
                     </div>
                 </div>
@@ -59,8 +59,8 @@
                                 <span x-show="$store.locale === 'en'" x-cloak>AI Document Reader (OCR)</span>
                             </h4>
                             <p class="text-slate-500 text-xs md:text-sm mt-1">
-                                <span x-show="$store.locale === 'id'">Ekstraksi instan untuk Invoice, Packing List, B/L, dan Shipping Instruction dengan akurasi hingga 99.4%.</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Instant extraction of Invoice, Packing List, B/L, and Shipping Instructions with up to 99.4% accuracy.</span>
+                                <span x-show="$store.locale === 'id'">Ekstraksi terstruktur untuk Invoice, Packing List, B/L, dan Shipping Instruction berbasis format dokumen standar.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Structured extraction for Invoice, Packing List, B/L, and Shipping Instructions based on standard document formats.</span>
                             </p>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                         <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
                         <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
                         <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                        <span class="text-xs font-mono text-slate-500 ml-2 select-none">M2B One - Interactive Sandbox</span>
+                        <span class="text-xs font-mono text-slate-500 ml-2 select-none">M2B One - Interactive Sandbox (Simulasi Demo)</span>
                     </div>
                     <button x-show="step > 1" @click="resetDemo()" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1 font-body font-semibold cursor-pointer">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18"/></svg>

@@ -578,7 +578,7 @@
                                     <div class="grid grid-cols-2 gap-1.5">
                                         <div class="bg-white/5 border border-white/10 p-1 rounded">
                                             <div class="text-[5px] text-[#C9A55C] uppercase tracking-wider font-mono">BC 2.0 IMPORT</div>
-                                            <div class="text-[8px] font-bold text-[#0E867E]">98.2% Success</div>
+                                            <div class="text-[8px] font-bold text-[#0E867E]">Draft Siap Aju</div>
                                         </div>
                                         <div class="bg-white/5 border border-white/10 p-1 rounded">
                                             <div class="text-[5px] text-[#C9A55C] uppercase tracking-wider font-mono">BC 3.0 EXPORT</div>
@@ -1226,7 +1226,7 @@
                                     <div class="grid grid-cols-2 gap-1.5">
                                         <div class="bg-white/5 border border-white/10 p-1 rounded">
                                             <div class="text-[5px] text-[#C9A55C] uppercase tracking-wider font-mono">BC 2.0 IMPORT</div>
-                                            <div class="text-[8px] font-bold text-[#0E867E]">98.2% Success</div>
+                                            <div class="text-[8px] font-bold text-[#0E867E]">Draft Siap Aju</div>
                                         </div>
                                         <div class="bg-white/5 border border-white/10 p-1 rounded">
                                             <div class="text-[5px] text-[#C9A55C] uppercase tracking-wider font-mono">BC 3.0 EXPORT</div>

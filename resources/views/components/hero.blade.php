@@ -73,17 +73,17 @@
                 <!-- Stats Row -->
                 <div class="animate-visible grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/60">
                     <div>
-                        <div class="text-3xl font-bold text-white" data-counter="50" data-suffix="+">50+</div>
+                        <div class="text-3xl font-bold text-white">B2B</div>
                         <div class="text-xs text-slate-500 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Proyek Selesai</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Projects Done</span>
+                            <span x-show="$store.locale === 'id'">Fokus Solusi</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Enterprise Focus</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-cyan-400" data-counter="25" data-suffix="+">25+</div>
+                        <div class="text-3xl font-bold text-cyan-400">100%</div>
                         <div class="text-xs text-slate-500 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Klien Aktif</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Active Clients</span>
+                            <span x-show="$store.locale === 'id'">Custom Software</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Custom Built</span>
                         </div>
                     </div>
                     <div>
@@ -381,14 +381,14 @@
                             <text x="22" y="11" fill="#64748b"  font-size="6.5" font-family="monospace">UPTIME</text>
                             <text x="22" y="22" fill="#00e5ff"  font-size="10"  font-weight="700" font-family="monospace">99.9%</text>
                         </g>
-                        <!-- Bottom-left: Active Clients -->
+                        <!-- Bottom-left: Architecture -->
                         <g transform="translate(14,302)">
                             <rect width="110" height="30" rx="7" fill="rgba(124,58,237,0.05)" stroke="rgba(124,58,237,0.18)" stroke-width="0.8"/>
                             <circle cx="12" cy="15" r="3.5" fill="#7c3aed" opacity="0.85">
                                 <animate attributeName="opacity" values="0.85;0.3;0.85" dur="2.0s" repeatCount="indefinite"/>
                             </circle>
-                            <text x="22" y="11" fill="#64748b"  font-size="6.5" font-family="monospace">KLIEN AKTIF</text>
-                            <text x="22" y="22" fill="#7c3aed"  font-size="10"  font-weight="700" font-family="monospace">25+ Klien</text>
+                            <text x="22" y="11" fill="#64748b"  font-size="6.5" font-family="monospace">ARSITEKTUR</text>
+                            <text x="22" y="22" fill="#7c3aed"  font-size="10"  font-weight="700" font-family="monospace">Scalable</text>
                         </g>
                         <!-- Top-left: AI Powered -->
                         <g transform="translate(14,32)">
@@ -399,14 +399,14 @@
                             <text x="22" y="11" fill="#64748b" font-size="6.5" font-family="monospace">AI-POWERED</text>
                             <text x="22" y="22" fill="#2962ff" font-size="10"  font-weight="700" font-family="monospace">Generative</text>
                         </g>
-                        <!-- Bottom-right: Projects Done -->
+                        <!-- Bottom-right: Stack Verified -->
                         <g transform="translate(418,352)">
                             <rect width="108" height="30" rx="7" fill="rgba(0,229,255,0.05)" stroke="rgba(0,229,255,0.18)" stroke-width="0.8"/>
                             <circle cx="12" cy="15" r="3.5" fill="#00e5ff" opacity="0.8">
                                 <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.2s" repeatCount="indefinite"/>
                             </circle>
-                            <text x="22" y="11" fill="#64748b" font-size="6.5" font-family="monospace">PROYEK</text>
-                            <text x="22" y="22" fill="#00e5ff" font-size="10"  font-weight="700" font-family="monospace">50+ Done</text>
+                            <text x="22" y="11" fill="#64748b" font-size="6.5" font-family="monospace">STANDARD</text>
+                            <text x="22" y="22" fill="#00e5ff" font-size="10"  font-weight="700" font-family="monospace">Enterprise</text>
                         </g>
 
                         <!-- Frame border glow -->
