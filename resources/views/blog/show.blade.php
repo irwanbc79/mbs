@@ -10,13 +10,6 @@
 @endphp
 @section('keywords', $keywords)
 
-@if(config('services.adsense.enabled') && config('services.adsense.client_id'))
-@push('head_scripts')
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('services.adsense.client_id') }}"
-        crossorigin="anonymous"></script>
-@endpush
-@endif
-
 @push('head_scripts')
 <style>
 .prose-mora {

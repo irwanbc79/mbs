@@ -36,6 +36,13 @@ class BlogController extends Controller
 
     public function show(string $slug)
     {
+        // Withdrawn posts are gone for good, not merely missing: 410 gets them
+        // out of Google's index far faster than the 404 firstOrFail() would
+        // raise, which matters while the site awaits an AdSense review.
+        if (in_array($slug, config('blog.retired_slugs', []), true)) {
+            return response('Resource permanently removed.', 410);
+        }
+
         $post    = Post::published()->where('slug', $slug)->firstOrFail();
         $related = Post::published()
                        ->where('id', '!=', $post->id)

@@ -105,6 +105,13 @@
 
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- Auto Ads loader: every page on the domain, not just the blog, so the
+         AdSense crawler and Auto Ads see a consistently tagged site. --}}
+    @if(config('services.adsense.enabled') && config('services.adsense.client_id'))
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('services.adsense.client_id') }}"
+            crossorigin="anonymous"></script>
+    @endif
+
     @stack('head_scripts')
 </head>
 <body x-data class="min-h-screen bg-surface text-white antialiased">
