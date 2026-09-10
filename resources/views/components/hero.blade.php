@@ -15,8 +15,8 @@
                 <div data-testid="hero-badge" class="scroll-reveal inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-sm">
                     <span class="w-2 h-2 rounded-full bg-blue-400"></span>
                     <span class="text-blue-300 font-semibold text-xs tracking-wider uppercase">
-                        <span x-show="$store.locale === 'id'">Enterprise Software &bull; Sistem ERP &bull; Integrasi API</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Enterprise Software &bull; Custom ERP &bull; API Integration</span>
+                        <span x-show="$store.locale === 'id'">Enterprise Software House &bull; Sistem ERP Kustom &bull; Digitalisasi Korporat</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Enterprise Software House &bull; Custom ERP Systems &bull; Corporate Portals</span>
                     </span>
                 </div>
 
@@ -24,14 +24,14 @@
                 <div class="scroll-reveal">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.12] tracking-tight text-white">
                         <span x-show="$store.locale === 'id'">
-                            Sistem ERP &amp; Portal Bisnis<br>
-                            Untuk Operasional yang<br>
-                            <span class="gradient-text-blue">Presisi &amp; Terintegrasi</span>
+                            Sistem ERP Terpadu<br>
+                            &amp; Portal Korporat Untuk<br>
+                            <span class="gradient-text-blue">Operasional Skala Besar</span>
                         </span>
                         <span x-show="$store.locale === 'en'" x-cloak>
-                            Enterprise ERP &amp; Portals<br>
-                            Engineered For<br>
-                            <span class="gradient-text-blue">Precision Operations</span>
+                            Unified Enterprise ERP<br>
+                            &amp; Corporate Portals For<br>
+                            <span class="gradient-text-blue">Large-Scale Operations</span>
                         </span>
                     </h1>
                 </div>
@@ -39,10 +39,10 @@
                 <!-- Subtext -->
                 <p class="scroll-reveal text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl font-body">
                     <span x-show="$store.locale === 'id'">
-                        Mora Bangun Solutions membangun piranti lunak kustom berkinerja tinggi—mengintegrasikan <strong class="text-white font-semibold">alur data pabean, logistik, inventaris gudang, hingga otomasi dokumen cerdas</strong> untuk korporasi, BUMN, dan industri nasional.
+                        Mora Bangun Solutions merekayasa piranti lunak enterprise kustom berkinerja tinggi—mengintegrasikan <strong class="text-white font-semibold">manajemen operasional ERP, rantai pasok (supply chain), portal korporat multi-cabang, hingga otomatisasi alur kerja cerdas</strong> untuk perusahaan skala menengah, korporasi, dan BUMN.
                     </span>
                     <span x-show="$store.locale === 'en'" x-cloak>
-                        Mora Bangun Solutions builds high-performance custom enterprise software—unifying <strong class="text-white font-semibold">customs workflows, logistics pipelines, warehouse ERP, and smart document automation</strong> for enterprises and industrial leaders in Indonesia.
+                        Mora Bangun Solutions engineers high-performance custom enterprise software—unifying <strong class="text-white font-semibold">core ERP operations, supply chain logistics, multi-branch corporate portals, and intelligent workflow automation</strong> for medium-to-large enterprises and SOEs.
                     </span>
                 </p>
 
@@ -81,145 +81,268 @@
                         <div class="text-2xl sm:text-3xl font-bold text-blue-400">100%</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
                             <span x-show="$store.locale === 'id'">Bespoke Software</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Custom Architecture</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Custom Built</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-bold text-emerald-400">CEISA 4.0</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-emerald-400">18+ Sektor</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Kepatuhan Regulasi</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Compliance Ready</span>
+                            <span x-show="$store.locale === 'id'">Solusi Industri</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Industry Proven</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-bold text-slate-200">99.9%</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-slate-200">99.98%</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Target Reliabilitas</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Target Uptime</span>
+                            <span x-show="$store.locale === 'id'">Keandalan SLA</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Guaranteed SLA</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ========== RIGHT: ENTERPRISE SYSTEM ARCHITECTURE PREVIEW ========== -->
+            <!-- ========== RIGHT: FUTURISTIC ENTERPRISE ECOSYSTEM VISUALIZATION ========== -->
             <div class="scroll-reveal hidden lg:block relative">
-                <!-- Outer Card Frame -->
-                <div class="relative w-full max-w-[560px] mx-auto rounded-2xl border border-slate-800/90 bg-[#0e1628] shadow-2xl overflow-hidden">
+                <!-- Ambient Multi-Color Core Glow -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
+                    <div class="w-[480px] h-[380px] rounded-full bg-blue-600/10 blur-[100px]"></div>
+                    <div class="w-[300px] h-[300px] rounded-full bg-indigo-600/10 blur-[80px]"></div>
+                    <div class="w-[200px] h-[200px] rounded-full bg-emerald-500/5 blur-[60px]"></div>
+                </div>
+
+                <!-- Main Futuristic Visual Glass Container -->
+                <div class="relative w-full max-w-[560px] mx-auto rounded-3xl border border-blue-500/20 bg-[#0B101D]/90 backdrop-blur-xl shadow-2xl overflow-hidden group hover:border-blue-500/35 transition-all duration-500">
                     
-                    <!-- Control Bar -->
-                    <div class="px-5 py-3.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+                    <!-- Top HUD Status Bar -->
+                    <div class="px-5 py-3.5 bg-slate-900/80 border-b border-slate-800/80 flex items-center justify-between z-20 relative">
                         <div class="flex items-center gap-2.5">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span class="text-xs font-mono font-semibold text-slate-200">Production Control Hub &bull; Live</span>
+                            <div class="flex gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-blue-400/80"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <span class="text-xs font-mono font-bold tracking-wider text-slate-200 uppercase">Enterprise Digital Core</span>
                         </div>
-                        <div class="flex items-center gap-2 text-[11px] font-mono text-slate-400 bg-slate-800/60 px-2.5 py-1 rounded-md border border-slate-700/50">
-                            <span>CEISA 4.0 &amp; ERP Core</span>
-                        </div>
-                    </div>
-
-                    <!-- Inner Body -->
-                    <div class="p-6 space-y-5">
-                        
-                        <!-- Live Workflow Topology -->
-                        <div>
-                            <div class="text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-2.5 flex items-center justify-between">
-                                <span>Arsitektur Alur Data Operasional</span>
-                                <span class="text-blue-400 font-semibold">Sinkronisasi Real-Time</span>
-                            </div>
-                            <div class="grid grid-cols-3 gap-2.5">
-                                <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
-                                    <div class="text-[10px] text-slate-400 font-mono">Tahap 1</div>
-                                    <div class="text-xs font-bold text-white mt-1">Dokumen &amp; Order</div>
-                                    <div class="text-[10px] text-emerald-400 mt-1 flex items-center justify-center gap-1 font-mono">
-                                        <span>●</span> Terverifikasi
-                                    </div>
-                                </div>
-                                <div class="p-3 rounded-xl bg-blue-950/40 border border-blue-800/50 text-center">
-                                    <div class="text-[10px] text-blue-300 font-mono">Tahap 2</div>
-                                    <div class="text-xs font-bold text-blue-200 mt-1">Validasi Pabean/Pajak</div>
-                                    <div class="text-[10px] text-blue-300 mt-1 flex items-center justify-center gap-1 font-mono">
-                                        <span>●</span> Engine Otomasi
-                                    </div>
-                                </div>
-                                <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
-                                    <div class="text-[10px] text-slate-400 font-mono">Tahap 3</div>
-                                    <div class="text-xs font-bold text-white mt-1">ERP &amp; Gudang</div>
-                                    <div class="text-[10px] text-emerald-400 mt-1 flex items-center justify-center gap-1 font-mono">
-                                        <span>●</span> Terkonsiliasi
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Active Operational Modules -->
-                        <div class="space-y-2.5">
-                            <div class="text-[11px] font-mono uppercase tracking-wider text-slate-400">Status Modul Operasional</div>
-                            
-                            <!-- Item 1 -->
-                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-lg bg-blue-600/15 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs font-bold text-white">Integrasi H2H Gateway CEISA 4.0</div>
-                                        <div class="text-[11px] text-slate-400">DJBC Ekspor-Impor &bull; Protokol Aman</div>
-                                    </div>
-                                </div>
-                                <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Connected</span>
-                            </div>
-
-                            <!-- Item 2 -->
-                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-lg bg-indigo-600/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs font-bold text-white">Sinkronisasi Multi-Gudang &amp; Stok</div>
-                                        <div class="text-[11px] text-slate-400">Pelacakan Kontainer &amp; Inventori Fisik</div>
-                                    </div>
-                                </div>
-                                <span class="text-[11px] font-mono text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">Sync 0s</span>
-                            </div>
-
-                            <!-- Item 3 -->
-                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-lg bg-emerald-600/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs font-bold text-white">Enkripsi Audit Trail &amp; RBAC</div>
-                                        <div class="text-[11px] text-slate-400">Pencatatan Log Transaksi Tidak Dapat Diubah</div>
-                                    </div>
-                                </div>
-                                <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Secured</span>
-                            </div>
-                        </div>
-
-                        <!-- Key Performance Metrics -->
-                        <div class="pt-3 border-t border-slate-800/80 grid grid-cols-3 gap-3 text-center">
-                            <div>
-                                <div class="text-lg font-bold text-white font-mono">94.8%</div>
-                                <div class="text-[10px] text-slate-400">Efisiensi Alur Dokumen</div>
-                            </div>
-                            <div>
-                                <div class="text-lg font-bold text-blue-400 font-mono">&lt; 3 Mnt</div>
-                                <div class="text-[10px] text-slate-400">Validasi Pabean</div>
-                            </div>
-                            <div>
-                                <div class="text-lg font-bold text-emerald-400 font-mono">0 Discrepancy</div>
-                                <div class="text-[10px] text-slate-400">Rekonsiliasi Data</div>
-                            </div>
+                        <div class="flex items-center gap-2 text-[11px] font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-800/40">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span>100% IN SYNC &bull; 14ms</span>
                         </div>
                     </div>
 
-                    <!-- Card Footer -->
-                    <div class="px-5 py-2.5 bg-slate-950/90 border-t border-slate-800 text-[10px] font-mono text-slate-400 flex items-center justify-between">
-                        <span>Stack: Laravel 12 &bull; MySQL &bull; REST API &bull; VPS Nginx</span>
-                        <span class="text-blue-400 font-medium">Bespoke Architecture</span>
+                    <!-- Interactive Animated Canvas -->
+                    <div class="relative p-3 sm:p-5">
+                        <svg viewBox="0 0 580 440" class="w-full h-auto select-none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- Gradients -->
+                                <radialGradient id="futuristic-core-glow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/>
+                                    <stop offset="60%" stop-color="#1D4ED8" stop-opacity="0.12"/>
+                                    <stop offset="100%" stop-color="#1E3A8A" stop-opacity="0"/>
+                                </radialGradient>
+                                <radialGradient id="center-hub-fill" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#1E293B"/>
+                                    <stop offset="100%" stop-color="#0F172A"/>
+                                </radialGradient>
+                                <linearGradient id="stream-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#2563EB" stop-opacity="0.2"/>
+                                </linearGradient>
+                                <linearGradient id="stream-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#34D399" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#059669" stop-opacity="0.2"/>
+                                </linearGradient>
+                                <linearGradient id="stream-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.2"/>
+                                </linearGradient>
+
+                                <!-- Filters -->
+                                <filter id="laser-glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                                    <feMerge>
+                                        <feMergeNode in="blur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                                <filter id="packet-glow" x="-100%" y="-100%" width="300%" height="300%">
+                                    <feGaussianBlur stdDeviation="3.5" result="blur"/>
+                                    <feMerge>
+                                        <feMergeNode in="blur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+
+                            <!-- Background Isometric Wireframe Grid -->
+                            <g opacity="0.35">
+                                <line x1="0" y1="70" x2="580" y2="70" stroke="#1E293B" stroke-width="0.8"/>
+                                <line x1="0" y1="150" x2="580" y2="150" stroke="#1E293B" stroke-width="0.8"/>
+                                <line x1="0" y1="220" x2="580" y2="220" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="4,6"/>
+                                <line x1="0" y1="290" x2="580" y2="290" stroke="#1E293B" stroke-width="0.8"/>
+                                <line x1="0" y1="370" x2="580" y2="370" stroke="#1E293B" stroke-width="0.8"/>
+
+                                <line x1="80" y1="0" x2="80" y2="440" stroke="#1E293B" stroke-width="0.8"/>
+                                <line x1="180" y1="0" x2="180" y2="440" stroke="#1E293B" stroke-width="0.8"/>
+                                <line x1="290" y1="0" x2="290" y2="440" stroke="#1E293B" stroke-width="0.8" stroke-dasharray="4,6"/>
+                                <line x1="400" y1="0" x2="400" y2="440" stroke="#1E293B" stroke-width="0.8"/>
+                                <line x1="500" y1="0" x2="500" y2="440" stroke="#1E293B" stroke-width="0.8"/>
+
+                                <!-- Grid Crosshair Accents -->
+                                <circle cx="180" cy="150" r="2" fill="#3B82F6" opacity="0.6"/>
+                                <circle cx="400" cy="150" r="2" fill="#3B82F6" opacity="0.6"/>
+                                <circle cx="180" cy="290" r="2" fill="#3B82F6" opacity="0.6"/>
+                                <circle cx="400" cy="290" r="2" fill="#3B82F6" opacity="0.6"/>
+                            </g>
+
+                            <!-- Ambient Aura behind center core -->
+                            <circle cx="290" cy="220" r="140" fill="url(#futuristic-core-glow)"/>
+
+                            <!-- ================= HIGHWAY DATA BUS PIPELINES ================= -->
+                            <!-- Core to Top-Left (Finance & Ledger) -->
+                            <path id="path-to-finance" d="M 290 220 L 210 160 L 175 140" stroke="url(#stream-blue)" stroke-width="1.8" stroke-dasharray="6,4" fill="none"/>
+                            <!-- Core to Top-Right (Smart Supply Chain) -->
+                            <path id="path-to-supply" d="M 290 220 L 370 160 L 405 140" stroke="url(#stream-emerald)" stroke-width="1.8" stroke-dasharray="6,4" fill="none"/>
+                            <!-- Core to Bottom-Left (Workflow Automation) -->
+                            <path id="path-to-workflow" d="M 290 220 L 210 280 L 175 300" stroke="url(#stream-violet)" stroke-width="1.8" stroke-dasharray="6,4" fill="none"/>
+                            <!-- Core to Bottom-Right (Corporate Portal & SSO) -->
+                            <path id="path-to-portal" d="M 290 220 L 370 280 L 405 300" stroke="url(#stream-blue)" stroke-width="1.8" stroke-dasharray="6,4" fill="none"/>
+
+                            <!-- ================= ANIMATED LASER DATA PACKETS ================= -->
+                            <!-- Packets on Path 1 (Finance) -->
+                            <circle r="4" fill="#60A5FA" filter="url(#packet-glow)">
+                                <animateMotion dur="2.2s" repeatCount="indefinite" path="M 290 220 L 210 160 L 175 140"/>
+                            </circle>
+                            <circle r="3" fill="#93C5FD" filter="url(#packet-glow)" opacity="0.7">
+                                <animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M 175 140 L 210 160 L 290 220"/>
+                            </circle>
+
+                            <!-- Packets on Path 2 (Supply Chain) -->
+                            <circle r="4" fill="#34D399" filter="url(#packet-glow)">
+                                <animateMotion dur="2.5s" repeatCount="indefinite" path="M 290 220 L 370 160 L 405 140"/>
+                            </circle>
+                            <circle r="3" fill="#6EE7B7" filter="url(#packet-glow)" opacity="0.7">
+                                <animateMotion dur="2.5s" begin="1.25s" repeatCount="indefinite" path="M 405 140 L 370 160 L 290 220"/>
+                            </circle>
+
+                            <!-- Packets on Path 3 (Workflow) -->
+                            <circle r="4" fill="#C084FC" filter="url(#packet-glow)">
+                                <animateMotion dur="2.0s" repeatCount="indefinite" path="M 290 220 L 210 280 L 175 300"/>
+                            </circle>
+                            <circle r="3" fill="#DDD6FE" filter="url(#packet-glow)" opacity="0.7">
+                                <animateMotion dur="2.0s" begin="1.0s" repeatCount="indefinite" path="M 175 300 L 210 280 L 290 220"/>
+                            </circle>
+
+                            <!-- Packets on Path 4 (Portal) -->
+                            <circle r="4" fill="#38BDF8" filter="url(#packet-glow)">
+                                <animateMotion dur="2.4s" repeatCount="indefinite" path="M 290 220 L 370 280 L 405 300"/>
+                            </circle>
+                            <circle r="3" fill="#7DD3FC" filter="url(#packet-glow)" opacity="0.7">
+                                <animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M 405 300 L 370 280 L 290 220"/>
+                            </circle>
+
+                            <!-- ================= SATELLITE MODULE NODE 1 (Top-Left: Finance & General Ledger) ================= -->
+                            <g transform="translate(18, 75)" class="cursor-pointer">
+                                <!-- Card Glass Base -->
+                                <rect width="170" height="74" rx="14" fill="#0E172A" fill-opacity="0.9" stroke="#3B82F6" stroke-opacity="0.4" stroke-width="1.2"/>
+                                <!-- Top Accent Bar -->
+                                <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 156 0 C 163.73 0 170 6.27 170 14 L 170 16 L 0 16 Z" fill="#1E3A8A" fill-opacity="0.5"/>
+                                <!-- Icon Badge -->
+                                <rect x="12" y="24" width="34" height="34" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-opacity="0.4"/>
+                                <path d="M 23 41 L 35 41 M 29 29 L 29 43 M 24 33 C 24 30 34 30 34 33 C 34 37 24 37 24 41 C 24 44 34 44 34 41" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round"/>
+                                <!-- Text Labels -->
+                                <text x="54" y="38" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.5">FINANCE &amp; LEDGER</text>
+                                <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">Auto-Jurnal &bull; Neraca</text>
+                                <!-- Status Tag -->
+                                <rect x="54" y="58" width="62" height="12" rx="4" fill="#10B981" fill-opacity="0.15"/>
+                                <text x="58" y="67" fill="#34D399" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● 100% RECONCILED</text>
+                            </g>
+
+                            <!-- ================= SATELLITE MODULE NODE 2 (Top-Right: Smart Supply Chain & Inventory) ================= -->
+                            <g transform="translate(392, 75)" class="cursor-pointer">
+                                <rect width="170" height="74" rx="14" fill="#0E172A" fill-opacity="0.9" stroke="#10B981" stroke-opacity="0.4" stroke-width="1.2"/>
+                                <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 156 0 C 163.73 0 170 6.27 170 14 L 170 16 L 0 16 Z" fill="#064E3B" fill-opacity="0.5"/>
+                                <rect x="12" y="24" width="34" height="34" rx="8" fill="#1E293B" stroke="#10B981" stroke-opacity="0.4"/>
+                                <path d="M 29 27 L 41 33 L 29 39 L 17 33 Z M 17 33 L 17 41 L 29 47 L 29 39 M 41 33 L 41 41 L 29 47" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <text x="54" y="38" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.5">SUPPLY CHAIN</text>
+                                <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">Multi-Gudang &bull; Stok Live</text>
+                                <rect x="54" y="58" width="60" height="12" rx="4" fill="#3B82F6" fill-opacity="0.15"/>
+                                <text x="58" y="67" fill="#60A5FA" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● 48K SKU SYNCED</text>
+                            </g>
+
+                            <!-- ================= SATELLITE MODULE NODE 3 (Bottom-Left: Workflow & Event Automation) ================= -->
+                            <g transform="translate(18, 285)" class="cursor-pointer">
+                                <rect width="170" height="74" rx="14" fill="#0E172A" fill-opacity="0.9" stroke="#8B5CF6" stroke-opacity="0.4" stroke-width="1.2"/>
+                                <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 156 0 C 163.73 0 170 6.27 170 14 L 170 16 L 0 16 Z" fill="#4C1D95" fill-opacity="0.5"/>
+                                <rect x="12" y="24" width="34" height="34" rx="8" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.4"/>
+                                <path d="M 31 27 L 22 36 L 29 36 L 27 45 L 36 34 L 29 34 Z" stroke="#C084FC" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <text x="54" y="38" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.5">AUTO WORKFLOW</text>
+                                <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">Event-Driven Pipeline</text>
+                                <rect x="54" y="58" width="64" height="12" rx="4" fill="#8B5CF6" fill-opacity="0.15"/>
+                                <text x="58" y="67" fill="#C084FC" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● SUB-SECOND OPS</text>
+                            </g>
+
+                            <!-- ================= SATELLITE MODULE NODE 4 (Bottom-Right: Corporate Portal & RBAC) ================= -->
+                            <g transform="translate(392, 285)" class="cursor-pointer">
+                                <rect width="170" height="74" rx="14" fill="#0E172A" fill-opacity="0.9" stroke="#3B82F6" stroke-opacity="0.4" stroke-width="1.2"/>
+                                <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 156 0 C 163.73 0 170 6.27 170 14 L 170 16 L 0 16 Z" fill="#1E3A8A" fill-opacity="0.5"/>
+                                <rect x="12" y="24" width="34" height="34" rx="8" fill="#1E293B" stroke="#3B82F6" stroke-opacity="0.4"/>
+                                <path d="M 29 27 L 38 31 V 37 C 38 42 29 46 29 46 C 29 46 20 42 20 37 V 31 Z" stroke="#60A5FA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <text x="54" y="38" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.5">CORPORATE PORTAL</text>
+                                <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">SSO &bull; Audit Trail &bull; RBAC</text>
+                                <rect x="54" y="58" width="60" height="12" rx="4" fill="#3B82F6" fill-opacity="0.15"/>
+                                <text x="58" y="67" fill="#60A5FA" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● MULTI-BRANCH</text>
+                            </g>
+
+                            <!-- ================= CENTRAL FUTURISTIC ERP CORE (290, 220) ================= -->
+                            <!-- Outer Rotating Ticks Ring (Clockwise) -->
+                            <circle cx="290" cy="220" r="82" stroke="#3B82F6" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="8 6" fill="none">
+                                <animateTransform attributeName="transform" type="rotate" from="0 290 220" to="360 290 220" dur="24s" repeatCount="indefinite"/>
+                            </circle>
+
+                            <!-- Middle Counter-Rotating Ring (Counter-Clockwise) -->
+                            <circle cx="290" cy="220" r="68" stroke="#60A5FA" stroke-opacity="0.3" stroke-width="1.2" stroke-dasharray="14 10" fill="none">
+                                <animateTransform attributeName="transform" type="rotate" from="360 290 220" to="0 290 220" dur="18s" repeatCount="indefinite"/>
+                            </circle>
+
+                            <!-- Radar Sweep Ray -->
+                            <line x1="290" y1="220" x2="290" y2="145" stroke="#60A5FA" stroke-width="1.5" opacity="0.5" filter="url(#laser-glow)">
+                                <animateTransform attributeName="transform" type="rotate" from="0 290 220" to="360 290 220" dur="6s" repeatCount="indefinite"/>
+                            </line>
+
+                            <!-- Core Hexagon Base -->
+                            <circle cx="290" cy="220" r="54" fill="url(#center-hub-fill)" stroke="#3B82F6" stroke-width="2.5" filter="url(#laser-glow)"/>
+                            <circle cx="290" cy="220" r="46" fill="#0B1329" stroke="#60A5FA" stroke-opacity="0.4" stroke-width="1"/>
+
+                            <!-- Center Core Content -->
+                            <!-- Central Holographic Cube / Stack -->
+                            <path d="M 290 196 L 306 205 L 290 214 L 274 205 Z" fill="#3B82F6" fill-opacity="0.5"/>
+                            <path d="M 274 205 L 290 214 L 290 227 L 274 218 Z" fill="#1D4ED8" fill-opacity="0.7"/>
+                            <path d="M 306 205 L 290 214 L 290 227 L 306 218 Z" fill="#2563EB" fill-opacity="0.9"/>
+
+                            <!-- Center Text -->
+                            <text x="290" y="238" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="10.5" font-weight="800" text-anchor="middle" letter-spacing="1">MBS CORE</text>
+                            <text x="290" y="250" fill="#60A5FA" font-family="ui-monospace, monospace" font-size="8" font-weight="600" text-anchor="middle" letter-spacing="0.5">ERP ENGINE</text>
+
+                            <!-- Live Radar Pulse Ripples -->
+                            <circle cx="290" cy="220" r="54" fill="none" stroke="#60A5FA" stroke-width="1" opacity="0">
+                                <animate attributeName="r" values="54;120;54" dur="4s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
                     </div>
+
+                    <!-- Bottom Floating HUD Banner (Multi-Branch Mesh Indicator) -->
+                    <div class="px-5 py-3 bg-slate-950/90 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+                        <div class="flex items-center gap-2 text-slate-300">
+                            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                            <span>Arsitektur Jaringan: <strong class="text-white">Medan HQ &bull; Jakarta Hub &bull; Surabaya Hub</strong></span>
+                        </div>
+                        <div class="flex items-center gap-2 text-emerald-400 text-[11px]">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Multi-Tenant &bull; Zero Bottleneck</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

@@ -7,15 +7,15 @@
         <div class="text-center mb-16">
             <span class="scroll-reveal inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-xs text-blue-300 font-bold uppercase tracking-widest font-mono">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                <span x-show="$store.locale === 'id'">Studi Kasus Solusi</span>
+                <span x-show="$store.locale === 'id'">Studi Kasus Solusi Enterprise</span>
                 <span x-show="$store.locale === 'en'" x-cloak>Enterprise Case Study</span>
             </span>
             <h2 class="scroll-reveal text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mt-4 mb-4 text-white">
                 M2B <span class="text-blue-400">One</span>
             </h2>
             <p class="scroll-reveal text-slate-300 max-w-3xl mx-auto font-body text-base md:text-lg leading-relaxed">
-                <span x-show="$store.locale === 'id'">Sistem Portal &amp; ERP Logistik Kepabeanan terpadu yang dikembangkan khusus untuk mengotomatiskan alur kerja dokumen pabean, tracking kargo, dan rekonsiliasi keuangan di PT. Mora Multi Berkah (MMB).</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Unified Logistics &amp; Customs ERP Portal custom-built to automate customs documentation, cargo tracking, and financial reconciliation at PT. Mora Multi Berkah (MMB).</span>
+                <span x-show="$store.locale === 'id'">Sistem ERP &amp; Portal Logistik Multimoda Terpadu yang dikembangkan khusus untuk mengotomatiskan alur kerja operasional kargo, tracking pengiriman, kepatuhan pabean, dan rekonsiliasi keuangan di PT. Mora Multi Berkah (MMB).</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Unified Multimodal Logistics &amp; Operations ERP Portal custom-built to automate freight workflows, cargo tracking, customs compliance, and financial reconciliation at PT. Mora Multi Berkah (MMB).</span>
             </p>
         </div>
 
@@ -35,8 +35,8 @@
                     </p>
                     
                     <!-- SaaS Model Highlight Badge -->
-                    <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-2.5 rounded-xl border border-cyan-500/20 bg-cyan-500/5 text-xs text-cyan-400 font-body">
-                        <span class="px-2 py-0.5 rounded bg-cyan-500 text-slate-950 font-bold tracking-wider uppercase text-[10px]">Arsitektur</span>
+                    <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-2.5 rounded-xl border border-blue-500/20 bg-blue-500/5 text-xs text-blue-400 font-body">
+                        <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-bold tracking-wider uppercase text-[10px]">Arsitektur</span>
                         <span class="font-semibold">
                             <span x-show="$store.locale === 'id'">Otomasi Alur Dokumen &bull; Validasi Standar Kepabeanan</span>
                             <span x-show="$store.locale === 'en'" x-cloak>Document Flow Automation &bull; Customs Standard Validation</span>
@@ -47,8 +47,8 @@
                 <!-- Feature list -->
                 <div class="space-y-4 font-body">
                     <!-- Feature 1 -->
-                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-cyan-500/20 transition-all group">
-                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all duration-300 shrink-0">
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/20 transition-all group">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         </div>
                         <div>
@@ -187,7 +187,7 @@
                         <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
                         <span class="text-xs font-mono text-slate-500 ml-2 select-none">M2B One - Interactive Sandbox (Simulasi Demo)</span>
                     </div>
-                    <button x-show="step > 1" @click="resetDemo()" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1 font-body font-semibold cursor-pointer">
+                    <button x-show="step > 1" @click="resetDemo()" class="text-xs text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-1 font-body font-semibold cursor-pointer">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18"/></svg>
                         <span x-show="$store.locale === 'id'">Reset Demo</span>
                         <span x-show="$store.locale === 'en'" x-cloak>Reset Demo</span>
@@ -209,11 +209,11 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <!-- Card 1: Import Document -->
-                        <button @click="startDemo('import')" class="group relative rounded-xl border border-slate-800 bg-slate-900/50 p-5 text-left transition-all hover:border-cyan-500/40 hover:bg-cyan-500/5 hover:-translate-y-1 cursor-pointer">
-                            <div class="absolute top-4 right-4 text-cyan-500/20 group-hover:text-cyan-400 transition-colors">
+                        <button @click="startDemo('import')" class="group relative rounded-xl border border-slate-800 bg-slate-900/50 p-5 text-left transition-all hover:border-blue-500/40 hover:bg-blue-500/5 hover:-translate-y-1 cursor-pointer">
+                            <div class="absolute top-4 right-4 text-blue-500/20 group-hover:text-blue-400 transition-colors">
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"/></svg>
                             </div>
-                            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-3">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                             </div>
                             <h4 class="font-bold text-white text-sm md:text-base">
@@ -243,8 +243,8 @@
                 <!-- STEP 2: AI OCR Scanning Animation -->
                 <div x-show="step === 2" class="space-y-6">
                     <div class="flex items-center justify-between">
-                        <h4 class="text-sm font-mono text-cyan-400 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        <h4 class="text-sm font-mono text-blue-400 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                             <span x-show="$store.locale === 'id'">AI Engine: Melakukan OCR &amp; Ekstraksi Dokumen...</span>
                             <span x-show="$store.locale === 'en'" x-cloak>AI Engine: Running OCR &amp; Document Extraction...</span>
                         </h4>
@@ -253,13 +253,13 @@
 
                     <!-- Progress Bar -->
                     <div class="w-full h-1.5 rounded-full bg-slate-800 overflow-hidden">
-                        <div class="h-full bg-cyan-400 transition-all duration-150" :style="'width: ' + ocrProgress + '%'"></div>
+                        <div class="h-full bg-blue-500 transition-all duration-150" :style="'width: ' + ocrProgress + '%'"></div>
                     </div>
 
                     <!-- Scanning Document Mock -->
                     <div class="relative rounded-xl border border-slate-800 bg-slate-900/30 p-4 font-mono text-[11px] text-slate-500 leading-relaxed overflow-hidden h-36">
                         <!-- Laser line animation -->
-                        <div class="absolute left-0 right-0 h-0.5 bg-cyan-500/80 shadow-md shadow-cyan-500/50 animate-bounce" style="top: 15%;"></div>
+                        <div class="absolute left-0 right-0 h-0.5 bg-blue-500/80 shadow-md shadow-blue-500/50 animate-bounce" style="top: 15%;"></div>
                         
                         <div class="space-y-1">
                             <p class="text-slate-400"># DECLARED INVOICE DATA</p>
@@ -275,8 +275,8 @@
 
                 <!-- STEP 3: AI Compliance Check -->
                 <div x-show="step === 3" class="space-y-6">
-                    <h4 class="text-sm font-mono text-cyan-400 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <h4 class="text-sm font-mono text-blue-400 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                         <span x-show="$store.locale === 'id'">AI Auditor: Memeriksa Kepatuhan Pabean...</span>
                         <span x-show="$store.locale === 'en'" x-cloak>AI Auditor: Checking Customs Compliance...</span>
                     </h4>
@@ -300,7 +300,7 @@
 
                     <!-- Action Submit Button -->
                     <div x-show="auditDone" class="text-center pt-2">
-                        <button @click="submitToCeisa()" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 flex items-center justify-center gap-2 mx-auto cursor-pointer">
+                        <button @click="submitToCeisa()" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 flex items-center justify-center gap-2 mx-auto cursor-pointer">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
                             <span x-show="$store.locale === 'id'">Kirim ke CEISA Bea Cukai H2H Gateway</span>
                             <span x-show="$store.locale === 'en'" x-cloak>Submit to CEISA Customs H2H Gateway</span>
@@ -314,8 +314,8 @@
                     <div class="flex flex-col items-center justify-center py-6 text-center">
                         <!-- Submitting Spinner -->
                         <div x-show="ceisaStatus === 'submitting'" class="space-y-4">
-                            <div class="w-12 h-12 rounded-full border-t-2 border-r-2 border-cyan-400 animate-spin mx-auto"></div>
-                            <p class="text-sm font-mono text-cyan-400">
+                            <div class="w-12 h-12 rounded-full border-t-2 border-r-2 border-blue-400 animate-spin mx-auto"></div>
+                            <p class="text-sm font-mono text-blue-400">
                                 <span x-show="$store.locale === 'id'">Mengirim paket pabean via Host-to-Host API...</span>
                                 <span x-show="$store.locale === 'en'" x-cloak>Sending customs payload via Host-to-Host API...</span>
                             </p>
@@ -323,7 +323,7 @@
 
                         <!-- Registered State -->
                         <div x-show="ceisaStatus === 'registered'" class="space-y-3">
-                            <div class="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mx-auto animate-pulse">
+                            <div class="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mx-auto animate-pulse">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <p class="text-base font-bold text-white">
@@ -366,7 +366,7 @@
                                     <span>WA Sent to Customer: "Kargo Anda telah rilis (SPPB)..."</span>
                                 </div>
                                 <div class="flex gap-2">
-                                    <button class="flex-grow py-2 rounded bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-wide transition-colors cursor-pointer">
+                                    <button class="flex-grow py-2 rounded bg-blue-500/10 border border-blue-500/30 hover:bg-blue-500/20 text-blue-400 text-xs font-semibold tracking-wide transition-colors cursor-pointer">
                                         Unduh PDF
                                     </button>
                                     <button @click="resetDemo()" class="px-4 py-2 rounded border border-slate-700 hover:border-slate-500 text-slate-300 text-xs font-semibold transition-colors cursor-pointer">
@@ -379,8 +379,8 @@
                 </div>
 
                 <!-- Glow effects on corners -->
-                <div class="absolute -top-10 -right-10 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl pointer-events-none"></div>
-                <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-blue-600/10 rounded-full blur-xl pointer-events-none"></div>
+                <div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-500/10 rounded-full blur-xl pointer-events-none"></div>
+                <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-indigo-600/10 rounded-full blur-xl pointer-events-none"></div>
             </div>
         </div>
     </div>
