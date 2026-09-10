@@ -14,44 +14,44 @@
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-    /* Cyber-Corporate Dark Palette */
-    --color-surface: #030712;
-    --color-surface-dim: #0a0f1e;
-    --color-surface-bright: #1e2a3a;
-    --color-surface-container-lowest: #020810;
-    --color-surface-container-low: #0f172a;
-    --color-surface-container: #121c2e;
-    --color-surface-container-high: #1a2540;
-    --color-surface-container-highest: #232e4a;
-    --color-on-surface: #f1f5f9;
+    /* Executive Enterprise Dark Palette */
+    --color-surface: #0b0f19;
+    --color-surface-dim: #070b14;
+    --color-surface-bright: #162032;
+    --color-surface-container-lowest: #04070d;
+    --color-surface-container-low: #0d1524;
+    --color-surface-container: #111a2e;
+    --color-surface-container-high: #18243c;
+    --color-surface-container-highest: #202e4a;
+    --color-on-surface: #f8fafc;
     --color-on-surface-variant: #94a3b8;
-    --color-outline: #334155;
-    --color-outline-variant: #1e2d44;
+    --color-outline: #1e293b;
+    --color-outline-variant: #152238;
 
-    /* Primary: Neon Cyan */
-    --color-primary: #00e5ff;
-    --color-on-primary: #002535;
-    --color-primary-container: #00b8d9;
-    --color-on-primary-container: #003340;
-    --color-inverse-primary: #007a9e;
+    /* Primary: Royal Sapphire Blue */
+    --color-primary: #2563eb;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #1d4ed8;
+    --color-on-primary-container: #dbeafe;
+    --color-inverse-primary: #3b82f6;
 
-    /* Secondary: Electric Blue */
-    --color-secondary: #2962ff;
+    /* Secondary: Steel & Executive Blue */
+    --color-secondary: #3b82f6;
     --color-on-secondary: #ffffff;
-    --color-secondary-container: #1565c0;
-    --color-on-secondary-container: #e3f2fd;
+    --color-secondary-container: #1e40af;
+    --color-on-secondary-container: #eff6ff;
 
-    /* Tertiary: Violet accent */
-    --color-tertiary: #7c3aed;
+    /* Tertiary: Emerald Health & Compliance */
+    --color-tertiary: #10b981;
     --color-on-tertiary: #ffffff;
-    --color-tertiary-container: #5b21b6;
+    --color-tertiary-container: #047857;
 
     --color-error: #f87171;
     --color-on-error: #7f1d1d;
 
-    --color-background: #030712;
-    --color-on-background: #f1f5f9;
-    --color-surface-variant: #1e293b;
+    --color-background: #0b0f19;
+    --color-on-background: #f8fafc;
+    --color-surface-variant: #131d31;
 }
 
 /* === ANIMATIONS === */
@@ -109,13 +109,13 @@
     animation: float 4s ease-in-out infinite;
 }
 
-@utility glow-cyan {
-    filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.6));
+@utility glow-blue {
+    filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.35));
 }
 
-@utility neon-border {
-    border: 1px solid rgba(0, 229, 255, 0.35);
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.08), inset 0 0 20px rgba(0, 229, 255, 0.03);
+@utility corporate-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 [x-cloak] { display: none !important; }
@@ -131,12 +131,12 @@
     }
 
     ::selection {
-        background: rgba(0, 229, 255, 0.25);
+        background: rgba(37, 99, 235, 0.3);
         color: #ffffff;
     }
 
-    ::-webkit-scrollbar        { width: 5px; }
-    ::-webkit-scrollbar-track  { background: #030712; }
+    ::-webkit-scrollbar        { width: 6px; }
+    ::-webkit-scrollbar-track  { background: #0b0f19; }
     ::-webkit-scrollbar-thumb  { background: #1e293b; border-radius: 9999px; }
     ::-webkit-scrollbar-thumb:hover { background: #334155; }
 }
@@ -144,7 +144,14 @@
 /* === COMPONENTS === */
 @layer components {
     .gradient-text {
-        background: linear-gradient(135deg, #00e5ff 0%, #2962ff 60%, #7c3aed 100%);
+        background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .gradient-text-blue {
+        background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -158,25 +165,25 @@
     }
 
     .glass-card {
-        backdrop-filter: blur(20px);
-        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(16px);
+        background: rgba(15, 23, 42, 0.75);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 1rem;
     }
 
     .glass-card-hover {
-        backdrop-filter: blur(20px);
-        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(16px);
+        background: rgba(15, 23, 42, 0.75);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 1rem;
         transition: all 0.3s ease;
     }
 
     .glass-card-hover:hover {
-        background: rgba(15, 23, 42, 0.8);
-        border-color: rgba(0, 229, 255, 0.25);
+        background: rgba(15, 23, 42, 0.9);
+        border-color: rgba(59, 130, 246, 0.35);
         transform: translateY(-3px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 229, 255, 0.06);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(37, 99, 235, 0.08);
     }
 
     .section-padding {
@@ -331,19 +338,19 @@
     /* Grid background utility */
     .grid-bg {
         background-image:
-            linear-gradient(rgba(0,229,255,0.025) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,229,255,0.025) 1px, transparent 1px);
-        background-size: 60px 60px;
+            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+        background-size: 48px 48px;
     }
 
     /* Section label */
     .section-label {
         display: inline-block;
         font-size: 0.75rem;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.2em;
-        color: #00e5ff;
+        color: #3b82f6;
         font-family: 'JetBrains Mono', monospace;
         margin-bottom: 0.75rem;
     }

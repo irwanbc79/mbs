@@ -124,23 +124,23 @@
     }">
 
     <!-- Background accent -->
-    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
-    <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none"></div>
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+    <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
 
     <div class="container-max relative z-10">
         <!-- Section Header -->
         <div class="text-center mb-16">
             <span class="scroll-reveal section-label">
-                <span x-show="$store.locale === 'id'">Layanan Kami</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Our Services</span>
+                <span x-show="$store.locale === 'id'">Layanan Piranti Lunak</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Enterprise Services</span>
             </span>
-            <h2 class="scroll-reveal text-4xl md:text-5xl font-bold tracking-tight mt-2 mb-4">
-                <span x-show="$store.locale === 'id'">Komponen <span class="gradient-text">AI Business Brain</span></span>
-                <span x-show="$store.locale === 'en'" x-cloak>Components of the <span class="gradient-text">AI Business Brain</span></span>
+            <h2 class="scroll-reveal text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-2 mb-4 text-white">
+                <span x-show="$store.locale === 'id'">Solusi Sistem &amp; <span class="text-blue-400">Teknologi Terintegrasi</span></span>
+                <span x-show="$store.locale === 'en'" x-cloak>Enterprise Software &amp; <span class="text-blue-400">System Integration</span></span>
             </h2>
-            <p class="scroll-reveal text-slate-400 max-w-2xl mx-auto font-body">
-                <span x-show="$store.locale === 'id'">Kami mengintegrasikan seluruh sistem operasional Anda ke dalam satu pusat saraf berbasis AI yang cerdas, scalable, dan berjalan secara otonom.</span>
-                <span x-show="$store.locale === 'en'" x-cloak>We integrate all your core operational systems into a single AI-powered nerve center that is smart, scalable, and runs autonomously.</span>
+            <p class="scroll-reveal text-slate-300 max-w-2xl mx-auto font-body text-base sm:text-lg">
+                <span x-show="$store.locale === 'id'">Kami merancang dan mengintegrasikan ekosistem teknologi operasional yang kokoh, aman, dan dirancang khusus untuk memecahkan kompleksitas bisnis Anda.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>We architect and integrate robust, secure operational software ecosystems engineered to solve enterprise business complexities.</span>
             </p>
         </div>
 
@@ -149,26 +149,26 @@
 
             <!-- 1. ERP -->
             <div data-testid="service-erp" class="scroll-reveal glass-card-hover p-8 group cursor-pointer" @click="openService('erp')">
-                <div class="service-icon mb-6 group-hover:bg-cyan-500/15 group-hover:border-cyan-500/30 transition-all">
+                <div class="service-icon mb-6 group-hover:bg-blue-500/15 group-hover:border-blue-500/30 transition-all text-blue-400 bg-blue-500/10 border border-blue-500/20">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-3">
+                <h3 class="text-xl font-bold mb-3 text-white">
                     <span x-show="$store.locale === 'id'">Sistem ERP</span>
                     <span x-show="$store.locale === 'en'" x-cloak>ERP System</span>
                 </h3>
                 <p class="text-slate-400 text-sm leading-relaxed mb-5 font-body">
-                    <span x-show="$store.locale === 'id'">Enterprise Resource Planning terintegrasi untuk manajemen inventori, keuangan, SDM, dan operasional bisnis dalam satu platform cerdas.</span>
-                    <span x-show="$store.locale === 'en'" x-cloak>Integrated ERP for inventory, finance, HR, and business operations management in one intelligent platform.</span>
+                    <span x-show="$store.locale === 'id'">Enterprise Resource Planning terintegrasi untuk manajemen inventori, keuangan, SDM, dan operasional bisnis dalam satu platform handal.</span>
+                    <span x-show="$store.locale === 'en'" x-cloak>Integrated ERP for inventory, finance, HR, and business operations management in one unified platform.</span>
                 </p>
                 <div class="flex items-center justify-between">
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-500/8 border border-cyan-500/20 text-cyan-400">Inventori</span>
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-500/8 border border-cyan-500/20 text-cyan-400">Keuangan</span>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300">Inventori</span>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300">Keuangan</span>
                     </div>
-                    <span class="text-xs text-cyan-400 flex items-center gap-1 group-hover:gap-2 transition-all">
-                        <span x-show="$store.locale === 'id'">Selengkapnya</span>
+                    <span class="text-xs text-blue-400 flex items-center gap-1 group-hover:gap-2 transition-all font-medium">
+                        <span x-show="$store.locale === 'id'">Detail Solusi</span>
                         <span x-show="$store.locale === 'en'" x-cloak>Learn more</span>
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </span>
@@ -225,26 +225,29 @@
                 </div>
             </div>
 
-            <!-- 4. AI Workflow Automation -->
+            <!-- 4. Workflow Automation & API -->
             <div data-testid="service-automation" class="scroll-reveal glass-card-hover p-8 group relative overflow-hidden cursor-pointer" @click="openService('automation')">
-                <div class="absolute top-4 right-4 text-xs px-2.5 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 font-medium">AI</div>
-                <div class="service-icon mb-6 group-hover:bg-cyan-500/15 group-hover:border-cyan-500/30 transition-all">
+                <div class="absolute top-4 right-4 text-xs px-2.5 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 font-medium">B2B</div>
+                <div class="service-icon mb-6 group-hover:bg-blue-500/15 group-hover:border-blue-500/30 transition-all text-blue-400 bg-blue-500/10 border border-blue-500/20">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-3">AI Workflow Automation</h3>
+                <h3 class="text-xl font-bold mb-3 text-white">
+                    <span x-show="$store.locale === 'id'">Otomasi Alur Kerja &amp; API</span>
+                    <span x-show="$store.locale === 'en'" x-cloak>Workflow Automation &amp; API</span>
+                </h3>
                 <p class="text-slate-400 text-sm leading-relaxed mb-5 font-body">
-                    <span x-show="$store.locale === 'id'">Otomatisasi proses bisnis dengan kecerdasan buatan: integrasi API, pemrosesan dokumen otomatis, approval workflow, serta meminimalisir potensi kesalahan operasional.</span>
-                    <span x-show="$store.locale === 'en'" x-cloak>Automate business processes with AI: API integration, automatic document processing, approval workflows, and minimize operational risk.</span>
+                    <span x-show="$store.locale === 'id'">Otomatisasi proses bisnis &amp; integrasi API H2H: pemrosesan dokumen, validasi aturan pabean, approval berjenjang, dan audit trail terpadu.</span>
+                    <span x-show="$store.locale === 'en'" x-cloak>Business workflow automation &amp; H2H API integrations: document processing, customs rule validation, tiered approvals, and unified audit trails.</span>
                 </p>
                 <div class="flex items-center justify-between">
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-500/8 border border-cyan-500/20 text-cyan-400">RPA</span>
-                        <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-500/8 border border-cyan-500/20 text-cyan-400">OCR</span>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300">API Gateway</span>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300">OCR &amp; Dokumen</span>
                     </div>
-                    <span class="text-xs text-cyan-400 flex items-center gap-1 group-hover:gap-2 transition-all">
-                        <span x-show="$store.locale === 'id'">Selengkapnya</span>
+                    <span class="text-xs text-blue-400 flex items-center gap-1 group-hover:gap-2 transition-all font-medium">
+                        <span x-show="$store.locale === 'id'">Detail Solusi</span>
                         <span x-show="$store.locale === 'en'" x-cloak>Learn more</span>
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </span>

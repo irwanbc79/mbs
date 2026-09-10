@@ -7,8 +7,7 @@
 
         <!-- Logo -->
         <a href="{{ route('home') }}" class="flex items-center gap-3 group" aria-label="Mora Bangun Solutions">
-            <div class="h-16 w-16 flex-shrink-0 transition-all duration-300 group-hover:scale-105"
-                 style="filter:drop-shadow(0 0 14px rgba(34,211,238,0.45))">
+            <div class="h-14 w-14 flex-shrink-0 transition-all duration-300 group-hover:scale-105">
                 <img src="{{ asset('images/brand/mbs-symbol-160.png') }}"
                      alt="MBS"
                      width="160" height="118"
@@ -17,7 +16,7 @@
             </div>
             <div>
                 <span class="font-extrabold text-base tracking-tight text-white block leading-tight">
-                    Mora <span class="text-cyan-400">Bangun</span>
+                    Mora <span class="text-blue-400">Bangun</span>
                 </span>
                 <span class="text-slate-400 font-mono tracking-widest uppercase text-[10px] block font-semibold">Solutions</span>
             </div>
@@ -79,8 +78,8 @@
             <div class="relative" @click.outside="openPortal = false">
                 <button @click="openPortal = !openPortal"
                         data-testid="nav-portals-btn"
-                        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-cyan-500/40 text-xs font-medium text-slate-300 hover:text-cyan-400 transition-all">
-                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
+                        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-blue-500/40 text-xs font-medium text-slate-300 hover:text-blue-300 transition-all">
+                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2zm10-11V7a4 4 0 00-8 0v4h8z"/></svg>
                     <span>Portals</span>
                     <svg class="w-3 h-3 opacity-50 transition-transform duration-200" :class="openPortal ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
@@ -95,7 +94,7 @@
                     <a href="https://admin.morabangun.com/admin"
                        target="_blank"
                        class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
-                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
                         <div>
                             <div class="font-bold text-white">Admin Portal</div>
                             <div class="text-[10px] text-slate-500">Filament Management</div>
@@ -116,7 +115,7 @@
             <!-- CTA Button -->
             <a href="#contact"
                data-testid="nav-cta-btn"
-               class="inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-bold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/30 hover:-translate-y-0.5">
+               class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-md shadow-blue-600/20 hover:-translate-y-0.5">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
                 <span x-show="$store.locale === 'id'">Konsultasi Gratis</span>
                 <span x-show="$store.locale === 'en'" x-cloak>Free Consultation</span>
@@ -196,7 +195,7 @@
 
             <div class="pt-3">
                 <a href="#contact" @click="mobileOpen=false"
-                   class="flex items-center justify-center gap-2 w-full px-5 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-sm font-bold rounded-lg transition-all">
+                   class="flex items-center justify-center gap-2 w-full px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-all">
                     <span x-show="$store.locale === 'id'">Konsultasi Gratis</span>
                     <span x-show="$store.locale === 'en'" x-cloak>Free Consultation</span>
                 </a>

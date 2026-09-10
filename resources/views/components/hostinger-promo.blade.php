@@ -7,7 +7,7 @@
         <div class="relative overflow-hidden w-full max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-slate-950/80 via-slate-900/50 to-slate-950/80 border border-violet-500/20 p-8 md:p-12 shadow-2xl backdrop-blur-xl">
             <!-- Neon glow accents inside card -->
             <div class="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-violet-600/10 blur-[90px] pointer-events-none"></div>
-            <div class="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-cyan-500/8 blur-[90px] pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-blue-500/8 blur-[90px] pointer-events-none"></div>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 <!-- Left Content Column (7 cols on lg) -->

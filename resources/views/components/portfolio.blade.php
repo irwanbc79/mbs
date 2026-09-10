@@ -9,13 +9,13 @@
                 <span x-show="$store.locale === 'id'">Portfolio</span>
                 <span x-show="$store.locale === 'en'" x-cloak>Portfolio</span>
             </span>
-            <h2 class="scroll-reveal text-4xl md:text-5xl font-bold tracking-tight mt-2 mb-4">
-                <span x-show="$store.locale === 'id'">Proyek <span class="gradient-text">Live &amp; Berjalan</span></span>
-                <span x-show="$store.locale === 'en'" x-cloak>Live &amp; <span class="gradient-text">Running Projects</span></span>
+            <h2 class="scroll-reveal text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2 mb-4 text-white">
+                <span x-show="$store.locale === 'id'">Implementasi Proyek <span class="text-blue-400">&amp; Rekam Jejak</span></span>
+                <span x-show="$store.locale === 'en'" x-cloak>Real-World Projects &amp; <span class="text-blue-400">Track Record</span></span>
             </h2>
-            <p class="scroll-reveal text-slate-400 max-w-2xl mx-auto font-body">
-                <span x-show="$store.locale === 'id'">Berikut adalah beberapa proyek nyata yang telah kami bangun, diakses, dan digunakan oleh klien setiap hari.</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Here are real projects we've built, accessed, and used by clients every day.</span>
+            <p class="scroll-reveal text-slate-300 max-w-2xl mx-auto font-body text-base sm:text-lg">
+                <span x-show="$store.locale === 'id'">Platform digital dan sistem ERP skala produksi yang telah kami bangun dan aktif digunakan dalam operasional bisnis sehari-hari.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Production-scale digital platforms and enterprise systems actively driving daily business operations.</span>
             </p>
         </div>
 

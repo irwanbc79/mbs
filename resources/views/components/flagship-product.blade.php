@@ -1,23 +1,21 @@
 <section id="moratrade-ai" class="section-padding relative overflow-hidden bg-surface-dim">
-    <!-- Background grid & glow -->
-    <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
-    <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Subtle grid -->
+    <div class="absolute inset-0 grid-bg opacity-25 pointer-events-none"></div>
 
     <div class="relative z-10 container-max px-6 lg:px-24">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <span class="scroll-reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-xs text-cyan-400 font-bold uppercase tracking-widest">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-                <span x-show="$store.locale === 'id'">Showcase Solusi</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Solution Showcase</span>
+            <span class="scroll-reveal inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-xs text-blue-300 font-bold uppercase tracking-widest font-mono">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                <span x-show="$store.locale === 'id'">Studi Kasus Solusi</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Enterprise Case Study</span>
             </span>
-            <h2 class="scroll-reveal text-4xl md:text-5xl font-black tracking-tight mt-4 mb-4">
-                M2B <span class="gradient-text">One</span>
+            <h2 class="scroll-reveal text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mt-4 mb-4 text-white">
+                M2B <span class="text-blue-400">One</span>
             </h2>
-            <p class="scroll-reveal text-slate-400 max-w-3xl mx-auto font-body text-base md:text-lg">
-                <span x-show="$store.locale === 'id'">Sistem Operasi AI Logistik pertama dari MBS yang dikembangkan khusus untuk mengotomatiskan seluruh alur kerja pabean, pengiriman barang, dan keuangan di PT. Mora Multi Berkah (MMB).</span>
-                <span x-show="$store.locale === 'en'" x-cloak>MBS's first logistics AI Operating System, custom-built to automate the end-to-end customs, freight forwarding, and financial workflows at PT. Mora Multi Berkah (MMB).</span>
+            <p class="scroll-reveal text-slate-300 max-w-3xl mx-auto font-body text-base md:text-lg leading-relaxed">
+                <span x-show="$store.locale === 'id'">Sistem Portal &amp; ERP Logistik Kepabeanan terpadu yang dikembangkan khusus untuk mengotomatiskan alur kerja dokumen pabean, tracking kargo, dan rekonsiliasi keuangan di PT. Mora Multi Berkah (MMB).</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Unified Logistics &amp; Customs ERP Portal custom-built to automate customs documentation, cargo tracking, and financial reconciliation at PT. Mora Multi Berkah (MMB).</span>
             </p>
         </div>
 

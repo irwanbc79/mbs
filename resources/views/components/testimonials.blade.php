@@ -1,5 +1,5 @@
-<section id="testimonials" class="section-padding relative bg-[#050d1e]">
-    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/25 to-transparent"></div>
+<section id="testimonials" class="section-padding relative bg-surface">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
 
     <div class="container-max">
         <!-- Header -->
@@ -37,7 +37,7 @@
                         <span x-show="$store.locale === 'en'" x-cloak>"Mora Bangun Solutions' team is very professional and responsive. The ERP system they built greatly helps our company operations. Their work exceeded expectations, and their after-sales support is outstanding."</span>
                     </blockquote>
                     <div class="flex items-center gap-3 pt-5 border-t border-white/8">
-                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-slate-950 font-bold text-sm flex-shrink-0">DB</div>
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">DB</div>
                         <div>
                             <p class="font-semibold text-white text-sm">Dira Baraka</p>
                             <p class="text-slate-500 text-xs">CEO, PT. Dira Baraka Mulia</p>
@@ -106,7 +106,7 @@
                          :style="`transform: translateX(-${current * 100}%)`">
 
                         @foreach([
-                            ['id' => 1, 'initial' => 'DB', 'color' => 'from-cyan-400 to-blue-600', 'tcolor' => 'text-slate-950', 'name_id' => 'Dira Baraka', 'name_en' => 'Dira Baraka', 'role_id' => 'CEO, PT. Dira Baraka Mulia', 'role_en' => 'CEO, PT. Dira Baraka Mulia', 'badge' => 'ERP', 'badge_color' => 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400', 'quote_id' => '"Tim Mora Bangun Solutions sangat profesional dan responsif. Sistem ERP yang mereka bangun sangat membantu operasional perusahaan kami."', 'quote_en' => '"Mora Bangun Solutions team is very professional and responsive. The ERP system they built greatly helps our company operations."'],
+                            ['id' => 1, 'initial' => 'DB', 'color' => 'from-blue-500 to-indigo-700', 'tcolor' => 'text-white', 'name_id' => 'Dira Baraka', 'name_en' => 'Dira Baraka', 'role_id' => 'CEO, PT. Dira Baraka Mulia', 'role_en' => 'CEO, PT. Dira Baraka Mulia', 'badge' => 'ERP', 'badge_color' => 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400', 'quote_id' => '"Tim Mora Bangun Solutions sangat profesional dan responsif. Sistem ERP yang mereka bangun sangat membantu operasional perusahaan kami."', 'quote_en' => '"Mora Bangun Solutions team is very professional and responsive. The ERP system they built greatly helps our company operations."'],
                             ['id' => 2, 'initial' => 'IS', 'color' => 'from-emerald-400 to-teal-600', 'tcolor' => 'text-white', 'name_id' => 'Irawan Santoso', 'name_en' => 'Irawan Santoso', 'role_id' => 'Direktur, CV. Indoplas', 'role_en' => 'Director, CV. Indoplas', 'badge_id' => 'Website', 'badge_en' => 'Website', 'badge_color' => 'bg-blue-500/10 border-blue-500/20 text-blue-400', 'quote_id' => '"Website company profile kami jadi jauh lebih profesional dan loading sangat cepat setelah direvamp oleh Mora Bangun."', 'quote_en' => '"Our company profile website became much more professional and very fast loading after being revamped by Mora Bangun."'],
                             ['id' => 3, 'initial' => 'LS', 'color' => 'from-rose-400 to-pink-600', 'tcolor' => 'text-white', 'name_id' => 'Laila Sari', 'name_en' => 'Laila Sari', 'role_id' => 'Owner, Ladaik Store', 'role_en' => 'Owner, Ladaik Store', 'badge' => 'E-Commerce', 'badge_color' => 'bg-rose-500/10 border-rose-500/20 text-rose-400', 'quote_id' => '"Platform e-commerce yang dibangun Mora Bangun benar-benar mengubah cara kami berjualan. Fitur pembayaran terintegrasi sangat membantu."', 'quote_en' => '"The e-commerce platform built by Mora Bangun truly changed how we sell. Integrated payment features are very helpful."'],
                         ] as $t)
@@ -144,7 +144,7 @@
                     <template x-for="i in total" :key="i">
                         <button @click="current = i - 1" data-testid="carousel-dot"
                                 class="h-2 rounded-full transition-all duration-300"
-                                :class="current === i - 1 ? 'w-6 bg-cyan-400' : 'w-2 bg-slate-700 hover:bg-slate-500'">
+                                :class="current === i - 1 ? 'w-6 bg-blue-500' : 'w-2 bg-slate-700 hover:bg-slate-500'">
                         </button>
                     </template>
                 </div>

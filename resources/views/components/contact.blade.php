@@ -1,5 +1,5 @@
 <section id="contact" class="section-padding relative bg-surface">
-    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
     <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
 
     <div class="container-max relative z-10">
@@ -33,12 +33,12 @@
 
                     <!-- Email -->
                     <a href="mailto:info@morabangun.com" class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500/20 transition-colors">
-                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/20 transition-colors">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
                         <div>
                             <p class="text-xs text-slate-500 mb-0.5">Email</p>
-                            <p class="text-sm text-white group-hover:text-cyan-400 transition-colors font-medium">info@morabangun.com</p>
+                            <p class="text-sm text-white group-hover:text-blue-400 transition-colors font-medium">info@morabangun.com</p>
                         </div>
                     </a>
 
@@ -78,8 +78,8 @@
                         </span>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed font-body">
-                        <span x-show="$store.locale === 'id'">Rata-rata waktu respons: <strong class="text-cyan-400">kurang dari 2 jam</strong> di hari kerja. Untuk urgent, hubungi via WhatsApp.</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Average response time: <strong class="text-cyan-400">less than 2 hours</strong> on business days. For urgent matters, contact via WhatsApp.</span>
+                        <span x-show="$store.locale === 'id'">Rata-rata waktu respons: <strong class="text-blue-400">kurang dari 2 jam</strong> di hari kerja. Untuk urgent, hubungi via WhatsApp.</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Average response time: <strong class="text-blue-400">less than 2 hours</strong> on business days. For urgent matters, contact via WhatsApp.</span>
                     </p>
                 </div>
 
@@ -95,7 +95,7 @@
                         ['icon' => '3', 'id' => 'Demo sistem & presentasi teknis', 'en' => 'System demo & technical presentation'],
                     ] as $step)
                     <div class="flex items-center gap-3 text-sm">
-                        <div class="w-6 h-6 rounded-full bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center text-cyan-400 text-xs font-bold flex-shrink-0">{{ $step['icon'] }}</div>
+                        <div class="w-6 h-6 rounded-full bg-blue-500/15 border border-blue-500/25 flex items-center justify-center text-blue-400 text-xs font-bold flex-shrink-0">{{ $step['icon'] }}</div>
                         <span class="text-slate-400">
                             <span x-show="$store.locale === 'id'">{{ $step['id'] }}</span>
                             <span x-show="$store.locale === 'en'" x-cloak>{{ $step['en'] }}</span>
@@ -156,7 +156,7 @@
                             <span x-show="$store.locale === 'id'">Terima kasih! Tim kami akan menghubungi Anda dalam 1x24 jam. Cek email atau WhatsApp Anda.</span>
                             <span x-show="$store.locale === 'en'" x-cloak>Thank you! Our team will contact you within 24 hours. Check your email or WhatsApp.</span>
                         </p>
-                        <button @click="success = false" class="mt-6 text-cyan-400 hover:text-cyan-300 text-sm underline transition-colors">
+                        <button @click="success = false" class="mt-6 text-blue-400 hover:text-blue-300 text-sm underline transition-colors">
                             <span x-show="$store.locale === 'id'">Kirim pesan lain</span>
                             <span x-show="$store.locale === 'en'" x-cloak>Send another message</span>
                         </button>
@@ -263,7 +263,7 @@
                         <button type="submit"
                                 data-testid="contact-submit"
                                 :disabled="loading"
-                                class="w-full flex items-center justify-center gap-2.5 px-8 py-4 bg-cyan-500 hover:bg-cyan-400 disabled:bg-slate-700 disabled:cursor-not-allowed text-slate-950 disabled:text-slate-500 font-bold rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/25 hover:-translate-y-0.5 disabled:transform-none">
+                                class="w-full flex items-center justify-center gap-2.5 px-8 py-4 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:cursor-not-allowed text-white disabled:text-slate-500 font-bold rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-600/25 hover:-translate-y-0.5 disabled:transform-none">
                             <span x-show="!loading">
                                 <span x-show="$store.locale === 'id'">Kirim Pesan Sekarang</span>
                                 <span x-show="$store.locale === 'en'" x-cloak>Send Message Now</span>
