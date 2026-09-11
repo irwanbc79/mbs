@@ -17,19 +17,19 @@
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                             </svg>
-                            <span x-show="$store.locale === 'id'">OFFICIAL CLOUD HOSTING PARTNER</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>OFFICIAL CLOUD HOSTING PARTNER</span>
+                            <span x-show="$store.locale === 'id'">REKOMENDASI HOSTING · TAUTAN AFILIASI</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>HOSTING RECOMMENDATION · AFFILIATE LINK</span>
                         </span>
                     </div>
                     
                     <h3 class="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
-                        <span x-show="$store.locale === 'id'">Bangun Web Bisnis Anda dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Server Indonesia Terbaik</span></span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Build Your Business Web with the <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Best Indonesian Server</span></span>
+                        <span x-show="$store.locale === 'id'">Pilihan Hosting untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Web Bisnis Indonesia</span></span>
+                        <span x-show="$store.locale === 'en'" x-cloak>A Hosting Option for <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Indonesian Business Websites</span></span>
                     </h3>
                     
                     <p class="text-slate-400 text-base leading-relaxed font-body">
-                        <span x-show="$store.locale === 'id'">Mau bikin website toko atau bisnis yang kencang, aman, dan tanpa pusing teknis? Morabangun merekomendasikan Hostinger karena sangat gampang dipakai pemula dengan server lokal Jakarta. Klaim diskon eksklusif <strong class="text-violet-400 font-bold">20% + Domain Gratis</strong> untuk Anda sekarang!</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Enjoy ultra-fast Jakarta server speeds with maximum uptime. Morabangun recommends Hostinger for high scalability, DDoS protection, and easy management. Claim an exclusive <strong class="text-violet-400 font-bold">20% discount + Free Domain</strong> for you now!</span>
+                        <span x-show="$store.locale === 'id'">Morabangun menggunakan tautan afiliasi Hostinger. Kami dapat menerima komisi tanpa biaya tambahan bagi Anda. Harga, diskon, domain gratis, dan ketersediaan server mengikuti ketentuan Hostinger saat transaksi.</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Morabangun uses a Hostinger affiliate link. We may receive a commission at no additional cost to you. Pricing, discounts, free domains, and server availability follow Hostinger's terms at checkout.</span>
                     </p>
                     
                     <!-- Call To Action -->
@@ -39,8 +39,8 @@
                            rel="noopener noreferrer"
                            class="group inline-flex items-center justify-center px-8 py-4 rounded-xl text-white font-bold text-base tracking-wide transition-all duration-300 bg-gradient-to-r from-violet-600 via-indigo-600 to-violet-700 hover:from-violet-500 hover:to-violet-600 hover:shadow-xl hover:shadow-violet-600/30 hover:-translate-y-0.5 active:scale-[0.98]">
                             <span class="flex items-center gap-2">
-                                <span x-show="$store.locale === 'id'">Klaim Diskon 20% Hosting</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Claim 20% Hosting Discount</span>
+                                <span x-show="$store.locale === 'id'">Lihat Penawaran Hostinger</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>View Hostinger Offer</span>
                                 <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                                 </svg>
@@ -49,8 +49,8 @@
                         
                         <div class="flex items-center justify-center gap-1.5 text-xs text-slate-500">
                             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span x-show="$store.locale === 'id'">Aktif & Terverifikasi</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Active & Verified</span>
+                            <span x-show="$store.locale === 'id'">Tautan afiliasi</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Affiliate link</span>
                         </div>
                     </div>
                 </div>

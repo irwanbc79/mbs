@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CEISA H2H — PPJK & Ekspor-Impor — Sistem Siap Pakai | Mora Bangun Solutions</title>
-<meta name="description" content="Otomatiskan dokumen pabean PIB/PEB ke CEISA 4.0. OCR, AI auditor HS code, kirim H2H resmi DJBC. Dari Rp 12 juta.">
+<meta name="description" content="Konsep integrasi dokumen PIB/PEB dengan OCR, validasi berbantuan sistem, dan kesiapan H2H. Pengiriman resmi memerlukan otorisasi dan hak akses pengguna jasa.">
 <link rel="canonical" href="https://morabangun.com/solusi/ceisa">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛃</text></svg>">
 <meta property="og:title" content="CEISA H2H — PPJK & Ekspor-Impor — Mora Bangun Solutions">
-<meta property="og:description" content="Otomatiskan dokumen pabean PIB/PEB ke CEISA 4.0. OCR, AI auditor HS code, kirim H2H resmi DJBC. Dari Rp 12 juta.">
+<meta property="og:description" content="Konsep integrasi dokumen PIB/PEB dengan OCR, validasi berbantuan sistem, dan kesiapan H2H. Pengiriman resmi memerlukan otorisasi dan hak akses pengguna jasa.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://morabangun.com/solusi/ceisa">
 <meta property="og:locale" content="id_ID">
 <script type="application/ld+json">
-{"@@context":"https://schema.org","@@type":"Product","name":"CEISA H2H — PPJK & Ekspor-Impor by Mora Bangun Solutions","description":"Otomatiskan dokumen pabean PIB/PEB ke CEISA 4.0. OCR, AI auditor HS code, kirim H2H resmi DJBC. Dari Rp 12 juta.","brand":{"@@type":"Organization","name":"Mora Bangun Solutions","url":"https://morabangun.com"},"offers":{"@@type":"AggregateOffer","priceCurrency":"IDR","lowPrice":"12000","highPrice":"50000"}}
+{"@@context":"https://schema.org","@@type":"Product","name":"Workflow Dokumen Kepabeanan — PPJK & Ekspor-Impor by Mora Bangun Solutions","description":"Konsep integrasi dokumen PIB/PEB dengan OCR, validasi berbantuan sistem, dan kesiapan H2H untuk pengguna yang memiliki otorisasi.","brand":{"@@type":"Organization","name":"Mora Bangun Solutions","url":"https://morabangun.com"},"offers":{"@@type":"AggregateOffer","priceCurrency":"IDR","lowPrice":"12000000","highPrice":"50000000"}}
 </script>
 <script type="application/ld+json">
-{"@@context":"https://schema.org","@@type":"FAQPage","mainEntity":[{"@@type":"Question","name":"Data operasional kami sudah di Excel. Harus input ulang?","acceptedAnswer":{"@@type":"Answer","text":"Tidak. Paket Professional termasuk import data dari Excel existing. Tim Anda cukup update status — atau kami integrasikan dengan sistem yang sudah jalan."}},{"@@type":"Question","name":"Apakah pengguna kami harus bayar atau install aplikasi?","acceptedAnswer":{"@@type":"Answer","text":"Tidak. Cukup buka portal dari browser HP/laptop, login, selesai. Tanpa install, tanpa biaya untuk mereka."}},{"@@type":"Question","name":"Bagaimana keamanan data kami?","acceptedAnswer":{"@@type":"Answer","text":"Setiap akun hanya melihat datanya sendiri (isolasi per akun). Server di Indonesia, backup harian, dan audit log semua aktivitas."}},{"@@type":"Question","name":"14 hari tayang itu benar realistis?","acceptedAnswer":{"@@type":"Answer","text":"Ya, karena kami tidak membangun dari nol — fondasinya sudah jadi dan teruji (lihat Portal Forwarder yang live). Yang kami kerjakan: branding Anda, subdomain, import data, dan training."}},{"@@type":"Question","name":"Apakah legal terhubung ke CEISA?","acceptedAnswer":{"@@type":"Answer","text":"Ya. Koneksi H2H (host-to-host) adalah jalur resmi yang disediakan DJBC untuk PPJK/perusahaan — bukan scraping atau celah tidak resmi."}},{"@@type":"Question","name":"Data kepabeanan kami aman?","acceptedAnswer":{"@@type":"Answer","text":"Data per perusahaan terisolasi, server Indonesia, dan tim kami terbiasa menangani kerahasiaan dokumen kepabeanan sejak lama."}}]}
+{"@@context":"https://schema.org","@@type":"FAQPage","mainEntity":[{"@@type":"Question","name":"Data operasional kami sudah di Excel. Harus input ulang?","acceptedAnswer":{"@@type":"Answer","text":"Data dapat dipetakan dan diimpor setelah struktur, kualitas, serta otorisasinya diverifikasi bersama pengguna."}},{"@@type":"Question","name":"Apakah pengguna kami harus install aplikasi?","acceptedAnswer":{"@@type":"Answer","text":"Tidak. Portal dapat digunakan melalui browser dengan akun dan hak akses yang ditetapkan perusahaan."}},{"@@type":"Question","name":"Bagaimana keamanan data kami?","acceptedAnswer":{"@@type":"Answer","text":"Kontrol keamanan, lokasi penyimpanan, backup, retensi, dan audit log ditetapkan dalam ruang lingkup serta perjanjian implementasi."}},{"@@type":"Question","name":"Berapa lama implementasinya?","acceptedAnswer":{"@@type":"Answer","text":"Timeline ditetapkan setelah discovery, pemetaan integrasi, pemeriksaan data, dan konfirmasi dependensi pihak ketiga."}},{"@@type":"Question","name":"Bagaimana integrasi dengan CEISA dilakukan?","acceptedAnswer":{"@@type":"Answer","text":"Integrasi hanya dilakukan melalui akses pengguna jasa yang sah, otorisasi yang sesuai, dan kanal yang disetujui DJBC. Sistem tidak menggantikan keputusan pejabat atau melewati kontrol akses."}},{"@@type":"Question","name":"Bagaimana data kepabeanan dilindungi?","acceptedAnswer":{"@@type":"Answer","text":"Desain menggunakan pemisahan akses per perusahaan, audit log, dan kontrol operasional yang disepakati sebelum implementasi."}}]}
 </script>
 <style>
   :root{
@@ -304,13 +304,13 @@
   <div class="container hero-grid">
     <div>
       <span class="eyebrow" data-i18n="eyebrowX">🛃 PPJK · Eksportir · Importir</span>
-      <h1 data-i18n="h1">Satu Kesalahan PIB Bisa Berarti Denda.<br>Otomatiskan Dokumen Pabean Anda ke <span class="hl">CEISA 4.0</span>.</h1>
-      <p class="sub" data-i18n="hsub">OCR dokumen → AI auditor cek HS code → kirim H2H ke CEISA → No. AJU & SPPB/NPE terpantau otomatis. Dibangun praktisi kepabeanan 20+ tahun, live di ceisa.m2b.co.id.</p>
+      <h1 data-i18n="h1">Kurangi Risiko Kesalahan Data PIB/PEB.<br>Siapkan Workflow Dokumen untuk <span class="hl">Integrasi Terotorisasi</span>.</h1>
+      <p class="sub" data-i18n="hsub">OCR dokumen → pemeriksaan awal data → penyusunan draft payload → pencatatan respons. Pengiriman resmi dan keputusan pabean tetap melalui pengguna berwenang serta sistem DJBC.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#demo" data-i18n="ctaDemo">▶ Lihat Demo Langsung</a>
         <a class="btn btn-wa" data-wa data-pkg="CEISA H2H — PPJK & Ekspor-Impor" data-pos="hero" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="ctaWa">💬 Konsultasi Gratis</a>
       </div>
-      <div class="trust"><div><b data-i18n="t0b">20+ tahun</b><span data-i18n="t0">praktisi kepabeanan</span></div><div><b data-i18n="t1b">Live</b><span data-i18n="t1">ceisa.m2b.co.id (H2H DJBC)</span></div><div><b data-i18n="t2b">BC 2.0 & 3.0</b><span data-i18n="t2">impor + ekspor</span></div></div>
+      <div class="trust"><div><b data-i18n="t0b">20+ tahun</b><span data-i18n="t0">pengalaman praktisi kepabeanan</span></div><div><b data-i18n="t1b">Demo</b><span data-i18n="t1">workflow dokumen &amp; respons</span></div><div><b data-i18n="t2b">BC 2.0 &amp; 3.0</b><span data-i18n="t2">skenario impor + ekspor</span></div></div>
     </div>
     <div class="hero-visual">
       <img src="/images/solusi/ceisa-hero.webp" alt="CEISA H2H — PPJK & Ekspor-Impor" width="1448" height="1086" loading="eager" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:10px">
@@ -327,13 +327,13 @@
         <div class="ico">⌨️</div>
         <h3 data-i18n="ceisa_pain_0_h">Input Manual Rawan Salah</h3>
         <p data-i18n="ceisa_pain_0_p">Staf mengetik ulang data dari invoice/PL ke portal CEISA. Satu salah ketik HS code atau nilai pabean = risiko denda.</p>
-        <div class="fix" data-i18n="ceisa_pain_0_f">✓ OCR baca dokumen, AI auditor cek sebelum kirim</div>
+        <div class="fix" data-i18n="ceisa_pain_0_f">✓ OCR baca dokumen, asisten validasi menandai data untuk pemeriksaan manusia</div>
       </div>
       <div class="pain-card">
         <div class="ico">🔁</div>
         <h3 data-i18n="ceisa_pain_1_h">Cek Status Berulang-Ulang</h3>
         <p data-i18n="ceisa_pain_1_p">Tim harus login CEISA berkali-kali sehari cuma untuk cek apakah AJU sudah terbit atau masih tertahan.</p>
-        <div class="fix" data-i18n="ceisa_pain_1_f">✓ Status AJU/SPPB/NPE terpantau otomatis di satu dashboard</div>
+        <div class="fix" data-i18n="ceisa_pain_1_f">✓ Respons yang diterima melalui kanal terotorisasi dapat dicatat di satu dashboard</div>
       </div>
       <div class="pain-card">
         <div class="ico">⚠️</div>
@@ -365,7 +365,7 @@
         <div class="runrow">
           <button class="runbtn" id="runBtn" onclick="runPipe()">▶ Jalankan Proses</button>
           <button class="resetbtn" onclick="resetPipe()">↺ Uji Ulang</button>
-          <span style="font-size:.72rem;color:var(--dim)">8 langkah otomatis · tanpa input manual ke portal CEISA</span>
+          <span style="font-size:.72rem;color:var(--dim)">8 langkah simulasi · tidak mengirim data ke CEISA</span>
         </div>
         <div class="plog" id="plog"><div class="plog-empty">Log proses akan tampil di sini — klik <b style="color:var(--ceisa)">Jalankan Proses</b>.</div></div>
 
@@ -382,7 +382,7 @@
       </div>
     </div>
     </div>
-    <div class="demo-note" data-i18n="demoNote">ℹ️ Ini <b>demo statis</b>. Versi asli terhubung data operasional Anda + notifikasi WhatsApp otomatis.</div>
+    <div class="demo-note" data-i18n="demoNote">ℹ️ Ini <b>demo statis dengan data fiktif</b>. Tidak ada data yang dikirim ke CEISA, dan tidak ada keputusan pabean yang diterbitkan.</div>
   </div>
 </section>
 
@@ -406,7 +406,7 @@
       </div>
       <div class="feat">
         <div class="ico">✅</div>
-        <h3 data-i18n="ceisa_feat_2_h">AI Auditor HS Code</h3>
+        <h3 data-i18n="ceisa_feat_2_h">Asisten Validasi HS Code</h3>
         <p data-i18n="ceisa_feat_2_p">Validasi HS code & kelengkapan dokumen sebelum dikirim ke CEISA.</p>
         
       </div>
@@ -419,7 +419,7 @@
       <div class="feat">
         <div class="ico">📊</div>
         <h3 data-i18n="ceisa_feat_4_h">Monitor Status Real-Time</h3>
-        <p data-i18n="ceisa_feat_4_p">No. AJU, kode billing, SPPB/NPE — semua terpantau tanpa login CEISA berkali-kali.</p>
+        <p data-i18n="ceisa_feat_4_p">No. AJU, kode billing, dan respons dokumen dicatat setelah diterima melalui akses yang diotorisasi.</p>
         
       </div>
       <div class="feat">
@@ -443,7 +443,7 @@
       <div class="feat">
         <div class="ico">🔗</div>
         <h3 data-i18n="ceisa_feat_8_h">Integrasi H2H Resmi DJBC</h3>
-        <p data-i18n="ceisa_feat_8_p">Koneksi host-to-host langsung ke CEISA 4.0 — jalur resmi, bukan scraping.</p>
+        <p data-i18n="ceisa_feat_8_p">Arsitektur disiapkan untuk kanal H2H yang diotorisasi; implementasi bergantung pada persetujuan dan hak akses pengguna jasa.</p>
         <span class="tag">Add-on</span>
       </div>
     </div>
@@ -471,7 +471,7 @@
         <div class="for" data-i18n="ceisa_pr_Professional_for">OCR + kirim H2H + notifikasi WA</div>
         <div class="amount">Rp 25jt <small>setup</small></div>
         <div class="monthly">+ <b>Rp 1,5jt/bulan</b> <span data-i18n="prHostLabel">hosting &amp; maintenance</span></div>
-        <ul><li data-i18n="ceisa_pr_Professional_i0"><b style="color:var(--text)">Semua fitur Starter</b>, plus:</li><li data-i18n="ceisa_pr_Professional_i1">OCR dokumen otomatis</li><li data-i18n="ceisa_pr_Professional_i2">AI auditor HS code</li><li data-i18n="ceisa_pr_Professional_i3">Kirim H2H otomatis ke CEISA</li><li data-i18n="ceisa_pr_Professional_i4">Notifikasi WA saat status berubah</li><li data-i18n="ceisa_pr_Professional_i5">Import data dari sistem existing</li></ul>
+        <ul><li data-i18n="ceisa_pr_Professional_i0"><b style="color:var(--text)">Semua fitur Starter</b>, plus:</li><li data-i18n="ceisa_pr_Professional_i1">OCR dokumen otomatis</li><li data-i18n="ceisa_pr_Professional_i2">Asisten validasi HS code</li><li data-i18n="ceisa_pr_Professional_i3">Modul H2H setelah otorisasi akses disetujui</li><li data-i18n="ceisa_pr_Professional_i4">Notifikasi WA saat status berubah</li><li data-i18n="ceisa_pr_Professional_i5">Import data dari sistem existing</li></ul>
         <a class="btn btn-primary" data-wa data-pkg="paket Professional CEISA H2H — PPJK & Ekspor-Impor" data-pos="pricing" href="https://wa.me/6281399997132" target="_blank" rel="noopener" data-i18n="ceisa_pr_Professional_cta">Pilih Professional</a>
       </div>
       <div class="price">
@@ -492,11 +492,11 @@
     <div>
       <span class="eyebrow" data-i18n="prfEye">Bukti, Bukan Janji</span>
       <h2 data-i18n="prfH2">Sudah Dibangun oleh Praktisi yang Menjalankan Sistem Sungguhan</h2>
-      <p class="sub" data-i18n="ceisa_prfSub">Bukan produk coba-coba. Fondasi teknisnya sudah live dan dipakai setiap hari.</p>
-      <div class="proof-stats"><div class="pstat"><b data-i18n="ceisa_ps_0_b">ceisa.m2b.co.id</b><small data-i18n="ceisa_ps_0_s">Implementasi H2H live</small></div><div class="pstat"><b data-i18n="ceisa_ps_1_b">20+ tahun</b><small data-i18n="ceisa_ps_1_s">Praktisi kepabeanan di balik desainnya</small></div><div class="pstat"><b data-i18n="ceisa_ps_2_b">H2H Resmi</b><small data-i18n="ceisa_ps_2_s">Jalur resmi DJBC, bukan scraping</small></div><div class="pstat"><b data-i18n="ceisa_ps_3_b">BC 2.0/3.0</b><small data-i18n="ceisa_ps_3_s">Impor & ekspor, bukan sekadar CRUD</small></div></div>
+      <p class="sub" data-i18n="ceisa_prfSub">Fondasi portal dan workflow dapat didemonstrasikan. Koneksi eksternal hanya diaktifkan setelah scope, otorisasi, dan akses pihak terkait terkonfirmasi.</p>
+      <div class="proof-stats"><div class="pstat"><b data-i18n="ceisa_ps_0_b">ceisa.m2b.co.id</b><small data-i18n="ceisa_ps_0_s">demo teknis akses terbatas</small></div><div class="pstat"><b data-i18n="ceisa_ps_1_b">20+ tahun</b><small data-i18n="ceisa_ps_1_s">pengalaman praktisi kepabeanan</small></div><div class="pstat"><b data-i18n="ceisa_ps_2_b">H2H Ready</b><small data-i18n="ceisa_ps_2_s">memerlukan otorisasi dan hak akses</small></div><div class="pstat"><b data-i18n="ceisa_ps_3_b">BC 2.0/3.0</b><small data-i18n="ceisa_ps_3_s">skenario workflow impor &amp; ekspor</small></div></div>
     </div>
     <div class="quote">
-      <p data-i18n="ceisa_qt">"Portal Forwarder kami sudah live dan dipakai forwarder aktif setiap hari — CEISA H2H dibangun di atas rekam jejak kepabeanan yang sama, bukan proyek coba-coba."</p>
+      <p data-i18n="ceisa_qt">"Workflow dirancang dari kebutuhan operasional forwarder dan kepabeanan, lalu divalidasi bertahap sebelum integrasi eksternal diaktifkan."</p>
       <div class="who">
         <div class="av">MB</div>
         <div><b data-i18n="ceisa_qtWho">Tim Mora Bangun Solutions</b><small data-i18n="ceisa_qtCo">Dibangun oleh praktisi kepabeanan 20+ tahun, Medan</small></div>
@@ -513,8 +513,8 @@
       <details><summary data-i18n="ceisa_fq0">Data operasional kami sudah di Excel. Harus input ulang?</summary><p data-i18n="ceisa_fa0">Tidak. Paket Professional termasuk import data dari Excel existing. Tim Anda cukup update status — atau kami integrasikan dengan sistem yang sudah jalan.</p></details>
       <details><summary data-i18n="ceisa_fq1">Apakah pengguna kami harus bayar atau install aplikasi?</summary><p data-i18n="ceisa_fa1">Tidak. Cukup buka portal dari browser HP/laptop, login, selesai. Tanpa install, tanpa biaya untuk mereka.</p></details>
       <details><summary data-i18n="ceisa_fq2">Bagaimana keamanan data kami?</summary><p data-i18n="ceisa_fa2">Setiap akun hanya melihat datanya sendiri (isolasi per akun). Server di Indonesia, backup harian, dan audit log semua aktivitas.</p></details>
-      <details><summary data-i18n="ceisa_fq3">14 hari tayang itu benar realistis?</summary><p data-i18n="ceisa_fa3">Ya, karena kami tidak membangun dari nol — fondasinya sudah jadi dan teruji (lihat Portal Forwarder yang live). Yang kami kerjakan: branding Anda, subdomain, import data, dan training.</p></details>
-      <details><summary data-i18n="ceisa_fq4">Apakah legal terhubung ke CEISA?</summary><p data-i18n="ceisa_fa4">Ya. Koneksi H2H (host-to-host) adalah jalur resmi yang disediakan DJBC untuk PPJK/perusahaan — bukan scraping atau celah tidak resmi.</p></details>
+      <details><summary data-i18n="ceisa_fq3">Berapa lama implementasinya?</summary><p data-i18n="ceisa_fa3">Timeline ditetapkan setelah discovery, pemetaan integrasi, pemeriksaan kualitas data, dan konfirmasi dependensi pihak ketiga.</p></details>
+      <details><summary data-i18n="ceisa_fq4">Bagaimana integrasi dengan CEISA dilakukan?</summary><p data-i18n="ceisa_fa4">Integrasi hanya melalui akses pengguna jasa yang sah, otorisasi yang sesuai, dan kanal yang disetujui DJBC. Sistem tidak menggantikan keputusan pejabat atau melewati kontrol akses.</p></details>
       <details><summary data-i18n="ceisa_fq5">Data kepabeanan kami aman?</summary><p data-i18n="ceisa_fa5">Data per perusahaan terisolasi, server Indonesia, dan tim kami terbiasa menangani kerahasiaan dokumen kepabeanan sejak lama.</p></details>
     </div>
   </div>
@@ -636,13 +636,13 @@ function pickDoc(d){
     var pib = docSel==='pib';
     return [
       ['OCR & ekstraksi dokumen', pib?'Invoice + Packing List + B/L sparepart terbaca · USD 24.500':'Invoice + PL + COO kopi arabika terbaca · USD 42.000'],
-      ['AI auditor memeriksa', pib?'HS 8708.99.90 ✓ · nilai pabean wajar ✓ · lartas: tidak ada':'HS 0901.11.10 ✓ · berat & kemasan konsisten ✓'],
-      ['Menyusun payload CEISA', pib?'BC 2.0 (PIB) · 42 elemen data terisi otomatis':'BC 3.0 (PEB) · 38 elemen data terisi otomatis'],
-      ['Kirim H2H ke CEISA 4.0', 'koneksi resmi DJBC · terkirim 1,2 detik'],
+      ['Asisten validasi memeriksa contoh data', pib?'HS 8708.99.90 · perlu validasi manusia · lartas: cek INSW':'HS 0901.11.10 · berat & kemasan: dataset demo'],
+      ['Menyusun contoh payload', pib?'BC 2.0 (PIB) · dataset simulasi':'BC 3.0 (PEB) · dataset simulasi'],
+      ['Siapkan payload H2H', 'simulasi lokal · belum dikirim ke CEISA'],
       ['Nomor AJU terbit', pib?'AJU 000020-012345-20260721-000088':'AJU 000030-067890-20260721-000112'],
       ['Kode billing diterima', pib?'Rp 61.250.000 (BM + PPN + PPh) · siap bayar':'PNBP Rp 100.000 · siap bayar'],
-      [pib?'SPPB rilis — jalur hijau':'NPE rilis — siap ekspor', pib?'kargo bisa keluar Tanjung Priok':'kargo siap masuk gate Belawan'],
-      ['WA otomatis terkirim ke customer', 'status + dokumen terlampir — tanpa dicek manual']
+      ['Contoh respons ditampilkan', 'bukan respons resmi atau keputusan pabean'],
+      ['Pratinjau notifikasi WA', 'belum dikirim ke pelanggan']
     ];
   }
   function runPipe(){
@@ -687,14 +687,14 @@ function pickDoc(d){
     'crossContact': 'Contact',
     'crossBlog': 'Blog',
     'eyebrowX': '🛃 PPJK · Exporters · Importers',
-    'h1': 'One PIB Mistake Can Mean a Fine.<br>Automate Your Customs Documents to <span class="hl">CEISA 4.0</span>.',
-    'hsub': 'Document OCR → AI auditor checks HS code → H2H submission to CEISA → AJU number & SPPB/NPE tracked automatically. Built by 20+ year customs practitioners, live at ceisa.m2b.co.id.',
+    'h1': 'Reduce PIB/PEB Data-Entry Risk.<br>Prepare Document Workflows for <span class="hl">Authorized Integration</span>.',
+    'hsub': 'Document OCR → preliminary data checks → draft payload preparation → response records. Official submission and customs decisions remain with authorized users and DJBC systems.',
     'ctaDemo': '&#9654; See the Live Demo',
     'ctaWa': '&#128172; Free Consultation',
     't0b': '20+ years',
     't0': 'customs practitioners',
-    't1b': 'Live',
-    't1': 'ceisa.m2b.co.id (H2H DJBC)',
+    't1b': 'Demo',
+    't1': 'document and response workflow',
     't2b': 'BC 2.0 & 3.0',
     't2': 'import + export',
     'painEye': 'The Problems You Face Every Day',
@@ -704,12 +704,12 @@ function pickDoc(d){
     'ceisa_pain_0_f': '✓ OCR reads documents, AI audits before submission',
     'ceisa_pain_1_h': 'Repeated Manual Status Checks',
     'ceisa_pain_1_p': 'Your team logs into CEISA repeatedly just to check if the AJU number is out or still pending.',
-    'ceisa_pain_1_f': '✓ AJU/SPPB/NPE status tracked automatically in one dashboard',
+    'ceisa_pain_1_f': '✓ Responses received through an authorized channel can be recorded in one dashboard',
     'ceisa_pain_2_h': 'Notes of Objection & Held Cargo',
     'ceisa_pain_2_p': 'Wrong HS code or customs value leads to objections, fines, even cargo held at port.',
     'ceisa_pain_2_f': '✓ HS code & completeness validated before submission',
     'demoEye': 'Interactive Demo &mdash; Try It Now',
-    'demoNote': 'ℹ️ This is a <b>static demo</b>. The real version connects to your operational data + automatic WhatsApp notifications.',
+    'demoNote': 'ℹ️ This is a <b>static demo using fictional data</b>. Nothing is submitted to CEISA and no customs decision is issued.',
     'demoH2': 'This Is the System Your Users Will Use',
     'featEye': 'Complete Features',
     'featH2': 'Every Module Built From a Real Workflow,<br>Not Just a Generic App',
@@ -718,20 +718,20 @@ function pickDoc(d){
     'ceisa_feat_0_p': 'Your own logo, colors and subdomain. Users see your brand, not ours.',
     'ceisa_feat_1_h': 'Automatic Document OCR',
     'ceisa_feat_1_p': 'Invoice, packing list, B/L read automatically — no double manual entry.',
-    'ceisa_feat_2_h': 'AI HS Code Auditor',
-    'ceisa_feat_2_p': 'HS code & document completeness validated before sending to CEISA.',
+    'ceisa_feat_2_h': 'HS Code Validation Assistant',
+    'ceisa_feat_2_p': 'HS code and document data are flagged for human review before any authorized submission.',
     'ceisa_feat_3_h': 'Automatic WhatsApp Notifications',
     'ceisa_feat_3_p': 'Status changes → users get WA automatically. No manual one-by-one messaging.',
     'ceisa_feat_4_h': 'Real-Time Status Monitor',
-    'ceisa_feat_4_p': 'AJU number, billing code, SPPB/NPE — all tracked without logging into CEISA repeatedly.',
+    'ceisa_feat_4_p': 'AJU numbers, billing codes, and document responses are recorded after receipt through authorized access.',
     'ceisa_feat_5_h': 'Multi-User & Roles',
     'ceisa_feat_5_p': 'Admin, operations, finance — separate logins per role. Full audit log.',
     'ceisa_feat_6_h': 'Multi-Company',
     'ceisa_feat_6_p': 'For PPJK handling multiple clients — manage all from one portal.',
     'ceisa_feat_7_h': 'Multi-Language (ID/EN)',
     'ceisa_feat_7_p': 'The portal is bilingual — ready for your foreign users or overseas partners.',
-    'ceisa_feat_8_h': 'Official DJBC H2H Integration',
-    'ceisa_feat_8_p': 'Direct host-to-host connection to CEISA 4.0 — official channel, not scraping.',
+    'ceisa_feat_8_h': 'H2H Integration Readiness',
+    'ceisa_feat_8_p': 'Architecture prepared for an authorized H2H channel; implementation depends on approval and user access rights.',
     'prEye': 'Investment',
     'prH2': 'Pricing Built for Your Industry',
     'prSub': 'One-time setup, light subscription. Compare: one admin staffer costs Rp 3&ndash;4 million/month. This system works 24/7.',
@@ -750,8 +750,8 @@ function pickDoc(d){
     'ceisa_pr_Professional_for': 'OCR + H2H submission + WA notifications',
     'ceisa_pr_Professional_i0': '<b style="color:var(--text)">Everything in Starter</b>, plus:',
     'ceisa_pr_Professional_i1': 'Automatic document OCR',
-    'ceisa_pr_Professional_i2': 'AI HS code auditor',
-    'ceisa_pr_Professional_i3': 'Automatic H2H submission to CEISA',
+    'ceisa_pr_Professional_i2': 'HS code validation assistant',
+    'ceisa_pr_Professional_i3': 'H2H module after access authorization is approved',
     'ceisa_pr_Professional_i4': 'WA notification on status change',
     'ceisa_pr_Professional_i5': 'Import from your existing system',
     'ceisa_pr_Professional_cta': 'Choose Professional',
@@ -765,16 +765,16 @@ function pickDoc(d){
     'ceisa_pr_Enterprise_cta': 'Discuss Your Needs',
     'prfEye': 'Proof, Not Promises',
     'prfH2': 'Built by Practitioners Who Run Real Systems',
-    'ceisa_prfSub': 'Not an experiment. The technical foundation is already live and used every day.',
+    'ceisa_prfSub': 'The portal and workflow foundation can be demonstrated. External connections are enabled only after scope, authorization, and third-party access are confirmed.',
     'ceisa_ps_0_b': 'ceisa.m2b.co.id',
-    'ceisa_ps_0_s': 'Live H2H implementation',
+    'ceisa_ps_0_s': 'restricted-access technical demo',
     'ceisa_ps_1_b': '20+ years',
     'ceisa_ps_1_s': 'Customs practitioners behind its design',
-    'ceisa_ps_2_b': 'Official H2H',
-    'ceisa_ps_2_s': 'Official DJBC channel, not scraping',
+    'ceisa_ps_2_b': 'H2H Ready',
+    'ceisa_ps_2_s': 'Requires authorization and access rights',
     'ceisa_ps_3_b': 'BC 2.0/3.0',
     'ceisa_ps_3_s': 'Import & export, not just CRUD',
-    'ceisa_qt': '"Our Portal Forwarder is already live and used daily by an active forwarder — CEISA H2H is built on the same customs track record, not an experiment."',
+    'ceisa_qt': '"The workflow is designed from real forwarding and customs needs, then validated in stages before any external integration is enabled."',
     'ceisa_qtWho': 'Mora Bangun Solutions Team',
     'ceisa_qtCo': 'Built by 20+ year customs practitioners, Medan',
     'faqEye': 'Common Questions',
@@ -785,10 +785,10 @@ function pickDoc(d){
     'ceisa_fa1': 'No. They just open the portal in any browser, log in, done. No install, no cost for them.',
     'ceisa_fq2': 'How is our data secured?',
     'ceisa_fa2': 'Each account only sees its own data (per-account isolation). Servers in Indonesia, daily backups, and full audit logs.',
-    'ceisa_fq3': 'Is 14 days to go live realistic?',
-    'ceisa_fa3': 'Yes — we\'re not building from scratch. The foundation is already finished and battle-tested (see our live Portal Forwarder). We handle your branding, subdomain, data import and training.',
-    'ceisa_fq4': 'Is connecting to CEISA legal?',
-    'ceisa_fa4': 'Yes. H2H (host-to-host) is an official channel provided by DJBC for PPJK/companies — not scraping or an unofficial workaround.',
+    'ceisa_fq3': 'How long does implementation take?',
+    'ceisa_fa3': 'The timeline is defined after discovery, integration mapping, data-quality checks, and confirmation of third-party dependencies.',
+    'ceisa_fq4': 'How is CEISA integration handled?',
+    'ceisa_fa4': 'Integration is performed only through lawful user access, appropriate authorization, and a DJBC-approved channel. The system does not replace customs decisions or bypass access controls.',
     'ceisa_fq5': 'Is our customs data safe?',
     'ceisa_fa5': 'Data is isolated per company, servers in Indonesia, and our team has long handled the confidentiality of customs documents.',
     'finEye': 'Next Step',

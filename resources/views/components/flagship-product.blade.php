@@ -7,8 +7,8 @@
         <div class="text-center mb-16">
             <span class="scroll-reveal inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-xs text-blue-300 font-bold uppercase tracking-widest font-mono">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                <span x-show="$store.locale === 'id'">Studi Kasus Solusi Enterprise</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Enterprise Case Study</span>
+                <span x-show="$store.locale === 'id'">Studi Implementasi Internal</span>
+                <span x-show="$store.locale === 'en'" x-cloak>Internal Implementation Study</span>
             </span>
             <h2 class="scroll-reveal text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mt-4 mb-4 text-white">
                 M2B <span class="text-blue-400">One</span>
@@ -26,12 +26,12 @@
             <div class="lg:col-span-5 space-y-8">
                 <div class="space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                        <span x-show="$store.locale === 'id'">Studi Kasus: Otomasi Operasional PT. Mora Multi Berkah</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Case Study: PT. Mora Multi Berkah Operational Automation</span>
+                        <span x-show="$store.locale === 'id'">Rancangan Otomasi Operasional PT. Mora Multi Berkah</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>PT. Mora Multi Berkah Operational Automation Design</span>
                     </h3>
                     <p class="text-slate-400 leading-relaxed font-body text-sm md:text-base">
-                        <span x-show="$store.locale === 'id'">M2B One menghubungkan alur kerja internal MMB langsung ke gerbang H2H CEISA 4.0 Bea Cukai secara otonom. AI membaca dokumen ekspor-impor, mengaudit kepatuhan, dan memicu notifikasi tanpa pengetikan manual.</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>M2B One autonomously connects MMB's internal workflows directly to Indonesia Customs' CEISA 4.0 H2H gateway. AI reads export-import docs, audits regulatory compliance, and triggers notifications without manual entry.</span>
+                        <span x-show="$store.locale === 'id'">M2B One dirancang untuk menyatukan dokumen ekspor-impor, validasi berbantuan sistem, dan pencatatan respons kepabeanan. Pengiriman resmi tetap memerlukan hak akses, otorisasi, serta validasi manusia.</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>M2B One is designed to unify trade documents, system-assisted validation, and customs-response records. Official submission still requires access rights, authorization, and human validation.</span>
                     </p>
                     
                     <!-- SaaS Model Highlight Badge -->
@@ -74,8 +74,8 @@
                                 <span x-show="$store.locale === 'en'" x-cloak>AI Compliance Audit</span>
                             </h4>
                             <p class="text-slate-500 text-xs md:text-sm mt-1">
-                                <span x-show="$store.locale === 'id'">Validasi HS Code, lisensi importir (NIB/API), dan kalkulasi tarif bea masuk secara otomatis untuk meminimalisir reject.</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Automated validation of HS Codes, importer licenses (NIB/API), and duty calculations to minimize rejections.</span>
+                                <span x-show="$store.locale === 'id'">Pemeriksaan awal HS Code, data NIB/API, dan simulasi pungutan sebagai bantuan kerja sebelum validasi petugas berwenang.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Preliminary checks for HS Codes, NIB/API data, and duty simulations to assist work before validation by authorized personnel.</span>
                             </p>
                         </div>
                     </div>
@@ -91,8 +91,8 @@
                                 <span x-show="$store.locale === 'en'" x-cloak>CEISA 4.0 H2H Integration</span>
                             </h4>
                             <p class="text-slate-500 text-xs md:text-sm mt-1">
-                                <span x-show="$store.locale === 'id'">Kirim draft PIB/PEB ke Bea Cukai &amp; terima respon SPJM/SPPB real-time langsung ke sistem internal Anda.</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Submit PIB/PEB drafts to Customs &amp; receive real-time SPJM/SPPB statuses directly inside your internal systems.</span>
+                                <span x-show="$store.locale === 'id'">Menyiapkan draft payload PIB/PEB dan pencatatan respons untuk integrasi melalui kanal yang telah diotorisasi.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Prepare PIB/PEB draft payloads and response records for integration through an authorized channel.</span>
                             </p>
                         </div>
                     </div>
@@ -132,10 +132,10 @@
                          this.auditDone = false;
                          
                          let logs = [
-                             { id: 'NIB verified (API-U Active)', en: 'NIB verified (API-U Active)', status: 'pass' },
-                             { id: 'HS Code 8708.29.95 valid & aktif', en: 'HS Code 8708.29.95 valid & active', status: 'pass' },
-                             { id: 'Ketentuan Lartas: BEBAS LARTAS', en: 'Restriction Check: FREE/NO RESTRICTIONS', status: 'pass' },
-                             { id: 'Valuta USD ke IDR terkonversi (Kurs Pajak)', en: 'Currency USD to IDR converted (Tax Rate)', status: 'pass' }
+                             { id: 'Contoh data NIB terbaca dari dataset demo', en: 'Sample NIB data read from the demo dataset', status: 'pass' },
+                             { id: 'Contoh HS Code masuk antrean validasi', en: 'Sample HS Code queued for validation', status: 'pass' },
+                             { id: 'Ketentuan lartas memerlukan verifikasi INSW', en: 'Restrictions require verification through INSW', status: 'pass' },
+                             { id: 'Simulasi konversi valuta selesai', en: 'Currency conversion simulation completed', status: 'pass' }
                          ];
                          
                          let i = 0;
@@ -150,7 +150,7 @@
                          }, 600);
                      },
                      
-                     submitToCeisa() {
+                     simulateCeisaResponse() {
                          this.step = 4;
                          this.ceisaStatus = 'submitting';
                          
@@ -160,7 +160,7 @@
                              
                              setTimeout(() => {
                                  this.ceisaStatus = 'approved';
-                                 this.responseDoc = this.selectedDoc === 'import' ? 'SPPB (Persetujuan Pengeluaran)' : 'NPE (Nota Pelayanan Ekspor)';
+                                this.responseDoc = this.selectedDoc === 'import' ? 'Contoh status SPPB' : 'Contoh status NPE';
                                  this.notifSent = true;
                              }, 2000);
                          }, 2000);
@@ -198,8 +198,8 @@
                 <div x-show="step === 1" class="space-y-5">
                     <div class="text-center py-4">
                         <p class="text-slate-300 font-bold mb-2 text-sm md:text-base">
-                            <span x-show="$store.locale === 'id'">Simulasikan Alur Otonom M2B One</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Simulate M2B One Autonomous Flow</span>
+                            <span x-show="$store.locale === 'id'">Simulasikan Alur Konseptual M2B One</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Simulate the M2B One Conceptual Flow</span>
                         </p>
                         <p class="text-slate-500 text-xs md:text-sm font-body">
                             <span x-show="$store.locale === 'id'">Pilih salah satu contoh dokumen untuk memulai alur otomatisasi pabean:</span>
@@ -277,8 +277,8 @@
                 <div x-show="step === 3" class="space-y-6">
                     <h4 class="text-sm font-mono text-blue-400 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                        <span x-show="$store.locale === 'id'">AI Auditor: Memeriksa Kepatuhan Pabean...</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>AI Auditor: Checking Customs Compliance...</span>
+                        <span x-show="$store.locale === 'id'">Asisten Validasi: Menjalankan Pemeriksaan Awal...</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Validation Assistant: Running Preliminary Checks...</span>
                     </h4>
 
                     <!-- Compliance Logs -->
@@ -300,10 +300,10 @@
 
                     <!-- Action Submit Button -->
                     <div x-show="auditDone" class="text-center pt-2">
-                        <button @click="submitToCeisa()" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 flex items-center justify-center gap-2 mx-auto cursor-pointer">
+                        <button @click="simulateCeisaResponse()" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 flex items-center justify-center gap-2 mx-auto cursor-pointer">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
-                            <span x-show="$store.locale === 'id'">Kirim ke CEISA Bea Cukai H2H Gateway</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Submit to CEISA Customs H2H Gateway</span>
+                            <span x-show="$store.locale === 'id'">Simulasikan Respons Integrasi</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Simulate Integration Response</span>
                         </button>
                     </div>
                 </div>
@@ -316,8 +316,8 @@
                         <div x-show="ceisaStatus === 'submitting'" class="space-y-4">
                             <div class="w-12 h-12 rounded-full border-t-2 border-r-2 border-blue-400 animate-spin mx-auto"></div>
                             <p class="text-sm font-mono text-blue-400">
-                                <span x-show="$store.locale === 'id'">Mengirim paket pabean via Host-to-Host API...</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Sending customs payload via Host-to-Host API...</span>
+                                <span x-show="$store.locale === 'id'">Menjalankan simulasi payload secara lokal—tidak dikirim ke CEISA...</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Running a local payload simulation—nothing is sent to CEISA...</span>
                             </p>
                         </div>
 
@@ -327,14 +327,14 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <p class="text-base font-bold text-white">
-                                <span x-show="$store.locale === 'id'">Dokumen Terdaftar di Bea Cukai</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Document Registered at Customs</span>
+                                <span x-show="$store.locale === 'id'">Payload Demo Lulus Pemeriksaan Lokal</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Demo Payload Passed Local Checks</span>
                             </p>
                             <p class="text-xs font-mono text-slate-500">
-                                NO AJU: 050700-001249-20260623-000452
+                                NO AJU: DEMO—TIDAK DIKIRIM
                             </p>
                             <div class="inline-block px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 rounded-full text-[10px] font-mono">
-                                BILLING: Kode Billing Terbit (ID Billing: <span x-text="billingCode"></span>)
+                                BILLING: DATA SIMULASI (<span x-text="billingCode"></span>)
                             </div>
                         </div>
 
@@ -345,12 +345,12 @@
                             </div>
                             <div>
                                 <p class="text-lg font-bold text-green-400">
-                                    <span x-show="$store.locale === 'id'">Persetujuan Bea Cukai Dirilis!</span>
-                                    <span x-show="$store.locale === 'en'" x-cloak>Customs Clearance Approved!</span>
+                                    <span x-show="$store.locale === 'id'">Simulasi Alur Selesai</span>
+                                    <span x-show="$store.locale === 'en'" x-cloak>Workflow Simulation Complete</span>
                                 </p>
                                 <p class="text-xs text-slate-400 mt-1 font-body">
-                                    <span x-show="$store.locale === 'id'">Mendapatkan respon pabean akhir:</span>
-                                    <span x-show="$store.locale === 'en'" x-cloak>Final customs response received:</span>
+                                    <span x-show="$store.locale === 'id'">Contoh keluaran status:</span>
+                                    <span x-show="$store.locale === 'en'" x-cloak>Example status output:</span>
                                     <span class="font-bold text-white font-mono" x-text="responseDoc"></span>
                                 </p>
                             </div>
@@ -358,12 +358,12 @@
                             <!-- Dashboard & Notification mockup -->
                             <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-4 text-left space-y-3 max-w-md mx-auto font-body">
                                 <div class="flex items-center justify-between text-xs text-slate-400">
-                                    <span>Sync Status: <strong class="text-green-400 font-semibold">SUCCESS</strong></span>
+                                    <span>Simulation Status: <strong class="text-green-400 font-semibold">DEMO ONLY</strong></span>
                                     <span class="font-mono">21:11</span>
                                 </div>
                                 <div class="p-2.5 rounded bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-400 flex items-center gap-2">
                                     <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-                                    <span>WA Sent to Customer: "Kargo Anda telah rilis (SPPB)..."</span>
+                                    <span>WA Preview: "Contoh notifikasi status—belum dikirim."</span>
                                 </div>
                                 <div class="flex gap-2">
                                     <button class="flex-grow py-2 rounded bg-blue-500/10 border border-blue-500/30 hover:bg-blue-500/20 text-blue-400 text-xs font-semibold tracking-wide transition-colors cursor-pointer">

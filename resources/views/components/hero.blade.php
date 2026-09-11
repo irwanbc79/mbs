@@ -71,31 +71,31 @@
                 <!-- Stats Row -->
                 <div class="animate-visible grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80">
                     <div>
-                        <div class="text-2xl sm:text-3xl font-bold text-white">B2B &amp; BUMN</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-white">B2B</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Kesiapan Sistem</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Enterprise Ready</span>
+                            <span x-show="$store.locale === 'id'">Fokus Solusi Bisnis</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Business Solutions</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-bold text-blue-400">100%</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-blue-400">Custom</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Bespoke Software</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Custom Built</span>
+                            <span x-show="$store.locale === 'id'">Sesuai Kebutuhan</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Built to Fit</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-bold text-emerald-400">18+ Sektor</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-emerald-400">18</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Solusi Industri</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Industry Proven</span>
+                            <span x-show="$store.locale === 'id'">Skenario Demo Industri</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Industry Demo Scenarios</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-bold text-slate-200">99.98%</div>
+                        <div class="text-2xl sm:text-3xl font-bold text-slate-200">SLA</div>
                         <div class="text-xs text-slate-400 mt-1 font-body">
-                            <span x-show="$store.locale === 'id'">Keandalan SLA</span>
-                            <span x-show="$store.locale === 'en'" x-cloak>Guaranteed SLA</span>
+                            <span x-show="$store.locale === 'id'">Disepakati per Proyek</span>
+                            <span x-show="$store.locale === 'en'" x-cloak>Agreed per Project</span>
                         </div>
                     </div>
                 </div>

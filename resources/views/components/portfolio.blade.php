@@ -547,7 +547,7 @@
                             <span class="browser-dot bg-[#FFBD2E]"></span>
                             <span class="browser-dot bg-[#28CA41]"></span>
                             <div class="browser-url">https://ceisa.m2b.co.id</div>
-                            <span class="text-[9px] text-[#C9A55C] font-semibold">H2H API</span>
+                            <span class="text-[9px] text-[#C9A55C] font-semibold">SYSTEM DEMO</span>
                         </div>
                         <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
                             <img src="{{ asset('images/portfolio/ceisa.jpg') }}"
@@ -582,24 +582,24 @@
                                         </div>
                                         <div class="bg-white/5 border border-white/10 p-1 rounded">
                                             <div class="text-[5px] text-[#C9A55C] uppercase tracking-wider font-mono">BC 3.0 EXPORT</div>
-                                            <div class="text-[8px] font-bold text-[#0E867E]">242 Docs</div>
+                                            <div class="text-[8px] font-bold text-[#0E867E]">Contoh PEB</div>
                                         </div>
                                     </div>
                                     <!-- Queue flow -->
                                     <div class="bg-[#080d26]/80 border border-[#C9A55C]/15 rounded p-1.5 space-y-1 grow overflow-hidden">
                                         <div class="flex items-center justify-between text-[5px] text-[#C9A55C] font-mono border-b border-[#C9A55C]/10 pb-0.5">
                                             <span>H2H QUEUE STATUS</span>
-                                            <span class="text-[#0E867E] animate-pulse">● GATEWAY ONLINE</span>
+                                            <span class="text-[#0E867E]">● SANDBOX DEMO</span>
                                         </div>
                                         <div class="flex items-center gap-1.5 h-3 bg-white/5 rounded px-1">
                                             <span class="text-[5px] text-[#0E867E] font-bold">BC20</span>
                                             <div class="flex-1 h-0.5 bg-white/10 rounded overflow-hidden"><div class="w-4/5 h-full bg-[#0E867E]"></div></div>
-                                            <span class="text-[4px] text-white/50">Sent 2m ago</span>
+                                            <span class="text-[4px] text-white/50">Not Sent</span>
                                         </div>
                                         <div class="flex items-center gap-1.5 h-3 bg-white/5 rounded px-1">
                                             <span class="text-[5px] text-[#0E867E] font-bold">BC30</span>
                                             <div class="flex-1 h-0.5 bg-white/10 rounded overflow-hidden"><div class="w-full h-full bg-[#0E867E]"></div></div>
-                                            <span class="text-[4px] text-emerald-400 font-bold">APPROVED</span>
+                                            <span class="text-[4px] text-emerald-400 font-bold">UI DEMO</span>
                                         </div>
                                     </div>
                                 </div>
@@ -611,11 +611,11 @@
                                 <svg class="w-4 h-4 text-slate-600 group-hover:text-[#C9A55C] transition-colors flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                             </div>
                             <p class="text-xs text-slate-500 mb-3 font-body">
-                                <span x-show="$store.locale === 'id'">Sistem integrasi H2H kepabeanan otomatis langsung terhubung ke API CEISA 4.0 DJBC Bea Cukai.</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Automated customs clearance H2H integration system directly connected to DJBC CEISA 4.0 API.</span>
+                                <span x-show="$store.locale === 'id'">Demo antarmuka workflow dokumen pabean untuk integrasi melalui kanal yang diotorisasi.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Customs-document workflow interface demo for integration through an authorized channel.</span>
                             </p>
                             <div class="flex flex-wrap gap-1.5">
-                                <span class="text-xs px-2 py-0.5 rounded-full bg-[#C9A55C]/10 border border-[#C9A55C]/20 text-[#C9A55C]">API H2H</span>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-[#C9A55C]/10 border border-[#C9A55C]/20 text-[#C9A55C]">Workflow Demo</span>
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-[#0E867E]/10 border border-[#0E867E]/20 text-[#0E867E]">CEISA 4.0</span>
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">Laravel</span>
                             </div>
@@ -1195,7 +1195,7 @@
                             <span class="browser-dot bg-[#FFBD2E]"></span>
                             <span class="browser-dot bg-[#28CA41]"></span>
                             <div class="browser-url">https://ceisa.m2b.co.id</div>
-                            <span class="text-[9px] text-[#C9A55C] font-semibold">H2H API</span>
+                            <span class="text-[9px] text-[#C9A55C] font-semibold">SYSTEM DEMO</span>
                         </div>
                         <div class="relative overflow-hidden" style="aspect-ratio: 16/9;">
                             <img src="{{ asset('images/portfolio/ceisa.jpg') }}"
@@ -1230,24 +1230,24 @@
                                         </div>
                                         <div class="bg-white/5 border border-white/10 p-1 rounded">
                                             <div class="text-[5px] text-[#C9A55C] uppercase tracking-wider font-mono">BC 3.0 EXPORT</div>
-                                            <div class="text-[8px] font-bold text-[#0E867E]">242 Docs</div>
+                                            <div class="text-[8px] font-bold text-[#0E867E]">Contoh PEB</div>
                                         </div>
                                     </div>
                                     <!-- Queue flow -->
                                     <div class="bg-[#080d26]/80 border border-[#C9A55C]/15 rounded p-1.5 space-y-1 grow overflow-hidden">
                                         <div class="flex items-center justify-between text-[5px] text-[#C9A55C] font-mono border-b border-[#C9A55C]/10 pb-0.5">
                                             <span>H2H QUEUE STATUS</span>
-                                            <span class="text-[#0E867E] animate-pulse">● GATEWAY ONLINE</span>
+                                            <span class="text-[#0E867E]">● SANDBOX DEMO</span>
                                         </div>
                                         <div class="flex items-center gap-1.5 h-3 bg-white/5 rounded px-1">
                                             <span class="text-[5px] text-[#0E867E] font-bold">BC20</span>
                                             <div class="flex-1 h-0.5 bg-white/10 rounded overflow-hidden"><div class="w-4/5 h-full bg-[#0E867E]"></div></div>
-                                            <span class="text-[4px] text-white/50">Sent 2m ago</span>
+                                            <span class="text-[4px] text-white/50">Not Sent</span>
                                         </div>
                                         <div class="flex items-center gap-1.5 h-3 bg-white/5 rounded px-1">
                                             <span class="text-[5px] text-[#0E867E] font-bold">BC30</span>
                                             <div class="flex-1 h-0.5 bg-white/10 rounded overflow-hidden"><div class="w-full h-full bg-[#0E867E]"></div></div>
-                                            <span class="text-[4px] text-emerald-400 font-bold">APPROVED</span>
+                                            <span class="text-[4px] text-emerald-400 font-bold">UI DEMO</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1259,11 +1259,11 @@
                                 <svg class="w-4 h-4 text-slate-600 group-hover:text-[#C9A55C] transition-colors flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                             </div>
                             <p class="text-xs text-slate-500 mb-3 font-body">
-                                <span x-show="$store.locale === 'id'">Sistem integrasi H2H kepabeanan otomatis langsung terhubung ke API CEISA 4.0 DJBC Bea Cukai.</span>
-                                <span x-show="$store.locale === 'en'" x-cloak>Automated customs clearance H2H integration system directly connected to DJBC CEISA 4.0 API.</span>
+                                <span x-show="$store.locale === 'id'">Demo antarmuka workflow dokumen pabean untuk integrasi melalui kanal yang diotorisasi.</span>
+                                <span x-show="$store.locale === 'en'" x-cloak>Customs-document workflow interface demo for integration through an authorized channel.</span>
                             </p>
                             <div class="flex flex-wrap gap-1.5">
-                                <span class="text-xs px-2 py-0.5 rounded-full bg-[#C9A55C]/10 border border-[#C9A55C]/20 text-[#C9A55C]">API H2H</span>
+                                <span class="text-xs px-2 py-0.5 rounded-full bg-[#C9A55C]/10 border border-[#C9A55C]/20 text-[#C9A55C]">Workflow Demo</span>
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-[#0E867E]/10 border border-[#0E867E]/20 text-[#0E867E]">CEISA 4.0</span>
                                 <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">Laravel</span>
                             </div>
