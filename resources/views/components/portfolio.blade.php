@@ -14,8 +14,8 @@
                 <span x-show="$store.locale === 'en'" x-cloak>Real-World Projects &amp; <span class="text-blue-400">Track Record</span></span>
             </h2>
             <p class="scroll-reveal text-slate-300 max-w-2xl mx-auto font-body text-base sm:text-lg">
-                <span x-show="$store.locale === 'id'">Platform digital dan sistem ERP skala produksi yang telah kami bangun dan aktif digunakan dalam operasional bisnis sehari-hari.</span>
-                <span x-show="$store.locale === 'en'" x-cloak>Production-scale digital platforms and enterprise systems actively driving daily business operations.</span>
+                <span x-show="$store.locale === 'id'">Pilihan website, portal operasional, dan demo sistem yang kami bangun; setiap kartu membedakan implementasi live dari konsep demonstrasi.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>A selection of websites, operational portals, and system demos we built; each card distinguishes live implementations from demonstration concepts.</span>
             </p>
         </div>
 

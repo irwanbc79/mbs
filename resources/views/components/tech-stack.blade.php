@@ -87,12 +87,12 @@
                 </div>
                 <div>
                     <p class="font-semibold text-sm text-white">
-                        <span x-show="$store.locale === 'id'">Keamanan Tinggi</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>High Security</span>
+                        <span x-show="$store.locale === 'id'">Security by Design</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Security by Design</span>
                     </p>
                     <p class="text-xs text-slate-500">
-                        <span x-show="$store.locale === 'id'">Enkripsi end-to-end</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>End-to-end encryption</span>
+                        <span x-show="$store.locale === 'id'">Kontrol akses &amp; audit log sesuai scope</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Scoped access controls &amp; audit logs</span>
                     </p>
                 </div>
             </div>
@@ -121,8 +121,8 @@
                         <span x-show="$store.locale === 'en'" x-cloak>Scalable</span>
                     </p>
                     <p class="text-xs text-slate-500">
-                        <span x-show="$store.locale === 'id'">Arsitektur microservices</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Microservices architecture</span>
+                        <span x-show="$store.locale === 'id'">Arsitektur modular sesuai kebutuhan</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Modular architecture when appropriate</span>
                     </p>
                 </div>
             </div>

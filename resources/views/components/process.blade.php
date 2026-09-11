@@ -131,12 +131,12 @@
                         </svg>
                     </div>
                     <p class="mt-3 text-sm font-bold text-emerald-400 tracking-wide">
-                        <span x-show="$store.locale === 'id'">Siap Produksi!</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Production Ready!</span>
+                        <span x-show="$store.locale === 'id'">Target Go-Live</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Go-Live Target</span>
                     </p>
                     <p class="mt-1 text-xs text-slate-500 font-body leading-tight max-w-[140px]">
-                        <span x-show="$store.locale === 'id'">Sistem Operasi Stabil &amp; Terintegrasi</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Stable Operating System &amp; Full Integration</span>
+                        <span x-show="$store.locale === 'id'">Setelah UAT dan gate operasional terpenuhi</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>After UAT and operational gates pass</span>
                     </p>
                 </div>
 
@@ -181,12 +181,12 @@
                 </div>
                 <div class="pb-2">
                     <p class="font-bold text-emerald-400 text-sm tracking-wide">
-                        <span x-show="$store.locale === 'id'">Siap Produksi!</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Production Ready!</span>
+                        <span x-show="$store.locale === 'id'">Target Go-Live</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>Go-Live Target</span>
                     </p>
                     <p class="text-xs text-slate-500 font-body mt-0.5">
-                        <span x-show="$store.locale === 'id'">Sistem Operasi Stabil &amp; Terintegrasi</span>
-                        <span x-show="$store.locale === 'en'" x-cloak>Stable Operating System &amp; Full Integration</span>
+                        <span x-show="$store.locale === 'id'">Setelah UAT dan gate operasional terpenuhi</span>
+                        <span x-show="$store.locale === 'en'" x-cloak>After UAT and operational gates pass</span>
                     </p>
                 </div>
             </div>
@@ -195,8 +195,8 @@
         {{-- Bottom CTA --}}
         <div class="scroll-reveal mt-16 text-center">
             <p class="text-slate-400 font-body text-sm mb-6">
-                <span x-show="$store.locale === 'id'">Siklus implementasi terukur &amp; transparan: <strong class="text-white">6–12 minggu</strong></span>
-                <span x-show="$store.locale === 'en'" x-cloak>Measurable &amp; transparent implementation cycle: <strong class="text-white">6–12 weeks</strong></span>
+                <span x-show="$store.locale === 'id'">Timeline ditetapkan setelah discovery, scope, dependensi, dan kriteria UAT disepakati.</span>
+                <span x-show="$store.locale === 'en'" x-cloak>The timeline is set after discovery, scope, dependencies, and UAT criteria are agreed.</span>
             </p>
             <a href="#contact" class="inline-flex items-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-blue-600/25 hover:-translate-y-0.5">
                 <span x-show="$store.locale === 'id'">Konsultasikan Rencana Sistem Anda</span>

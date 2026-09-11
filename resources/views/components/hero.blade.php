@@ -125,7 +125,7 @@
                         </div>
                         <div class="flex items-center gap-2 text-[11px] font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-800/40">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                            <span>100% IN SYNC &bull; 14ms</span>
+                            <span>SYSTEM DESIGN &bull; DEMO</span>
                         </div>
                     </div>
 
@@ -254,7 +254,7 @@
                                 <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">Auto-Jurnal &bull; Neraca</text>
                                 <!-- Status Tag -->
                                 <rect x="54" y="58" width="62" height="12" rx="4" fill="#10B981" fill-opacity="0.15"/>
-                                <text x="58" y="67" fill="#34D399" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● 100% RECONCILED</text>
+                                <text x="58" y="67" fill="#34D399" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● WORKFLOW SAMPLE</text>
                             </g>
 
                             <!-- ================= SATELLITE MODULE NODE 2 (Top-Right: Smart Supply Chain & Inventory) ================= -->
@@ -266,7 +266,7 @@
                                 <text x="54" y="38" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.5">SUPPLY CHAIN</text>
                                 <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">Multi-Gudang &bull; Stok Live</text>
                                 <rect x="54" y="58" width="60" height="12" rx="4" fill="#3B82F6" fill-opacity="0.15"/>
-                                <text x="58" y="67" fill="#60A5FA" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● 48K SKU SYNCED</text>
+                                <text x="58" y="67" fill="#60A5FA" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● INVENTORY FLOW</text>
                             </g>
 
                             <!-- ================= SATELLITE MODULE NODE 3 (Bottom-Left: Workflow & Event Automation) ================= -->
@@ -278,7 +278,7 @@
                                 <text x="54" y="38" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.5">AUTO WORKFLOW</text>
                                 <text x="54" y="52" fill="#94A3B8" font-family="sans-serif" font-size="9.5">Event-Driven Pipeline</text>
                                 <rect x="54" y="58" width="64" height="12" rx="4" fill="#8B5CF6" fill-opacity="0.15"/>
-                                <text x="58" y="67" fill="#C084FC" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● SUB-SECOND OPS</text>
+                                <text x="58" y="67" fill="#C084FC" font-family="ui-monospace, monospace" font-size="8" font-weight="600">● EVENT-DRIVEN</text>
                             </g>
 
                             <!-- ================= SATELLITE MODULE NODE 4 (Bottom-Right: Corporate Portal & RBAC) ================= -->
@@ -335,11 +335,11 @@
                     <div class="px-5 py-3 bg-slate-950/90 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
                         <div class="flex items-center gap-2 text-slate-300">
                             <span class="w-2 h-2 rounded-full bg-blue-400"></span>
-                            <span>Arsitektur Jaringan: <strong class="text-white">Medan HQ &bull; Jakarta Hub &bull; Surabaya Hub</strong></span>
+                            <span>Konsep Arsitektur: <strong class="text-white">Multi-cabang &bull; Role-based Access</strong></span>
                         </div>
                         <div class="flex items-center gap-2 text-emerald-400 text-[11px]">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>Multi-Tenant &bull; Zero Bottleneck</span>
+                            <span>Multi-Tenant &bull; Scalable Design</span>
                         </div>
                     </div>
 
