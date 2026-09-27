@@ -1,4 +1,4 @@
-@props(['type' => 'horizontal', 'slot' => ''])
+@props(['type' => 'horizontal', 'slot' => '', 'lazy' => true])
 
 @php
     $enabled = config('services.adsense.enabled', false);
@@ -8,37 +8,49 @@
 
 @if($enabled && $slot)
     @if($type === 'horizontal')
-        {{-- Responsive leaderboard — pasang di atas/bawah konten artikel --}}
-        <div class="my-6 overflow-hidden rounded-xl bg-slate-900/40 border border-slate-800/40 flex items-center justify-center min-h-[90px]">
+        {{-- Responsive leaderboard --}}
+        <div class="my-6 ad-container overflow-hidden rounded-xl bg-slate-900/40 border border-slate-800/40 flex flex-col items-center justify-center min-h-[90px] w-full" style="contain: layout style;">
+            <div class="text-[10px] text-slate-500 uppercase tracking-widest text-center py-1 font-mono">Iklan</div>
             <ins class="adsbygoogle"
                  style="display:block;width:100%;min-height:90px"
                  data-ad-client="{{ $client }}"
                  data-ad-slot="{{ $slot }}"
                  data-ad-format="horizontal"
-                 data-full-width-responsive="true"></ins>
+                 data-full-width-responsive="true"
+                 @if($lazy) data-ad-lazy="true" @endif></ins>
+            @if(!$lazy)
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            @endif
         </div>
     @elseif($type === 'rectangle')
-        {{-- 300×250 rectangle — cocok untuk sidebar --}}
-        <div class="overflow-hidden rounded-2xl bg-slate-900/40 border border-slate-800/40 flex items-center justify-center min-h-[250px]">
+        {{-- 300×250 / 300x600 rectangle — cocok untuk sidebar --}}
+        <div class="ad-container overflow-hidden rounded-2xl bg-slate-900/40 border border-slate-800/40 flex flex-col items-center justify-center min-h-[250px] w-full" style="contain: layout style;">
+            <div class="text-[10px] text-slate-500 uppercase tracking-widest text-center py-1 font-mono">Iklan</div>
             <ins class="adsbygoogle"
                  style="display:block;width:100%;min-height:250px"
                  data-ad-client="{{ $client }}"
                  data-ad-slot="{{ $slot }}"
                  data-ad-format="rectangle"
-                 data-full-width-responsive="false"></ins>
+                 data-full-width-responsive="false"
+                 @if($lazy) data-ad-lazy="true" @endif></ins>
+            @if(!$lazy)
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            @endif
         </div>
     @elseif($type === 'in-article')
         {{-- In-article native ad — menyatu dengan konten --}}
-        <div class="my-8 overflow-hidden rounded-xl">
+        <div class="my-8 ad-container overflow-hidden rounded-xl min-h-[250px] w-full" style="contain: layout style;">
+            <div class="text-[10px] text-slate-500 uppercase tracking-widest text-center py-1 font-mono">Iklan</div>
             <ins class="adsbygoogle"
-                 style="display:block;text-align:center"
+                 style="display:block;text-align:center;min-height:250px"
                  data-ad-layout="in-article"
                  data-ad-format="fluid"
                  data-ad-client="{{ $client }}"
-                 data-ad-slot="{{ $slot }}"></ins>
+                 data-ad-slot="{{ $slot }}"
+                 @if($lazy) data-ad-lazy="true" @endif></ins>
+            @if(!$lazy)
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            @endif
         </div>
     @endif
 @elseif($isDebug)

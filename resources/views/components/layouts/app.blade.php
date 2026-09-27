@@ -108,8 +108,14 @@
     {{-- Auto Ads loader: every page on the domain, not just the blog, so the
          AdSense crawler and Auto Ads see a consistently tagged site. --}}
     @if(config('services.adsense.enabled') && config('services.adsense.client_id'))
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ config('services.adsense.client_id') }}"
             crossorigin="anonymous"></script>
+    <style>
+      ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+      .ad-container:has(> ins.adsbygoogle[data-ad-status="unfilled"]) { display: none !important; }
+    </style>
     @endif
 
     @stack('head_scripts')
@@ -192,5 +198,37 @@
     </div>
 
     @stack('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var lazyAds = document.querySelectorAll('ins.adsbygoogle[data-ad-lazy="true"]');
+    if (!lazyAds.length) return;
+
+    if ('IntersectionObserver' in window) {
+        var adObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var ad = entry.target;
+                    ad.removeAttribute('data-ad-lazy');
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {}
+                    observer.unobserve(ad);
+                }
+            });
+        }, { rootMargin: '250px 0px' });
+
+        lazyAds.forEach(function(ad) {
+            adObserver.observe(ad);
+        });
+    } else {
+        lazyAds.forEach(function(ad) {
+            ad.removeAttribute('data-ad-lazy');
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {}
+        });
+    }
+});
+</script>
 </body>
 </html>

@@ -254,7 +254,7 @@
 
     {{-- ── AD: BANNER ATAS ARTIKEL ── --}}
     <div class="container-max max-w-4xl px-6 lg:px-0 -mt-4 mb-2">
-        @include('partials.adsense', ['type' => 'horizontal', 'slot' => config('services.adsense.slots.top')])
+        @include('partials.adsense', ['type' => 'horizontal', 'slot' => config('services.adsense.slots.top'), 'lazy' => false])
     </div>
 
     {{-- ── ARTICLE BODY ── --}}
@@ -270,7 +270,20 @@
                         </div>
                     @endif
                     <!-- google_ad_section_start -->
-                    {!! $post->content !!}
+                    @php
+                        $paras = explode('</p>', $post->content);
+                        $pCount = count($paras);
+                    @endphp
+                    @if($pCount > 4 && config('services.adsense.enabled') && config('services.adsense.slots.top'))
+                        @foreach($paras as $idx => $p)
+                            {!! $p !!}@if($idx < $pCount - 1)</p>@endif
+                            @if($idx === 2)
+                                @include('partials.adsense', ['type' => 'in-article', 'slot' => config('services.adsense.slots.top'), 'lazy' => true])
+                            @endif
+                        @endforeach
+                    @else
+                        {!! $post->content !!}
+                    @endif
                     <!-- google_ad_section_end -->
                 </article>
 
@@ -310,7 +323,7 @@
                         </div>
 
                         {{-- AdSense Rectangle --}}
-                        @include('partials.adsense', ['type' => 'rectangle', 'slot' => config('services.adsense.slots.sidebar')])
+                        @include('partials.adsense', ['type' => 'rectangle', 'slot' => config('services.adsense.slots.sidebar'), 'lazy' => false])
 
                         {{-- CTA --}}
                         <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 text-center">
@@ -328,7 +341,7 @@
             </div>
 
             {{-- ── AD: BANNER BAWAH ARTIKEL ── --}}
-            @include('partials.adsense', ['type' => 'horizontal', 'slot' => config('services.adsense.slots.bottom')])
+            @include('partials.adsense', ['type' => 'horizontal', 'slot' => config('services.adsense.slots.bottom'), 'lazy' => true])
 
             {{-- ── RELATED POSTS ── --}}
             @if($related->count())
