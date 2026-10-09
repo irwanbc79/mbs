@@ -25,7 +25,9 @@ class Post extends Model
 
     public function scopePublished($query)
     {
-        return $query->whereNotNull('published_at')->where('published_at', '<=', now());
+        return $query->whereNotNull('published_at')
+                     ->where('published_at', '<=', now())
+                     ->whereNotIn('slug', config('blog.retired_slugs', []));
     }
 
     public function scopeByCategory($query, string $category)
